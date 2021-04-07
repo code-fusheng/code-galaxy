@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 1.项目基本信息配置-->
+    <!--项目的全球唯一标识符，通常使用全限定的包名区分该项目和其他项目。并且构建时生成的路径也是由此生成。-->
+    <groupId>xyz.fusheng</groupId>
+    <!--构件的标识符，它和groupId一起唯一标识一个构件。换句话说，同一个groupId下的artifactId不可重复.-->
+    <!--构件是项目生产的或者使用的一个东西，Maven为项目产生的构件包括：jar,war,源码和二进制。-->
+    <artifactId>code-galaxy</artifactId>
+    <!--子项目的版本.-->
+    <version>1.0.0</version>
+    <!--项目的名称，Maven用于生成文档.-->
+    <name>code-fusheng</name>
+    <!--项目的详细描述，Maven产生文档使用。可以使用HTML格式描述，类似javaDoc.-->
+    <description>个人网站</description>
+    <!--项目产生的构建类型。-->
+    <packaging>pom</packaging>
+    <!-- 项目的主页URL,Maven用于生成文档。-->
+    <url>http://www.fusheng.xyz</url>
+    <!--项目创建的年份-->
+    <inceptionYear>2021</inceptionYear>
+
+    <!--生命项目描述符尊新哪一个POM模型版本。模型本身的版本很少改变，但是依然是必不可少的。-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--项目开发者列表-->
+    <developers>
+        <!--某个项目开发者的信息-->
+        <developer>
+            <!--项目开发者的唯一标识-->
+            <id>code-fusheng</id>
+            <!--项目开发者的全名-->
+            <name>code-fusheng</name>
+            <!--项目开发者的email-->
+            <email>2561035977@qq.com</email>
+            <!--项目开发者的主页-->
+            <url>http://www.fusheng.xyz</url>
+            <!--项目开发者在项目中扮演的角色-->
+            <roles>
+                <role>creator</role>
+            </roles>
+            <!--项目开发者所属组织-->
+            <organization>code-fusheng</organization>
+            <!--项目开发者所属组织的URL-->
+            <organizationUrl>http://www.fusheng.xyz</organizationUrl>
+            <!--项目开发者属性，即时信息处理等等-->
+            <properties>
+                <dept>XX</dept>
+            </properties>
+            <!--项目开发者所在的时区-->
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <!--描述项目所属组织的各种属性，Maven产生文档使用-->
+    <organization>
+        <!--组织的全名-->
+        <name>code-fusheng</name>
+        <!--组织的主页-->
+        <url>http://wwww.fusheng.xyz</url>
+    </organization>
+
+    <!-- 模块(子项目) 被构建成项目的一部分。列出的每个模块元素是指向该模块的目录的相对路劲.-->
+    <modules>
+        <!--模块的名字-->
+        <!--
+        <module>helloMaven</module>
+        -->
+        <module>common-center</module>
+        <module>server-center</module>
+        <module>gateway-server</module>
+        <module>auth-server</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.12</lombok.version>
+        <!-- 微服务架构核心依赖 -->
+        <spring-boot-dependencies.version>2.3.8.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Hoxton.SR9</spring-cloud-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2.2.5.RELEASE</spring-cloud-alibaba-dependencies.version>
+
+        <!-- 自定义依赖 -->
+        <common-center.version>1.0.0</common-center.version>
+
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <knife4j.version>2.0.1</knife4j.version>
+        <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
+        <mybatis-plus-boot-starter.version>3.4.0</mybatis-plus-boot-starter.version>
+        <druid.version>1.1.6</druid.version>
+        <fastjson.version>1.2.73</fastjson.version>
+        <hutool.version>5.1.4</hutool.version>
+    </properties>
+
+    <!--父项目的坐标，如果子项目中没有配置相关的信息，那么使用父项目中的配置。坐标包括：groupID,artifactId和version。-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.8.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 项目的依赖列表 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 多模块依赖关系管理 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>xyz.fusheng</groupId>
+                <artifactId>core-common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- Spring Cloud 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Cloud Alibaba 依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 阿里 fastjson 依赖 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- Swagger 依赖 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+
+            <!-- 拓展 Swagger2 UI -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- db -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <!-- MyBatisPlus 依赖 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+
+            <!-- 引入阿里数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

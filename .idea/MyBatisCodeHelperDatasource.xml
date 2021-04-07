@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="deleteByPrimayKeyEnabled" value="false" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="insertMethodEnabled" value="false" />
+        <option name="insertSelectiveMethodEnabled" value="false" />
+        <option name="javaMapperPackage" value="xyz.fusheng.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/server-center/user-server/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.model.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="core-common" />
+        <option name="lombokDataAnnotation" value="true" />
+        <option name="mapperAnnotaion" value="true" />
+        <option name="modelSuperClass" value="xyz.fusheng.model.base.BaseEntity" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="core-common">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="xyz.fusheng.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/server-center/user-server/src/main/java" />
+                  <option name="javaModelPacakge" value="xyz.fusheng.model.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.service.impl" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/server-center/user-server/src/main/java" />
+                  <option name="javaServicePackage" value="xyz.fusheng.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/server-center/user-server/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/server-center/user-server/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="mybatisPlusStaticField" value="false" />
+        <option name="removeTablePreName" value="sys_" />
+        <option name="selectByPrimaryKeyEnabled" value="false" />
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="code-galaxy:sys_menu">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="Menu" />
+                  <option name="moduleName" value="core-common" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="code-galaxy:sys_role">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="role_id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="Role" />
+                  <option name="moduleName" value="core-common" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="code-galaxy:sys_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="user_id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="core-common" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+        <option name="updateByPrimaykeyEnabled" value="false" />
+        <option name="useSwagger" value="true" />
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/server-center/user-server/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

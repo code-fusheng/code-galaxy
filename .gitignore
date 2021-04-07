@@ -1,0 +1,5 @@
+# Project exclude paths
+/common-center/core-common/target/
+/gateway-server/target/
+/server-center/test-server/target/
+/server-center/user-server/target/
