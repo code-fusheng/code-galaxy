@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://47.111.158.6:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zH1314520?
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#以下为Mybatis-plus的配置
+mybatis-plus:
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath:mapper/*.xml

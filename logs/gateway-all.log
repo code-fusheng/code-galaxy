@@ -1,0 +1,28 @@
+2021-04-08 14:08:30.665 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-08 14:08:31.170 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-08 14:08:31.745 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=2c9d836d-179b-3645-bca9-0025c85a2721
+2021-04-08 14:08:31.765 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-08 14:08:31.767 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-08 14:08:31.771 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-08 14:08:32.179 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
+2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
+2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
+2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
+2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
+2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
+2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
+2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
+2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
+2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
+2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
+2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
+2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-04-08 14:08:32.205 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:08:32.206 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-08 14:08:32.209 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:08:32.209 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-08 14:08:32.444 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-08 14:08:32.896 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
+2021-04-08 14:08:32.909 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
+2021-04-08 14:08:32.922 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 2.8 seconds (JVM running for 3.448)
+2021-04-08 14:08:32.925 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
