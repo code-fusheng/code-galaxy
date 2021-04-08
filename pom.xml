@@ -93,6 +93,7 @@
         <druid.version>1.1.6</druid.version>
         <fastjson.version>1.2.73</fastjson.version>
         <hutool.version>5.1.4</hutool.version>
+        <security-oauth2.version>2.3.8.RELEASE</security-oauth2.version>
     </properties>
 
     <!--父项目的坐标，如果子项目中没有配置相关的信息，那么使用父项目中的配置。坐标包括：groupID,artifactId和version。-->

@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import xyz.fusheng.model.base.BaseEntity;
@@ -100,4 +102,8 @@ public class User extends BaseEntity {
 
     @ApiModelProperty(value = "修改时间")
     private Date updatedTime;
+
+    @ApiModelProperty(value = "角色列表")
+    @TableField(exist = false)
+    private List<Role> roleList;
 }

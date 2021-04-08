@@ -13,28 +13,35 @@
     <result column="signature" jdbcType="VARCHAR" property="signature" />
     <result column="description" jdbcType="VARCHAR" property="description" />
     <result column="realname" jdbcType="VARCHAR" property="realname" />
-    <result column="sex" jdbcType="BOOLEAN" property="sex" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
     <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="lng" jdbcType="DECIMAL" property="lng" />
     <result column="lat" jdbcType="DECIMAL" property="lat" />
     <result column="github_id" jdbcType="VARCHAR" property="githubId" />
-    <result column="state" jdbcType="BOOLEAN" property="state" />
+    <result column="state" jdbcType="INTEGER" property="state" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="memo" jdbcType="VARCHAR" property="memo" />
     <result column="version" jdbcType="INTEGER" property="version" />
-    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
-    <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
+    <result column="is_enabled" jdbcType="INTEGER" property="enabled" />
+    <result column="is_deleted" jdbcType="INTEGER" property="deleted" />
     <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
     <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
     <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
     <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
-    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
-    <result column="updated_at" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
     user_id, username, `password`, `header`, phone, mail, signature, description, realname, 
     sex, address, lng, lat, github_id, `state`, remark, memo, version, is_enabled, is_deleted, 
-    creator_id, updater_id, creator_name, updater_name, created_at, updated_at
+    creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
+
+  <select id="selectRolesByUserId" resultType="xyz.fusheng.model.entity.Role">
+    select r.* from sys_role r
+    left join sys_user_role ur on ur.role_id = r.role_id
+    where ur.user_id = #{userId}
+  </select>
+
 </mapper>

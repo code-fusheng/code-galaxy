@@ -26,7 +26,7 @@ public class GatewayServerApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(GatewayServerApplication.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        logger.info("测试服务[test-server]已经启动,端口号:{}", environment.getProperty("server.port"));
+        logger.info("网关服务[gateway-server]已经启动,端口号:{}", environment.getProperty("server.port"));
     }
 
 }

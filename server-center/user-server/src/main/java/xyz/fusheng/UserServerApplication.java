@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 
@@ -27,7 +28,7 @@ public class UserServerApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(UserServerApplication.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        logger.info("测试服务[test-server]已经启动,端口号:{}", environment.getProperty("server.port"));
+        logger.info("用户服务[user-server]已经启动,端口号:{}", environment.getProperty("server.port"));
     }
 
 }

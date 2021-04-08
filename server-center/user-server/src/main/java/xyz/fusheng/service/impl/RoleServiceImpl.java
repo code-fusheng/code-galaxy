@@ -1,9 +1,9 @@
-package xyz.fusheng.service;
+package xyz.fusheng.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import xyz.fusheng.mapper.RoleMapper;
-import xyz.fusheng.service.impl.RoleService;
+import xyz.fusheng.service.RoleService;
 
 import javax.annotation.Resource;
 

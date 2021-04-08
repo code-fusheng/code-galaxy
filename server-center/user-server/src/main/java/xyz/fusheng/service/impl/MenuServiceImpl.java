@@ -1,9 +1,9 @@
-package xyz.fusheng.service;
+package xyz.fusheng.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import xyz.fusheng.mapper.MenuMapper;
-import xyz.fusheng.service.impl.MenuService;
+import xyz.fusheng.service.MenuService;
 
 import javax.annotation.Resource;
 
