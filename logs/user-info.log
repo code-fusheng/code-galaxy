@@ -417,3 +417,32 @@
 2021-04-08 14:08:30.146 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
 2021-04-08 14:08:30.168 INFO  [main]xyz.fusheng.UserServerApplication.logStarted:61 -Started UserServerApplication in 3.894 seconds (JVM running for 4.406)
 2021-04-08 14:08:30.170 INFO  [main]xyz.fusheng.UserServerApplication.main:31 -用户服务[user-server]已经启动,端口号:10010
+2021-04-08 14:18:54.397 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-08 14:18:54.399 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-08 14:18:54.401 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-08 14:19:01.858 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-08 14:20:21.666 INFO  [main]xyz.fusheng.UserServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-08 14:20:22.485 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=affeb44f-65d0-363b-8f0c-95b288044eef
+2021-04-08 14:20:22.752 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10010 (http)
+2021-04-08 14:20:22.765 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10010"]
+2021-04-08 14:20:22.767 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2021-04-08 14:20:22.774 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-08 14:20:22.906 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2021-04-08 14:20:22.907 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1220 ms
+2021-04-08 14:20:23.660 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-08 14:20:23.676 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-08 14:20:23.680 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-08 14:20:23.754 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-08 14:20:23.852 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-08 14:20:24.157 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10010"]
+2021-04-08 14:20:24.183 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10010 (http) with context path ''
+2021-04-08 14:20:24.192 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP user-server 192.168.0.2:10010 register finished
+2021-04-08 14:20:24.196 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2021-04-08 14:20:24.205 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2021-04-08 14:20:24.238 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2021-04-08 14:20:24.258 INFO  [main]xyz.fusheng.UserServerApplication.logStarted:61 -Started UserServerApplication in 3.627 seconds (JVM running for 4.309)
+2021-04-08 14:20:24.262 INFO  [main]xyz.fusheng.UserServerApplication.main:31 -用户服务[user-server]已经启动,端口号:10010
+2021-04-08 14:21:20.549 INFO  [http-nio-10010-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-08 14:21:20.550 INFO  [http-nio-10010-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2021-04-08 14:21:20.558 INFO  [http-nio-10010-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 7 ms
+2021-04-08 14:21:20.715 INFO  [http-nio-10010-exec-1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited

@@ -9,7 +9,7 @@ spring:
     username: root
     password: zH1314520?
     driver-class-name: com.mysql.cj.jdbc.Driver
-#以下为Mybatis-plus的配置
 mybatis-plus:
-  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
   mapper-locations: classpath:mapper/*.xml
+  configuration:
+    call-setters-on-nulls: true

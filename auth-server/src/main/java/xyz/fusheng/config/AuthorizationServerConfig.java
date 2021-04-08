@@ -83,7 +83,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.withClientDetails(clientDetails());
+//        clients.withClientDetails(clientDetails());
         clients.inMemory()
                 .withClient("test-server")     // client_id
                 .secret(new BCryptPasswordEncoder().encode("test"))   // 客户端密钥
