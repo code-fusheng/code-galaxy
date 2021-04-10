@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import xyz.fusheng.enums.StateEnums;
 import xyz.fusheng.mapper.UserMapper;
+import xyz.fusheng.model.entity.Menu;
 import xyz.fusheng.model.entity.Role;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.service.UserService;
@@ -32,8 +33,25 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public User selectUserByPhone(String phone) {
+        User user = userMapper.selectOne(new QueryWrapper<User>().lambda()
+                .eq(User::getPhone, phone));
+        if (ObjectUtils.isNotEmpty(user)) {
+            List<Role> roleList = selectRolesByUserId(user.getUserId());
+            user.setRoleList(roleList);
+        }
+        return user;
+    }
+
+    @Override
     public List<Role> selectRolesByUserId(Long userId) {
         List<Role> roleList = userMapper.selectRolesByUserId(userId);
         return roleList;
+    }
+
+    @Override
+    public List<Menu> selectMenusByUserId(Long userId) {
+        List<Menu> menuList = userMapper.selectMenusByUserId(userId);
+        return menuList;
     }
 }

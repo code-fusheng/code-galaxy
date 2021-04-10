@@ -1,12 +1,15 @@
-package xyz.fusheng.converter;
+package xyz.fusheng.manager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.common.exceptions.InvalidTokenException;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken;
 import reactor.core.publisher.Mono;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -23,7 +26,7 @@ public class CustomAuthenticationManager implements ReactiveAuthenticationManage
 
     private static final Logger logger = LoggerFactory.getLogger(CustomAuthenticationManager.class);
 
-    private TokenStore tokenStore;
+    public TokenStore tokenStore;
 
     public CustomAuthenticationManager(TokenStore tokenStore) {
         this.tokenStore = tokenStore;

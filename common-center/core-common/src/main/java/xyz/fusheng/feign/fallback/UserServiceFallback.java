@@ -23,7 +23,12 @@ public class UserServiceFallback implements FallbackFactory<UserFeignClientServe
         return new UserFeignClientServer() {
             @Override
             public User selectUserByUsername(String username) {
-                logger.error("调用user-server服务-通过用户名查询用户失败:{}", username, throwable);
+                logger.error("调用user-server服务-通过用户名{}查询用户失败", username, throwable);
+                return null;
+            }
+            @Override
+            public User selectUserByPhone(String phone) {
+                logger.error("调用user-server服务-通过手机号{}查询用户失败:{}", phone, throwable);
                 return null;
             }
         };

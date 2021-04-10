@@ -2,13 +2,11 @@ package xyz.fusheng.interceptor;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
-import org.apache.juli.logging.LogFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.support.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
@@ -36,7 +34,7 @@ public class FeignRequestInterceptor implements RequestInterceptor {
             for (Map.Entry<String, String> entry : headers.entrySet()) {
                 template.header(entry.getKey(), entry.getValue());
             }
-            logger.info("FeignRequestInterceptor:{}", template.toString());
+            logger.info("FeignRequestInterceptor:{}", template);
         }
     }
 

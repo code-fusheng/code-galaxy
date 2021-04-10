@@ -1,228 +1,1152 @@
-2021-04-08 14:08:30.665 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
-2021-04-08 14:08:31.170 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 14:08:31.745 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=2c9d836d-179b-3645-bca9-0025c85a2721
-2021-04-08 14:08:31.765 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:08:31.767 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:08:31.771 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:08:32.179 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
-2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
-2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
-2021-04-08 14:08:32.180 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
-2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
-2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
-2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
-2021-04-08 14:08:32.181 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
-2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
-2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
-2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
-2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
-2021-04-08 14:08:32.182 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2021-04-08 14:08:32.205 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 14:08:32.206 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:08:32.209 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 14:08:32.209 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:08:32.444 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:08:32.896 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
-2021-04-08 14:08:32.909 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
-2021-04-08 14:08:32.922 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 2.8 seconds (JVM running for 3.448)
-2021-04-08 14:08:32.925 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
-2021-04-08 14:18:53.272 WARN  [Thread-9]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
-2021-04-08 14:18:53.272 WARN  [Thread-15]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
-2021-04-08 14:18:53.273 WARN  [Thread-15]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
-2021-04-08 14:18:53.273 WARN  [Thread-9]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
-2021-04-08 14:18:53.279 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:18:53.281 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 14:18:53.285 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 14:18:57.238 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2021-04-08 14:20:12.774 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
-2021-04-08 14:20:13.398 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 14:20:14.153 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=2c9d836d-179b-3645-bca9-0025c85a2721
-2021-04-08 14:20:14.176 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:20:14.179 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:20:14.184 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 14:20:14.700 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
-2021-04-08 14:20:14.700 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
-2021-04-08 14:20:14.701 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
-2021-04-08 14:20:14.702 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
-2021-04-08 14:20:14.702 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
-2021-04-08 14:20:14.703 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
-2021-04-08 14:20:14.703 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
-2021-04-08 14:20:14.703 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
-2021-04-08 14:20:14.704 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
-2021-04-08 14:20:14.704 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
-2021-04-08 14:20:14.704 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
-2021-04-08 14:20:14.705 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
-2021-04-08 14:20:14.705 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2021-04-08 14:20:14.733 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 14:20:14.734 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:20:14.737 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 14:20:14.738 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:20:15.035 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:20:15.509 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
-2021-04-08 14:20:15.526 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
-2021-04-08 14:20:15.543 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 3.493 seconds (JVM running for 4.328)
-2021-04-08 14:20:15.546 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
-2021-04-08 14:21:09.695 INFO  [reactor-http-nio-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 14:21:09.728 INFO  [reactor-http-nio-3]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: auth-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2021-04-08 14:21:09.739 INFO  [reactor-http-nio-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
-2021-04-08 14:21:09.760 INFO  [reactor-http-nio-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 14:21:09.762 INFO  [reactor-http-nio-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client auth-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[192.168.0.2:9000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+2021-04-09 09:29:14.509 WARN  [Thread-20]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-09 09:29:14.509 WARN  [Thread-14]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-09 09:29:14.509 INFO  [Thread-45]com.netflix.loadbalancer.PollingServerListUpdater.run:53 -Shutting down the Executor Pool for PollingServerListUpdater
+2021-04-09 09:29:14.513 WARN  [Thread-20]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-09 09:29:14.514 WARN  [Thread-14]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-09 09:29:14.532 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 09:29:14.537 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 09:29:14.542 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 09:29:20.638 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-09 09:29:20.671 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 09:29:43.904 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-09 09:29:44.466 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 09:29:45.661 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-09 09:29:45.720 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
+2021-04-09 09:29:45.779 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=aacf5282-4b5a-3451-b41e-60a4f4bd868e
+2021-04-09 09:29:45.854 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 09:29:45.857 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 09:29:45.859 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 09:29:46.275 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+
+Using generated security password: 315d6411-51f8-4888-a1f0-42247e2ea3a3
+
+2021-04-09 09:29:46.619 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
+2021-04-09 09:29:46.619 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
+2021-04-09 09:29:46.620 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
+2021-04-09 09:29:46.620 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
+2021-04-09 09:29:46.620 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
+2021-04-09 09:29:46.621 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
+2021-04-09 09:29:46.621 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
+2021-04-09 09:29:46.621 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
+2021-04-09 09:29:46.621 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
+2021-04-09 09:29:46.622 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
+2021-04-09 09:29:46.622 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
+2021-04-09 09:29:46.622 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
+2021-04-09 09:29:46.623 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-04-09 09:29:46.740 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 09:29:46.740 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 09:29:46.743 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 09:29:46.744 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 09:29:47.595 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 09:29:47.696 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 09:29:48.140 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2021-04-09 09:29:48.832 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
+2021-04-09 09:29:48.849 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
+2021-04-09 09:29:48.891 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 5.762 seconds (JVM running for 6.585)
+2021-04-09 09:29:48.901 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
+2021-04-09 09:29:49.375 INFO  [RMI TCP Connection(4)-192.168.0.2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 09:30:31.704 INFO  [boundedElastic-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 09:30:31.738 INFO  [boundedElastic-3]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: auth-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-04-09 09:30:31.745 INFO  [boundedElastic-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
+2021-04-09 09:30:31.767 INFO  [boundedElastic-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 09:30:31.769 INFO  [boundedElastic-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client auth-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[192.168.0.2:9000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
 },Server stats: [[Server:192.168.0.2:9000;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@7ab08fe5
-2021-04-08 14:21:10.743 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:11:00.276 INFO  [Thread-36]com.netflix.loadbalancer.PollingServerListUpdater.run:53 -Shutting down the Executor Pool for PollingServerListUpdater
-2021-04-08 15:11:00.276 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
-2021-04-08 15:11:00.276 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
-2021-04-08 15:11:00.278 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
-2021-04-08 15:11:00.279 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
-2021-04-08 15:11:00.292 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:11:00.296 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 15:11:00.300 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 15:11:09.343 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2021-04-08 15:11:15.940 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
-2021-04-08 15:11:16.410 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 15:11:16.964 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=2c9d836d-179b-3645-bca9-0025c85a2721
-2021-04-08 15:11:16.988 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:11:16.992 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:11:16.996 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:11:17.425 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
-2021-04-08 15:11:17.425 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
-2021-04-08 15:11:17.425 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
-2021-04-08 15:11:17.426 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
-2021-04-08 15:11:17.427 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
-2021-04-08 15:11:17.427 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
-2021-04-08 15:11:17.427 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
-2021-04-08 15:11:17.428 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
-2021-04-08 15:11:17.428 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
-2021-04-08 15:11:17.429 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
-2021-04-08 15:11:17.429 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
-2021-04-08 15:11:17.429 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
-2021-04-08 15:11:17.430 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2021-04-08 15:11:17.461 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:11:17.462 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:11:17.469 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:11:17.470 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:11:17.790 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:11:18.255 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
-2021-04-08 15:11:18.269 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
-2021-04-08 15:11:18.284 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 2.919 seconds (JVM running for 3.66)
-2021-04-08 15:11:18.288 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
-2021-04-08 15:28:49.993 WARN  [Thread-15]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
-2021-04-08 15:28:49.993 WARN  [Thread-9]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
-2021-04-08 15:28:49.994 WARN  [Thread-15]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
-2021-04-08 15:28:49.994 WARN  [Thread-9]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
-2021-04-08 15:28:50.004 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:28:50.006 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 15:28:50.010 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 15:28:59.032 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2021-04-08 15:29:07.149 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
-2021-04-08 15:29:07.680 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 15:29:08.551 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2021-04-08 15:29:08.595 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
-2021-04-08 15:29:08.670 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=aacf5282-4b5a-3451-b41e-60a4f4bd868e
-2021-04-08 15:29:08.741 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:29:08.743 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:29:08.745 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:29:09.073 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@39fc59c8
+2021-04-09 09:30:32.755 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:22:28.456 ERROR [reactor-http-nio-3]o.s.b.a.w.r.error.AbstractErrorWebExceptionHandler.error:122 -[bb421587-2]  500 Server Error for HTTP GET "/test-server/debug/getPort"
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select token_id, token from oauth_access_token where token_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ xyz.fusheng.config.SecurityConfig$$Lambda$492/1498259207 [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/test-server/debug/getPort" [ExceptionHandlingWebHandler]
+Stack trace:
+		at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+		at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443)
+		at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+		at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+		at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+		at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+		at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+	at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+	at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+	at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+	at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-09 10:22:56.525 ERROR [reactor-http-nio-3]o.s.b.a.w.r.error.AbstractErrorWebExceptionHandler.error:122 -[bb421587-4]  500 Server Error for HTTP GET "/test-server/debug/getPort"
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select token_id, token from oauth_access_token where token_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ xyz.fusheng.config.SecurityConfig$$Lambda$492/1498259207 [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/test-server/debug/getPort" [ExceptionHandlingWebHandler]
+Stack trace:
+		at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+		at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443)
+		at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+		at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+		at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+		at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+		at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+	at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+	at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+	at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+	at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-09 10:23:37.207 ERROR [reactor-http-nio-3]o.s.b.a.w.r.error.AbstractErrorWebExceptionHandler.error:122 -[bb421587-6]  500 Server Error for HTTP GET "/test-server/debug/getPort"
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select token_id, token from oauth_access_token where token_id = ?]; nested exception is java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ xyz.fusheng.config.SecurityConfig$$Lambda$492/1498259207 [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/test-server/debug/getPort" [ExceptionHandlingWebHandler]
+Stack trace:
+		at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+		at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443)
+		at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+		at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+		at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+		at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+		at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+		at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'code-galaxy.oauth_access_token' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:678)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:712)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:790)
+	at org.springframework.security.oauth2.provider.token.store.JdbcTokenStore.readAccessToken(JdbcTokenStore.java:160)
+	at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:39)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+	at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+	at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+	at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+	at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+	at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+	at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-09 10:34:55.974 WARN  [Thread-19]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-09 10:34:55.975 WARN  [Thread-13]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-09 10:34:55.974 INFO  [Thread-44]com.netflix.loadbalancer.PollingServerListUpdater.run:53 -Shutting down the Executor Pool for PollingServerListUpdater
+2021-04-09 10:34:55.976 WARN  [Thread-19]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-09 10:34:55.977 WARN  [Thread-13]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-09 10:34:55.989 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:34:55.992 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 10:34:55.997 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 10:35:04.218 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-09 10:35:04.232 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 10:35:12.312 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-09 10:35:12.711 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 10:35:13.521 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-09 10:35:13.565 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
+2021-04-09 10:35:13.634 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=690cdaa7-811f-3401-af55-23dce72c876a
+2021-04-09 10:35:13.707 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:35:13.709 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:35:13.711 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:35:13.861 WARN  [main]o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext.refresh:559 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customAuthenticationManager' defined in file [/Users/zhanghao/IdeaProjects/core/code-galaxy/gateway-server/target/classes/xyz/fusheng/manager/CustomAuthenticationManager.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'customAuthenticationManager': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2021-04-09 10:35:13.886 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
 
-Using generated security password: 83d12265-a03a-4489-94c7-fd05c58318dc
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-09 10:35:13.889 ERROR [main]o.s.boot.diagnostics.LoggingFailureAnalysisReporter.report:40 -
 
-2021-04-08 15:29:09.309 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
-2021-04-08 15:29:09.310 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
-2021-04-08 15:29:09.310 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
-2021-04-08 15:29:09.310 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
-2021-04-08 15:29:09.311 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
-2021-04-08 15:29:09.311 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
-2021-04-08 15:29:09.311 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
-2021-04-08 15:29:09.311 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
-2021-04-08 15:29:09.312 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
-2021-04-08 15:29:09.312 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
-2021-04-08 15:29:09.312 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
-2021-04-08 15:29:09.313 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
-2021-04-08 15:29:09.313 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2021-04-08 15:29:09.403 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:29:09.403 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:29:09.405 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:29:09.406 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:29:09.857 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 15:29:09.911 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:29:10.160 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2021-04-08 15:29:10.417 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
-2021-04-08 15:29:10.430 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
-2021-04-08 15:29:10.449 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 3.828 seconds (JVM running for 4.51)
-2021-04-08 15:29:10.452 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
-2021-04-08 15:29:10.618 INFO  [RMI TCP Connection(1)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 15:30:40.428 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
-2021-04-08 15:30:40.428 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
-2021-04-08 15:30:40.430 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
-2021-04-08 15:30:40.430 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
-2021-04-08 15:30:40.438 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:30:40.441 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 15:30:40.445 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 15:30:44.469 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
-2021-04-08 15:30:44.488 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 15:30:50.996 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
-2021-04-08 15:30:51.563 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 15:30:52.661 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2021-04-08 15:30:52.724 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
-2021-04-08 15:30:52.798 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=aacf5282-4b5a-3451-b41e-60a4f4bd868e
-2021-04-08 15:30:52.880 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:30:52.883 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:30:52.885 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 15:30:53.299 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+***************************
+APPLICATION FAILED TO START
+***************************
 
-Using generated security password: 2ef0264c-78c8-4198-a9fa-fcbfd1efe012
+Description:
 
-2021-04-08 15:30:53.600 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
-2021-04-08 15:30:53.601 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
-2021-04-08 15:30:53.602 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
-2021-04-08 15:30:53.602 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
-2021-04-08 15:30:53.603 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
-2021-04-08 15:30:53.603 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
-2021-04-08 15:30:53.603 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
-2021-04-08 15:30:53.604 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
-2021-04-08 15:30:53.604 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
-2021-04-08 15:30:53.604 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
-2021-04-08 15:30:53.604 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
-2021-04-08 15:30:53.604 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
-2021-04-08 15:30:53.605 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2021-04-08 15:30:53.724 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:30:53.724 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:30:53.727 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
-2021-04-08 15:30:53.727 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 15:30:54.253 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 15:30:54.324 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 15:30:54.649 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2021-04-08 15:30:55.134 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
-2021-04-08 15:30:55.155 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
-2021-04-08 15:30:55.187 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 5.254 seconds (JVM running for 6.384)
-2021-04-08 15:30:55.190 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
-2021-04-08 15:30:55.772 INFO  [RMI TCP Connection(3)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 15:32:09.894 INFO  [boundedElastic-5]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:32:09.926 INFO  [boundedElastic-5]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: auth-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2021-04-08 15:32:09.932 INFO  [boundedElastic-5]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
-2021-04-08 15:32:09.955 INFO  [boundedElastic-5]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:32:09.958 INFO  [boundedElastic-5]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client auth-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[192.168.0.2:9000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:192.168.0.2:9000;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@3911fbe6
-2021-04-08 15:32:10.936 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:36:56.529 INFO  [boundedElastic-3]xyz.fusheng.converter.AccessManager.checkAuthorities:72 -clientId is test-server
-2021-04-08 15:36:56.530 INFO  [boundedElastic-3]xyz.fusheng.converter.AccessManager.checkAuthorities:75 -用户信息:org.springframework.security.core.userdetails.User@99094f1a: Username: code-fusheng; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: []
-2021-04-08 15:36:56.566 INFO  [boundedElastic-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:36:56.568 INFO  [boundedElastic-3]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: test-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=test-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2021-04-08 15:36:56.569 INFO  [boundedElastic-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
-2021-04-08 15:36:56.571 INFO  [boundedElastic-3]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:36:56.573 INFO  [boundedElastic-3]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client test-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=test-server,current list of Servers=[192.168.0.2:10000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  customAuthenticationManager defined in file [/Users/zhanghao/IdeaProjects/core/code-galaxy/gateway-server/target/classes/xyz/fusheng/manager/CustomAuthenticationManager.class]
+└─────┘
+
+
+2021-04-09 10:39:06.065 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-09 10:39:06.526 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 10:39:07.350 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-09 10:39:07.407 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
+2021-04-09 10:39:07.520 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=aacf5282-4b5a-3451-b41e-60a4f4bd868e
+2021-04-09 10:39:07.602 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:39:07.604 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:39:07.605 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:39:07.972 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+
+Using generated security password: 5886e786-b8b7-4ac5-93c8-fc23aebbb728
+
+2021-04-09 10:39:08.230 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
+2021-04-09 10:39:08.231 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
+2021-04-09 10:39:08.231 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
+2021-04-09 10:39:08.231 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
+2021-04-09 10:39:08.232 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
+2021-04-09 10:39:08.232 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
+2021-04-09 10:39:08.232 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
+2021-04-09 10:39:08.232 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
+2021-04-09 10:39:08.233 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
+2021-04-09 10:39:08.233 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
+2021-04-09 10:39:08.233 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
+2021-04-09 10:39:08.233 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
+2021-04-09 10:39:08.234 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-04-09 10:39:08.328 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:39:08.329 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:39:08.332 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:39:08.332 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:39:08.770 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 10:39:08.825 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:39:09.066 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2021-04-09 10:39:09.347 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
+2021-04-09 10:39:09.362 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
+2021-04-09 10:39:09.382 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 3.856 seconds (JVM running for 4.502)
+2021-04-09 10:39:09.384 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
+2021-04-09 10:39:09.531 INFO  [RMI TCP Connection(3)-192.168.0.2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 10:45:30.494 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-09 10:45:30.494 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-09 10:45:30.495 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-09 10:45:30.495 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-09 10:45:30.502 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:45:30.504 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 10:45:30.510 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 10:45:39.547 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-09 10:45:39.581 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 10:45:47.378 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-09 10:45:47.806 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 10:45:48.605 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-09 10:45:48.648 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
+2021-04-09 10:45:48.722 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=aacf5282-4b5a-3451-b41e-60a4f4bd868e
+2021-04-09 10:45:48.790 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:45:48.792 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:45:48.793 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:45:49.117 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+
+Using generated security password: 8718badf-df83-42bb-9d29-2fdb7a264973
+
+2021-04-09 10:45:49.344 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
+2021-04-09 10:45:49.345 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
+2021-04-09 10:45:49.345 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
+2021-04-09 10:45:49.345 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
+2021-04-09 10:45:49.346 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
+2021-04-09 10:45:49.346 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
+2021-04-09 10:45:49.346 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
+2021-04-09 10:45:49.347 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
+2021-04-09 10:45:49.347 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
+2021-04-09 10:45:49.347 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
+2021-04-09 10:45:49.347 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
+2021-04-09 10:45:49.348 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
+2021-04-09 10:45:49.348 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-04-09 10:45:49.433 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:45:49.433 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:45:49.436 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:45:49.436 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:45:49.882 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 10:45:49.933 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:45:50.181 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2021-04-09 10:45:50.427 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
+2021-04-09 10:45:50.440 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
+2021-04-09 10:45:50.459 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 3.605 seconds (JVM running for 4.31)
+2021-04-09 10:45:50.461 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
+2021-04-09 10:45:51.028 INFO  [RMI TCP Connection(2)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 10:47:01.897 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-09 10:47:01.897 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-09 10:47:01.898 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-09 10:47:01.900 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-09 10:47:01.910 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:47:01.914 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 10:47:01.917 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 10:47:10.959 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-09 10:47:10.980 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 10:47:18.636 INFO  [background-preinit]org.hibernate.validator.internal.util.Version.<clinit>:21 -HV000001: Hibernate Validator 6.1.7.Final
+2021-04-09 10:47:19.081 INFO  [main]xyz.fusheng.GatewayServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 10:47:19.887 WARN  [main]org.springframework.boot.actuate.endpoint.EndpointId.logWarning:155 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-09 10:47:19.932 WARN  [main]org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 -No MyBatis mapper was found in '[xyz.fusheng]' package. Please check your configuration.
+2021-04-09 10:47:20.001 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=4644a7a1-6bd8-3a4e-a8d7-8be1051b06fe
+2021-04-09 10:47:20.069 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:47:20.072 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactiveLoadBalancerConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:47:20.073 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:335 -Bean 'deferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-09 10:47:20.389 INFO  [main]o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration.getOrDeducePassword:88 -
+
+Using generated security password: f0fe067e-b3d0-4328-bd69-ec7b4355e91a
+
+2021-04-09 10:47:20.639 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [After]
+2021-04-09 10:47:20.639 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Before]
+2021-04-09 10:47:20.639 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Between]
+2021-04-09 10:47:20.640 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Cookie]
+2021-04-09 10:47:20.640 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Header]
+2021-04-09 10:47:20.640 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Host]
+2021-04-09 10:47:20.640 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Method]
+2021-04-09 10:47:20.641 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Path]
+2021-04-09 10:47:20.641 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Query]
+2021-04-09 10:47:20.641 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [ReadBody]
+2021-04-09 10:47:20.641 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [RemoteAddr]
+2021-04-09 10:47:20.642 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [Weight]
+2021-04-09 10:47:20.642 INFO  [main]o.s.cloud.gateway.route.RouteDefinitionRouteLocator.lambda$initFactories$2:139 -Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-04-09 10:47:20.671 WARN  [main]o.s.s.o.provider.token.store.JwtAccessTokenConverter.afterPropertiesSet:302 -Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2021-04-09 10:47:20.738 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:47:20.738 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:47:20.741 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-09 10:47:20.741 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:47:21.181 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 10:47:21.235 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:47:21.478 WARN  [main]o.s.c.s.oauth2.SpringCloudSecurityAutoConfiguration.<init>:38 -All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2021-04-09 10:47:21.726 INFO  [main]o.springframework.boot.web.embedded.netty.NettyWebServer.start:109 -Netty started on port(s): 9999
+2021-04-09 10:47:21.739 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP gateway-server 192.168.0.2:9999 register finished
+2021-04-09 10:47:21.759 INFO  [main]xyz.fusheng.GatewayServerApplication.logStarted:61 -Started GatewayServerApplication in 3.62 seconds (JVM running for 4.182)
+2021-04-09 10:47:21.761 INFO  [main]xyz.fusheng.GatewayServerApplication.main:29 -网关服务[gateway-server]已经启动,端口号:9999
+2021-04-09 10:47:22.036 INFO  [RMI TCP Connection(2)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 10:47:31.469 INFO  [boundedElastic-9]xyz.fusheng.manager.AccessManager.checkAuthorities:71 -clientId is test-server
+2021-04-09 10:47:31.469 INFO  [boundedElastic-9]xyz.fusheng.manager.AccessManager.checkAuthorities:74 -用户信息:code-fusheng
+2021-04-09 10:47:31.690 INFO  [boundedElastic-9]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:47:31.721 INFO  [boundedElastic-9]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: test-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=test-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-04-09 10:47:31.727 INFO  [boundedElastic-9]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
+2021-04-09 10:47:31.747 INFO  [boundedElastic-9]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:47:31.750 INFO  [boundedElastic-9]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client test-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=test-server,current list of Servers=[192.168.0.2:10000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
 },Server stats: [[Server:192.168.0.2:10000;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@79ddc9f
-2021-04-08 15:36:57.575 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:38:20.242 INFO  [boundedElastic-5]xyz.fusheng.converter.AccessManager.checkAuthorities:72 -clientId is test-server
-2021-04-08 15:38:20.244 INFO  [boundedElastic-5]xyz.fusheng.converter.AccessManager.checkAuthorities:75 -用户信息:org.springframework.security.core.userdetails.User@99094f1a: Username: code-fusheng; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: []
-2021-04-08 15:47:51.092 INFO  [boundedElastic-10]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:47:51.095 INFO  [boundedElastic-10]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: user-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=user-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2021-04-08 15:47:51.096 INFO  [boundedElastic-10]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
-2021-04-08 15:47:51.099 INFO  [boundedElastic-10]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 15:47:51.100 INFO  [boundedElastic-10]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client user-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=user-server,current list of Servers=[192.168.0.2:10010],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@51da947b
+2021-04-09 10:47:32.732 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: test-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:49:01.865 INFO  [boundedElastic-9]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:49:01.868 INFO  [boundedElastic-9]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: auth-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-04-09 10:49:01.870 INFO  [boundedElastic-9]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
+2021-04-09 10:49:01.872 INFO  [boundedElastic-9]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:49:01.873 INFO  [boundedElastic-9]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client auth-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=auth-server,current list of Servers=[192.168.0.2:9000],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.0.2:9000;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@2c0305e4
+2021-04-09 10:49:02.875 INFO  [PollingServerListUpdater-1]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: auth-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 10:50:50.564 ERROR [reactor-http-nio-3]o.s.b.a.w.r.error.AbstractErrorWebExceptionHandler.error:122 -[cd51dd5a-5]  500 Server Error for HTTP GET "/test-server/debug/getPort"
+org.springframework.security.oauth2.common.exceptions.InvalidTokenException: Access token expired: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdC1zZXJ2ZXIiXSwidXNlcl9uYW1lIjoiY29kZS1mdXNoZW5nIiwic2NvcGUiOlsid2ViIl0sImV4cCI6MTYxNzkzNjU0OCwiYXV0aG9yaXRpZXMiOlsiW10iXSwianRpIjoiOTdjZDcwMjctZWZkOS00ZDYzLTljM2ItMzZmMmQzZjgxY2JhIiwiY2xpZW50X2lkIjoidGVzdC1zZXJ2ZXIifQ.C4VXijcmiVOWOxp7bzicNr0uhZ-8r3RQjF6tsPEdpi8
+	at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:47)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	|_ checkpoint ⇢ org.springframework.security.web.server.authentication.AuthenticationWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.context.ReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ xyz.fusheng.config.SecurityConfig$$Lambda$492/722378544 [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.header.HttpHeaderWriterWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.config.web.server.ServerHttpSecurity$ServerWebExchangeReactorContextWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.security.web.server.WebFilterChainProxy [DefaultWebFilterChain]
+	|_ checkpoint ⇢ org.springframework.boot.actuate.metrics.web.reactive.server.MetricsWebFilter [DefaultWebFilterChain]
+	|_ checkpoint ⇢ HTTP GET "/test-server/debug/getPort" [ExceptionHandlingWebHandler]
+Stack trace:
+		at xyz.fusheng.manager.CustomAuthenticationManager.lambda$authenticate$1(CustomAuthenticationManager.java:47)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:118)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:162)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onSubscribe(FluxMapFuseable.java:90)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:199)
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCallable.subscribe(MonoCallable.java:61)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onNext(FluxFilterFuseable.java:112)
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2357)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.request(FluxFilterFuseable.java:184)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onSubscribe(MonoFlatMap.java:103)
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableSubscriber.onSubscribe(FluxFilterFuseable.java:81)
+		at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:54)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:121)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:241)
+		at reactor.core.publisher.Operators$MonoSubscriber.complete(Operators.java:1787)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:121)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:357)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:222)
+		at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onSubscribe(MonoCollectList.java:72)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:81)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:150)
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:67)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:76)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.drain(FluxFilterWhen.java:295)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onNext(FluxFilterWhen.java:134)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:267)
+		at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:225)
+		at reactor.core.publisher.FluxFilterWhen$FluxFilterWhenSubscriber.onSubscribe(FluxFilterWhen.java:194)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:161)
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4252)
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.drain(MonoIgnoreThen.java:172)
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:56)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.netty.http.server.HttpServerHandle.onStateChange(HttpServerHandle.java:65)
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:537)
+		at reactor.netty.tcp.TcpServerBind$ChildObserver.onStateChange(TcpServerBind.java:278)
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:475)
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:96)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:191)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.lang.Thread.run(Thread.java:748)
+2021-04-09 10:52:49.415 INFO  [boundedElastic-3]xyz.fusheng.manager.AccessManager.checkAuthorities:71 -clientId is test-server
+2021-04-09 10:52:49.415 INFO  [boundedElastic-3]xyz.fusheng.manager.AccessManager.checkAuthorities:74 -用户信息:code-fusheng
+2021-04-09 10:53:00.041 INFO  [boundedElastic-7]xyz.fusheng.manager.AccessManager.checkAuthorities:71 -clientId is test-server
+2021-04-09 10:53:00.042 INFO  [boundedElastic-7]xyz.fusheng.manager.AccessManager.checkAuthorities:74 -用户信息:code-fusheng
+2021-04-09 17:32:29.975 INFO  [boundedElastic-23]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 17:32:29.978 INFO  [boundedElastic-23]com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig:197 -Client: user-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=user-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-04-09 17:32:29.980 INFO  [boundedElastic-23]com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature:222 -Using serverListUpdater PollingServerListUpdater
+2021-04-09 17:32:29.983 INFO  [boundedElastic-23]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 17:32:29.984 INFO  [boundedElastic-23]com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit:150 -DynamicServerListLoadBalancer for client user-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=user-server,current list of Servers=[192.168.0.2:10010],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
 },Server stats: [[Server:192.168.0.2:10010;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@11cbe9c9
-2021-04-08 15:47:52.098 INFO  [PollingServerListUpdater-0]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@27fbab83
+2021-04-09 17:32:30.982 INFO  [PollingServerListUpdater-1]com.netflix.config.ChainedDynamicProperty.checkAndFlip:115 -Flipping property: user-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-04-09 17:32:51.235 INFO  [boundedElastic-23]xyz.fusheng.manager.AccessManager.checkAuthorities:71 -clientId is test-server
+2021-04-09 17:32:51.236 INFO  [boundedElastic-23]xyz.fusheng.manager.AccessManager.checkAuthorities:74 -用户信息:code-fusheng
+2021-04-09 18:01:21.171 INFO  [Thread-37]com.netflix.loadbalancer.PollingServerListUpdater.run:53 -Shutting down the Executor Pool for PollingServerListUpdater
+2021-04-09 18:01:21.173 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-09 18:01:21.173 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-09 18:01:21.177 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-09 18:01:21.181 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-09 18:01:21.213 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 18:01:21.231 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 18:01:21.237 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 18:01:30.271 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-09 18:01:30.310 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed

@@ -44,4 +44,13 @@
     where ur.user_id = #{userId}
   </select>
 
+  <select id="selectMenusByUserId" resultType="xyz.fusheng.model.entity.Menu">
+    select distinct m.* from sys_user_role su
+    left join sys_role_menu rm
+    on ur.role_id = rm.role_id
+    left join sys_menu m
+    on rm.menu_id = m.menu_id
+    where ur.user_id = #{userId}
+  </select>
+
 </mapper>

@@ -1,6 +1,7 @@
 package xyz.fusheng.controller;
 
 import org.springframework.web.bind.annotation.*;
+import xyz.fusheng.model.entity.Menu;
 import xyz.fusheng.model.entity.Role;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
@@ -31,12 +32,17 @@ public class UserController {
 
     /**
      * >>>>> Feign 远程调用接口 >>>>
-     * @param username
-     * @return
      */
+
     @GetMapping("/user/selectUserByUsername/{username}")
     public User selectUserByUsername(@PathVariable("username") String username) {
         User user = userService.selectUserByUsername(username);
+        return user;
+    }
+
+    @GetMapping("/user/selectUserByPhone/{phone}")
+    public User selectUserByPhone(@PathVariable("phone") String phone) {
+        User user = userService.selectUserByPhone(phone);
         return user;
     }
 
@@ -44,6 +50,12 @@ public class UserController {
     public List<Role> selectRolesByUserId(@PathVariable Long userId) {
         List<Role> roleList = userService.selectRolesByUserId(userId);
         return roleList;
+    }
+
+    @GetMapping("/user/selectMenusByUserId/{userId}")
+    public List<Menu> selectMenusByUserId(@PathVariable("userId") Long userId) {
+        List<Menu> menuList = userService.selectMenusByUserId(userId);
+        return menuList;
     }
 
 }

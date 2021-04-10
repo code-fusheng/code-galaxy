@@ -7,11 +7,13 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
-import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.server.resource.web.server.ServerBearerTokenAuthenticationConverter;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.authentication.AuthenticationWebFilter;
@@ -20,8 +22,8 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
-import xyz.fusheng.converter.AccessManager;
-import xyz.fusheng.converter.CustomAuthenticationManager;
+import xyz.fusheng.manager.AccessManager;
+import xyz.fusheng.manager.CustomAuthenticationManager;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -43,6 +45,18 @@ public class SecurityConfig {
     private DataSource dataSource;
     @Resource
     private AccessManager accessManager;
+
+    @Bean
+    public TokenStore tokenStore() {
+        return new JwtTokenStore(jwtTokenEnhancer());
+    }
+
+    @Bean
+    public JwtAccessTokenConverter jwtTokenEnhancer(){
+        JwtAccessTokenConverter jwtTokenEnhancer = new JwtAccessTokenConverter();
+        jwtTokenEnhancer.setSigningKey("fusheng");
+        return jwtTokenEnhancer;
+    }
 
     /**
      * 跨域配置
@@ -75,7 +89,7 @@ public class SecurityConfig {
     @Bean
     SecurityWebFilterChain webFluxSecurityFilterChain(ServerHttpSecurity http) throws Exception{
         //token管理器
-        ReactiveAuthenticationManager tokenAuthenticationManager = new CustomAuthenticationManager(new JdbcTokenStore(dataSource));
+        ReactiveAuthenticationManager tokenAuthenticationManager = new CustomAuthenticationManager(tokenStore());
         //认证过滤器
         AuthenticationWebFilter authenticationWebFilter = new AuthenticationWebFilter(tokenAuthenticationManager);
         authenticationWebFilter.setServerAuthenticationConverter(new ServerBearerTokenAuthenticationConverter());

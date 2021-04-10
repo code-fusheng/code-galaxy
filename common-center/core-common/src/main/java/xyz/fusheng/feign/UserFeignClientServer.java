@@ -23,4 +23,6 @@ public interface UserFeignClientServer {
     @GetMapping("/user/selectUserByUsername/{username}")
     User selectUserByUsername(@PathVariable("username") String username);
 
+    @GetMapping("/user/selectUserByPhone/{phone}")
+    User selectUserByPhone(@PathVariable("phone") String phone);
 }

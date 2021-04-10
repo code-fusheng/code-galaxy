@@ -44,4 +44,17 @@ public class SelfUserDetailsService implements UserDetailsService {
                 AuthorityUtils.createAuthorityList(String.valueOf(authorities)));
     }
 
+    public UserDetails loadUserByPhone(String phone) {
+        User user = userService.selectUserByPhone(phone);
+        Assert.notNull(user, "手机号[" + phone +"]不存在");
+        // 角色集合
+        Set<GrantedAuthority> authorities = new HashSet<>();
+        user.getRoleList().forEach(role -> {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRoleName()));
+        });
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                AuthorityUtils.createAuthorityList(String.valueOf(authorities)));
+    }
 }

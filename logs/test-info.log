@@ -1,258 +1,79 @@
-2021-04-08 12:04:09.349 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:04:09.353 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 12:04:09.356 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 12:04:18.020 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:04:49.796 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 12:04:51.802 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=9e978e08-3f51-3544-8ea2-44eff593e70b
-2021-04-08 12:04:52.220 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 12:04:52.228 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:04:52.230 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 12:04:52.232 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 12:04:52.455 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 12:04:52.456 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 2618 ms
-2021-04-08 12:04:53.544 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 12:04:53.733 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 12:04:53.756 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:04:53.761 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:04:53.867 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:04:54.052 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:04:54.369 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
+2021-04-09 09:29:14.631 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 09:29:14.653 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 09:29:14.666 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 09:29:23.714 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 09:29:23.725 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 09:29:49.230 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 09:29:51.144 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=20c9d289-a1df-3a93-9973-f2c9cc2ccb5c
+2021-04-09 09:29:51.513 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
+2021-04-09 09:29:51.521 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
+2021-04-09 09:29:51.522 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2021-04-09 09:29:51.522 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-09 09:29:51.608 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2021-04-09 09:29:51.608 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 2318 ms
+2021-04-09 09:29:52.646 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 09:29:52.858 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-09 09:29:52.890 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 09:29:52.898 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 09:29:53.072 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 09:29:53.246 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 09:29:53.592 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
 
-Using generated security password: 20501351-1f15-401c-b50c-9579072e9d35
+Using generated security password: 88a00cc0-8e5a-4cc6-a612-ad57372f96b2
 
-2021-04-08 12:04:54.765 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76828577, org.springframework.security.web.context.SecurityContextPersistenceFilter@25ae1f80, org.springframework.security.web.header.HeaderWriterFilter@37d0d373, org.springframework.security.web.authentication.logout.LogoutFilter@6546371, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@b428830, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6df791a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f8667bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38732372, org.springframework.security.web.session.SessionManagementFilter@64bba0eb, org.springframework.security.web.access.ExceptionTranslationFilter@b3857e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d911a]
-2021-04-08 12:04:55.204 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:04:55.238 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 12:04:55.250 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 12:04:55.254 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 12:04:55.275 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 12:04:55.317 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 12:04:55.472 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 7.064 seconds (JVM running for 7.935)
-2021-04-08 12:04:55.484 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 12:04:55.484 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 12:04:55.973 INFO  [RMI TCP Connection(4)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 12:04:55.973 INFO  [RMI TCP Connection(4)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 12:04:55.985 INFO  [RMI TCP Connection(4)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 11 ms
-2021-04-08 12:04:56.072 INFO  [RMI TCP Connection(5)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 12:28:40.432 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:28:40.437 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 12:28:40.439 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 12:28:47.859 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:28:47.877 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 12:32:42.998 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 12:32:44.430 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=37ae63c4-b2ea-380a-a3f9-0c16ab2c2cab
-2021-04-08 12:32:44.771 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 12:32:44.780 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:32:44.781 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 12:32:44.781 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 12:32:44.869 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 12:32:44.870 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1845 ms
-2021-04-08 12:32:45.703 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 12:32:45.900 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 12:32:45.922 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:32:45.926 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:32:46.031 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:32:46.122 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:32:46.300 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
+2021-04-09 09:29:53.857 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17b6ad97, org.springframework.security.web.context.SecurityContextPersistenceFilter@384472bf, org.springframework.security.web.header.HeaderWriterFilter@5409dfdd, org.springframework.security.web.authentication.logout.LogoutFilter@2fb082ff, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@22fb9a2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b8507df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d67d5a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44fb6ebd, org.springframework.security.web.session.SessionManagementFilter@7185e611, org.springframework.security.web.access.ExceptionTranslationFilter@6ba6557e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6598caab]
+2021-04-09 09:29:54.229 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
+2021-04-09 09:29:54.265 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
+2021-04-09 09:29:54.278 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
+2021-04-09 09:29:54.281 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2021-04-09 09:29:54.301 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2021-04-09 09:29:54.349 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2021-04-09 09:29:54.495 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 6.719 seconds (JVM running for 7.553)
+2021-04-09 09:29:54.503 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
+2021-04-09 09:29:54.503 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
+2021-04-09 09:29:54.936 INFO  [RMI TCP Connection(2)-192.168.0.2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-09 09:29:54.937 INFO  [RMI TCP Connection(2)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2021-04-09 09:29:54.947 INFO  [RMI TCP Connection(2)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 9 ms
+2021-04-09 09:29:54.985 INFO  [RMI TCP Connection(3)-192.168.0.2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 10:21:54.346 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:21:54.352 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 10:21:54.354 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 10:22:02.374 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 10:22:02.379 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
+2021-04-09 10:22:12.757 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
+2021-04-09 10:22:13.912 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=9cff09f9-6896-3ac9-a3ec-9ee2d2d10b23
+2021-04-09 10:22:14.182 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
+2021-04-09 10:22:14.192 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
+2021-04-09 10:22:14.193 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2021-04-09 10:22:14.193 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-09 10:22:14.278 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2021-04-09 10:22:14.278 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1492 ms
+2021-04-09 10:22:15.018 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-09 10:22:15.125 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-09 10:22:15.140 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:22:15.144 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-09 10:22:15.230 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 10:22:15.314 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 10:22:15.499 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
 
-Using generated security password: cad81a0d-2843-4203-856e-426f0c7dde38
+Using generated security password: d22e21db-dd0f-4d9a-b829-3ca4974b3f98
 
-2021-04-08 12:32:46.553 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44d43cc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@bfb93cf, org.springframework.security.web.header.HeaderWriterFilter@12fccff0, org.springframework.security.web.authentication.logout.LogoutFilter@6c96403e, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@14ed7ddf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bc2ae16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f61e002, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@384472bf, org.springframework.security.web.session.SessionManagementFilter@227a933d, org.springframework.security.web.access.ExceptionTranslationFilter@68fc9167, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45f9d394]
-2021-04-08 12:32:46.871 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:32:46.902 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 12:32:46.915 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 12:32:46.919 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 12:32:46.934 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 12:32:46.968 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 12:32:47.095 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 5.186 seconds (JVM running for 5.976)
-2021-04-08 12:32:47.101 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 12:32:47.101 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 12:32:47.629 INFO  [RMI TCP Connection(3)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 12:32:47.629 INFO  [RMI TCP Connection(3)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 12:32:47.641 INFO  [RMI TCP Connection(3)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 11 ms
-2021-04-08 12:32:47.693 INFO  [RMI TCP Connection(1)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 12:33:00.968 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:33:00.974 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 12:33:00.977 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 12:33:07.952 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:33:07.960 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 12:33:29.034 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 12:33:30.457 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=37ae63c4-b2ea-380a-a3f9-0c16ab2c2cab
-2021-04-08 12:33:30.811 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 12:33:30.820 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:33:30.821 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 12:33:30.822 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 12:33:30.905 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 12:33:30.906 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1842 ms
-2021-04-08 12:33:31.882 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 12:33:32.063 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 12:33:32.085 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:33:32.090 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:33:32.200 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:33:32.319 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:33:32.674 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
-
-Using generated security password: 42a84487-9e45-449f-bdc8-892fa0280c6a
-
-2021-04-08 12:33:32.966 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d7f1e59, org.springframework.security.web.context.SecurityContextPersistenceFilter@68fc9167, org.springframework.security.web.header.HeaderWriterFilter@43588265, org.springframework.security.web.authentication.logout.LogoutFilter@42aa1324, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@3c17bd0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12fccff0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7103745, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53e93fb7, org.springframework.security.web.session.SessionManagementFilter@328e4ec2, org.springframework.security.web.access.ExceptionTranslationFilter@4c56644f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b770d07]
-2021-04-08 12:33:33.272 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:33:33.303 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 12:33:33.314 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 12:33:33.317 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 12:33:33.331 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 12:33:33.369 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 12:33:33.497 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 5.56 seconds (JVM running for 6.232)
-2021-04-08 12:33:33.503 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 12:33:33.504 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 12:33:33.701 INFO  [RMI TCP Connection(2)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 12:33:33.701 INFO  [RMI TCP Connection(2)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 12:33:33.711 INFO  [RMI TCP Connection(2)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 9 ms
-2021-04-08 12:33:33.744 INFO  [RMI TCP Connection(3)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 12:34:06.412 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:34:06.417 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 12:34:06.420 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 12:34:14.385 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:34:14.402 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 12:38:05.845 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 12:38:07.198 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=9e978e08-3f51-3544-8ea2-44eff593e70b
-2021-04-08 12:38:07.544 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 12:38:07.553 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:38:07.554 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 12:38:07.554 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 12:38:07.654 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 12:38:07.654 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1786 ms
-2021-04-08 12:38:08.641 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 12:38:08.808 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 12:38:08.830 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:38:08.835 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:38:08.935 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:38:09.038 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:38:09.351 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
-
-Using generated security password: eec9f161-4837-4faf-8f99-7fc15ba9760a
-
-2021-04-08 12:38:09.621 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@223967ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@328e4ec2, org.springframework.security.web.header.HeaderWriterFilter@4c56644f, org.springframework.security.web.authentication.logout.LogoutFilter@b428830, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@22b7ef2b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68fc9167, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b458cd6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a6a6a69, org.springframework.security.web.session.SessionManagementFilter@643f6179, org.springframework.security.web.access.ExceptionTranslationFilter@23b71d24, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64f32e9e]
-2021-04-08 12:38:09.932 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:38:09.967 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 12:38:09.978 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 12:38:09.982 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 12:38:09.995 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 12:38:10.042 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 12:38:10.147 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 5.31 seconds (JVM running for 6.013)
-2021-04-08 12:38:10.153 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 12:38:10.153 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 12:38:10.487 INFO  [RMI TCP Connection(4)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 12:38:10.487 INFO  [RMI TCP Connection(4)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 12:38:10.496 INFO  [RMI TCP Connection(4)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 8 ms
-2021-04-08 12:38:10.527 INFO  [RMI TCP Connection(3)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 12:41:33.178 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:41:33.184 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 12:41:33.189 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 12:41:41.284 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:41:41.300 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 12:41:47.440 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 12:41:48.501 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=9e978e08-3f51-3544-8ea2-44eff593e70b
-2021-04-08 12:41:48.772 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 12:41:48.780 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:41:48.781 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 12:41:48.781 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 12:41:48.860 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 12:41:48.861 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1402 ms
-2021-04-08 12:41:49.607 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 12:41:49.745 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 12:41:49.762 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:41:49.765 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 12:41:49.851 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 12:41:49.943 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 12:41:50.140 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
-
-Using generated security password: 76420535-8ef9-4a54-a3be-501d437ca9e0
-
-2021-04-08 12:41:50.321 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@223967ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@61ab6521, org.springframework.security.web.header.HeaderWriterFilter@568f4faa, org.springframework.security.web.authentication.logout.LogoutFilter@1f179f51, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@7c7ed72a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7757025d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6546371, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a6a6a69, org.springframework.security.web.session.SessionManagementFilter@5280688, org.springframework.security.web.access.ExceptionTranslationFilter@729cd862, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64f32e9e]
-2021-04-08 12:41:50.551 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 12:41:50.579 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 12:41:50.590 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 12:41:50.594 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 12:41:50.606 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 12:41:50.634 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 12:41:50.728 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 4.14 seconds (JVM running for 4.712)
-2021-04-08 12:41:50.733 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 12:41:50.734 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 12:41:50.902 INFO  [RMI TCP Connection(4)-192.168.0.2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 12:41:50.903 INFO  [RMI TCP Connection(4)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 12:41:50.909 INFO  [RMI TCP Connection(4)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 6 ms
-2021-04-08 12:41:50.939 INFO  [RMI TCP Connection(5)-192.168.0.2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 14:08:01.688 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:08:01.692 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 14:08:01.695 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 14:08:09.528 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 14:08:09.536 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 14:08:14.130 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 14:08:15.345 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=029dff7f-b0ae-340d-bbba-4a081545f31e
-2021-04-08 14:08:15.675 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 14:08:15.685 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 14:08:15.686 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 14:08:15.687 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 14:08:15.775 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 14:08:15.776 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1615 ms
-2021-04-08 14:08:16.539 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 14:08:16.731 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 14:08:16.746 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:08:16.750 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:08:16.833 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 14:08:16.922 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:08:17.104 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
-
-Using generated security password: 3f760d15-7d43-42ee-be42-d42c785b9060
-
-2021-04-08 14:08:17.321 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@360d41d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@356b6b5d, org.springframework.security.web.header.HeaderWriterFilter@4d4df0f4, org.springframework.security.web.authentication.logout.LogoutFilter@3b770d07, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1f172892, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1187dc82, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e068ac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4586a8aa, org.springframework.security.web.session.SessionManagementFilter@ca546a1, org.springframework.security.web.access.ExceptionTranslationFilter@4cecc15a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2154652c]
-2021-04-08 14:08:17.638 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 14:08:17.667 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 14:08:17.677 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 14:08:17.681 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 14:08:17.698 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 14:08:17.753 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 14:08:17.855 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 4.726 seconds (JVM running for 5.356)
-2021-04-08 14:08:17.863 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 14:08:17.864 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 14:08:18.359 INFO  [RMI TCP Connection(1)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 14:08:18.360 INFO  [RMI TCP Connection(1)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 14:08:18.366 INFO  [RMI TCP Connection(1)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 6 ms
-2021-04-08 14:08:18.397 INFO  [RMI TCP Connection(2)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
-2021-04-08 14:18:54.334 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:18:54.339 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
-2021-04-08 14:18:54.341 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
-2021-04-08 14:19:02.108 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 14:19:02.121 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed
-2021-04-08 14:20:17.715 INFO  [main]xyz.fusheng.TestServerApplication.logStartupProfileInfo:651 -No active profile set, falling back to default profiles: default
-2021-04-08 14:20:19.264 INFO  [main]org.springframework.cloud.context.scope.GenericScope.setSerializationId:295 -BeanFactory id=029dff7f-b0ae-340d-bbba-4a081545f31e
-2021-04-08 14:20:19.590 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:108 -Tomcat initialized with port(s): 10000 (http)
-2021-04-08 14:20:19.597 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-10000"]
-2021-04-08 14:20:19.598 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2021-04-08 14:20:19.598 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-04-08 14:20:19.678 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2021-04-08 14:20:19.678 INFO  [main]o.s.b.w.s.context.ServletWebServerApplicationContext.prepareWebApplicationContext:285 -Root WebApplicationContext: initialization completed in 1933 ms
-2021-04-08 14:20:20.650 INFO  [main]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:58 -Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-04-08 14:20:20.834 INFO  [main]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 14:20:20.855 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:20:20.863 INFO  [main]com.netflix.config.sources.URLConfigurationSource.<init>:122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 14:20:20.980 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:181 -Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 14:20:21.192 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:181 -Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
-2021-04-08 14:20:21.491 INFO  [main]o.s.b.a.s.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 -
-
-Using generated security password: ab96ba77-c4d5-4d41-a540-aa1d19c590df
-
-2021-04-08 14:20:21.748 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21527b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e2eead5, org.springframework.security.web.header.HeaderWriterFilter@1682e6a, org.springframework.security.web.authentication.logout.LogoutFilter@54329480, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@16ac4d3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ca546a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@710ae6a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cc1f72c, org.springframework.security.web.session.SessionManagementFilter@892af0e, org.springframework.security.web.access.ExceptionTranslationFilter@1ac0cdb0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e2b9f53]
-2021-04-08 14:20:22.044 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
-2021-04-08 14:20:22.074 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
-2021-04-08 14:20:22.084 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
-2021-04-08 14:20:22.088 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
-2021-04-08 14:20:22.102 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
-2021-04-08 14:20:22.138 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
-2021-04-08 14:20:22.247 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 5.738 seconds (JVM running for 6.666)
-2021-04-08 14:20:22.253 INFO  [main]xyz.fusheng.TestServerApplication.main:30 -测试服务[test-server]已经启动,端口号:10000
-2021-04-08 14:20:22.254 INFO  [main]xyz.fusheng.TestServerApplication.main:33 -username:code-fusheng, password:123456
-2021-04-08 14:20:22.495 INFO  [RMI TCP Connection(3)-127.0.0.1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 14:20:22.495 INFO  [RMI TCP Connection(3)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2021-04-08 14:20:22.504 INFO  [RMI TCP Connection(3)-127.0.0.1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 9 ms
-2021-04-08 14:20:22.538 INFO  [RMI TCP Connection(2)-127.0.0.1]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 10:22:15.663 INFO  [main]o.s.security.web.DefaultSecurityFilterChain.<init>:43 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c9e8a67, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c2c44e8, org.springframework.security.web.header.HeaderWriterFilter@328e4ec2, org.springframework.security.web.authentication.logout.LogoutFilter@72eed547, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@d969452, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@227a933d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@464ede1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2262f0d8, org.springframework.security.web.session.SessionManagementFilter@6546371, org.springframework.security.web.access.ExceptionTranslationFilter@643f6179, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@559d19c]
+2021-04-09 10:22:15.901 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-10000"]
+2021-04-09 10:22:15.939 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:220 -Tomcat started on port(s): 10000 (http) with context path ''
+2021-04-09 10:22:15.949 INFO  [main]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register:75 -nacos registry, DEFAULT_GROUP test-server 192.168.0.2:10000 register finished
+2021-04-09 10:22:15.953 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2021-04-09 10:22:15.964 INFO  [main]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2021-04-09 10:22:15.993 INFO  [main]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2021-04-09 10:22:16.094 INFO  [main]xyz.fusheng.TestServerApplication.logStarted:61 -Started TestServerApplication in 4.569 seconds (JVM running for 5.188)
+2021-04-09 10:22:16.100 INFO  [main]xyz.fusheng.TestServerApplication.main:38 -测试服务[test-server]已经启动,端口号:10000
+2021-04-09 10:22:16.100 INFO  [main]xyz.fusheng.TestServerApplication.main:41 -username:code-fusheng, password:123456
+2021-04-09 10:22:16.320 INFO  [RMI TCP Connection(5)-192.168.0.2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-09 10:22:16.321 INFO  [RMI TCP Connection(5)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2021-04-09 10:22:16.330 INFO  [RMI TCP Connection(5)-192.168.0.2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 9 ms
+2021-04-09 10:22:16.369 INFO  [RMI TCP Connection(4)-192.168.0.2]com.alibaba.druid.pool.DruidDataSource.init:922 -{dataSource-1} inited
+2021-04-09 18:01:22.288 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:218 -Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-04-09 18:01:22.298 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:90 -De-registering from Nacos Server now...
+2021-04-09 18:01:22.301 INFO  [SpringContextShutdownHook]com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister:110 -De-registration finished.
+2021-04-09 18:01:29.559 INFO  [SpringContextShutdownHook]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 18:01:29.579 INFO  [SpringContextShutdownHook]com.alibaba.druid.pool.DruidDataSource.close:1817 -{dataSource-1} closed

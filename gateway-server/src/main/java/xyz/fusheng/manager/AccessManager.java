@@ -1,9 +1,8 @@
-package xyz.fusheng.converter;
+package xyz.fusheng.manager;
 
 import com.alibaba.nacos.common.utils.ConcurrentHashSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authorization.AuthorizationDecision;
 import org.springframework.security.authorization.ReactiveAuthorizationManager;
 import org.springframework.security.core.Authentication;

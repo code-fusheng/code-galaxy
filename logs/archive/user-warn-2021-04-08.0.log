@@ -1,0 +1,119 @@
+2021-04-08 12:04:08.188 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 12:04:08.188 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 12:04:08.196 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 12:04:08.197 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 12:04:17.902 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 12:05:01.775 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:05:01.780 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:16:47.023 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 12:16:47.023 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 12:16:47.024 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 12:16:47.024 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 12:16:54.283 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 12:17:02.507 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:17:02.511 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:28:39.284 WARN  [Thread-12]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 12:28:39.284 WARN  [Thread-18]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 12:28:39.284 WARN  [Thread-18]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 12:28:39.285 WARN  [Thread-12]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 12:28:47.507 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 12:32:49.893 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:32:49.897 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:32:59.821 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 12:32:59.821 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 12:32:59.821 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 12:32:59.822 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 12:33:10.075 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 12:33:34.947 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:33:34.951 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:34:05.263 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 12:34:05.263 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 12:34:05.264 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 12:34:05.265 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 12:34:15.527 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 12:38:11.505 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 12:38:11.509 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:12:42.140 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:12:42.140 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:12:42.140 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:12:42.141 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:12:49.290 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:12:56.762 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:12:56.766 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:15:47.228 WARN  [Thread-12]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:15:47.228 WARN  [Thread-18]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:15:47.229 WARN  [Thread-18]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:15:47.229 WARN  [Thread-12]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:15:56.093 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:16:02.633 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:16:02.638 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:16:44.387 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:16:44.387 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:16:44.388 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:16:44.389 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:16:54.234 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:17:00.731 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:17:00.735 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:18:24.373 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:18:24.373 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:18:24.373 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:18:24.374 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:18:32.495 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:18:40.341 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:18:40.345 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:19:47.092 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:19:47.092 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:19:47.094 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:19:47.094 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:19:54.972 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:20:02.569 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:20:02.573 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:20:21.865 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:20:21.865 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:20:21.866 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:20:21.867 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:20:27.122 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:20:34.521 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:20:34.525 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:21:43.906 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:21:43.906 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:21:43.908 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:21:43.908 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:21:49.113 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:21:56.046 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:21:56.050 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:28:38.701 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:28:38.701 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:28:38.702 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:28:38.702 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:28:47.540 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:28:56.823 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:28:56.827 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:37:08.093 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 13:37:08.093 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 13:37:08.094 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 13:37:08.094 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 13:37:18.323 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 13:37:26.606 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 13:37:26.610 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:08:15.293 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 14:08:15.293 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 14:08:15.294 WARN  [Thread-16]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 14:08:15.295 WARN  [Thread-10]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 14:08:22.819 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 14:08:29.341 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:08:29.346 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:18:53.222 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 14:18:53.222 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 14:18:53.223 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 14:18:53.223 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 14:19:01.857 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 14:20:23.676 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 14:20:23.679 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 18:24:51.777 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:108 -[HttpClientBeanHolder] Start destroying common HttpClient
+2021-04-08 18:24:51.775 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:145 -[NotifyCenter] Start destroying Publisher
+2021-04-08 18:24:51.781 WARN  [Thread-17]com.alibaba.nacos.common.notify.NotifyCenter.shutdown:162 -[NotifyCenter] Destruction of the end
+2021-04-08 18:24:51.784 WARN  [Thread-11]com.alibaba.nacos.common.http.HttpClientBeanHolder.shutdown:114 -[HttpClientBeanHolder] Destruction of the end
+2021-04-08 18:24:58.767 WARN  [SpringContextShutdownHook]o.s.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod:349 -Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-04-08 18:30:53.531 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.
+2021-04-08 18:30:53.536 WARN  [main]com.netflix.config.sources.URLConfigurationSource.<init>:121 -No URLs will be polled as dynamic configuration sources.

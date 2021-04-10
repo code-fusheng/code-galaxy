@@ -1,18 +1,114 @@
-2021-04-08 14:21:21.408 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
-2021-04-08 14:21:21.434 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
-2021-04-08 14:21:21.479 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
-2021-04-08 14:21:21.482 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
-2021-04-08 14:21:21.483 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
-2021-04-08 14:21:21.511 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
-2021-04-08 14:21:21.512 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
-2021-04-08 14:21:21.513 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
-2021-04-08 14:21:21.547 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
-2021-04-08 14:21:21.548 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
-2021-04-08 14:21:21.549 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
-2021-04-08 14:21:21.575 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
-2021-04-08 15:32:11.408 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
-2021-04-08 15:32:11.413 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
-2021-04-08 15:32:11.447 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
-2021-04-08 15:32:11.449 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
-2021-04-08 15:32:11.450 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
-2021-04-08 15:32:11.474 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 09:30:33.918 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 09:30:33.950 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 09:30:34.000 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 09:30:34.002 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 09:30:34.002 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 09:30:34.030 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 09:30:34.031 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 09:30:34.031 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 09:30:34.057 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 09:30:34.059 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 09:30:34.061 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 09:30:34.087 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 10:23:03.723 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 10:23:03.727 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 10:23:03.757 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 10:23:03.759 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 10:23:03.759 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 10:23:03.786 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 10:48:57.417 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 10:48:57.419 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 10:48:57.452 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 10:48:57.453 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 10:48:57.455 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 10:48:57.479 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 10:49:02.005 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 10:49:02.006 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 10:49:02.045 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 10:49:02.046 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 10:49:02.047 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 10:49:02.073 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 10:51:13.745 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 10:51:13.747 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 10:51:13.800 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 10:51:13.802 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 10:51:13.803 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 10:51:13.828 DEBUG [http-nio-10010-exec-6]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 10:52:24.247 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 10:52:24.248 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 10:52:24.277 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 10:52:24.279 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 10:52:24.279 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 10:52:24.304 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 11:00:25.787 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 11:00:25.789 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 11:00:25.818 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 11:00:25.820 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 11:00:25.821 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 11:00:25.847 DEBUG [http-nio-10010-exec-8]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 11:04:34.038 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 11:04:34.040 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 11:04:34.068 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 11:04:34.069 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 11:04:34.069 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 11:04:34.095 DEBUG [http-nio-10010-exec-9]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 11:17:39.830 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 11:17:39.833 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 11:17:39.916 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 11:17:39.918 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 11:17:39.918 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 11:17:40.061 DEBUG [http-nio-10010-exec-10]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 11:55:22.473 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 11:55:22.476 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 11:55:22.505 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 11:55:22.505 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 11:55:22.506 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 11:55:22.528 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 12:20:58.780 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 12:20:58.785 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 12:20:58.811 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 12:20:58.812 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 12:20:58.813 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 12:20:58.835 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 13:04:35.805 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 13:04:35.812 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 13:04:35.843 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 13:04:35.845 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 13:04:35.846 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 13:04:35.871 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 15:04:26.228 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 15:04:26.251 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 15:04:26.348 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 15:04:26.350 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 15:04:26.351 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 15:04:26.378 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 15:04:26.379 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 15:04:26.380 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 15:04:26.403 DEBUG [http-nio-10010-exec-1]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 15:04:26.404 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 15:04:26.405 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 15:04:26.429 DEBUG [http-nio-10010-exec-2]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 15:11:06.459 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 15:11:06.460 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 15:11:06.491 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 15:11:06.491 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 15:11:06.492 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 15:11:06.518 DEBUG [http-nio-10010-exec-3]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 16:44:47.134 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 16:44:47.143 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 16:44:47.179 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 16:44:47.180 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 16:44:47.181 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 16:44:47.207 DEBUG [http-nio-10010-exec-4]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 0
+2021-04-09 17:29:08.573 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 17:29:08.575 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 17:29:08.606 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 17:29:08.607 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 17:29:08.608 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 17:29:08.636 DEBUG [http-nio-10010-exec-5]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 1
+2021-04-09 17:31:08.502 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==>  Preparing: SELECT user_id,username,password,header,phone,mail,signature,description,realname,sex,address,lng,lat,github_id,state,remark,memo,version,is_enabled AS enabled,is_deleted AS deleted,creator_id,updater_id,creator_name,updater_name,created_time,updated_time FROM sys_user WHERE (username = ?)
+2021-04-09 17:31:08.504 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -==> Parameters: code-fusheng(String)
+2021-04-09 17:31:08.532 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectOne.debug:137 -<==      Total: 1
+2021-04-09 17:31:08.533 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==>  Preparing: select r.* from sys_role r left join sys_user_role ur on ur.role_id = r.role_id where ur.user_id = ?
+2021-04-09 17:31:08.534 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -==> Parameters: 1(Long)
+2021-04-09 17:31:08.658 DEBUG [http-nio-10010-exec-7]xyz.fusheng.mapper.UserMapper.selectRolesByUserId.debug:137 -<==      Total: 1

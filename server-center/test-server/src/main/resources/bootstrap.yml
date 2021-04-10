@@ -24,7 +24,4 @@ mybatis-plus:
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:9000/user/current/get
-    client:
-      client-id: test-server
-      client-secret: test
+      id: test-server
