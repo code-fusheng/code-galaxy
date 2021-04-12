@@ -8,7 +8,7 @@ import xyz.fusheng.service.MenuService;
 import javax.annotation.Resource;
 
 @Service
-public class MenuServiceImpl implements MenuService{
+public class MenuServiceImpl implements MenuService {
 
     @Resource
     private MenuMapper menuMapper;

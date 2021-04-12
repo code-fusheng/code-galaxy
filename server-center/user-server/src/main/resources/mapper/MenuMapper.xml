@@ -14,8 +14,8 @@
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="memo" jdbcType="VARCHAR" property="memo" />
     <result column="version" jdbcType="INTEGER" property="version" />
-    <result column="is_enabled" jdbcType="INTEGER" property="enabled" />
-    <result column="is_deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="is_enabled" jdbcType="INTEGER" property="isEnabled" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
     <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
     <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
     <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />

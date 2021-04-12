@@ -14,6 +14,7 @@ import lombok.Getter;
 public enum ResultEnums {
 
     /**
+     * 标准 HTTP 异常
      * 返回枚举类型，每一个枚举类型代表一个返回状态
      * 1** 信息，服务器收到请求，需要请求这继续执行操作
      * 2** 成功，操作被成功执行并接受处理
@@ -27,7 +28,12 @@ public enum ResultEnums {
     NOT_LOGIN(401, "未登录！"),
     NOT_AUTHORIZED(403, "未授权！"),
     NOT_FOUND(404,"访问连接不存在！"),
-    INTERNAL_SERVER_ERROR(500,"服务器故障！")
+    INTERNAL_SERVER_ERROR(500,"服务器故障！"),
+
+    /**
+     * 系统自定义异常
+     */
+    BUSINESS_ERROR(99999, "统一业务异常!")
     ;
 
     /**

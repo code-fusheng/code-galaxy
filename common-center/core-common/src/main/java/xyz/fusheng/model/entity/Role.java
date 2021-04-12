@@ -40,11 +40,11 @@ public class Role extends BaseEntity {
 
     @ApiModelProperty(value = "是否启用(1:已启用/0:未启用)")
     @TableField(value = "is_enabled")
-    private Integer enabled;
+    private Integer isEnabled;
 
     @ApiModelProperty(value = "是否逻辑删除(1:已删除/0:未删除)")
     @TableField(value = "is_deleted")
-    private Integer deleted;
+    private Integer isDeleted;
 
     @ApiModelProperty(value = "创建者编号")
     private Long creatorId;

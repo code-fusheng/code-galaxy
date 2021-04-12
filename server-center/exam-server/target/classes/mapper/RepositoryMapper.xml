@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.mapper.RepositoryMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Repository">
+    <!--@mbg.generated-->
+    <!--@Table ex_repository-->
+    <id column="repository_id" jdbcType="BIGINT" property="repositoryId" />
+    <result column="repository_name" jdbcType="VARCHAR" property="repositoryName" />
+    <result column="question_count" jdbcType="INTEGER" property="questionCount" />
+    <result column="state" jdbcType="BOOLEAN" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
+    <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
+    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
+    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    repository_id, repository_name, question_count, `state`, remark, memo, version, is_enabled, 
+    is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
+  </sql>
+</mapper>

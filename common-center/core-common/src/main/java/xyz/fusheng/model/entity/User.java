@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -79,11 +81,11 @@ public class User extends BaseEntity {
 
     @ApiModelProperty(value = "是否启用(1:已启用/0:未启用)")
     @TableField(value = "is_enabled")
-    private Integer enabled;
+    private Integer isEnabled;
 
     @ApiModelProperty(value = "是否逻辑删除(1:已删除/0:未删除)")
     @TableField(value = "is_deleted")
-    private Integer deleted;
+    private Integer isDeleted;
 
     @ApiModelProperty(value = "创建者编号")
     private Long creatorId;

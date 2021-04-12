@@ -20,6 +20,10 @@ spring:
             - Path=/user-server/**
           filters:
             - StripPrefix=1
+        - id: user-admin-server
+          uri: lb://user-admin-server
+          predicates:
+            - Path=/user-admin-server/**
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://47.111.158.6:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8

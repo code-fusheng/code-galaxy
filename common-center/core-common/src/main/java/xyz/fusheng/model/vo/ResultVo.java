@@ -78,4 +78,23 @@ public class ResultVo<T> implements Serializable {
         this.msg = resultEnums.getMsg();
     }
 
+    public static ResultVo getResult(Integer code, String msg, Object data) {
+        ResultVo resultVo = new ResultVo();
+        resultVo.setCode(code);
+        resultVo.setMsg(msg);
+        resultVo.setData(data);
+        return resultVo;
+    }
+
+    public static ResultVo success(Object data) {
+        return getResult(ResultEnums.SUCCESS.getCode(), ResultEnums.SUCCESS.getMsg(), data);
+    }
+
+    public static ResultVo error(String msg) {
+        return getResult(ResultEnums.ERROR.getCode(), msg, null);
+    }
+
+    public static ResultVo error(Integer code, String msg) {
+        return getResult(code, msg, null);
+    }
 }

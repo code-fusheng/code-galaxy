@@ -71,6 +71,7 @@
         <module>server-center</module>
         <module>gateway-server</module>
         <module>auth-server</module>
+        <module>admin-center</module>
     </modules>
 
     <properties>
@@ -129,6 +130,12 @@
                 <version>1.0.0</version>
             </dependency>
 
+            <dependency>
+                <groupId>xyz.fusheng</groupId>
+                <artifactId>tool-common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
             <!-- Spring Cloud 依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -152,6 +159,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- hutool工具类 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
             <dependency>

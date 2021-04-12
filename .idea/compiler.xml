@@ -7,34 +7,48 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exam-server" />
-        <module name="test-server" />
-        <module name="article-server" />
-        <module name="code-swagger2-starter" />
-        <module name="gateway-server" />
         <module name="core-common" />
         <module name="auth-server" />
+        <module name="test-server" />
+        <module name="user-admin" />
+        <module name="code-swagger2-starter" />
+        <module name="exam-server" />
+        <module name="gateway-server" />
+        <module name="article-admin" />
+        <module name="tool-common" />
+        <module name="exam-admin" />
+        <module name="repo-server" />
+        <module name="article-server" />
+        <module name="test-admin" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="code-swagger2-starter" target="1.8" />
       <module name="model-common" target="1.8" />
+      <module name="repo-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-center" options="-parameters" />
+      <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="code-galaxy" options="-parameters" />
       <module name="code-swagger2-starter" options="-parameters" />
       <module name="common-center" options="-parameters" />
       <module name="core-common" options="-parameters" />
+      <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="model-common" options="-parameters" />
+      <module name="repo-server" options="-parameters" />
       <module name="server-center" options="-parameters" />
+      <module name="test-admin" options="-parameters" />
       <module name="test-server" options="-parameters" />
+      <module name="tool-common" options="-parameters" />
+      <module name="user-admin" options="-parameters" />
       <module name="user-server" options="-parameters" />
     </option>
   </component>
