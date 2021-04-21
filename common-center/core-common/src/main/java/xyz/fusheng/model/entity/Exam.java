@@ -100,12 +100,6 @@ public class Exam extends BaseEntity {
     @ApiModelProperty(value = "修改者编号")
     private Long updaterId;
 
-    @ApiModelProperty(value = "创建者姓名")
-    private String creatorName;
-
-    @ApiModelProperty(value = "修改者姓名")
-    private String updaterName;
-
     @ApiModelProperty(value = "创建时间")
     private Date createdTime;
 

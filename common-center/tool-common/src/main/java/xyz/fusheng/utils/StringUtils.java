@@ -6,7 +6,6 @@
  */
 package xyz.fusheng.utils;
 
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.springframework.util.Assert;
 
 import javax.servlet.http.HttpServletRequest;

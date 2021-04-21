@@ -2,6 +2,7 @@ package xyz.fusheng.model.dto;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.base.BaseDto;
@@ -18,6 +19,7 @@ import javax.validation.constraints.NotNull;
  */
 
 @Data
+@ApiModel(value = "用户传输对象")
 public class UserDto extends BaseDto {
 
     @ApiModelProperty(value = "用户ID")
@@ -52,6 +54,9 @@ public class UserDto extends BaseDto {
 
     @ApiModelProperty(value = "地址")
     private String address;
+
+    @ApiModelProperty(value = "备注")
+    private String remark;
 
     @NotNull(message = "参数异常:角色不能为空!")
     @ApiModelProperty(value = "角色")

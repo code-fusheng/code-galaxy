@@ -24,12 +24,25 @@ spring:
           uri: lb://user-admin-server
           predicates:
             - Path=/user-admin-server/**
+          filters:
+            - StripPrefix=1
+        - id: base-admin-server
+          uri: lb://base-admin-server
+          predicates:
+            - Path=/base-admin-server/**
+          filters:
+            - StripPrefix=1
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://47.111.158.6:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
     password: zH1314520?
     driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 47.111.158.6
+    port: 6390
+    password: 123456
+    database: 9
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:

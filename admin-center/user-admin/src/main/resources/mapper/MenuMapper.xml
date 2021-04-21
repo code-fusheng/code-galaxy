@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.mapper.MenuMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Menu">
+    <!--@mbg.generated-->
+    <!--@Table sys_menu-->
+    <id column="menu_id" jdbcType="BIGINT" property="menuId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="level" jdbcType="TINYINT" property="level" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="is_enabled" jdbcType="INTEGER" property="isEnabled" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
+    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    menu_id, `name`, permission, `path`, pid, `level`, `state`, remark, memo, version, 
+    is_enabled, is_deleted, creator_id, updater_id, creator_name, updater_name, created_time,
+    updated_time
+  </sql>
+</mapper>

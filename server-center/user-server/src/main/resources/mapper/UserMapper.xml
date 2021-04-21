@@ -45,7 +45,7 @@
   </select>
 
   <select id="selectMenusByUserId" resultType="xyz.fusheng.model.entity.Menu">
-    select distinct m.* from sys_user_role su
+    select distinct m.* from sys_user_role ur
     left join sys_role_menu rm
     on ur.role_id = rm.role_id
     left join sys_menu m

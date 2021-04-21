@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core-common" />
-        <module name="auth-server" />
+        <module name="gateway-server" />
         <module name="test-server" />
         <module name="user-admin" />
         <module name="code-swagger2-starter" />
         <module name="exam-server" />
-        <module name="gateway-server" />
+        <module name="auth-server" />
         <module name="article-admin" />
         <module name="tool-common" />
         <module name="exam-admin" />
         <module name="repo-server" />
         <module name="article-server" />
+        <module name="base-admin" />
         <module name="test-admin" />
+        <module name="core-common" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
@@ -35,6 +36,7 @@
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
+      <module name="base-admin" options="-parameters" />
       <module name="code-galaxy" options="-parameters" />
       <module name="code-swagger2-starter" options="-parameters" />
       <module name="common-center" options="-parameters" />

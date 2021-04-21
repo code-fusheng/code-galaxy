@@ -1,4 +1,4 @@
-package xyz.fusheng.user.service.impl;
+package xyz.fusheng.user.service;
 
 import xyz.fusheng.model.dto.UserDto;
 import xyz.fusheng.model.entity.User;

@@ -8,16 +8,32 @@
         <option name="generateServiceInterface" value="true" />
         <option name="insertMethodEnabled" value="false" />
         <option name="insertSelectiveMethodEnabled" value="false" />
-        <option name="javaMapperPackage" value="xyz.fusheng.user.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
-        <option name="javaModelPackage" value="xyz.fusheng.user" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="user-admin" />
+        <option name="javaMapperPackage" value="xyz.fusheng.base.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.base" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="base-admin" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="mapperAnnotaion" value="true" />
         <option name="modelSuperClass" value="xyz.fusheng.model.base.BaseEntity" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
+            <entry key="base-admin">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="xyz.fusheng.base.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+                  <option name="javaModelPacakge" value="xyz.fusheng.base" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.base.service.impl" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+                  <option name="javaServicePackage" value="xyz.fusheng.base.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="core-common">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -137,7 +153,7 @@
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="DictData" />
-                  <option name="moduleName" value="core-common" />
+                  <option name="moduleName" value="base-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
@@ -152,7 +168,7 @@
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="DictType" />
-                  <option name="moduleName" value="core-common" />
+                  <option name="moduleName" value="base-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
@@ -215,7 +231,7 @@
         <option name="updateByPrimaykeyEnabled" value="false" />
         <option name="useSwagger" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/base-admin/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

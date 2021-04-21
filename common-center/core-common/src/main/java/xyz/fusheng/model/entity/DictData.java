@@ -16,34 +16,20 @@ import xyz.fusheng.model.base.BaseEntity;
 @EqualsAndHashCode(callSuper=true)
 @TableName(value = "sys_dict_data")
 public class DictData extends BaseEntity {
-    /**
-    * 字典编码
-    */
+
     @ApiModelProperty(value="字典编码")
     @TableId(type = IdType.ASSIGN_ID)
     private Long dictCode;
 
-    /**
-    * 字典标签
-    */
     @ApiModelProperty(value="字典标签")
     private String dictLabel;
 
-    /**
-    * 字典键值
-    */
     @ApiModelProperty(value="字典键值")
     private String dictValue;
 
-    /**
-    * 字典类型
-    */
     @ApiModelProperty(value="字典类型")
     private String dictType;
 
-    /**
-    * 字典排序
-    */
     @ApiModelProperty(value="字典排序")
     private Integer dictSort;
 

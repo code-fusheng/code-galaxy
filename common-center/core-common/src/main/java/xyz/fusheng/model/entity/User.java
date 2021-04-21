@@ -108,4 +108,8 @@ public class User extends BaseEntity {
     @ApiModelProperty(value = "角色列表")
     @TableField(exist = false)
     private List<Role> roleList;
+
+    @ApiModelProperty(value = "权限列表")
+    @TableField(exist = false)
+    private List<Menu> menuList;
 }

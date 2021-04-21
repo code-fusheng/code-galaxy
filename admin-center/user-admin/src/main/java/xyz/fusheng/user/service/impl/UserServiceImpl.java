@@ -1,4 +1,4 @@
-package xyz.fusheng.user.service;
+package xyz.fusheng.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.ObjectUtils;
@@ -9,23 +9,26 @@ import javax.annotation.Resource;
 
 import org.springframework.util.Assert;
 import xyz.fusheng.enums.StateEnums;
+import xyz.fusheng.exception.BusinessException;
 import xyz.fusheng.model.dto.UserDto;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.user.mapper.UserMapper;
-import xyz.fusheng.user.service.impl.UserService;
+import xyz.fusheng.user.service.UserService;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     @Resource
     private UserMapper userMapper;
 
     @Override
     public boolean saveUser(UserDto userDto) {
-
         User user = userMapper.selectOne(new QueryWrapper<User>().lambda().eq(User::getUsername, userDto.getUsername())
                 .eq(User::getIsEnabled, StateEnums.ENABLED.getCode()));
-        Assert.isTrue(ObjectUtils.isEmpty(user), "添加失败:该用户名已经存在!");
+        if (ObjectUtils.isNotEmpty(user)) {
+            throw new BusinessException("添加失败:该用户名已经存在!");
+        }
+        user = new User();
         BeanUtils.copyProperties(userDto, user);
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPhone()));
         int insertResult = userMapper.insert(user);

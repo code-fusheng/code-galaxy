@@ -5,6 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import xyz.fusheng.feign.fallback.UserServiceFallback;
+import xyz.fusheng.model.entity.Menu;
 import xyz.fusheng.model.entity.User;
 
 /**
@@ -23,4 +24,7 @@ public interface UserFeignClientServer {
 
     @GetMapping("/user/selectUserByPhone/{phone}")
     User selectUserByPhone(@PathVariable("phone") String phone);
+
+    @GetMapping("/menu/getMenuByPath/{path}")
+    Menu getMenuByPath(@PathVariable("path") String path);
 }

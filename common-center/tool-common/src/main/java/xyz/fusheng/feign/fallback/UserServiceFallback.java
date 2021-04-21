@@ -4,6 +4,7 @@ import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.fusheng.feign.UserFeignClientServer;
+import xyz.fusheng.model.entity.Menu;
 import xyz.fusheng.model.entity.User;
 
 /**
@@ -23,12 +24,18 @@ public class UserServiceFallback implements FallbackFactory<UserFeignClientServe
         return new UserFeignClientServer() {
             @Override
             public User selectUserByUsername(String username) {
-                logger.error("调用user-server服务-通过用户名{}查询用户失败", username, throwable);
+                logger.error("调用user-server服务-通过用户名:{}查询用户失败", username, throwable);
                 return null;
             }
             @Override
             public User selectUserByPhone(String phone) {
-                logger.error("调用user-server服务-通过手机号{}查询用户失败:{}", phone, throwable);
+                logger.error("调用user-server服务-通过手机号:{}查询用户失败:{}", phone, throwable);
+                return null;
+            }
+
+            @Override
+            public Menu getMenuByPath(String path) {
+                logger.error("调用user-server服务-通过路径:{}查询角色权限失败:{}", path, throwable);
                 return null;
             }
         };

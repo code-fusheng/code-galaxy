@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.model.dto.UserDto;
-import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
-import xyz.fusheng.user.service.impl.UserService;
-import xyz.fusheng.utils.StringUtils;
+import xyz.fusheng.user.service.UserService;
 
 import javax.annotation.Resource;
 
