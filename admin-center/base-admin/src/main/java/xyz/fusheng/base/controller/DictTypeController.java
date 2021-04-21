@@ -42,7 +42,7 @@ public class DictTypeController {
 
     @ApiOperation(value = "批量删除字典类型")
     @DeleteMapping("/deleteDictTypeByIds")
-    public ResultVo<Object> deletedDictTypeByIds(@RequestBody Long[] dictIds) {
+    public ResultVo<Object> deleteDictTypeByIds(@RequestBody Long[] dictIds) {
         dictTypeService.deleteDictTypedByIds(dictIds);
         return new ResultVo<>("操作提示: 删除成功!");
     }
@@ -77,8 +77,5 @@ public class DictTypeController {
         page = dictTypeService.getDictTypeByPage(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
-
-
-
 
 }

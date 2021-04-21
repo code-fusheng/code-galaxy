@@ -1,5 +1,6 @@
 package xyz.fusheng.model.vo;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.entity.DictType;
 
@@ -13,15 +14,5 @@ import xyz.fusheng.model.entity.DictType;
 
 @Data
 public class DictTypeVo extends DictType {
-
-    /**
-     * 创建者用户名
-     */
-    private String createdUserName;
-
-    /**
-     * 更新者用户名
-     */
-    private String updateUserName;
 
 }

@@ -15,6 +15,8 @@
     <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
     <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
     <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
     <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
   </resultMap>
@@ -25,24 +27,23 @@
   </sql>
 
    <select id="getByPage" resultType="xyz.fusheng.model.vo.DictTypeVo" parameterType="xyz.fusheng.model.base.Page">
-    select sdt.*, su1.username as createdUserName, su2.username as updateUserName
-    from sys_dict_type sdt left join sys_user su1 on sdt.creator_id = su1.user_id
-                           left join sys_user su2 on sdt.updater_id = su2.user_id
-    where sdt.is_deleted = 0
+    select *
+    from sys_dict_type
+    where is_deleted = 0
     <if test="params.dictName != null and params.dictName != ''">
-        and sdt.dict_name like concat(#{params.dictName}, '%')
+        and dict_name like concat(#{params.dictName}, '%')
     </if>
     <if test="params.dictType != null and params.dictType != ''">
-        and sdt.dict_type like concat(#{params.dictType}, '%')
+        and dict_type like concat(#{params.dictType}, '%')
     </if>
-    <if test="params.createdUserName != null">
-        and su1.username like concat(#{params.createdUserName}, '%')
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
     </if>
     <if test="params.isEnabled != null">
-        and sdt.is_enabled = #{params.isEnabled}
+        and is_enabled = #{params.isEnabled}
     </if>
     <if test="params.dictTypeTime != null">
-        and sdt.created_time between #{params.dictTypeTime[0], jdbcType=TIMESTAMP} and #{params.dictTypeTime[1], jdbcType=TIMESTAMP}
+        and created_time between #{params.dictTypeTime[0], jdbcType=TIMESTAMP} and #{params.dictTypeTime[1], jdbcType=TIMESTAMP}
     </if>
     <if test="sortColumn !=null and sortColumn != ''">
         order by ${sortColumn} ${sortMethod}
@@ -52,23 +53,22 @@
 
   <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.model.base.Page">
     select count(*)
-    from sys_dict_type sdt left join sys_user su1 on sdt.creator_id = su1.user_id
-                           left join sys_user su2 on sdt.updater_id = su2.user_id
-    where sdt.is_deleted = 0
+    from sys_dict_type
+    where is_deleted = 0
     <if test="params.dictName != null and params.dictName != ''">
-        and sdt.dict_name like concat(#{params.dictName}, '%')
+        and dict_name like concat(#{params.dictName}, '%')
     </if>
     <if test="params.dictType != null and params.dictType != ''">
-        and sdt.dict_type like concat(#{params.dictType}, '%')
+        and dict_type like concat(#{params.dictType}, '%')
     </if>
-    <if test="params.createdUserName != null">
-        and su1.username like concat(#{params.createdUserName}, '%')
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
     </if>
     <if test="params.isEnabled != null">
-        and sdt.is_enabled = #{params.isEnabled}
+        and is_enabled = #{params.isEnabled}
     </if>
     <if test="params.dictTypeTime != null">
-        and sdt.created_time between #{params.dictTypeTime[0], jdbcType=TIMESTAMP} and #{params.dictTypeTime[1], jdbcType=TIMESTAMP}
+        and created_time between #{params.dictTypeTime[0], jdbcType=TIMESTAMP} and #{params.dictTypeTime[1], jdbcType=TIMESTAMP}
     </if>
   </select>
 

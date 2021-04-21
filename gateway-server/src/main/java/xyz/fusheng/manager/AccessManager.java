@@ -23,6 +23,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 import xyz.fusheng.constants.AuthConstants;
 import xyz.fusheng.constants.CodeConstant;
+import xyz.fusheng.exception.BusinessException;
 import xyz.fusheng.feign.UserAdminFeignClientServer;
 import xyz.fusheng.model.entity.Menu;
 import xyz.fusheng.model.vo.ResultVo;
@@ -159,7 +160,9 @@ public class AccessManager implements ReactiveAuthorizationManager<Authorization
      */
     public Menu syncSingleMenuToRedis(String path) {
         Menu menu = userAdminFeignClientServer.getMenuByPath(path);
-        Assert.notNull(menu, "权限信息为空!");
+        if (ObjectUtils.isEmpty(menu)) {
+            throw new BusinessException("权限信息为空!");
+        }
         try {
             redisTemplate.opsForValue().set(CodeConstant.REDIS_MENU_PREFIX + path, JSON.toJSONString(menu));
         } catch (Exception e) {

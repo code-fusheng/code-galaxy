@@ -2,7 +2,6 @@ package xyz.fusheng.base.service;
 
 import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.DictTypeDto;
-import xyz.fusheng.model.entity.DictType;
 import xyz.fusheng.model.vo.DictTypeVo;
 
 public interface DictTypeService {

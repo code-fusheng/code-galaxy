@@ -1,9 +1,6 @@
 package xyz.fusheng.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -44,6 +41,7 @@ public class Role extends BaseEntity {
 
     @ApiModelProperty(value = "是否逻辑删除(1:已删除/0:未删除)")
     @TableField(value = "is_deleted")
+    @TableLogic(delval = "1", value = "0")
     private Integer isDeleted;
 
     @ApiModelProperty(value = "创建者编号")
@@ -51,6 +49,12 @@ public class Role extends BaseEntity {
 
     @ApiModelProperty(value = "修改者编号")
     private Long updaterId;
+
+    @ApiModelProperty(value = "创建者姓名")
+    private String creatorName;
+
+    @ApiModelProperty(value = "修改者姓名")
+    private String updaterName;
 
     @ApiModelProperty(value = "创建时间")
     private Date createdTime;
