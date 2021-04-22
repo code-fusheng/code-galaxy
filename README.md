@@ -1,4 +1,6 @@
-# 个人网站 ｜ code-fusheng
+# 个人网站 - Wiki
+
+
 
 (2021/03/01 09:00 --- 2021/03/08 10:45) build : 项目构建 --- 初步搭建项目整体架构，包括认证中心、公共中心、网关中心、业务中心
 (2021/03/16 09:00 --- 2021/03/16 09:00) test : 版本测试 --- Git多账户测试
@@ -11,6 +13,281 @@
 (2021/04/22 08:00 --- 2021/04/23 00:14) feature/fix : 题库管理/分页 --- 新增题库管理 Repository 相关接口, 优化分页查询对象
 
 
+[TOC]
+
+## 一、系统环境搭建
+
+
+
+### 1、Linux 搭建 JDK 环境（离线Shell脚本）
+
+```shell
+#!bin/bash
+# 使用本脚本，请务必提前使用 scp 将jdk资源上传至服务器，并与本脚本文件在同一路径下！！！
+currentPath=`pwd`
+echo "当前路径:$currentPath"
+# JDK目标安装路径
+javaTargetPath="/usr/local/java"
+
+# 检查是否存在目录，如果不存在就创建
+if [ ! -d "$javaTargetPath" ]
+then
+	echo "安装路径不全,开始创建:$javaTargetPath"
+	mkdir $javaTargetPath
+	if [ -d "$javaTargetPath" ]
+	then 
+		echo "安装路径创建成功"
+	fi
+fi
+
+# 解压
+if [ -d "jdk-8u221-linux-x64.tar.gz" ]
+then 
+	echo "未找到资源 jdk-8u221-linux-x64.tar.gz"
+	exit
+else 
+  tar -zxvf jdk-8u221-linux-x64.tar.gz -C /usr/local/java
+  if [ -d "/usr/local/java/jdk1.8.0_221" ]
+  then 
+  	echo "解压成功"
+  fi
+fi
+
+# 环境配置
+echo "#java jdk环境变量" >> /etc/profile
+echo "export JAVA_HOME=/usr/local/java/jdk1.8.0_221" >> /etc/profile
+echo "export PATH=$JAVA_HOME/bin:$PATH" >> /etc/profile
+echo "export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar" >> /etc/profile
+echo "刷新环境变量"
+source /etc/profile
+java -version
+echo "jdk 安装完成"
+```
+
+
+
+### 2、Linux 搭建 MySQL 环境（Docker安装MySQL5.7）
+
+```shell
+# 1、查看 docker 仓库中的 mysql 
+$ docker search mysql
+# 2、选定需要pull到系统中的数据库镜像
+$ docker pull mysql:5.7
+# 3、启动 mysql 容器（并设置忽略大小写）
+$ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=zH1314520? -d mysql:5.7 --lower_case_table_names=1
+```
+
+
+
+### 3、Linux 搭建 Docker 环境（在线Shell脚本 docker-ce）
+
+```shell
+#!/bin/sh
+# Linux 搭建 Docker 环境
+
+echo "---查看Linux版本信息--"
+cat /etc/redhat-release 
+
+echo "---安装必要依赖---"
+yum -y install gcc gcc-c++
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+echo "---卸载旧版本---"
+yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+                  
+echo "---设置Docker yum源---"
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+echo "---安装---"
+yum install docker-ce
+echo "---设置允许开机启动---"
+systemctl start docker
+echo "---启动docker---"
+systemctl enable docker
+echo "---查看docker版本信息---"
+docker version
+
+# 配置 Docker 阿里云加速镜像
+mkdir -p /etc/docker
+vim  /etc/docker/daemon.json
+# 阿里云镜像加速器{"registry-mirrors": ["http://hub-mirror.c.163.com"] }
+systemctl daemon-reload
+systemctl restart docker
+```
+
+```
+# docker compose
+
+```
+
+
+
+
+
+
+
+### 4、Linux 搭建 Tomcat 环境 
+
+略
+
+
+
+### 5、Linux 搭建 Redis 环境（在线Docker 方式）
+
+```shell
+docker run -d --name redis -p 6390:6379 redis --requirepass "123456"
+```
+
+
+
+### 6、Linux 搭建 RabbitMQ （在线/离线方式）
+
+```shell
+# 1、更新基本环境
+$ yum -y update
+
+# 2、安装 Erlang
+# 安装 EPEL
+$ yum -y install epel-release
+# 安装 Erlang
+$ yum -y install erlang socat
+# 检查 Erlang 版本
+$ erl -version
+
+# 3、安装 wget
+$ yum -y install wget
+
+# 4、下载安装 RabbitMQ
+$ wget https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-3.6.10-1.el7.noarch.rpm
+# 导入 GPG 密钥
+$ rpm -import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+# 运行 rpm 安装 RabbitMQ rpm 包 
+$ rpm -Uvh rabbitmq-server-3.6.10-1.el7.noarch.rpm
+
+# 5、使用命令
+# 运行
+$ systemctl start rabbitmq-server
+# 开机自启
+$ systemctl enable rabbitmq-server
+# 检查状态
+$ systemctl status rabbitmq-server
+
+# 6、访问 WEB 控制台
+$ rabbitmq-plugins enable rabbitmq_management
+$ chown -R rabbitmq:rabbitmq /var/lib/rabbitmq/
+
+# 7、添加用户
+$ rabbitmqctl add_user rabbit rabbit
+$ rabbitmqctl set_permissions -p "/" rabbit ".*" ".*" ".*"
+$ rabbitmqctl set_user_tags rabbit administrator
+```
+
+
+
+### 7、Linux 搭建 Maven 环境（离线方式）
+
+PS：需要下载 apache-maven-3.6.3-bin.tar.gz 资源至 /root/download 目录下进行以下操作
+
+```shell
+# 解压压缩包
+$ cp -r apache-maven-3.6.3-bin.tar.gz /usr/local
+$ tar -zxvf apache-maven-3.6.3-bin.tar.gz 
+$ rm -rf apache-maven-3.6.3-bin.tar.gz 
+# 创建仓库
+$ mkdir apache-maven-3.6.3/repo
+# 配置Maven仓库位置以及镜像源
+$ cd apache-maven-3.6.3/conf
+$ vim settings.xml 
+# 替换 mirrors 标签中内容
+<mirrors>
+  <localRepository>/usr/local/apache-maven-3.6.3/repo</localRepository>
+  <mirror>
+     <id>nexus-aliyun</id>
+     <mirrorOf>*</mirrorOf>
+     <name>Nexus aliyun</name>
+     <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+  </mirror>
+</mirrors>
+# 刷新配置使其生效
+$ source /etc/profile
+$ mvn -version
+```
+
+
+
+### 8、Linux 搭建 Nginx 环境
+
+```shell
+# 切换到资源文件目录
+$ cd /root/Downloads
+
+# 安装必要依赖
+$ yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
+
+# 解压
+$ tar -zxvf nginx-1.16.1.tar.gz
+# 切换到 nginx-1.16.1 下
+$ cd nginx-1.16.1
+# 创建nginx安装目标路径 并指定
+$ mkdir /usr/local/nginx
+$ ./configure --prefix=/usr/local/nginx
+# 编译 安装
+$ make
+$ make install
+
+# 切换至最终安装目录 启动 nginx
+$ cd /usr/local/nginx
+$ ./sbin/nginx
+
+# PS : 修改配置后的重载
+$ ./sbin/nginx -s reload
+```
+
+
+
+### 9、Linux 搭建 Nacos 环境
+
+```shell
+# 解压 nacos-server-1.4.1.tar.gz
+$ tar -zxvf nacos-server-1.4.1.tar.gz
+
+# 拷贝至 /usr/local 目录下
+$ cp -r nacos /usr/local
+
+# 切换至 /usr/local/nacos/bin 目录下
+$ cd /usr/local/nacos/bin
+
+# standaloe 单机模式运行 非集群
+$ sh startup.sh -m standalone 
+
+# 查看输出日志
+$ tail -f /usr/local/nacos/logs/start.out
+```
+
+
+
+### 10、Linux 搭建 Seate 环境
+
+```shell
+# 解压 seata-server-1.4.1.tar.gz
+$ tar -zxvf seata-server-1.4.1.tar.gz
+
+# 拷贝至 /usr/local
+$ cp -r seate /usr/local
+
+# 切换至 /usr/local/seate/bin
+$ cd /usr/local/seate/bin
+
+# 启动 seate-server 服务
+$ sh ./bin/seate-server.sh
+```
 
 
 
