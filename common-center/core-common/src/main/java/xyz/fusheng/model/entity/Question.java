@@ -1,6 +1,7 @@
 package xyz.fusheng.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -14,7 +15,7 @@ import xyz.fusheng.model.base.BaseEntity;
 @ApiModel(value = "xyz-fusheng-model-entity-Question")
 @Data
 @EqualsAndHashCode(callSuper = true)
-@TableName(value = "sys_question")
+@TableName(value = "ex_question")
 public class Question extends BaseEntity {
     /**
      * 试题编号
@@ -99,8 +100,10 @@ public class Question extends BaseEntity {
     private String updaterName;
 
     @ApiModelProperty(value = "创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date createdTime;
 
     @ApiModelProperty(value = "修改时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date updatedTime;
 }

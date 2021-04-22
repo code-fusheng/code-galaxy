@@ -20,16 +20,22 @@ spring:
             - Path=/user-server/**
           filters:
             - StripPrefix=1
+        - id: base-admin-server
+          uri: lb://base-admin-server
+          predicates:
+            - Path=/base-admin-server/**
+          filters:
+            - StripPrefix=1
         - id: user-admin-server
           uri: lb://user-admin-server
           predicates:
             - Path=/user-admin-server/**
           filters:
             - StripPrefix=1
-        - id: base-admin-server
-          uri: lb://base-admin-server
+        - id: exam-admin-server
+          uri: lb://exam-admin-server
           predicates:
-            - Path=/base-admin-server/**
+            - Path=/exam-admin-server
           filters:
             - StripPrefix=1
   datasource:

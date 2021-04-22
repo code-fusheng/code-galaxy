@@ -65,14 +65,11 @@ public class DictTypeServiceImpl implements DictTypeService {
     }
 
     @Override
-    public DictTypeVo getDictTypeById(Long dictTypeId) {
+    public DictType getDictTypeById(Long dictTypeId) {
         DictType dictType = dictTypeMapper.selectOne(new QueryWrapper<DictType>().lambda()
                 .eq(DictType::getDictId, dictTypeId)
                 .eq(DictType::getIsEnabled, StateEnums.ENABLED.getCode()));
-        DictTypeVo dictTypeVo = new DictTypeVo();
-        Assert.isTrue(ObjectUtils.isEmpty(dictType), "操作提示:更新失败!");
-        BeanUtils.copyProperties(dictType, dictTypeVo);
-        return dictTypeVo;
+        return dictType;
     }
 
     @Override

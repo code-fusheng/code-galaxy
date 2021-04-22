@@ -86,6 +86,10 @@ public class ResultVo<T> implements Serializable {
         return resultVo;
     }
 
+    public static ResultVo success() {
+        return getResult(ResultEnums.SUCCESS.getCode(), ResultEnums.SUCCESS.getMsg(), null);
+    }
+
     public static ResultVo success(Object data) {
         return getResult(ResultEnums.SUCCESS.getCode(), ResultEnums.SUCCESS.getMsg(), data);
     }

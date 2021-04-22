@@ -2,6 +2,8 @@ package xyz.fusheng.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.ObjectUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,8 @@ import xyz.fusheng.user.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     @Resource
     private UserMapper userMapper;
 
@@ -33,5 +37,13 @@ public class UserServiceImpl implements UserService {
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPhone()));
         int insertResult = userMapper.insert(user);
         return 1 == insertResult;
+    }
+
+    @Override
+    public void deleteUserById(Long userId) {
+        User user = userMapper.selectById(userId);
+        user.setIsDeleted(StateEnums.DELETED.getCode());
+        userMapper.updateById(user);
+        logger.info("删除用户信息:{}", user);
     }
 }

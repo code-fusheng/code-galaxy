@@ -56,9 +56,9 @@ public class DictTypeController {
 
     @ApiOperation(value = "根据Id获取字典类型详情")
     @GetMapping("/getDictTypeById/{dictTypeId}")
-    public ResultVo<DictTypeVo> getDictTypeById(@PathVariable @ApiParam() Long dictTypeId) {
-        DictTypeVo dictTypeVo = dictTypeService.getDictTypeById(dictTypeId);
-        return new ResultVo<>("操作提示: 获取成功!", dictTypeVo);
+    public ResultVo<DictType> getDictTypeById(@PathVariable @ApiParam(value = "字典类型Id", example = "1384749237748654082") Long dictTypeId) {
+        DictType dictType = dictTypeService.getDictTypeById(dictTypeId);
+        return new ResultVo<>("操作提示: 获取成功!", dictType);
     }
 
     @ApiOperation(value = "分页查询字典类型列表")

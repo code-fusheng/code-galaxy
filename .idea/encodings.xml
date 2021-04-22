@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/article-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/base-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/exam-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/test-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/user-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-center/core-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-center/tool-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/article-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/exam-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/test-server/src/main/java" charset="UTF-8" />

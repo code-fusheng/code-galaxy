@@ -31,6 +31,13 @@ public enum ResultEnums {
     INTERNAL_SERVER_ERROR(500,"服务器故障！"),
 
     /**
+     * Oauth 认证相关异常
+     */
+    CLIENT_AUTH_FAILED(10001, "客户端认证失败!"),
+    USERNAME_OR_PASSWORD_ERROR(10002, "用户名或密码错误!"),
+    UNSUPPORTED_GRANT_TYPE(10003, "不支持的认证模式!"),
+
+    /**
      * 系统自定义异常
      */
     BUSINESS_ERROR(99999, "统一业务异常!")

@@ -2,6 +2,7 @@ package xyz.fusheng.base.service;
 
 import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.DictTypeDto;
+import xyz.fusheng.model.entity.DictType;
 import xyz.fusheng.model.vo.DictTypeVo;
 
 public interface DictTypeService {
@@ -29,7 +30,7 @@ public interface DictTypeService {
      * @param dictTypeId
      * @return
      */
-    DictTypeVo getDictTypeById(Long dictTypeId);
+    DictType getDictTypeById(Long dictTypeId);
 
     /**
      * 分页查询字典类型列表

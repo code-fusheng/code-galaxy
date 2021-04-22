@@ -1,0 +1,7 @@
+spring:
+   application:
+      name: exam-admin-server
+   cloud:
+      nacos:
+        discovery:
+           server-addr: localhost:8848

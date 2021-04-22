@@ -97,7 +97,7 @@ public class AccessManager implements ReactiveAuthorizationManager<Authorization
         // 3、缓存取资源权限角色关系 通过请求路径获取需要的角色和权限
         logger.info("当前请求路径:{}", requestPath);
         // TODO 走缓存
-        this.getMenuByPathForRedis(requestPath);
+//        this.getMenuByPathForRedis(requestPath);
 
 
         return authenticationMono.map(authentication -> {
