@@ -29,6 +29,12 @@ public interface RepositoryService{
     void deleteRepositoryIds(Long[] repositoryIds);
 
     /**
+     * 更新题库
+     * @param repositoryDto
+     */
+    void updateRepository(RepositoryDto repositoryDto);
+
+    /**
      * 分页查询题库
      * @return
      */

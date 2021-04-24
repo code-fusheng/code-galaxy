@@ -47,6 +47,13 @@ public class RepositoryServiceImpl implements RepositoryService{
     }
 
     @Override
+    public void updateRepository(RepositoryDto repositoryDto) {
+        Repository repository = new Repository();
+        BeanUtils.copyProperties(repositoryDto, repository);
+        repositoryMapper.updateById(repository);
+    }
+
+    @Override
     public IPage<Repository> getRepositoryByPage(RepositoryQuery queryPage) {
         IPage<Repository> pageInfo = repositoryMapper.selectPage(queryPage.getPage(), new QueryWrapper<Repository>().lambda()
                 .like(StringUtils.isNotBlank(queryPage.getRepositoryName()), Repository::getRepositoryName, queryPage.getRepositoryName())

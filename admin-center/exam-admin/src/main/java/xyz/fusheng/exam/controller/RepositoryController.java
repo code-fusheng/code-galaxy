@@ -55,16 +55,15 @@ public class RepositoryController {
     @PutMapping("/updateRepository")
     public ResultVo<Object> updateRepository(@RequestBody RepositoryDto repositoryDto) {
         repositoryDto.setVersion(repositoryService.getRepositoryById(repositoryDto.getRepositoryId()).getVersion());
+        repositoryService.updateRepository(repositoryDto);
         return new ResultVo<>("操作提示: 修改成功!");
     }
 
+    @ApiOperation(value = "分页查询题库列表")
     @PostMapping("/getRepositoryByPage")
     public ResultVo<IPage<Repository>> getRepositoryByPage(@RequestBody RepositoryQuery queryPage) {
         IPage<Repository> page = repositoryService.getRepositoryByPage(queryPage);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
-
-
-
 
 }

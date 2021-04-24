@@ -52,13 +52,13 @@ public class Question extends BaseEntity {
      * 试题类型 0：其它，1：单选题，2：多选题，3：填空题，4：判断题，5：简答题
      */
     @ApiModelProperty(value = "试题类型 0：其它，1：单选题，2：多选题，3：填空题，4：判断题，5：简答题")
-    private Byte questionTypeId;
+    private Integer questionTypeId;
 
     /**
      * 试题标签编号 0：其它，1：基础题，2：提升题，3：开发题
      */
     @ApiModelProperty(value = "试题标签编号 0：其它，1：基础题，2：提升题，3：开发题")
-    private Byte questionTagId;
+    private Integer questionTagId;
 
     /**
      * 试题分析
@@ -76,6 +76,7 @@ public class Question extends BaseEntity {
     private String memo;
 
     @ApiModelProperty(value = "乐观锁 默认1")
+    @Version
     private Integer version;
 
     @ApiModelProperty(value = "是否启用(1:已启用/0:未启用)")

@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.base.BaseDto;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -23,12 +24,14 @@ public class RepositoryDto extends BaseDto {
      * 题库编号
      */
     @ApiModelProperty(value="题库编号")
+    @NotNull
     private Long repositoryId;
 
     /**
      * 题库名称
      */
     @ApiModelProperty(value="题库名称")
+    @NotNull
     private String repositoryName;
 
 }
