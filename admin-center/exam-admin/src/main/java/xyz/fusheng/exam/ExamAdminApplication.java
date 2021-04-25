@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @FileName: ExamAdminApplication
@@ -17,6 +18,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
  * @Description: 考试管理服务启动类
  */
 
+@EnableTransactionManagement
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan("xyz.fusheng.exam.mapper")

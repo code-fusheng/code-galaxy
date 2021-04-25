@@ -26,4 +26,12 @@
     paper_id, paper_name, paper_rule_id, analysis, `state`, remark, memo, version, is_enabled, 
     is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
+
+  <select id="checkQuestionIsUsedByPaper" resultType="java.lang.Integer">
+    select count(*)
+    from ex_paper_question
+    where question_id = #{questionId}
+  </select>
+
+
 </mapper>

@@ -41,7 +41,13 @@ public enum StateEnums {
      * 消息状态枚举
      */
     MESSAGE_IS_READ(1, "消息已读"),
-    MESSAGE_NO_READ(0, "消息未读")
+    MESSAGE_NO_READ(0, "消息未读"),
+
+    /**
+     * 选项状态
+     */
+    OPTION_RIGHT(1, "正确"),
+    OPTION_ERROR(0, "错误")
 
     ;
 

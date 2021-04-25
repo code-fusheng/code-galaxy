@@ -31,12 +31,6 @@ public class Option extends BaseEntity {
     private Long questionId;
 
     /**
-     * 作答编号
-     */
-    @ApiModelProperty(value = "作答编号")
-    private Long paperId;
-
-    /**
      * 选项内容
      */
     @ApiModelProperty(value = "选项内容")

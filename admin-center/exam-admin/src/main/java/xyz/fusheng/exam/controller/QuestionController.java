@@ -1,10 +1,10 @@
 package xyz.fusheng.exam.controller;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import xyz.fusheng.enums.ResultEnums;
 import xyz.fusheng.exam.service.QuestionService;
 import xyz.fusheng.model.dto.QuestionDto;
 import xyz.fusheng.model.vo.ResultVo;
@@ -17,6 +17,8 @@ import javax.annotation.Resource;
  * @Date: 2021/4/24 11:10 下午
  * @Version: 1.0
  * @Description: 试题控制类
+ * 试题管理需要注意当前是单独的试题管理还是试卷中的试题管理
+ * 同时管理试题时需要考虑到，选项与答案的关系处理
  */
 
 @RestController
@@ -27,9 +29,25 @@ public class QuestionController {
     @Resource
     private QuestionService questionService;
 
+    @ApiOperation(value = "添加试题")
+    @PostMapping("/saveQuestion")
     public ResultVo<Object> saveQuestion(@RequestBody @Validated QuestionDto questionDto) {
         questionService.saveQuestion(questionDto);
         return new ResultVo<>("操作提示: 添加成功!");
     }
+
+    @ApiOperation(value = "批量删除试题")
+    @DeleteMapping("/deleteQuestionByIds")
+    public ResultVo<Object> deleteQuestionByIds(@RequestBody Long[] questionIds) {
+        // 查询删除的试题是否被试卷引用
+        boolean isUsed = questionService.checkQuestionIsUsedByPaper(questionIds);
+        if (isUsed) {
+            return new ResultVo<>(ResultEnums.BUSINESS_ERROR.getCode(), "操作提示: 批量删除试题目标存在试卷引用");
+        }
+        questionService.deleteQuestionByIds(questionIds);
+        return new ResultVo<>("操作提示: 删除成功!");
+    }
+
+
 
 }

@@ -32,21 +32,21 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="admin-center" options="-parameters" />
+      <module name="admin-center" options="" />
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
       <module name="base-admin" options="-parameters" />
-      <module name="code-galaxy" options="-parameters" />
+      <module name="code-galaxy" options="" />
       <module name="code-swagger2-starter" options="-parameters" />
-      <module name="common-center" options="-parameters" />
+      <module name="common-center" options="" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="model-common" options="-parameters" />
       <module name="repo-server" options="-parameters" />
-      <module name="server-center" options="-parameters" />
+      <module name="server-center" options="" />
       <module name="test-admin" options="-parameters" />
       <module name="test-server" options="-parameters" />
       <module name="tool-common" options="-parameters" />

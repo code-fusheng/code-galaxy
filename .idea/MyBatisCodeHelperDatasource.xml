@@ -132,6 +132,24 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="code-galaxy-exam:ex_paper_rule">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="PaperRule" />
+                  <option name="moduleName" value="exam-admin" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="code-galaxy-exam:ex_question">
               <value>
                 <TableGenerateConfig>
@@ -156,6 +174,24 @@
                   <option name="javaModelName" value="Repository" />
                   <option name="moduleName" value="exam-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="code-galaxy-exam:ex_rule">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="Rule" />
+                  <option name="moduleName" value="exam-admin" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
                   <option name="useActualColumnName" value="false" />

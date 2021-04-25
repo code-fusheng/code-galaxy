@@ -31,4 +31,9 @@
     question_tag_id, analysis, `state`, remark, memo, version, is_enabled, is_deleted, 
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
+
+  <select id="getRepositoryIdsByQuestionId" resultType="java.lang.Long">
+    select repository_id from ex_repository_question where question_id = #{questionId}
+  </select>
+
 </mapper>

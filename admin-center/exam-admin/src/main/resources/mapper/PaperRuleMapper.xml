@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.exam.mapper.PaperRuleMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.PaperRule">
+    <!--@mbg.generated-->
+    <!--@Table ex_paper_rule-->
+    <id column="paper_rule_id" jdbcType="BIGINT" property="paperRuleId" />
+    <result column="paper_rule_name" jdbcType="VARCHAR" property="paperRuleName" />
+    <result column="total_score" jdbcType="INTEGER" property="totalScore" />
+    <result column="total_time" jdbcType="INTEGER" property="totalTime" />
+    <result column="eligibility_score" jdbcType="INTEGER" property="eligibilityScore" />
+    <result column="repository_id" jdbcType="BIGINT" property="repositoryId" />
+    <result column="single_count" jdbcType="INTEGER" property="singleCount" />
+    <result column="single_score" jdbcType="INTEGER" property="singleScore" />
+    <result column="multiple_count" jdbcType="INTEGER" property="multipleCount" />
+    <result column="multiple_score" jdbcType="INTEGER" property="multipleScore" />
+    <result column="fill_count" jdbcType="INTEGER" property="fillCount" />
+    <result column="fill_score" jdbcType="INTEGER" property="fillScore" />
+    <result column="judge_count" jdbcType="INTEGER" property="judgeCount" />
+    <result column="judge_score" jdbcType="INTEGER" property="judgeScore" />
+    <result column="short_count" jdbcType="INTEGER" property="shortCount" />
+    <result column="short_score" jdbcType="INTEGER" property="shortScore" />
+    <result column="state" jdbcType="BOOLEAN" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
+    <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
+    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
+    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    paper_rule_id, paper_rule_name, total_score, total_time, eligibility_score, repository_id, 
+    single_count, single_score, multiple_count, multiple_score, fill_count, fill_score, 
+    judge_count, judge_score, short_count, short_score, `state`, remark, memo, version, 
+    is_enabled, is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, 
+    updated_time
+  </sql>
+</mapper>

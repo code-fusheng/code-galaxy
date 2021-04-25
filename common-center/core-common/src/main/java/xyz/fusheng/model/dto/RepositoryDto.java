@@ -6,7 +6,6 @@ import lombok.Data;
 import xyz.fusheng.model.base.BaseDto;
 
 import javax.validation.constraints.NotNull;
-import java.util.Date;
 
 /**
  * @FileName: RepositoryDto
