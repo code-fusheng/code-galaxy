@@ -25,14 +25,6 @@ public class UserServiceImpl implements UserService{
     public User selectUserByUsername(String username) {
         User user = userMapper.selectOne(new QueryWrapper<User>().lambda()
                 .eq(User::getUsername, username));
-        if (ObjectUtils.isNotEmpty(user)) {
-            // 获取当前用户所有角色
-            List<Role> roleList = selectRolesByUserId(user.getUserId());
-            user.setRoleList(roleList);
-            // 获取当前用户所有权限
-            List<Menu> menuList = selectMenusByUserId(user.getUserId());
-            user.setMenuList(menuList);
-        }
         return user;
     }
 
@@ -40,14 +32,14 @@ public class UserServiceImpl implements UserService{
     public User selectUserByPhone(String phone) {
         User user = userMapper.selectOne(new QueryWrapper<User>().lambda()
                 .eq(User::getPhone, phone));
-        if (ObjectUtils.isNotEmpty(user)) {
-            // 获取当前用户所有角色
-            List<Role> roleList = selectRolesByUserId(user.getUserId());
-            user.setRoleList(roleList);
-            // 获取当前用户所有权限
-            List<Menu> menuList = selectMenusByUserId(user.getUserId());
-            user.setMenuList(menuList);
-        }
+//        if (ObjectUtils.isNotEmpty(user)) {
+//            // 获取当前用户所有角色
+//            List<Role> roleList = selectRolesByUserId(user.getUserId());
+//            user.setRoleList(roleList);
+//            // 获取当前用户所有权限
+//            List<Menu> menuList = selectMenusByUserId(user.getUserId());
+//            user.setMenuList(menuList);
+//        }
         return user;
     }
 

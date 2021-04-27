@@ -21,6 +21,7 @@
         <module name="base-admin" />
         <module name="test-admin" />
         <module name="gateway-server" />
+        <module name="config-common" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
@@ -40,6 +41,7 @@
       <module name="code-galaxy" options="" />
       <module name="code-swagger2-starter" options="-parameters" />
       <module name="common-center" options="" />
+      <module name="config-common" options="-parameters" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />

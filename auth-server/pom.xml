@@ -35,6 +35,12 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- JDBC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
         <!-- MyBatisPlus 依赖 -->
         <dependency>
             <groupId>com.baomidou</groupId>

@@ -20,7 +20,7 @@ import xyz.fusheng.model.vo.ResultVo;
 @FeignClient(name = "user-admin-server", fallbackFactory = UserAdminServiceFallback.class)
 public interface UserAdminFeignClientServer {
 
-    @GetMapping("/menu/getMenuByPath")
+    @GetMapping("/api/menu/getMenuByPath")
     Menu getMenuByPath(@RequestParam("path") String path);
 
 }

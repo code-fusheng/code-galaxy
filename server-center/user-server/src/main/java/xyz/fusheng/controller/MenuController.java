@@ -25,7 +25,7 @@ public class MenuController {
     @Resource
     private MenuService menuService;
 
-    @GetMapping("/getMenuByPath")
+    @GetMapping("/api/getMenuByPath/{path}")
     @ApiOperation(value = "通过路径获取权限角色要求", notes = "通过路径获取权限角色要求")
     public ResultVo<Menu> getMenuByPath(@PathVariable String path) {
         Menu menu = menuService.getMenuByPath(path);

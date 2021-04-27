@@ -14,6 +14,10 @@ import xyz.fusheng.feign.UserFeignClientServer;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
 
+import javax.servlet.AsyncContext;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @FileName: DebugController
  * @Author: code-fusheng
@@ -51,5 +55,6 @@ public class DebugController {
         logger.info("user:{}", user);
         return new ResultVo<>("操作成功!", user);
     }
+
 
 }

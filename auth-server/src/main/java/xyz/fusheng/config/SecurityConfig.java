@@ -1,5 +1,6 @@
 package xyz.fusheng.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,16 +28,19 @@ import xyz.fusheng.service.SelfUserDetailsService;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return new SelfUserDetailsService();
-    }
+    @Autowired
+    private SelfUserDetailsService userDetailsService;
 
+    @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * Spring Security 使用密码模式需要配置该 Bean
+     * @return
+     * @throws Exception
+     */
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
@@ -45,14 +49,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService())
+        // 指定自定义查询用户信息完成身份认证
+        auth.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/debug/login", "/debug/feignTest").permitAll()
+        http.requestMatchers()
+                .antMatchers("/login", "/oauth/authorize")
+                .and()
+                .formLogin()
+                .and()
+                .authorizeRequests()
+                .antMatchers().permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()
                 .and().cors()
@@ -61,6 +71,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/debug/login", "/debug/feignTest", "/error", "/static/**", "/favicon.ico");
+        web.ignoring().antMatchers( "/login", "/error", "/static/**", "/favicon.ico");
     }
 }

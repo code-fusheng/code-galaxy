@@ -19,10 +19,10 @@ import xyz.fusheng.model.entity.User;
 @FeignClient(name = "user-server", fallbackFactory = UserServiceFallback.class)
 public interface UserFeignClientServer {
 
-    @GetMapping("/user/selectUserByUsername/{username}")
+    @GetMapping("/api/user/selectUserByUsername/{username}")
     User selectUserByUsername(@PathVariable("username") String username);
 
-    @GetMapping("/user/selectUserByPhone/{phone}")
+    @GetMapping("/api/user/selectUserByPhone/{phone}")
     User selectUserByPhone(@PathVariable("phone") String phone);
 
 }

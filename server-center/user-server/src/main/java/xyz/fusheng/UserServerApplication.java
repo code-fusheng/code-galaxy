@@ -20,6 +20,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients
 @MapperScan("xyz.fusheng.mapper")
 public class UserServerApplication {
 

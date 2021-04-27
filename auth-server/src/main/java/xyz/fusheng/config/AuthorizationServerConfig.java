@@ -53,6 +53,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     private DataSource dataSource;
 
+    public ClientDetailsService clientDetailsService() {
+        return new JdbcClientDetailsService(dataSource);
+    }
+
     /**
      * access_token 存储器
      * @return
@@ -78,6 +82,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Bean
     public DefaultTokenServices tokenServices() {
         DefaultTokenServices tokenServices = new DefaultTokenServices();
+        tokenServices.setClientDetailsService(clientDetailsService());
         tokenServices.setTokenEnhancer(jwtTokenEnhancer());
         tokenServices.setTokenStore(tokenStore());
         tokenServices.setSupportRefreshToken(true);
@@ -120,39 +125,39 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-//        clients.withClientDetails(clientDetails());
-        clients.inMemory()
-                .withClient("test-server")     // client_id
-                .secret(new BCryptPasswordEncoder().encode("test"))   // 客户端密钥
-                .resourceIds("test-server")   // 资源列表
-                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
-                .scopes("web")  // 允许的授权范围
-                .autoApprove(true)     // 跳转授权页面
-                .redirectUris("http://www.baidu.com")
-                .and()
-                .withClient("user-server")
-                .secret(new BCryptPasswordEncoder().encode("user"))
-                .resourceIds("user-server")
-                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
-                .scopes("web")
-                .autoApprove(true)
-                .redirectUris("http://www.baidu.com")
-                .and()
-                .withClient("article-server")
-                .secret(new BCryptPasswordEncoder().encode("article"))
-                .resourceIds("article-server")
-                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
-                .scopes("web")  // 允许的授权范围
-                .autoApprove(true)     // 跳转授权页面
-                .redirectUris("http://www.baidu.com")
-                .and()
-                .withClient("exam-server")
-                .secret(new BCryptPasswordEncoder().encode("exam"))
-                .resourceIds("exam-server")
-                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
-                .scopes("web")
-                .autoApprove(true)
-                .redirectUris("http://www.baidu.com");
+        clients.withClientDetails(clientDetailsService());
+//        clients.inMemory()
+//                .withClient("test-server")     // client_id
+//                .secret(new BCryptPasswordEncoder().encode("test"))   // 客户端密钥
+//                .resourceIds("test-server")   // 资源列表
+//                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
+//                .scopes("web")  // 允许的授权范围
+//                .autoApprove(false)     // 跳转授权页面
+//                .redirectUris("http://localhost:9999/doc.html")
+//                .and()
+//                .withClient("user-server")
+//                .secret(new BCryptPasswordEncoder().encode("user"))
+//                .resourceIds("user-server")
+//                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
+//                .scopes("web")
+//                .autoApprove(true)
+//                .redirectUris("http://www.baidu.com")
+//                .and()
+//                .withClient("article-server")
+//                .secret(new BCryptPasswordEncoder().encode("article"))
+//                .resourceIds("article-server")
+//                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
+//                .scopes("web")  // 允许的授权范围
+//                .autoApprove(true)     // 跳转授权页面
+//                .redirectUris("http://www.baidu.com")
+//                .and()
+//                .withClient("exam-server")
+//                .secret(new BCryptPasswordEncoder().encode("exam"))
+//                .resourceIds("exam-server")
+//                .authorizedGrantTypes("authorization_code", "password", "client_credentials", "implicit", "refresh_token", "sms_code")
+//                .scopes("web")
+//                .autoApprove(true)
+//                .redirectUris("http://www.baidu.com");
     }
 
     /**

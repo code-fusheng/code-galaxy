@@ -96,6 +96,7 @@
         <fastjson.version>1.2.73</fastjson.version>
         <hutool.version>5.1.4</hutool.version>
         <security-oauth2.version>2.3.8.RELEASE</security-oauth2.version>
+        <jjwt.version>0.9.0</jjwt.version>
     </properties>
 
     <!--父项目的坐标，如果子项目中没有配置相关的信息，那么使用父项目中的配置。坐标包括：groupID,artifactId和version。-->
@@ -127,6 +128,18 @@
             <dependency>
                 <groupId>xyz.fusheng</groupId>
                 <artifactId>core-common</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-oauth2</artifactId>
+                    </exclusion>
+                </exclusions>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xyz.fusheng</groupId>
+                <artifactId>config-common</artifactId>
                 <version>1.0.0</version>
             </dependency>
 
@@ -208,6 +221,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <!--jwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
 
         </dependencies>

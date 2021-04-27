@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -37,7 +39,8 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-public class SecurityConfig {
+@EnableWebFluxSecurity
+public class WebSecurityConfig {
     
     private static final String MAX_AGE = "18000L";
     
@@ -93,18 +96,17 @@ public class SecurityConfig {
         //认证过滤器
         AuthenticationWebFilter authenticationWebFilter = new AuthenticationWebFilter(tokenAuthenticationManager);
         authenticationWebFilter.setServerAuthenticationConverter(new ServerBearerTokenAuthenticationConverter());
-
         http
-                .httpBasic().disable()
-                .csrf().disable()
                 .authorizeExchange()
-                .pathMatchers(HttpMethod.OPTIONS).permitAll()
+                .pathMatchers("/user-server/login", "/**/getPort").permitAll()
                 .anyExchange().access(accessManager)
                 .and()
                 // 跨域过滤器
                 .addFilterAt(corsFilter(), SecurityWebFiltersOrder.CORS)
                 //oauth2认证过滤器
-                .addFilterAt(authenticationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION);
+                .addFilterAt(authenticationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION)
+                .httpBasic().disable()
+                .csrf().disable();
         return http.build();
     }
     

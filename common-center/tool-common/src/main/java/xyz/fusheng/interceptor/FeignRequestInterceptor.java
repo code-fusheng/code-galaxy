@@ -34,7 +34,7 @@ public class FeignRequestInterceptor implements RequestInterceptor {
             for (Map.Entry<String, String> entry : headers.entrySet()) {
                 template.header(entry.getKey(), entry.getValue());
             }
-            logger.info("FeignRequestInterceptor:{}", template);
+//            logger.info("FeignRequestInterceptor:{}", template);
         }
     }
 
