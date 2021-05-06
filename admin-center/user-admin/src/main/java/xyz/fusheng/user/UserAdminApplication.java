@@ -6,8 +6,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import xyz.fusheng.feign.AuthFeignClientServer;
+import xyz.fusheng.feign.UserFeignClientServer;
 
 /**
  * @FileName: UserAdminApplication
@@ -19,6 +22,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients(basePackageClasses = {AuthFeignClientServer.class, UserFeignClientServer.class})
 @MapperScan("xyz.fusheng.user.mapper")
 public class UserAdminApplication {
 

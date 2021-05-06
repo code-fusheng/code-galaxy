@@ -38,5 +38,5 @@ public interface RepositoryService{
      * 分页查询题库
      * @return
      */
-    IPage<Repository> getRepositoryByPage(RepositoryQuery queryPage);
+    Page<RepositoryVo> getRepositoryByPage(Page<RepositoryVo> queryPage);
 }

@@ -3,7 +3,11 @@ package xyz.fusheng.exam.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.entity.Repository;
+import xyz.fusheng.model.vo.RepositoryVo;
+
+import java.util.List;
 
 @Mapper
 public interface RepositoryMapper extends BaseMapper<Repository> {
@@ -21,4 +25,18 @@ public interface RepositoryMapper extends BaseMapper<Repository> {
      * @param questionId
      */
     void deleteRefForRepositoryAndQuestion(@Param("repositoryId") Long repositoryId,@Param("questionId") Long questionId);
+
+    /**
+     * 分页查询题库列表
+     * @param page
+     * @return
+     */
+    List<RepositoryVo> getByPage(Page<RepositoryVo> page);
+
+    /**
+     * 统计分页题库总数
+     * @param page
+     * @return
+     */
+    int getCountByPage(Page<RepositoryVo> page);
 }

@@ -22,7 +22,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    repository_id, repository_name, question_count, `state`, remark, memo, version, is_enabled, 
+    repository_id, repository_name, question_count, `state`, remark, memo, version, is_enabled,
     is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 
@@ -33,5 +33,45 @@
   <delete id="deleteRefForRepositoryAndQuestion">
     delete from ex_repository_question where repository_id = #{repositoryId} and question_id = #{questionId}
   </delete>
+
+  <select id="getByPage" resultType="xyz.fusheng.model.vo.RepositoryVo">
+    select *
+    from ex_repository
+    where is_deleted = 0
+    <if test="params.repositoryName != null and params.repositoryName != ''">
+        and repository_name like concat(#{params.repositoryName}, '%')
+    </if>
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.repositoryTime != null">
+        and created_time between #{params.repositoryTime[0], jdbcType=TIMESTAMP} and #{params.repositoryTime[1], jdbcType=TIMESTAMP}
+    </if>
+    <if test="sortColumn !=null and sortColumn != ''">
+        order by ${sortColumn} ${sortMethod}
+    </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="getCountByPage" resultType="java.lang.Integer">
+    select  count(*)
+    from ex_repository
+    where is_deleted = 0
+    <if test="params.repositoryName != null and params.repositoryName != ''">
+        and repository_name like concat(#{params.repositoryName}, '%')
+    </if>
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.repositoryTime != null">
+        and created_time between #{params.repositoryTime[0], jdbcType=TIMESTAMP} and #{params.repositoryTime[1], jdbcType=TIMESTAMP}
+    </if>
+   </select>
 
 </mapper>

@@ -1,5 +1,7 @@
 package xyz.fusheng.model.entity;
 
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -8,23 +10,25 @@ import lombok.EqualsAndHashCode;
 import xyz.fusheng.model.base.BaseEntity;
 
 /**
-    * 应用表-试卷规则表
+    * 应用表-规则表
     */
 @ApiModel(value="xyz-fusheng-exam-PaperRule")
 @Data
 @EqualsAndHashCode(callSuper=true)
-public class PaperRule extends BaseEntity {
+@TableName(value = "ex_rule")
+public class Rule extends BaseEntity {
     /**
     * 试卷规则编码
     */
-    @ApiModelProperty(value="试卷规则编码")
-    private Long paperRuleId;
+    @ApiModelProperty(value="规则编码")
+    @TableId(type = IdType.ASSIGN_ID)
+    private Long ruleId;
 
     /**
     * 试卷规则名称
     */
-    @ApiModelProperty(value="试卷规则名称")
-    private String paperRuleName;
+    @ApiModelProperty(value="规则名称")
+    private String ruleName;
 
     /**
     * 总分 (默认：100)
@@ -114,7 +118,7 @@ public class PaperRule extends BaseEntity {
     * 状态
     */
     @ApiModelProperty(value="状态")
-    private Boolean state;
+    private Integer state;
 
     /**
     * 备注
@@ -132,19 +136,22 @@ public class PaperRule extends BaseEntity {
     * 乐观锁 默认1
     */
     @ApiModelProperty(value="乐观锁 默认1")
+    @Version
     private Integer version;
 
     /**
     * 是否启用(1:已启用/0:未启用)
     */
     @ApiModelProperty(value="是否启用(1:已启用/0:未启用)")
-    private Boolean isEnabled;
+    private Integer isEnabled;
 
     /**
     * 是否逻辑删除(1:已删除/0:未删除)
     */
     @ApiModelProperty(value="是否逻辑删除(1:已删除/0:未删除)")
-    private Boolean isDeleted;
+    @TableField(value = "is_deleted")
+    @TableLogic(delval = "1", value = "0")
+    private Integer isDeleted;
 
     /**
     * 创建者编号
@@ -174,11 +181,13 @@ public class PaperRule extends BaseEntity {
     * 创建时间
     */
     @ApiModelProperty(value="创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date createdTime;
 
     /**
     * 修改时间
     */
     @ApiModelProperty(value="修改时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date updatedTime;
 }

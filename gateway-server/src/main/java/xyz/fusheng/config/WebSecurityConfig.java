@@ -98,7 +98,7 @@ public class WebSecurityConfig {
         authenticationWebFilter.setServerAuthenticationConverter(new ServerBearerTokenAuthenticationConverter());
         http
                 .authorizeExchange()
-                .pathMatchers("/user-server/login", "/**/getPort").permitAll()
+                .pathMatchers("/**").permitAll()
                 .anyExchange().access(accessManager)
                 .and()
                 // 跨域过滤器

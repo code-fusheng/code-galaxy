@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core-common" />
+        <module name="gateway-server" />
         <module name="test-server" />
         <module name="user-admin" />
         <module name="code-swagger2-starter" />
@@ -20,13 +20,13 @@
         <module name="article-server" />
         <module name="base-admin" />
         <module name="test-admin" />
-        <module name="gateway-server" />
-        <module name="config-common" />
+        <module name="core-common" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="code-swagger2-starter" target="1.8" />
+      <module name="config-common" target="1.8" />
       <module name="model-common" target="1.8" />
       <module name="repo-server" target="1.8" />
     </bytecodeTargetLevel>

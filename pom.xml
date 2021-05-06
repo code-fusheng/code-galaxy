@@ -139,12 +139,6 @@
 
             <dependency>
                 <groupId>xyz.fusheng</groupId>
-                <artifactId>config-common</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>xyz.fusheng</groupId>
                 <artifactId>tool-common</artifactId>
                 <version>1.0.0</version>
             </dependency>

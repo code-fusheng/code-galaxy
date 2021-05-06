@@ -6,7 +6,7 @@
     <!--@Table ex_paper-->
     <id column="paper_id" jdbcType="BIGINT" property="paperId" />
     <result column="paper_name" jdbcType="VARCHAR" property="paperName" />
-    <result column="paper_rule_id" jdbcType="BIGINT" property="paperRuleId" />
+    <result column="rule_id" jdbcType="BIGINT" property="ruleId" />
     <result column="analysis" jdbcType="VARCHAR" property="analysis" />
     <result column="state" jdbcType="BOOLEAN" property="state" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
@@ -23,7 +23,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    paper_id, paper_name, paper_rule_id, analysis, `state`, remark, memo, version, is_enabled, 
+    paper_id, paper_name, rule_id, analysis, `state`, remark, memo, version, is_enabled,
     is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 

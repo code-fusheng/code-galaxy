@@ -52,13 +52,13 @@ public class Question extends BaseEntity {
      * 试题类型 0：其它，1：单选题，2：多选题，3：填空题，4：判断题，5：简答题
      */
     @ApiModelProperty(value = "试题类型 0：其它，1：单选题，2：多选题，3：填空题，4：判断题，5：简答题")
-    private Integer questionTypeId;
+    private Integer questionType;
 
     /**
      * 试题标签编号 0：其它，1：基础题，2：提升题，3：开发题
      */
     @ApiModelProperty(value = "试题标签编号 0：其它，1：基础题，2：提升题，3：开发题")
-    private Integer questionTagId;
+    private Integer questionTag;
 
     /**
      * 试题分析

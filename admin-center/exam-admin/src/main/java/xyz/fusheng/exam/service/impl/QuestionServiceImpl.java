@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -8,15 +8,18 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 import org.springframework.transaction.annotation.Transactional;
+import xyz.fusheng.enums.StateEnums;
 import xyz.fusheng.exam.mapper.OptionMapper;
 import xyz.fusheng.exam.mapper.PaperMapper;
 import xyz.fusheng.exam.mapper.QuestionMapper;
 import xyz.fusheng.exam.mapper.RepositoryMapper;
 import xyz.fusheng.exam.service.QuestionService;
+import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.QuestionDto;
 import xyz.fusheng.model.entity.Option;
 import xyz.fusheng.model.entity.Question;
 import xyz.fusheng.model.entity.Repository;
+import xyz.fusheng.model.vo.QuestionVo;
 
 import java.util.Arrays;
 import java.util.List;
@@ -101,5 +104,33 @@ public class QuestionServiceImpl implements QuestionService{
         if (questionIdList.size() > 0) {
             questionMapper.deleteBatchIds(questionIdList);
         }
+    }
+
+    @Override
+    public Page<QuestionVo> getRepositoryByPage(Page<QuestionVo> page) {
+        // 查询数据
+        List<QuestionVo> questionVoList = questionMapper.getByPage(page);
+        page.setList(questionVoList);
+        // 统计总数
+        int totalCount = questionMapper.getCountByPage(page);
+        page.setTotalCount(totalCount);
+        return page;
+    }
+
+    /**
+     * 获取试题与选项连同答案
+     * @param questionId
+     * @return
+     */
+    @Override
+    public QuestionVo getQuestionWithOptionsAndAnswersById(Long questionId) {
+        // 先获取试题详情(含题库ID与名称)
+        QuestionVo questionVo = questionMapper.getQuestionVoById(questionId);
+        // 获取试题选项连同答案
+        List<Option> optionList = optionMapper.selectList(new QueryWrapper<Option>().lambda()
+                .eq(Option::getQuestionId, questionId)
+                .eq(Option::getIsEnabled, StateEnums.ENABLED.getCode()));
+        questionVo.setOptionList(optionList);
+        return questionVo;
     }
 }

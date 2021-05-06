@@ -5,14 +5,20 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import xyz.fusheng.enums.ResultEnums;
 import xyz.fusheng.exam.service.RepositoryService;
+import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.RepositoryDto;
 import xyz.fusheng.model.entity.Repository;
 import xyz.fusheng.model.query.RepositoryQuery;
+import xyz.fusheng.model.vo.DictDataVo;
 import xyz.fusheng.model.vo.RepositoryVo;
 import xyz.fusheng.model.vo.ResultVo;
+import xyz.fusheng.utils.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @FileName: RepositoryController
@@ -61,9 +67,18 @@ public class RepositoryController {
 
     @ApiOperation(value = "分页查询题库列表")
     @PostMapping("/getRepositoryByPage")
-    public ResultVo<IPage<Repository>> getRepositoryByPage(@RequestBody RepositoryQuery queryPage) {
-        IPage<Repository> page = repositoryService.getRepositoryByPage(queryPage);
+    public ResultVo<Page<RepositoryVo>> getRepositoryByPage(@RequestBody Page<RepositoryVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 创建时间、更新时间
+            String[] sortColumns = {"repository_name", "question_count", "created_time", "update_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+            }
+        }
+        page = repositoryService.getRepositoryByPage(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
-
 }

@@ -1,7 +1,11 @@
 package xyz.fusheng.model.vo;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import xyz.fusheng.model.entity.Option;
 import xyz.fusheng.model.entity.Question;
+
+import java.util.List;
 
 /**
  * @FileName: QuestionVo
@@ -13,4 +17,14 @@ import xyz.fusheng.model.entity.Question;
 
 @Data
 public class QuestionVo extends Question {
+
+    @ApiModelProperty("题库Id")
+    private Long repositoryId;
+
+    @ApiModelProperty("题库名称")
+    private String repositoryName;
+
+    @ApiModelProperty("选项列表")
+    private List<Option> optionList;
+
 }

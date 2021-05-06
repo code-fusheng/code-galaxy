@@ -14,7 +14,6 @@
     <modules>
         <module>core-common</module>
         <module>tool-common</module>
-        <module>config-common</module>
     </modules>
 
     <dependencies>

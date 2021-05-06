@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import xyz.fusheng.feign.fallback.AuthServerFallback;
+import xyz.fusheng.model.entity.User;
 
 import java.util.Map;
 
@@ -28,5 +29,8 @@ public interface AuthFeignClientServer {
             @RequestParam("username") String username,
             @RequestParam("password") String password
     );
+
+    @RequestMapping(value = "/user/info", method = RequestMethod.GET)
+    User info();
 
 }

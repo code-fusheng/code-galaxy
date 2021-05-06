@@ -1,53 +1,46 @@
-package xyz.fusheng.controller;
+package xyz.fusheng.user.controller;
 
-import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.exception.BusinessException;
 import xyz.fusheng.feign.AuthFeignClientServer;
 import xyz.fusheng.model.dto.LoginDto;
-import xyz.fusheng.model.entity.Menu;
-import xyz.fusheng.model.entity.Role;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
-import xyz.fusheng.service.UserService;
+import xyz.fusheng.user.service.UserService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 /**
- * @FileName: UserController
+ * @FileName: LoginController
  * @Author: code-fusheng
- * @Date: 2021/4/8 10:04 上午
+ * @Date: 2021/4/28 11:12 下午
  * @Version: 1.0
- * @Description: 用户控制器
+ * @Description:
  */
 
 @RestController
-public class UserController {
+public class LoginController {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Resource
     private UserService userService;
 
     @Resource
     private AuthFeignClientServer authFeignClientServer;
-
-    @GetMapping("/user/debugUser")
-    public ResultVo<Object> debugUser() {
-        return new ResultVo<>("操作成功!");
-    }
-
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResultVo<Object> login(@RequestBody @Validated LoginDto loginDto, HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -82,32 +75,7 @@ public class UserController {
     }
 
 
-    /**
-     * >>>>> Feign 远程调用接口 >>>>
-     */
 
-    @ApiOperation(value = "通过用户名获取用户信息-Feign接口")
-    @GetMapping("/api/user/selectUserByUsername/{username}")
-    public User selectUserByUsername(@PathVariable("username") String username) {
-        return userService.selectUserByUsername(username);
-    }
 
-    @ApiOperation(value = "通过手机号获取用户信息-Feign接口")
-    @GetMapping("/api//user/selectUserByPhone/{phone}")
-    public User selectUserByPhone(@PathVariable("phone") String phone) {
-        return userService.selectUserByPhone(phone);
-    }
-
-    @ApiOperation(value = "通过用户Id获取用户角色列表")
-    @GetMapping("/api//user/selectRolesByUserId/{userId}")
-    public List<Role> selectRolesByUserId(@PathVariable Long userId) {
-        return userService.selectRolesByUserId(userId);
-    }
-
-    @ApiOperation(value = "通过用户Id获取用户权限列表")
-    @GetMapping("/api//user/selectMenusByUserId/{userId}")
-    public List<Menu> selectMenusByUserId(@PathVariable("userId") Long userId) {
-        return userService.selectMenusByUserId(userId);
-    }
 
 }

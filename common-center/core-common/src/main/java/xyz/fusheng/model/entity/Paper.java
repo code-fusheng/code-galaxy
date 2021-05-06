@@ -34,7 +34,7 @@ public class Paper extends BaseEntity {
      * 试卷规则编号
      */
     @ApiModelProperty(value = "试卷规则编号")
-    private Long paperRuleId;
+    private Long ruleId;
 
     /**
      * 试卷分析
@@ -46,6 +46,7 @@ public class Paper extends BaseEntity {
      * 乐观锁 默认1
      */
     @ApiModelProperty(value = "乐观锁 默认1")
+    @Version
     private Integer version;
 
     @ApiModelProperty(value = "状态")

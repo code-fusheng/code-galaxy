@@ -6,10 +6,15 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.enums.ResultEnums;
 import xyz.fusheng.exam.service.QuestionService;
+import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.QuestionDto;
+import xyz.fusheng.model.vo.QuestionVo;
 import xyz.fusheng.model.vo.ResultVo;
+import xyz.fusheng.utils.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @FileName: QuestionController
@@ -48,6 +53,29 @@ public class QuestionController {
         return new ResultVo<>("操作提示: 删除成功!");
     }
 
+    @ApiOperation(value = "获取试题与选项连同答案")
+    @GetMapping("/getQuestionWithOptionsAndAnswersById/{questionId}")
+    public ResultVo<QuestionVo> getQuestionWithOptionsAndAnswersById(@PathVariable Long questionId) {
+        QuestionVo questionVo = questionService.getQuestionWithOptionsAndAnswersById(questionId);
+        return new ResultVo<>("操作提示: 获取成功!", questionVo);
+    }
+
+    @ApiOperation(value = "分页查询试题列表")
+    @PostMapping("/getQuestionByPage")
+    public ResultVo<Page<QuestionVo>> getQuestionByPage(@RequestBody Page<QuestionVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 试题类型、试题标签、创建时间、更新时间
+            String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+            }
+        }
+        page = questionService.getRepositoryByPage(page);
+        return new ResultVo<>("操作提示: 分页查询成功!", page);
+    }
 
 
 }

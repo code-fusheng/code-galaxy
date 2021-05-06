@@ -4,6 +4,7 @@ import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import xyz.fusheng.feign.AuthFeignClientServer;
+import xyz.fusheng.model.entity.User;
 
 import java.util.Map;
 
@@ -25,6 +26,12 @@ public class AuthServerFallback implements FallbackFactory<AuthFeignClientServer
             @Override
             public Map<String, String> getAccessToken(String clientId, String secret, String grantType, String username, String password) {
                 logger.error("调用auth-server服务-获取access_token失败", username, throwable);
+                return null;
+            }
+
+            @Override
+            public User info() {
+                logger.error("调用auth-server服务-获取用户信息失败", throwable);
                 return null;
             }
         };

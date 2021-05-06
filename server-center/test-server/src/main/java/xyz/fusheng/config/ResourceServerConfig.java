@@ -47,6 +47,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers(
                         "/v2/api-docs/**", "/doc.html", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**"
                 ).permitAll()
+                .antMatchers("/**").permitAll()
+                .antMatchers().access("#oauth2.hasScope('all')")
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling()
@@ -56,7 +58,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId(resourceId)
-                .tokenStore(tokenStore());
+                resources.tokenStore(tokenStore());
     }
 }

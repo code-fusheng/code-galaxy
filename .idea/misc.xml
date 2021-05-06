@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/common-center/code-swagger2-starter/pom.xml" />
         <option value="$PROJECT_DIR$/common-center/common-model/pom.xml" />
+        <option value="$PROJECT_DIR$/common-center/config-common/pom.xml" />
         <option value="$PROJECT_DIR$/common-center/model-common/pom.xml" />
         <option value="$PROJECT_DIR$/common-core/pom.xml" />
         <option value="$PROJECT_DIR$/test-server/pom.xml" />
