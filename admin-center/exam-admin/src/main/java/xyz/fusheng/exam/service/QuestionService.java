@@ -30,7 +30,7 @@ public interface QuestionService{
      * @param page
      * @return
      */
-    Page<QuestionVo> getRepositoryByPage(Page<QuestionVo> page);
+    Page<QuestionVo> getQuestionByPage(Page<QuestionVo> page);
 
     /**
      * 获取试题与选项连同答案
@@ -38,4 +38,11 @@ public interface QuestionService{
      * @return
      */
     QuestionVo getQuestionWithOptionsAndAnswersById(Long questionId);
+
+    /**
+     * 分页获取试卷中试题与选项信息（含答案）
+     * @param page
+     * @return
+     */
+    Page<QuestionVo> getQuestionAndOptionsWithAnswersByPage(Page<QuestionVo> page);
 }

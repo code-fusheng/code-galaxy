@@ -18,5 +18,12 @@ public interface RuleService {
      * @return
      */
     Page<RuleVo> getRuleByPage(Page<RuleVo> page);
+
+    /**
+     * 获取规则信息
+     * @param ruleId
+     * @return
+     */
+    RuleVo getRuleById(Long ruleId);
 }
 

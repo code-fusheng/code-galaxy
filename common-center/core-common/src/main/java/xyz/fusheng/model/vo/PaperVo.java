@@ -1,7 +1,10 @@
 package xyz.fusheng.model.vo;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.entity.Paper;
+
+import java.util.List;
 
 /**
  * @FileName: PaperVo
@@ -13,4 +16,8 @@ import xyz.fusheng.model.entity.Paper;
 
 @Data
 public class PaperVo extends Paper {
+
+    @ApiModelProperty("规则名称")
+    private String ruleName;
+
 }

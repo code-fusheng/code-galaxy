@@ -2,14 +2,12 @@ package xyz.fusheng.exam.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.enums.ResultEnums;
 import xyz.fusheng.exam.service.RuleService;
 import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.RuleDto;
+import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
 import xyz.fusheng.model.vo.RuleVo;
 import xyz.fusheng.utils.StringUtils;
@@ -61,6 +59,13 @@ public class RuleController {
         }
         page = ruleService.getRuleByPage(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
+    }
+
+    @ApiOperation(value = "获取规则详情")
+    @GetMapping("/getRuleById/{ruleId}")
+    public ResultVo<RuleVo> getRuleById(@PathVariable Long ruleId) {
+        RuleVo ruleVo = ruleService.getRuleById(ruleId);
+        return new ResultVo<>("操作提示: 获取规则成功!", ruleVo);
     }
 
 }

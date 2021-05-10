@@ -73,7 +73,24 @@ public class QuestionController {
                 return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
-        page = questionService.getRepositoryByPage(page);
+        page = questionService.getQuestionByPage(page);
+        return new ResultVo<>("操作提示: 分页查询成功!", page);
+    }
+
+    @ApiOperation(value = "分页查询试卷中的试题以及选项与答案")
+    @PostMapping("/getQuestionAndOptionsWithAnswersByPageForPaperId")
+    public ResultVo<Page<QuestionVo>> getQuestionAndOptionsWithAnswersByPageForPaperId(@RequestBody Page<QuestionVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 试题类型、试题标签、创建时间、更新时间
+            String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time", "question_sort"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+            }
+        }
+        page = questionService.getQuestionAndOptionsWithAnswersByPage(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
 

@@ -1,5 +1,6 @@
 package xyz.fusheng.exam.service.impl;
 
+import com.alibaba.nacos.common.utils.CollectionUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -107,7 +108,7 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public Page<QuestionVo> getRepositoryByPage(Page<QuestionVo> page) {
+    public Page<QuestionVo> getQuestionByPage(Page<QuestionVo> page) {
         // 查询数据
         List<QuestionVo> questionVoList = questionMapper.getByPage(page);
         page.setList(questionVoList);
@@ -132,5 +133,23 @@ public class QuestionServiceImpl implements QuestionService{
                 .eq(Option::getIsEnabled, StateEnums.ENABLED.getCode()));
         questionVo.setOptionList(optionList);
         return questionVo;
+    }
+
+    @Override
+    public Page<QuestionVo> getQuestionAndOptionsWithAnswersByPage(Page<QuestionVo> page) {
+        // 查询数据
+        List<QuestionVo> questionVoList = questionMapper.getSimpleQuestionByPage(page);
+        page.setList(questionVoList);
+        // 统计总数
+        int totalCount = questionMapper.getSimpleCountByPage(page);
+        page.setTotalCount(totalCount);
+        questionVoList.forEach(questionVo -> {
+            // 获取试题选项连同答案
+            List<Option> optionList = optionMapper.selectList(new QueryWrapper<Option>().lambda()
+                    .eq(Option::getQuestionId, questionVo.getQuestionId())
+                    .eq(Option::getIsEnabled, StateEnums.ENABLED.getCode()));
+            questionVo.setOptionList(optionList);
+        });
+        return page;
     }
 }

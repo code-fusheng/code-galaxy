@@ -38,4 +38,13 @@ public interface QuestionMapper extends BaseMapper<Question> {
      * @return
      */
     QuestionVo getQuestionVoById(Long questionId);
+
+    /**
+     *
+     * @param page
+     * @return
+     */
+    List<QuestionVo> getSimpleQuestionByPage(Page<QuestionVo> page);
+
+    int getSimpleCountByPage(Page<QuestionVo> page);
 }
