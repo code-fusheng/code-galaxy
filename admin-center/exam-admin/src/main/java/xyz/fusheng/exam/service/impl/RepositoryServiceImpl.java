@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+
+import xyz.fusheng.enums.StateEnums;
 import xyz.fusheng.exam.mapper.RepositoryMapper;
 import xyz.fusheng.exam.service.RepositoryService;
 import xyz.fusheng.model.base.Page;
@@ -61,6 +63,15 @@ public class RepositoryServiceImpl implements RepositoryService{
         int totalCount = repositoryMapper.getCountByPage(page);
         page.setTotalCount(totalCount);
         return page;
+    }
+
+    @Override
+    public List<Repository> getRepositoryList() {
+        List<Repository> repositoryList = repositoryMapper.selectList(new QueryWrapper<Repository>().lambda()
+                .select(Repository::getRepositoryId, Repository::getRepositoryName, Repository::getQuestionCount)
+                .eq(Repository::getIsEnabled, StateEnums.ENABLED.getCode())
+                .orderByDesc(Repository::getQuestionCount));
+        return repositoryList;
     }
 
 }

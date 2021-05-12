@@ -10,8 +10,8 @@
         <option name="insertSelectiveMethodEnabled" value="false" />
         <option name="javaMapperPackage" value="xyz.fusheng.exam.mapper" />
         <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
-        <option name="javaModelPackage" value="xyz.fusheng.exam" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.model.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
         <option name="lastDatabaseCrudChooseModuleName" value="exam-admin" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="mapperAnnotaion" value="true" />
@@ -53,8 +53,8 @@
                 <UserPackageAndPathInfoByModule>
                   <option name="javaMapperPackage" value="xyz.fusheng.exam.mapper" />
                   <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
-                  <option name="javaModelPacakge" value="xyz.fusheng.exam" />
-                  <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
+                  <option name="javaModelPacakge" value="xyz.fusheng.model.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
                   <option name="javaServiceInterfacePackage" value="xyz.fusheng.exam.service" />
                   <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
                   <option name="javaServicePackage" value="xyz.fusheng.exam.service.impl" />
@@ -91,11 +91,14 @@
               <value>
                 <TableGenerateConfig>
                   <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="" />
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="Exam" />
                   <option name="moduleName" value="exam-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
                   <option name="useActualColumnName" value="false" />
@@ -191,6 +194,24 @@
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="Rule" />
+                  <option name="moduleName" value="exam-admin" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="code-galaxy-exam:ex_user_exam_record">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="UserExamRecord" />
                   <option name="moduleName" value="exam-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
                   <option name="sequenceColumn" value="" />

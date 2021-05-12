@@ -39,7 +39,7 @@
     from ex_repository
     where is_deleted = 0
     <if test="params.repositoryName != null and params.repositoryName != ''">
-        and repository_name like concat(#{params.repositoryName}, '%')
+        and repository_name like concat('%', #{params.repositoryName}, '%')
     </if>
     <if test="params.creatorName != null">
         and creator_name like concat(#{params.creatorName}, '%')
@@ -61,7 +61,7 @@
     from ex_repository
     where is_deleted = 0
     <if test="params.repositoryName != null and params.repositoryName != ''">
-        and repository_name like concat(#{params.repositoryName}, '%')
+        and repository_name like concat('%', #{params.repositoryName}, '%')
     </if>
     <if test="params.creatorName != null">
         and creator_name like concat(#{params.creatorName}, '%')
@@ -72,6 +72,10 @@
     <if test="params.repositoryTime != null">
         and created_time between #{params.repositoryTime[0], jdbcType=TIMESTAMP} and #{params.repositoryTime[1], jdbcType=TIMESTAMP}
     </if>
+   </select>
+
+   <select id="checkIsChangeRepository" resultType="int">
+    select count(*) from ex_repository_question where question_id = #{questionId} and repository_id = #{repositoryId}
    </select>
 
 </mapper>

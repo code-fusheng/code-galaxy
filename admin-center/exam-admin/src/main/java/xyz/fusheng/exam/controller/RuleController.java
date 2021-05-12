@@ -7,6 +7,7 @@ import xyz.fusheng.enums.ResultEnums;
 import xyz.fusheng.exam.service.RuleService;
 import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.RuleDto;
+import xyz.fusheng.model.entity.Rule;
 import xyz.fusheng.model.entity.User;
 import xyz.fusheng.model.vo.ResultVo;
 import xyz.fusheng.model.vo.RuleVo;
@@ -66,6 +67,13 @@ public class RuleController {
     public ResultVo<RuleVo> getRuleById(@PathVariable Long ruleId) {
         RuleVo ruleVo = ruleService.getRuleById(ruleId);
         return new ResultVo<>("操作提示: 获取规则成功!", ruleVo);
+    }
+
+    @ApiOperation(value = "获取所有规则")
+    @GetMapping("/getRuleList")
+    public ResultVo<List<Rule>> getRuleList() {
+        List<Rule> ruleList = ruleService.getRuleList();
+        return new ResultVo<>("操作提示: 获取所有规则!", ruleList);
     }
 
 }

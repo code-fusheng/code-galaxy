@@ -1,5 +1,6 @@
 package xyz.fusheng.exam.controller;
 
+import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
@@ -37,6 +38,7 @@ public class QuestionController {
     @ApiOperation(value = "添加试题")
     @PostMapping("/saveQuestion")
     public ResultVo<Object> saveQuestion(@RequestBody @Validated QuestionDto questionDto) {
+        questionDto.setQuestionId(IdWorker.getId());
         questionService.saveQuestion(questionDto);
         return new ResultVo<>("操作提示: 添加成功!");
     }
@@ -51,6 +53,13 @@ public class QuestionController {
         }
         questionService.deleteQuestionByIds(questionIds);
         return new ResultVo<>("操作提示: 删除成功!");
+    }
+
+    @ApiOperation(value = "更新问题与选项连同答案")
+    @PutMapping("/updateQuestionWithOptionsAndAnswers")
+    public ResultVo<Object> updateQuestionWithOptionsAndAnswers(@RequestBody @Validated QuestionDto questionDto) {
+        questionService.updateQuestionWithOptionsAndAnswers(questionDto);
+        return new ResultVo<>("操作提示: 更新成功!");
     }
 
     @ApiOperation(value = "获取试题与选项连同答案")

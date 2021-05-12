@@ -65,6 +65,12 @@ public class RepositoryController {
         return new ResultVo<>("操作提示: 修改成功!");
     }
 
+    @GetMapping("/getRepositoryList")
+    public ResultVo<List<Repository>> getRepositoryList() {
+        List<Repository> repositoryList = repositoryService.getRepositoryList();
+        return new ResultVo<>("操作提示: 获取所有题库列表!", repositoryList);
+    }
+
     @ApiOperation(value = "分页查询题库列表")
     @PostMapping("/getRepositoryByPage")
     public ResultVo<Page<RepositoryVo>> getRepositoryByPage(@RequestBody Page<RepositoryVo> page) {

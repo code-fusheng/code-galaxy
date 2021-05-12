@@ -1,11 +1,13 @@
 package xyz.fusheng.exam.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 import xyz.fusheng.enums.ResultEnums;
+import xyz.fusheng.enums.StateEnums;
 import xyz.fusheng.exam.mapper.RuleMapper;
 import xyz.fusheng.exam.service.RuleService;
 import xyz.fusheng.exception.BusinessException;
@@ -63,6 +65,14 @@ public class RuleServiceImpl implements RuleService {
         }
         BeanUtils.copyProperties(rule, ruleVo);
         return ruleVo;
+    }
+
+    @Override
+    public List<Rule> getRuleList() {
+        // TODO 后续添加根据引用次数排序
+        List<Rule> ruleList = ruleMapper.selectList(new QueryWrapper<Rule>().lambda()
+                .eq(Rule::getIsEnabled, StateEnums.ENABLED.getCode()));
+        return ruleList;
     }
 }
 

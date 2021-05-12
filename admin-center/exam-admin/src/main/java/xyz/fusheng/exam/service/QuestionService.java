@@ -45,4 +45,10 @@ public interface QuestionService{
      * @return
      */
     Page<QuestionVo> getQuestionAndOptionsWithAnswersByPage(Page<QuestionVo> page);
+
+    /**
+     * 更新问题与选项连同答案
+     * @param questionDto
+     */
+    void updateQuestionWithOptionsAndAnswers(QuestionDto questionDto);
 }

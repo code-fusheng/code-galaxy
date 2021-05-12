@@ -39,4 +39,11 @@ public interface RepositoryMapper extends BaseMapper<Repository> {
      * @return
      */
     int getCountByPage(Page<RepositoryVo> page);
+
+    /**
+     * 查询当前试题是否修改归属题库
+     * @param repositoryId
+     * @param questionId
+     */
+    int checkIsChangeRepository(@Param("repositoryId") Long repositoryId,@Param("questionId") Long questionId);
 }

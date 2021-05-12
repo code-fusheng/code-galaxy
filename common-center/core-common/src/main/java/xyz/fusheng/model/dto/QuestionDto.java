@@ -1,5 +1,6 @@
 package xyz.fusheng.model.dto;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.base.BaseDto;

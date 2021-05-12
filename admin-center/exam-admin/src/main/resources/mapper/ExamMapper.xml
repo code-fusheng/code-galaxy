@@ -7,6 +7,7 @@
     <id column="exam_id" jdbcType="BIGINT" property="examId" />
     <result column="exam_name" jdbcType="VARCHAR" property="examName" />
     <result column="exam_description" jdbcType="VARCHAR" property="examDescription" />
+    <result column="exam_type" jdbcType="TINYINT" property="examType" />
     <result column="is_public" jdbcType="TINYINT" property="isPublic" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="is_limit_time" jdbcType="TINYINT" property="isLimitTime" />
@@ -28,8 +29,60 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    exam_id, exam_name, exam_description, is_public, `password`, is_limit_time, start_time, 
-    end_time, analysis, `state`, remark, memo, version, is_enabled, is_deleted, creator_id, 
-    updater_id, creator_name, updater_name, created_time, updated_time
+    exam_id, exam_name, exam_description, exam_type, is_public, `password`, is_limit_time,
+    start_time, end_time, analysis, `state`, remark, memo, version, is_enabled, is_deleted,
+    creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
+
+  <select id="getByPage" resultType="xyz.fusheng.model.vo.ExamVo">
+    select e.*
+    from ex_exam e
+    where e.is_deleted = 0
+    <if test="params.examName != null and params.examName != ''">
+        and e.exam_name like concat(#{params.examName}, '%')
+    </if>
+    <if test="params.isPublic != null">
+        and e.is_public = #{params.isPublic}
+    </if>
+    <if test="params.isLimitTime != null">
+        and e.is_limit_time = #{params.isLimitTime}
+    </if>
+    <if test="params.creatorName != null">
+        and e.creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and e.is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.examTime != null">
+        and e.created_time between #{params.examTime[0], jdbcType=TIMESTAMP} and #{params.examTime[1], jdbcType=TIMESTAMP}
+    </if>
+    <if test="sortColumn !=null and sortColumn != ''">
+        order by ${sortColumn} ${sortMethod}
+    </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="getCountByPage" resultType="int">
+    select count(*)
+    from ex_exam e
+    where e.is_deleted = 0
+    <if test="params.examName != null and params.examName != ''">
+        and e.exam_name like concat(#{params.examName}, '%')
+    </if>
+    <if test="params.isPublic != null">
+        and e.is_public = #{params.isPublic}
+    </if>
+    <if test="params.isLimitTime != null">
+        and e.is_limit_time = #{params.isLimitTime}
+    </if>
+    <if test="params.creatorName != null">
+        and e.creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and e.is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.examTime != null">
+        and e.created_time between #{params.examTime[0], jdbcType=TIMESTAMP} and #{params.examTime[1], jdbcType=TIMESTAMP}
+    </if>
+  </select>
 </mapper>

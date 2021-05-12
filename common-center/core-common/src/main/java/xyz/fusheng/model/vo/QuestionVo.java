@@ -16,7 +16,6 @@ import java.util.List;
  */
 
 @Data
-
 public class QuestionVo extends Question {
 
     @ApiModelProperty("题库Id")
@@ -27,5 +26,8 @@ public class QuestionVo extends Question {
 
     @ApiModelProperty("选项列表")
     private List<Option> optionList;
+
+    @ApiModelProperty("试题分数")
+    private Integer questionScore;
 
 }

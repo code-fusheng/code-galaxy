@@ -2,7 +2,10 @@ package xyz.fusheng.exam.service;
 
 import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.RuleDto;
+import xyz.fusheng.model.entity.Rule;
 import xyz.fusheng.model.vo.RuleVo;
+
+import java.util.List;
 
 public interface RuleService {
 
@@ -25,5 +28,11 @@ public interface RuleService {
      * @return
      */
     RuleVo getRuleById(Long ruleId);
+
+    /**
+     * 获取所有规则
+     * @return
+     */
+    List<Rule> getRuleList();
 }
 

@@ -7,6 +7,8 @@ import xyz.fusheng.model.entity.Repository;
 import xyz.fusheng.model.query.RepositoryQuery;
 import xyz.fusheng.model.vo.RepositoryVo;
 
+import java.util.List;
+
 public interface RepositoryService{
 
     /**
@@ -39,4 +41,10 @@ public interface RepositoryService{
      * @return
      */
     Page<RepositoryVo> getRepositoryByPage(Page<RepositoryVo> queryPage);
+
+    /**
+     * 获取所有题库列表
+     * @return
+     */
+    List<Repository> getRepositoryList();
 }

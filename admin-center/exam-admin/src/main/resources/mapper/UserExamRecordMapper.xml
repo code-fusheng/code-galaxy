@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.exam.mapper.UserExamRecordMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.UserExamRecord">
+    <!--@mbg.generated-->
+    <!--@Table ex_user_exam_record-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="exam_id" jdbcType="BIGINT" property="examId" />
+    <result column="paper_id" jdbcType="BIGINT" property="paperId" />
+    <result column="total_score" jdbcType="INTEGER" property="totalScore" />
+    <result column="is_mark" jdbcType="TINYINT" property="isMark" />
+    <result column="is_submit" jdbcType="TINYINT" property="isSubmit" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="memo" jdbcType="VARCHAR" property="memo" />
+    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
+    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
+    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
+    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_id, exam_id, paper_id, total_score, is_mark, is_submit, remark, memo, creator_id,
+    updater_id, creator_name, updater_name, created_time, updated_time
+  </sql>
+</mapper>

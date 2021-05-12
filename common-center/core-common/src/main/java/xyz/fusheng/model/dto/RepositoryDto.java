@@ -23,7 +23,6 @@ public class RepositoryDto extends BaseDto {
      * 题库编号
      */
     @ApiModelProperty(value="题库编号")
-    @NotNull
     private Long repositoryId;
 
     /**

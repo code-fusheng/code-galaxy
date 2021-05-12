@@ -76,7 +76,6 @@ public class Question extends BaseEntity {
     private String memo;
 
     @ApiModelProperty(value = "乐观锁 默认1")
-    @Version
     private Integer version;
 
     @ApiModelProperty(value = "是否启用(1:已启用/0:未启用)")

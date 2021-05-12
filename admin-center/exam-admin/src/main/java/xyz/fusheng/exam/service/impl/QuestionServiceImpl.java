@@ -2,6 +2,8 @@ package xyz.fusheng.exam.service.impl;
 
 import com.alibaba.nacos.common.utils.CollectionUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
@@ -21,6 +23,7 @@ import xyz.fusheng.model.entity.Option;
 import xyz.fusheng.model.entity.Question;
 import xyz.fusheng.model.entity.Repository;
 import xyz.fusheng.model.vo.QuestionVo;
+import xyz.fusheng.utils.StringUtils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -151,5 +154,42 @@ public class QuestionServiceImpl implements QuestionService{
             questionVo.setOptionList(optionList);
         });
         return page;
+    }
+
+    /**
+     * 更新问题与选项连同答案
+     * @param questionDto
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void updateQuestionWithOptionsAndAnswers(QuestionDto questionDto) {
+        Question question = new Question();
+        BeanUtils.copyProperties(questionDto, question);
+        // 更新试题
+        questionMapper.updateById(question);
+        // TODO 如何优化试题与题库的对应关系
+        // 先查询当前试题是否修改归属题库
+        //        int count = repositoryMapper.checkIsChangeRepository(questionDto.getRepositoryId(), questionDto.getQuestionId());
+        //        if (count <= 0) {
+        //            // 删除试题与题库关联关系
+        //            repositoryMapper.deleteRefForRepositoryAndQuestion(questionDto.getRepositoryId(), questionDto.getQuestionId());
+        //            repositoryMapper.update(new UpdateWrapper<Repository>().lambda()
+        //                    .eq(Repository::getRepositoryId, questionDto.))
+        //            // 保存试题与题库关联关系
+        //            repositoryMapper.saveRefForRepositoryAndQuestion(questionDto.getRepositoryId(), questionDto.getQuestionId());
+        //        }
+        // 判断视图对象中的答案列表是否为空，不为空时批量更新答案
+        if (questionDto.getOptionList().size() > 0) {
+            List<Option> optionList = questionDto.getOptionList();
+            optionList.forEach(option -> {
+                if (option.getQuestionId() == null) {
+                    option.setOptionId(IdWorker.getId());
+                    option.setQuestionId(questionDto.getQuestionId());
+                    optionMapper.insert(option);
+                } else {
+                    optionMapper.updateById(option);
+                }
+            });
+        }
     }
 }
