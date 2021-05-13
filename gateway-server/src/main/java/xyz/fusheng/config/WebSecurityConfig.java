@@ -41,9 +41,9 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebFluxSecurity
 public class WebSecurityConfig {
-    
+
     private static final String MAX_AGE = "18000L";
-    
+
     @Resource
     private DataSource dataSource;
     @Resource
@@ -106,8 +106,10 @@ public class WebSecurityConfig {
                 //oauth2认证过滤器
                 .addFilterAt(authenticationWebFilter, SecurityWebFiltersOrder.AUTHENTICATION)
                 .httpBasic().disable()
-                .csrf().disable();
+                .csrf().disable()
+                .headers().frameOptions().disable()
+        ;
         return http.build();
     }
-    
+
 }

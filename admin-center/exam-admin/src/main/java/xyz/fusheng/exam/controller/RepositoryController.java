@@ -30,7 +30,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/repository")
-@Api(tags = "题库管理", value = "题库管理接口")
+@Api(tags = "题库管理", value = "题库接口管理")
 public class RepositoryController {
 
     @Resource

@@ -27,6 +27,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/paper")
+@Api(tags = "试卷管理", value = "试卷接口管理")
 public class PaperController {
 
     @Resource

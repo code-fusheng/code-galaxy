@@ -1,5 +1,6 @@
 package xyz.fusheng.exam.controller;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +31,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/exam")
+@Api(tags = "考试管理", value = "考试接口管理")
 public class ExamController {
 
     @Resource

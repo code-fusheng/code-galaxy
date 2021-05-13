@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://47.111.158.6:3306/code-galaxy?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="code-galaxy@localhost" uuid="0a971623-0094-4c13-bb03-0d6263603a9a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/code-galaxy</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -16,6 +16,7 @@
 (2021/04/26 14:12 --- 2021/**/** **:**) rebuild/fix : 认证重构 --- 重构认证部分相关逻辑与代码，修复网关拦截登录接口(login)的问题
 (2021/05/01 09:00 --- 2021/05/06 23:07) feature : 试题管理/规则管理 --- 新增考试管理后台试题/规则分页接口
 (2021/05/12 10:00 --- 2021/05/13 02:19) feature : 系统完善
+(2021/05/14 09:00 --- 2021/05/14 12:55) feature : 项目部署 --- 新增 Docekr-Compose、Dockerfile 部署相关配置、新增 profile.active 环境配置
 ```
 
 
@@ -312,3 +313,24 @@ $ sh ./bin/seate-server.sh
 
 ### Redis 缓存
 缓存不能够成为数据持久化的解决方案，只能作为中间优化处理过程。即便缓存挂了也不能影响功能正常使用。
+
+
+## 帮助文档
+### Docker 打包部署指令
+```shell script
+mvn clean package docker:build -DskipTests
+
+docker run -it -m 512M -d -p 9999:9999 --rm gateway-server
+docker run -it -m 200M -d -p 9000:9000 --rm auth-server
+docker run -it -m 200M -d -p 10100:10100 --rm user-server
+docker run -it -m 512M -d -p 10399:10399 --rm exam-admin-server
+```
+
+```shell script
+# 内存大小排查
+docker images
+docker stats
+docker ps -a
+ps -ef | grep java
+top -p PID
+```
