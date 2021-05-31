@@ -319,11 +319,19 @@ $ sh ./bin/seate-server.sh
 ### Docker 打包部署指令
 ```shell script
 mvn clean package docker:build -DskipTests
+mvn clean package docker:build -Pprod -DskipTests
 
 docker run -it -m 512M -d -p 9999:9999 --rm gateway-server
-docker run -it -m 200M -d -p 9000:9000 --rm auth-server
-docker run -it -m 200M -d -p 10100:10100 --rm user-server
+docker run -it -m 256M -d -p 9000:9000 --rm auth-server
+docker run -it -m 256M -d -p 10100:10100 --rm user-server
+docker run -it -m 256M -d -p 10199:10199 --rm user-admin-server
 docker run -it -m 512M -d -p 10399:10399 --rm exam-admin-server
+docker run -it -m 256M -d -p 10099:10099 --rm base-admin-server
+
+
+nohup java -jar gateway-server-1.0.0.jar  --server.port=9999  > gateway-server.log>&1 &
+nohup java -jar exam-admin-server-1.0.0.jar --server.port=10399  > exam-admin-server.log>&1 &
+
 ```
 
 ```shell script
@@ -333,4 +341,13 @@ docker stats
 docker ps -a
 ps -ef | grep java
 top -p PID
+
+# 硬盘问题排查
+# 检查服务器磁盘使用情况
+df -h 
+```
+
+```shell script
+# 查看服务器入侵记录
+$ last -f /var/log/wtmp
 ```

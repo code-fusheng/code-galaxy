@@ -9,11 +9,6 @@ spring:
     username: root
     password: code-fusheng
     driver-class-name: com.mysql.cj.jdbc.Driver
-  redis:
-    host: 47.111.158.6
-    port: 6390
-    password: Xcode-redis?
-    database: 9
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:

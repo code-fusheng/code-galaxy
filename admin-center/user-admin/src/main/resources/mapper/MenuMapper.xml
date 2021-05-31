@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.mapper.MenuMapper">
+<mapper namespace="xyz.fusheng.user.mapper.MenuMapper">
   <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Menu">
     <!--@mbg.generated-->
     <!--@Table sys_menu-->
@@ -25,8 +25,55 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    menu_id, `name`, permission, `path`, pid, `level`, `state`, remark, memo, version, 
+    menu_id, `name`, permission, `path`, pid, `level`, `state`, remark, memo, version,
     is_enabled, is_deleted, creator_id, updater_id, creator_name, updater_name, created_time,
     updated_time
   </sql>
+
+  <select id="getMenuIdsByRoleId" resultType="java.lang.Long">
+    select rm.menu_id from sys_role_menu rm where rm.role_id = #{roleId}
+            and rm.menu_id not in
+            (select m.pid from sys_menu m
+                        inner join sys_role_menu srm on m.menu_id = srm.menu_id
+                        and srm.role_id = #{roleId})
+  </select>
+
+  <select id="getMenuByPage" resultType="xyz.fusheng.model.vo.MenuVo">
+    select * from sys_menu
+    where is_deleted = 0
+    <if test="params.name!=null and params.name!=''">
+        and name like concat('%', #{params.name}, '%')
+    </if>
+    <if test="params.level!=null">
+        and level = #{params.level}
+    </if>
+    <if test="params.pid!=null">
+        and pid = #{params.pid}
+    </if>
+    <if test="params.menuTime!=null">
+        and created_time between #{params.menuTime[0],jdbcType=TIMESTAMP} and #{params.menuTime[1],jdbcType=TIMESTAMP}
+    </if>
+    <if test="sortColumn!=null and sortColumn!=''">
+        order by ${sortColumn} ${sortMethod}
+    </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="getMenuCountByPage" resultType="java.lang.Integer">
+    select count(*)
+    from sys_menu
+    where is_deleted = 0
+    <if test="params.name!=null and params.name!=''">
+        and name like concat('%', #{params.name}, '%')
+    </if>
+    <if test="params.level!=null">
+        and level = #{params.level}
+    </if>
+    <if test="params.pid!=null">
+        and pid = #{params.pid}
+    </if>
+    <if test="params.menuTime!=null">
+        and created_time between #{params.menuTime[0],jdbcType=TIMESTAMP} and #{params.menuTime[1],jdbcType=TIMESTAMP}
+    </if>
+  </select>
 </mapper>

@@ -1,0 +1,42 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.111.158.6:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://rm-bp15mj67u7y8p5761lo.mysql.rds.aliyuncs.com:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zH1314520
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #以下为druid的配置
+    # 初始化连接池个数
+    initialSize: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+#以下为Mybatis-plus的配置
+mybatis-plus:
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath:mapper/*.xml
+  # 以下配置均有默认值,可以不设置
+  configuration:
+    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    #    map-underscore-to-camel-case: true
+    # 返回map时true:当查询数据为空时字段返回为null,false:不加这个查询数据为空时，字段将被隐藏
+    call-setters-on-nulls: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+#security:
+#  oauth2:
+#    resource:
+#      id: base-admin-server

@@ -42,7 +42,6 @@ public class User extends BaseEntity {
     private String mail;
 
     @ApiModelProperty(value = "签名")
-    @Deprecated
     private String signature;
 
     @ApiModelProperty(value = "描述")

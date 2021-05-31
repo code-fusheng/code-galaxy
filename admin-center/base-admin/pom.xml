@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>base-admin</artifactId>
+    <artifactId>base-admin-server</artifactId>
 
     <dependencies>
         <dependency>
@@ -87,7 +87,7 @@
                     </imageTags>
                     <!--指定Dockerfile路径-->
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                    <dockerHost>http://47.111.158.6:2376</dockerHost>
+                    <dockerHost>http://47.111.158.6:12375</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>

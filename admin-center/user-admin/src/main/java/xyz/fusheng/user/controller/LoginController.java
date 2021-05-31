@@ -64,7 +64,7 @@ public class LoginController {
         Map<String, String> resultMap = authFeignClientServer.getAccessToken("test-server", "test", "password", loginDto.getUsername(), loginDto.getPassword());
         logger.info("{}", resultMap);
         String access_token = resultMap.get("access_token");
-//        response.setHeader("authorization", "Bearer " + access_token );
+        response.setHeader("authorization", "Bearer " + access_token );
         return new ResultVo<>("登录成功!", access_token);
     }
 

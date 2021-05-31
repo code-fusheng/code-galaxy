@@ -8,11 +8,11 @@
         <option name="generateServiceInterface" value="true" />
         <option name="insertMethodEnabled" value="false" />
         <option name="insertSelectiveMethodEnabled" value="false" />
-        <option name="javaMapperPackage" value="xyz.fusheng.exam.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
-        <option name="javaModelPackage" value="xyz.fusheng.model.entity" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="exam-admin" />
+        <option name="javaMapperPackage" value="xyz.fusheng.user.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.user" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="user-admin" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="mapperAnnotaion" value="true" />
         <option name="modelSuperClass" value="xyz.fusheng.model.base.BaseEntity" />
@@ -71,7 +71,7 @@
                   <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
                   <option name="javaModelPacakge" value="xyz.fusheng.user" />
                   <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
-                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.user.service.impl" />
+                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.user.service" />
                   <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
                   <option name="javaServicePackage" value="xyz.fusheng.user.service" />
                   <option name="javaServicePath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/java" />
@@ -275,8 +275,10 @@
                   <option name="insertMethodEnabled" value="false" />
                   <option name="insertSelectiveMethodEnabled" value="false" />
                   <option name="javaModelName" value="Role" />
-                  <option name="moduleName" value="core-common" />
+                  <option name="moduleName" value="user-admin" />
                   <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
                   <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
                   <option name="updateByPrimaykeyEnabled" value="false" />
                   <option name="useActualColumnName" value="false" />
@@ -307,7 +309,7 @@
         <option name="updateByPrimaykeyEnabled" value="false" />
         <option name="useSwagger" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/user-admin/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

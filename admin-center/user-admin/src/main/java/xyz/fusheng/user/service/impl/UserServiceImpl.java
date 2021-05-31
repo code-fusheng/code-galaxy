@@ -12,10 +12,14 @@ import javax.annotation.Resource;
 import org.springframework.util.Assert;
 import xyz.fusheng.enums.StateEnums;
 import xyz.fusheng.exception.BusinessException;
+import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.UserDto;
 import xyz.fusheng.model.entity.User;
+import xyz.fusheng.model.vo.UserVo;
 import xyz.fusheng.user.mapper.UserMapper;
 import xyz.fusheng.user.service.UserService;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -45,5 +49,14 @@ public class UserServiceImpl implements UserService {
         user.setIsDeleted(StateEnums.DELETED.getCode());
         userMapper.updateById(user);
         logger.info("删除用户信息:{}", user);
+    }
+
+    @Override
+    public Page<UserVo> getUserByPage(Page<UserVo> page) {
+        List<UserVo> userVoList = userMapper.getUserByPage(page);
+        page.setList(userVoList);
+        int totalCount = userMapper.getUserCountByPage(page);
+        page.setTotalCount(totalCount);
+        return page;
     }
 }

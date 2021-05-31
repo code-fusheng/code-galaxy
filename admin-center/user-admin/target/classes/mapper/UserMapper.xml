@@ -33,8 +33,36 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    user_id, username, `password`, `header`, phone, mail, signature, description, realname, 
-    sex, address, lng, lat, github_id, `state`, remark, memo, version, is_enabled, is_deleted, 
+    user_id, username, `password`, `header`, phone, mail, signature, description, realname,
+    sex, address, lng, lat, github_id, `state`, remark, memo, version, is_enabled, is_deleted,
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
+
+  <select id="getUserByPage" resultType="xyz.fusheng.model.vo.UserVo">
+    select user_id, username, header, phone, mail, signature, description, realname,
+    sex, address, lng, lat, github_id, state, remark, memo, version, is_enabled, is_deleted,
+    creator_id, updater_id, creator_name, updater_name, created_time, updated_time from sys_user
+    where is_deleted = 0
+    <if test="params.username!=null and params.username!=''">
+        and username like concat('%', #{params.username}, '%')
+     </if>
+     <if test="params.userTime!=null">
+        and created_time between #{params.userTime[0],jdbcType=TIMESTAMP} and #{params.userTime[1],jdbcType=TIMESTAMP}
+     </if>
+     <if test="sortColumn!=null and sortColumn!=''">
+        order by ${sortColumn} ${sortMethod}
+     </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="getUserCountByPage" resultType="java.lang.Integer">
+    select count(*) from sys_user
+    where is_deleted = 0
+    <if test="params.username!=null and params.username!=''">
+        and username like concat('%', #{params.username}, '%')
+     </if>
+     <if test="params.userTime!=null">
+        and created_time between #{params.userTime[0],jdbcType=TIMESTAMP} and #{params.userTime[1],jdbcType=TIMESTAMP}
+     </if>
+  </select>
 </mapper>

@@ -78,7 +78,7 @@ public class RepositoryController {
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {
             // 创建时间、更新时间
-            String[] sortColumns = {"repository_name", "question_count", "created_time", "update_time"};
+            String[] sortColumns = {"repository_name", "question_count", "created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
                 return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
