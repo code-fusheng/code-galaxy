@@ -2,6 +2,7 @@ package xyz.fusheng.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
@@ -16,6 +17,7 @@ import xyz.fusheng.model.base.BaseEntity;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName(value = "ex_question")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Question extends BaseEntity {
     /**
      * 试题编号

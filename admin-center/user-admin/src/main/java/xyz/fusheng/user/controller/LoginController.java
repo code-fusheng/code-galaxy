@@ -2,6 +2,7 @@ package xyz.fusheng.user.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.Assert;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -59,9 +60,9 @@ public class LoginController {
             default:
                 throw new BusinessException("不支持的登录方式!");
         }
-        map.add("client_id", "test-server");
+        map.add("client_id", "user-admin");
         map.add("client_secret", "test");
-        Map<String, String> resultMap = authFeignClientServer.getAccessToken("test-server", "test", "password", loginDto.getUsername(), loginDto.getPassword());
+        Map<String, String> resultMap = authFeignClientServer.getAccessToken("user-admin", "test", "password", loginDto.getUsername(), loginDto.getPassword());
         logger.info("{}", resultMap);
         String access_token = resultMap.get("access_token");
         response.setHeader("authorization", "Bearer " + access_token );
@@ -70,7 +71,10 @@ public class LoginController {
 
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     public ResultVo<User> info() {
-        User userInfo = authFeignClientServer.info();
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        logger.info("principal:{}", principal);
+        User userInfo = userService.selectUserByUsername(principal.toString());
+        logger.info("user:{}", userInfo);
         return new ResultVo<>("操作提示: 获取成功!", userInfo);
     }
 

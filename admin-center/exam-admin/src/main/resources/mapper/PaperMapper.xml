@@ -85,5 +85,11 @@
     where p.is_deleted = 0 and p.paper_id = #{paperId}
   </select>
 
+  <select id="getPaperVoListByExamId" resultType="xyz.fusheng.model.vo.PaperVo">
+    select p.paper_id, p.paper_name, ep.priority_level as priorityLevel
+    from ex_exam_paper ep left join ex_paper p on ep.paper_id = p.paper_id
+    where ep.exam_id = #{examId} and p.is_deleted = 0
+  </select>
+
 
 </mapper>

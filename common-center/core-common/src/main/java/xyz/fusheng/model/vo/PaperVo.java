@@ -20,4 +20,7 @@ public class PaperVo extends Paper {
     @ApiModelProperty("规则名称")
     private String ruleName;
 
+    @ApiModelProperty("优先级")
+    private String priorityLevel;
+
 }

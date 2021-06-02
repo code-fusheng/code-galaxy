@@ -1,5 +1,6 @@
 package xyz.fusheng.model.vo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.model.entity.Option;

@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @FileName: BaseAdminApplication
@@ -19,6 +20,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableResourceServer
 @MapperScan("xyz.fusheng.base.mapper")
 public class BaseAdminApplication {
 

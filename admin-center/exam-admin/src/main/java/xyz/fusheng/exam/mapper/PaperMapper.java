@@ -38,4 +38,11 @@ public interface PaperMapper extends BaseMapper<Paper> {
      * @return
      */
     PaperVo getPaperBaseInfoById(Long paperId);
+
+    /**
+     * 获取考试选用的试卷信息
+     * @param examId
+     * @return
+     */
+    List<PaperVo> getPaperVoListByExamId(Long examId);
 }

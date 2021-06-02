@@ -56,5 +56,11 @@ public class PaperServiceImpl implements PaperService {
         PaperVo paperVo = paperMapper.getPaperBaseInfoById(paperId);
         return paperVo;
     }
+
+    @Override
+    public List<PaperVo> getPaperVoListByExamId(Long examId) {
+        List<PaperVo> paperVoList = paperMapper.getPaperVoListByExamId(examId);
+        return paperVoList;
+    }
 }
 

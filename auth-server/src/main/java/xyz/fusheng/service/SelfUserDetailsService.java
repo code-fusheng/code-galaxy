@@ -65,12 +65,12 @@ public class SelfUserDetailsService implements UserDetailsService {
         List<Menu> menuList = userService.selectMenusByUserId(user.getUserId());
         // 3、封装权限信息(code)
         List<GrantedAuthority> authorities = new ArrayList<>();
-        if (CollectionUtils.isNotEmpty(menuList)) {
-            for (Menu menu : menuList) {
-                // 权限标识
-                authorities.add(new SimpleGrantedAuthority(menu.getPermission()));
-            }
-        }
+        //        if (CollectionUtils.isNotEmpty(menuList)) {
+        //            for (Menu menu : menuList) {
+        //                // 权限标识
+        //                authorities.add(new SimpleGrantedAuthority(menu.getPermission()));
+        //            }
+        //        }
         // 4、构建用户信息
         SelfUser selfUser = new SelfUser();
         BeanUtils.copyProperties(user, selfUser);

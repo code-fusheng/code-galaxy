@@ -5,3 +5,7 @@ spring:
     name: base-admin-server
   profiles:
     active: @profiles.active@
+security:
+  oauth2:
+    resource:
+      id: base-admin

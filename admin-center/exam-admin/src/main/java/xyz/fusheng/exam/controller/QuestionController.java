@@ -103,5 +103,21 @@ public class QuestionController {
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
 
+    /****************************************以下为考试交卷相关接口********************************************/
+    @PostMapping("/getQuestionAndOptionsNotWithAnswersByPageForExam")
+    public ResultVo<Page<QuestionVo>> getQuestionAndOptionsNotWithAnswersByPageForExam(@RequestBody Page<QuestionVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 试题类型、试题标签、创建时间、更新时间
+            String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time", "question_sort"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+            }
+        }
+        page = questionService.getQuestionAndOptionsNotWithAnswersByPage(page);
+        return new ResultVo<>("操作提示: 分页查询成功!", page);
+    }
 
 }

@@ -9,6 +9,11 @@ import xyz.fusheng.model.vo.UserVo;
 public interface UserService{
 
     /**
+     * 通过用户名获取用户信息
+     */
+    User selectUserByUsername(String username);
+
+    /**
      * 添加用户
      * @param userDto
      * @return

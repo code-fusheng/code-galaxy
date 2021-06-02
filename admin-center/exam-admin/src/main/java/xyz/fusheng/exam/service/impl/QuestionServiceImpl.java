@@ -192,4 +192,24 @@ public class QuestionServiceImpl implements QuestionService{
             });
         }
     }
+
+    @Override
+    public Page<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(Page<QuestionVo> page) {
+        // 查询数据
+        List<QuestionVo> questionVoList = questionMapper.getSimpleQuestionByPage(page);
+        page.setList(questionVoList);
+        // 统计总数
+        int totalCount = questionMapper.getSimpleCountByPage(page);
+        page.setTotalCount(totalCount);
+        questionVoList.forEach(questionVo -> {
+            // 获取试题选项连同答案
+            List<Option> optionList = optionMapper.selectList(new QueryWrapper<Option>().lambda()
+                    .select(Option::getOptionId, Option::getOptionContent, Option::getOptionCode,
+                            Option::getOptionImage, Option::getOptionVideo)
+                    .eq(Option::getQuestionId, questionVo.getQuestionId())
+                    .eq(Option::getIsEnabled, StateEnums.ENABLED.getCode()).orderByAsc(Option::getOptionSort));
+            questionVo.setOptionList(optionList);
+        });
+        return page;
+    }
 }

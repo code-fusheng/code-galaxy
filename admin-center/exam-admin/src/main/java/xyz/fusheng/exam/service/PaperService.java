@@ -4,6 +4,8 @@ import xyz.fusheng.model.base.Page;
 import xyz.fusheng.model.dto.PaperDto;
 import xyz.fusheng.model.vo.PaperVo;
 
+import java.util.List;
+
 public interface PaperService {
 
     /**
@@ -25,5 +27,12 @@ public interface PaperService {
      * @return
      */
     PaperVo getPaperBaseInfoById(Long paperId);
+
+    /**
+     * 获取考试选用的试卷信息列表
+     * @param examId
+     * @return
+     */
+    List<PaperVo> getPaperVoListByExamId(Long examId);
 }
 

@@ -30,6 +30,13 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
+    public User selectUserByUsername(String username) {
+        User user = userMapper.selectOne(new QueryWrapper<User>().lambda()
+                .eq(User::getUsername, username));
+        return user;
+    }
+
+    @Override
     public boolean saveUser(UserDto userDto) {
         User user = userMapper.selectOne(new QueryWrapper<User>().lambda().eq(User::getUsername, userDto.getUsername())
                 .eq(User::getIsEnabled, StateEnums.ENABLED.getCode()));

@@ -5,4 +5,7 @@ spring:
     name: exam-admin-server
   profiles:
     active: @profiles.active@
-
+security:
+  oauth2:
+    resource:
+      id: exam-admin

@@ -5,4 +5,7 @@ spring:
     name: user-admin-server
   profiles:
     active: dev
-
+security:
+  oauth2:
+    resource:
+      id: user-admin

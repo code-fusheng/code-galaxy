@@ -51,4 +51,11 @@ public interface QuestionService{
      * @param questionDto
      */
     void updateQuestionWithOptionsAndAnswers(QuestionDto questionDto);
+
+    /**
+     * 分页获取试卷中试题与选项信息（不含答案）
+     * @param page
+     * @return
+     */
+    Page<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(Page<QuestionVo> page);
 }

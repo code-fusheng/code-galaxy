@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -21,6 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableResourceServer
 @MapperScan("xyz.fusheng.exam.mapper")
 public class ExamAdminApplication {
 

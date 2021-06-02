@@ -71,4 +71,11 @@ public class PaperController {
         return new ResultVo<>("操作提示: 获取成功!", paperVo);
     }
 
+    @ApiOperation(value = "获取考试选用的试卷信息")
+    @GetMapping("/getPaperVoListByExamId/{examId}")
+    public ResultVo<List<PaperVo>> getPaperVoListByExamId(@PathVariable Long examId) {
+        List<PaperVo> paperVoList = paperService.getPaperVoListByExamId(examId);
+        return new ResultVo<>("操作提示: 获取成功!", paperVoList);
+    }
+
 }
