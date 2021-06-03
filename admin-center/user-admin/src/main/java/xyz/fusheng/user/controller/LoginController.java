@@ -2,6 +2,7 @@ package xyz.fusheng.user.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.util.Assert;
 import org.springframework.util.LinkedMultiValueMap;
@@ -68,6 +69,12 @@ public class LoginController {
         response.setHeader("authorization", "Bearer " + access_token );
         return new ResultVo<>("登录成功!", access_token);
     }
+
+    /**
+     * PS： 当前我们只能够通过 SecurityContextHolder 获取当前用户的用户名, 无法获取用户的全部信息
+     * DefaultUserAuthenticationConverter 源码部分 #extractAuthentication 会判断当前 userDetailsService
+     * 是否为空  如果为空就返回用户名
+     */
 
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     public ResultVo<User> info() {

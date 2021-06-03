@@ -25,3 +25,9 @@ spring:
   profiles:
     active: @profiles.active@
 ```
+
+### 3、非对称加密指令
+```shell script
+keytool -genkeypair -alias oauth2 -keyalg RSA -keypass oauth2 -keystore oauth2.jks -storepass oauht2
+CN=zhanghao, OU=fusheng, O=fusheng, L=changsha, ST=湖南, C=f
+```

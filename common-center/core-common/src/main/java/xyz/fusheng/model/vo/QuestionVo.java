@@ -6,6 +6,7 @@ import lombok.Data;
 import xyz.fusheng.model.entity.Option;
 import xyz.fusheng.model.entity.Question;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,7 +27,7 @@ public class QuestionVo extends Question {
     private String repositoryName;
 
     @ApiModelProperty("选项列表")
-    private List<Option> optionList;
+    private List<Option> optionList = new ArrayList<>();
 
     @ApiModelProperty("试题分数")
     private Integer questionScore;

@@ -13,7 +13,7 @@ spring:
     host: 47.111.158.6
     port: 6390
     password: Xcode-redis?
-    database: 9
+    database: 6
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:

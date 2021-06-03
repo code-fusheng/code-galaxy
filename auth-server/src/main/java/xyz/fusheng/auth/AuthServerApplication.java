@@ -1,4 +1,4 @@
-package xyz.fusheng;
+package xyz.fusheng.auth;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import xyz.fusheng.feign.UserFeignClientServer;
 
 /**
  * @FileName: AuthServerApplication
@@ -22,7 +23,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableResourceServer
-@EnableFeignClients
+@EnableFeignClients(basePackageClasses = UserFeignClientServer.class)
 public class AuthServerApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthServerApplication.class);

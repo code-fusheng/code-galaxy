@@ -1,5 +1,6 @@
 package xyz.fusheng.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,6 +32,7 @@ public class SelfUser implements Serializable, UserDetails {
     /**
      * 密码
      */
+    @JsonIgnore
     private String password;
 
     /**

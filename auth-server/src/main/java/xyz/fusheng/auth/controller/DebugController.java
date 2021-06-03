@@ -1,4 +1,4 @@
-package xyz.fusheng.controller;
+package xyz.fusheng.auth.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

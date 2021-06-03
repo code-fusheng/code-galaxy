@@ -86,8 +86,6 @@
         <!-- 自定义依赖 -->
         <common-center.version>1.0.0</common-center.version>
 
-        <commons-collections4.version>4.4</commons-collections4.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <swagger2.version>2.9.2</swagger2.version>
         <knife4j.version>2.0.1</knife4j.version>
         <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
@@ -97,6 +95,12 @@
         <hutool.version>5.1.4</hutool.version>
         <security-oauth2.version>2.3.8.RELEASE</security-oauth2.version>
         <jjwt.version>0.9.0</jjwt.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-io.version>2.6</commons-io.version>
+        <httpclient.version>4.5.13</httpclient.version>
+        <httpclientutil.version>1.0.4</httpclientutil.version>
     </properties>
 
     <!--父项目的坐标，如果子项目中没有配置相关的信息，那么使用父项目中的配置。坐标包括：groupID,artifactId和version。-->
@@ -274,14 +278,24 @@
         </plugins>
         <resources>
             <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>**/*.jks</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.jks</include>
+                </includes>
+            </resource>
+            <resource>
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
             </resource>
         </resources>
     </build>
