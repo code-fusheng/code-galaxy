@@ -1,4 +1,4 @@
-package xyz.fusheng.auth.controller;
+package xyz.fusheng.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
