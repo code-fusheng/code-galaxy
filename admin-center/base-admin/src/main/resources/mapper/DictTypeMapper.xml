@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.base.mapper.DictTypeMapper">
+<mapper namespace="xyz.fusheng.base.core.mapper.DictTypeMapper">
   <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.DictType">
     <!--@mbg.generated-->
     <!--@Table sys_dict_type-->
@@ -22,7 +22,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    dict_id, dict_name, dict_type, `state`, remark, memo, version, is_enabled, is_deleted, 
+    dict_id, dict_name, dict_type, `state`, remark, memo, version, is_enabled, is_deleted,
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 

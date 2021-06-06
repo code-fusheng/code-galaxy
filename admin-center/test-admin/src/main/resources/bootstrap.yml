@@ -1,0 +1,11 @@
+server:
+  port: 10099
+spring:
+  application:
+    name: test-admin-server
+  profiles:
+    active: @profiles.active@
+security:
+  oauth2:
+    resource:
+      id: test-admin

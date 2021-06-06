@@ -1,5 +1,5 @@
 server:
-  port: 10099
+  port: 10098
 spring:
   application:
     name: base-admin-server

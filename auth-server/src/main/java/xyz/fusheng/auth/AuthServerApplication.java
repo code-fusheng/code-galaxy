@@ -22,7 +22,6 @@ import xyz.fusheng.feign.UserFeignClientServer;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableResourceServer
 @EnableFeignClients(basePackageClasses = UserFeignClientServer.class)
 public class AuthServerApplication {
 

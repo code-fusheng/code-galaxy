@@ -8,4 +8,4 @@ spring:
 security:
   oauth2:
     resource:
-      id: user-admin
+      id: user-admin-server

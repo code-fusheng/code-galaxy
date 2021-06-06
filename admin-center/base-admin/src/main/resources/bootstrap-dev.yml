@@ -36,7 +36,3 @@ mybatis-plus:
     # 返回map时true:当查询数据为空时字段返回为null,false:不加这个查询数据为空时，字段将被隐藏
     call-setters-on-nulls: true
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
-#security:
-#  oauth2:
-#    resource:
-#      id: base-admin-server

@@ -1,13 +1,14 @@
 package xyz.fusheng.auth.common.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import xyz.fusheng.auth.common.SelfLoginFailureHandler;
+import xyz.fusheng.auth.common.SelfLoginSuccessHandler;
+import xyz.fusheng.auth.common.SelfLogoutSuccessHandler;
 import xyz.fusheng.auth.service.SelfUserDetailsService;
 
 import javax.annotation.Resource;
@@ -40,6 +41,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private SelfUserDetailsService selfUserDetailsService;
 
+    @Resource
+    private SelfLoginSuccessHandler selfLoginSuccessHandler;
+
+    @Resource
+    private SelfLoginFailureHandler selfLoginFailureHandler;
+
+    @Resource
+    private SelfLogoutSuccessHandler selfLogoutSuccessHandler;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         // 获取用户信息认证
@@ -53,14 +63,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/user/refreshToken");
-    }
-
-    @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.requestMatchers()
-                .antMatchers("/user/refreshToken")
+        http.formLogin().loginPage("/login")   // 表单登录
+                .successHandler(selfLoginSuccessHandler)
+                .failureHandler(selfLoginFailureHandler)
+                .and()
+                .logout()
+                .logoutSuccessHandler(selfLogoutSuccessHandler)
                 .and()
                 .csrf().disable();
     }

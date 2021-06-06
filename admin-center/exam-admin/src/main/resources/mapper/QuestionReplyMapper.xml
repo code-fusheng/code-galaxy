@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.mapper.QuestionReplyMapper">
+<mapper namespace="xyz.fusheng.exam.core.mapper.QuestionReplyMapper">
   <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.QuestionReply">
     <!--@mbg.generated-->
     <!--@Table ex_question_reply-->
@@ -31,9 +31,9 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    reply_id, question_id, user_id, paper_id, exam_id, question_type, user_options, right_options, 
-    question_score, actual_score, is_right, use_time, reader_id, reader_name, analysis, 
-    `state`, remark, memo, creator_id, updater_id, creator_name, updater_name, created_time, 
+    reply_id, question_id, user_id, paper_id, exam_id, question_type, user_options, right_options,
+    question_score, actual_score, is_right, use_time, reader_id, reader_name, analysis,
+    `state`, remark, memo, creator_id, updater_id, creator_name, updater_name, created_time,
     updated_time
   </sql>
 </mapper>

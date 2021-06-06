@@ -25,7 +25,7 @@ import xyz.fusheng.feign.UserFeignClientServer;
 @EnableDiscoveryClient
 @EnableResourceServer
 @EnableFeignClients(basePackageClasses = {AuthFeignClientServer.class, UserFeignClientServer.class})
-@MapperScan("xyz.fusheng.user.mapper")
+@MapperScan("xyz.fusheng.user.core.mapper")
 public class UserAdminApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(UserAdminApplication.class);

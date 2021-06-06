@@ -17,6 +17,7 @@
 (2021/05/01 09:00 --- 2021/05/06 23:07) feature : 试题管理/规则管理 --- 新增考试管理后台试题/规则分页接口
 (2021/05/12 10:00 --- 2021/05/13 02:19) feature : 系统完善
 (2021/05/14 09:00 --- 2021/05/14 12:55) feature : 项目部署 --- 新增 Docekr-Compose、Dockerfile 部署相关配置、新增 profile.active 环境配置
+(2021/06/06 07:00 --- 2021/06/06 10:54) feature : rebuild : 项目重构 --- 后台项目整体结构重构,新增对外Api结构层 
 ```
 
 
@@ -81,7 +82,7 @@ $ docker search mysql
 # 2、选定需要pull到系统中的数据库镜像
 $ docker pull mysql:5.7
 # 3、启动 mysql 容器（并设置忽略大小写）
-$ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=zH1314520? -d mysql:5.7 --lower_case_table_names=1
+$ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=******* -d mysql:5.7 --lower_case_table_names=1
 ```
 
 

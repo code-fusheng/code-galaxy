@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableResourceServer
-@MapperScan("xyz.fusheng.exam.mapper")
+@MapperScan("xyz.fusheng.exam.core.mapper")
 public class ExamAdminApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(ExamAdminApplication.class);

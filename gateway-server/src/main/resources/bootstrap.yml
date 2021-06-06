@@ -24,6 +24,12 @@ spring:
             - Path=/user-server/**
           filters:
             - StripPrefix=1
+        - id: test-admin-server
+          uri: lb://test-admin-server
+          predicates:
+            - Path=/test-admin-server/**
+          filters:
+            - StripPrefix=1
         - id: base-admin-server
           uri: lb://base-admin-server
           predicates:
