@@ -10,13 +10,13 @@ spring:
       discovery:
         locator:
           lowerCaseServiceId: true
-          enabled: true
-      routes:
-        - id: test-server
-          uri: lb://test-server
-          predicates:
+          enabled: true   # 开启分区转发配置 使用服务名称调用目标服务
+      routes:   # list 类型
+        - id: test-server  # id: 路由标识 具有唯一性
+          uri: lb://test-server   # 目标服务名
+          predicates:   # 路由条件 匹配访问规则
             - Path=/test-server/**
-          filters:
+          filters:      # 代理转发时截取规则
             - StripPrefix=1
         - id: user-server
           uri: lb://user-server

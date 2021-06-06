@@ -37,6 +37,7 @@ public enum ResultEnums {
     USERNAME_OR_PASSWORD_ERROR(10002, "用户名或密码错误!"),
     UNSUPPORTED_GRANT_TYPE(10003, "不支持的认证模式!"),
     AUTH_FAILED(10004, "认证失败!"),
+    MISSING_CREDENTIALS(10005, "缺少身份凭证!"),
 
     /**
      * 系统自定义异常

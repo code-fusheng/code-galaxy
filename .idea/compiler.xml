@@ -22,6 +22,7 @@
         <module name="base-admin" />
         <module name="test-admin" />
         <module name="gateway-server" />
+        <module name="learn-java" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
@@ -34,6 +35,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="a-learn-demo" options="" />
       <module name="admin-center" options="" />
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
@@ -48,6 +50,7 @@
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="learn-java" options="-parameters" />
       <module name="model-common" options="-parameters" />
       <module name="repo-server" options="-parameters" />
       <module name="server-center" options="" />
