@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.mapper.RepositoryMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Repository">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Repository">
     <!--@mbg.generated-->
     <!--@Table ex_repository-->
     <id column="repository_id" jdbcType="BIGINT" property="repositoryId" />
@@ -22,7 +22,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    repository_id, repository_name, question_count, `state`, remark, memo, version, is_enabled, 
+    repository_id, repository_name, question_count, `state`, remark, memo, version, is_enabled,
     is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 </mapper>

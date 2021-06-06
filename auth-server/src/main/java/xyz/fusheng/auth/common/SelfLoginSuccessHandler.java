@@ -1,6 +1,5 @@
 package xyz.fusheng.auth.common;
 
-import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.collections.MapUtils;
 import org.apache.http.HttpHeaders;
@@ -13,10 +12,10 @@ import org.springframework.security.oauth2.provider.*;
 import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import xyz.fusheng.auth.service.AuthService;
-import xyz.fusheng.enums.ResultEnums;
-import xyz.fusheng.model.vo.ResultVo;
-import xyz.fusheng.utils.HeaderUtils;
+import xyz.fusheng.auth.core.service.AuthService;
+import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.model.vo.ResultVo;
+import xyz.fusheng.tool.utils.HeaderUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;

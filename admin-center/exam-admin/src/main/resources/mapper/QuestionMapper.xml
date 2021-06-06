@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.core.mapper.QuestionMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Question">
+<mapper namespace="xyz.fusheng.admin.exam.core.mapper.QuestionMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Question">
     <!--@mbg.generated-->
     <!--@Table ex_question-->
     <id column="question_id" jdbcType="BIGINT" property="questionId" />
@@ -36,7 +36,7 @@
     select repository_id from ex_repository_question where question_id = #{questionId}
   </select>
 
-  <select id="getByPage" resultType="xyz.fusheng.model.vo.QuestionVo">
+  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.QuestionVo">
     select q.*, rq.repository_id as repositoryId, r.repository_name as repositoryName
     from ex_question q left join ex_repository_question rq on q.question_id = rq.question_id
                        left join ex_repository r on rq.repository_id = r.repository_id
@@ -97,14 +97,14 @@
   </select>
 
   <!-- 获取试题视图对象(包含题库名称) -->
-  <select id="getQuestionVoById" resultType="xyz.fusheng.model.vo.QuestionVo">
+  <select id="getQuestionVoById" resultType="xyz.fusheng.core.model.vo.QuestionVo">
     select q.*, rq.repository_id as repositoryId, r.repository_name as repositoryName
     from ex_question q left join ex_repository_question rq on q.question_id = rq.question_id
                        left join ex_repository r on rq.repository_id = r.repository_id
     where q.is_deleted = 0 and q.question_id = #{questionId}
   </select>
 
-  <select id="getSimpleQuestionByPage" resultType="xyz.fusheng.model.vo.QuestionVo">
+  <select id="getSimpleQuestionByPage" resultType="xyz.fusheng.core.model.vo.QuestionVo">
     select q.question_id, q.question_content, q.question_image, q.question_video, q.question_code, q.question_type, q.question_tag,
     pq.question_sort as questionSort, pq.question_score as questionScore
     from ex_question q right join ex_paper_question pq on q.question_id = pq.question_id

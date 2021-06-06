@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import xyz.fusheng.auth.common.SelfLoginFailureHandler;
 import xyz.fusheng.auth.common.SelfLoginSuccessHandler;
 import xyz.fusheng.auth.common.SelfLogoutSuccessHandler;
-import xyz.fusheng.auth.service.SelfUserDetailsService;
+import xyz.fusheng.auth.core.service.SelfUserDetailsService;
 
 import javax.annotation.Resource;
 

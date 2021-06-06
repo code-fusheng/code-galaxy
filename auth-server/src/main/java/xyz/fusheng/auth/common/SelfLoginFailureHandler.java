@@ -9,7 +9,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
-import xyz.fusheng.model.vo.ResultVo;
+import xyz.fusheng.core.model.vo.ResultVo;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.mapper.OptionMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Option">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Option">
     <!--@mbg.generated-->
     <!--@Table ex_option-->
     <id column="option_id" jdbcType="BIGINT" property="optionId" />
@@ -29,8 +29,8 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    option_id, question_id, paper_id, option_content, option_image, option_video, option_code, 
-    option_sort, is_right, analysis, `state`, remark, memo, version, is_enabled, is_deleted, 
+    option_id, question_id, paper_id, option_content, option_image, option_video, option_code,
+    option_sort, is_right, analysis, `state`, remark, memo, version, is_enabled, is_deleted,
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 </mapper>

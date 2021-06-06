@@ -5,4 +5,8 @@ spring:
     name: user-server
   profiles:
     active: @profiles.active@
+security:
+  oauth2:
+    resource:
+      id: user-server
 

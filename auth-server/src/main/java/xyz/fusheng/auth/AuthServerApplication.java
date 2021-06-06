@@ -8,8 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import xyz.fusheng.feign.UserFeignClientServer;
+import xyz.fusheng.tool.feign.UserFeignClientServer;
 
 /**
  * @FileName: AuthServerApplication

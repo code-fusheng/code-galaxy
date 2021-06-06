@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.core.mapper.UserExamRecordMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.UserExamRecord">
+<mapper namespace="xyz.fusheng.admin.exam.core.mapper.UserExamRecordMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.UserExamRecord">
     <!--@mbg.generated-->
     <!--@Table ex_user_exam_record-->
     <id column="id" jdbcType="BIGINT" property="id" />

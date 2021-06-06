@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.core.mapper.RuleMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Rule">
+<mapper namespace="xyz.fusheng.admin.exam.core.mapper.RuleMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Rule">
     <!--@mbg.generated-->
     <!--@Table ex_paper_rule-->
     <id column="rule_id" jdbcType="BIGINT" property="ruleId" />
@@ -42,7 +42,7 @@
     updated_time
   </sql>
 
-  <select id="getByPage" resultType="xyz.fusheng.model.vo.RuleVo">
+  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.RuleVo">
     select *
     from ex_rule
     where is_deleted = 0

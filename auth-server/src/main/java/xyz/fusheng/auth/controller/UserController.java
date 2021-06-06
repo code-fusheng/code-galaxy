@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.fusheng.feign.UserFeignClientServer;
-import xyz.fusheng.model.entity.User;
-import xyz.fusheng.model.vo.ResultVo;
+import xyz.fusheng.tool.feign.UserFeignClientServer;
+import xyz.fusheng.core.model.entity.User;
+import xyz.fusheng.core.model.vo.ResultVo;
 
 import javax.annotation.Resource;
 import java.security.Principal;

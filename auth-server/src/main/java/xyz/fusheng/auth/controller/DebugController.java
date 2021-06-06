@@ -6,7 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.fusheng.model.entity.SelfUser;
+import xyz.fusheng.core.model.entity.SelfUser;
 
 /**
  * @FileName: DebugController

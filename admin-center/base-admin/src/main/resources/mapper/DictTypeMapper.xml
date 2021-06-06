@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.base.core.mapper.DictTypeMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.DictType">
+<mapper namespace="xyz.fusheng.admin.base.core.mapper.DictTypeMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.DictType">
     <!--@mbg.generated-->
     <!--@Table sys_dict_type-->
     <id column="dict_id" jdbcType="BIGINT" property="dictId" />
@@ -26,7 +26,7 @@
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 
-   <select id="getByPage" resultType="xyz.fusheng.model.vo.DictTypeVo" parameterType="xyz.fusheng.model.base.Page">
+   <select id="getByPage" resultType="xyz.fusheng.core.model.vo.DictTypeVo" parameterType="xyz.fusheng.core.model.base.Page">
     select *
     from sys_dict_type
     where is_deleted = 0
@@ -51,7 +51,7 @@
     limit #{index}, #{pageSize}
   </select>
 
-  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.model.base.Page">
+  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.core.model.base.Page">
     select count(*)
     from sys_dict_type
     where is_deleted = 0

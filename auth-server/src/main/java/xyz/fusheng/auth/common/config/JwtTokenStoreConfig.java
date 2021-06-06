@@ -7,12 +7,14 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2RefreshToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 
 import javax.annotation.Resource;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -32,11 +34,25 @@ public class JwtTokenStoreConfig {
     @Resource
     private RedisTemplate redisTemplate;
 
+    /**
+     * 定制AccessToken转换器 处理资源服务器无法从JWT获取用户信息的问题
+     */
+    private class SelfAccessTokenConverter extends DefaultAccessTokenConverter {
+        @Override
+        public OAuth2Authentication extractAuthentication(Map<String, ?> claims) {
+            OAuth2Authentication authentication = super.extractAuthentication(claims);
+            authentication.setDetails(claims);
+            return authentication;
+        }
+    }
+
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         // 设置对称签名
         converter.setSigningKey("fusheng");
+        // 定制 AccessToken 转换器
+        converter.setAccessTokenConverter(new SelfAccessTokenConverter());
         return converter;
     }
 

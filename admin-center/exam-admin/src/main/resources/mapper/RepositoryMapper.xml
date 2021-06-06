@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.core.mapper.RepositoryMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Repository">
+<mapper namespace="xyz.fusheng.admin.exam.core.mapper.RepositoryMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Repository">
     <!--@mbg.generated-->
     <!--@Table ex_repository-->
     <id column="repository_id" jdbcType="BIGINT" property="repositoryId" />
@@ -34,7 +34,7 @@
     delete from ex_repository_question where repository_id = #{repositoryId} and question_id = #{questionId}
   </delete>
 
-  <select id="getByPage" resultType="xyz.fusheng.model.vo.RepositoryVo">
+  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.RepositoryVo">
     select *
     from ex_repository
     where is_deleted = 0

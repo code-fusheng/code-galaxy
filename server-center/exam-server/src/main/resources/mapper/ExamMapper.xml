@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.mapper.ExamMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Exam">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Exam">
     <!--@mbg.generated-->
     <!--@Table ex_exam-->
     <id column="exam_id" jdbcType="BIGINT" property="examId" />
@@ -28,8 +28,8 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    exam_id, exam_name, exam_description, is_public, `password`, is_limit_time, start_time, 
-    end_time, analysis, `state`, remark, memo, version, is_enabled, is_deleted, creator_id, 
+    exam_id, exam_name, exam_description, is_public, `password`, is_limit_time, start_time,
+    end_time, analysis, `state`, remark, memo, version, is_enabled, is_deleted, creator_id,
     updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 </mapper>

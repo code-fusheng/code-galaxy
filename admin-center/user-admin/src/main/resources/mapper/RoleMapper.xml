@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.user.core.mapper.RoleMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Role">
+<mapper namespace="RoleMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Role">
     <!--@mbg.generated-->
     <!--@Table sys_role-->
     <id column="role_id" jdbcType="BIGINT" property="roleId" />

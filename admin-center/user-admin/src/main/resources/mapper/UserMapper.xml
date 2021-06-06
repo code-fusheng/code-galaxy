@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.user.core.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.User">
+<mapper namespace="UserMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.User">
     <!--@mbg.generated-->
     <!--@Table sys_user-->
     <id column="user_id" jdbcType="BIGINT" property="userId" />
@@ -38,7 +38,7 @@
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 
-  <select id="getUserByPage" resultType="xyz.fusheng.model.vo.UserVo">
+  <select id="getUserByPage" resultType="xyz.fusheng.core.model.vo.UserVo">
     select user_id, username, header, phone, mail, signature, description, realname,
     sex, address, lng, lat, github_id, state, remark, memo, version, is_enabled, is_deleted,
     creator_id, updater_id, creator_name, updater_name, created_time, updated_time from sys_user

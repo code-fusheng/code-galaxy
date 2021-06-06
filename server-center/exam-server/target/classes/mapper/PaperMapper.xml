@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.mapper.PaperMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Paper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Paper">
     <!--@mbg.generated-->
     <!--@Table ex_paper-->
     <id column="paper_id" jdbcType="BIGINT" property="paperId" />
@@ -23,7 +23,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    paper_id, paper_name, paper_rule_id, analysis, `state`, remark, memo, version, is_enabled, 
+    paper_id, paper_name, paper_rule_id, analysis, `state`, remark, memo, version, is_enabled,
     is_deleted, creator_id, updater_id, creator_name, updater_name, created_time, updated_time
   </sql>
 </mapper>

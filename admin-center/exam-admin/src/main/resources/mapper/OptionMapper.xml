@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.exam.core.mapper.OptionMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.model.entity.Option">
+<mapper namespace="xyz.fusheng.admin.exam.core.mapper.OptionMapper">
+  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Option">
     <!--@mbg.generated-->
     <!--@Table ex_option-->
     <id column="option_id" jdbcType="BIGINT" property="optionId" />
