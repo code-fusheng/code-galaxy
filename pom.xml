@@ -72,7 +72,7 @@
         <module>gateway-server</module>
         <module>auth-server</module>
         <module>admin-center</module>
-        <module>learn-demo</module>
+        <module>a-learn-demo</module>
     </modules>
 
     <properties>

@@ -10,6 +10,8 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken;
 import reactor.core.publisher.Mono;
 import org.springframework.security.oauth2.provider.token.TokenStore;
+import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.exception.BusinessException;
 
 /**
  * @FileName: ReactiveDbAuthenticationManager
@@ -36,19 +38,23 @@ public class CustomAuthenticationManager implements ReactiveAuthenticationManage
                 .cast(BearerTokenAuthenticationToken.class)
                 .map(BearerTokenAuthenticationToken::getToken)
                 .flatMap((accessTokenValue -> {
-                    OAuth2AccessToken accessToken = tokenStore.readAccessToken(accessTokenValue);
-                    if (accessToken == null) {
-                        return Mono.error(new InvalidTokenException("Invalid access token: " + accessTokenValue));
-                    } else if (accessToken.isExpired()) {
-                        tokenStore.removeAccessToken(accessToken);
-                        return Mono.error(new InvalidTokenException("Access token expired: " + accessTokenValue));
-                    }
+                    try {
+                        OAuth2AccessToken accessToken = tokenStore.readAccessToken(accessTokenValue);
+                        if (accessToken == null) {
+                            return Mono.error(new InvalidTokenException("Invalid access token: " + accessTokenValue));
+                        } else if (accessToken.isExpired()) {
+                            tokenStore.removeAccessToken(accessToken);
+                            return Mono.error(new InvalidTokenException("Access token expired: " + accessTokenValue));
+                        }
 
-                    OAuth2Authentication result = tokenStore.readAuthentication(accessToken);
-                    if (result == null) {
-                        return Mono.error(new InvalidTokenException("Invalid access token: " + accessTokenValue));
+                        OAuth2Authentication result = tokenStore.readAuthentication(accessToken);
+                        if (result == null) {
+                            return Mono.error(new InvalidTokenException("Invalid access token: " + accessTokenValue));
+                        }
+                        return Mono.just(result);
+                    } catch (InvalidTokenException e) {
+                        throw new BusinessException(ResultEnums.AUTH_FAILED.getCode(), "Token 非法");
                     }
-                    return Mono.just(result);
                 }))
                 .cast(Authentication.class);
     }

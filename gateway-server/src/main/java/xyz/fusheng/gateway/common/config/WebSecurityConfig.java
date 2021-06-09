@@ -11,6 +11,8 @@ import org.springframework.security.authentication.ReactiveAuthenticationManager
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
@@ -27,6 +29,7 @@ import xyz.fusheng.gateway.core.mamager.CustomAuthenticationManager;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.util.Map;
 
 /**
  * @FileName: SecurityConfig
@@ -52,10 +55,24 @@ public class WebSecurityConfig {
         return new JwtTokenStore(jwtTokenEnhancer());
     }
 
+    /**
+     * 定制AccessToken转换器 处理资源服务器无法从JWT获取用户信息的问题
+     */
+    private class SelfAccessTokenConverter extends DefaultAccessTokenConverter {
+        @Override
+        public OAuth2Authentication extractAuthentication(Map<String, ?> claims) {
+            OAuth2Authentication authentication = super.extractAuthentication(claims);
+            authentication.setDetails(claims);
+            return authentication;
+        }
+    }
+
     @Bean
-    public JwtAccessTokenConverter jwtTokenEnhancer(){
+    public JwtAccessTokenConverter jwtTokenEnhancer() {
         JwtAccessTokenConverter jwtTokenEnhancer = new JwtAccessTokenConverter();
         jwtTokenEnhancer.setSigningKey("fusheng");
+        // 定制 AccessToken 转换器
+        jwtTokenEnhancer.setAccessTokenConverter(new SelfAccessTokenConverter());
         return jwtTokenEnhancer;
     }
 
@@ -97,7 +114,7 @@ public class WebSecurityConfig {
         http
                 .authorizeExchange()
                 .pathMatchers("/**").permitAll()
-                .anyExchange().access(accessManager)
+                // .anyExchange().access(accessManager)
                 .and()
                 // 跨域过滤器
                 .addFilterAt(corsFilter(), SecurityWebFiltersOrder.CORS)

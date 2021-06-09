@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -46,6 +47,7 @@ public class TestController {
 
     @ApiOperation("测试通过工具类获取用户信息")
     @GetMapping("/testGetUserInfoByUtils")
+    @Cacheable
     public ResultVo<Object> testGetUserInfoByUtils() {
         SelfUser userInfo = SecurityUtils.getUserInfo();
         return new ResultVo<>("测试通过工具类获取用户信息!", userInfo);

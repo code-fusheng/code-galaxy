@@ -29,6 +29,16 @@
 
 
 
+# 个人网站 - Wiki
+
+
+
+[TOC]
+
+## 一、系统环境搭建
+
+
+
 ### 1、Linux 搭建 JDK 环境（离线Shell脚本）
 
 ```shell
@@ -66,8 +76,8 @@ fi
 # 环境配置
 echo "#java jdk环境变量" >> /etc/profile
 echo "export JAVA_HOME=/usr/local/java/jdk1.8.0_221" >> /etc/profile
-echo "export PATH=$JAVA_HOME/bin:$PATH" >> /etc/profile
-echo "export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar" >> /etc/profile
+echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> /etc/profile
+echo "export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar" >> /etc/profile
 echo "刷新环境变量"
 source /etc/profile
 java -version
@@ -84,7 +94,7 @@ $ docker search mysql
 # 2、选定需要pull到系统中的数据库镜像
 $ docker pull mysql:5.7
 # 3、启动 mysql 容器（并设置忽略大小写）
-$ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=******* -d mysql:5.7 --lower_case_table_names=1
+$ docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=zH1314520? -d mysql:5.7 --lower_case_table_names=1
 ```
 
 
@@ -123,7 +133,9 @@ echo "---启动docker---"
 systemctl enable docker
 echo "---查看docker版本信息---"
 docker version
+```
 
+```shell
 # 配置 Docker 阿里云加速镜像
 mkdir -p /etc/docker
 vim  /etc/docker/daemon.json
@@ -132,14 +144,28 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
-```
+```shell
 # docker compose
+# mac 本地
+$ scp docker-compose-Linux-x86_64 root@47.111.158.6:/root/Downloads
+# linux 服务器
+$ mkdir /usr/local/bin
+$ cp docker-compose-Linux-x86_64 /usr/local/bin
+$ cd /usr/local/bin
+$ mv docker-compose-Linux-x86_64 docker-compose
+$ chmod +x /usr/local/bin/docker-compose
 
+# 进一步搭建
+$ vi /lib/systemd/system/docker.service
+# 开放 2376 端口 建议改成12375
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:12375  -H unix:///var/run/docker.sock
+# 重启 docker 服务
+$ systemctl daemon-reload
+$ systemctl restart docker.service
+
+# 检查 
+$ netstat -nptl 
 ```
-
-
-
-
 
 
 
@@ -152,10 +178,8 @@ systemctl restart docker
 ### 5、Linux 搭建 Redis 环境（在线Docker 方式）
 
 ```shell
-docker run -d --name redis -p 6390:6379 redis --requirepass "123456"
+docker run -d --restart=always --name redis -p 6390:6379 redis --requirepass "Xcode-redis?"
 ```
-
-
 
 ### 6、Linux 搭建 RabbitMQ （在线/离线方式）
 
@@ -238,6 +262,9 @@ $ mvn -version
 # 切换到资源文件目录
 $ cd /root/Downloads
 
+# 在线下载 nginx
+$ wget http://nginx.org/download/nginx-1.16.1.tar.gz
+
 # 安装必要依赖
 $ yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
 
@@ -259,6 +286,52 @@ $ ./sbin/nginx
 # PS : 修改配置后的重载
 $ ./sbin/nginx -s reload
 ```
+
+
+
+*暂时不可用*
+
+```shell
+#!/bin/bash
+function IXDBA(){
+cat << EOF
++----------------+
+|Nginx在线安装脚本
++----------------+
+EOF
+}
+IXDBA
+
+if [ ! -d /usr/local ]
+	then
+	mkdir /usr/local
+fi
+if [ ! -d /usr/local/nginx ]
+	then
+	mkdir /usr/local/nginx
+fi
+LOG_DIR = /usr/local
+#########################
+function NGINX_INSTALL() {
+yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel &>/dev/nul
+	if [ $? -eq 0 ]
+		then
+			cd $ /usr/local	/
+			$$ wget http://nginx.org/download/nginx-1.16.1.tar.gz &>/dev/null /
+			$$ tar -zxvf nginx-1.16.1.tar.gz /
+			$$ cd nginx-1.16.1 /
+			$$ ./configure --prefix=/usr/local/nginx &>/dev/null	/
+			$$ make &>/dev/null /
+      $$ make install &>/dev/null
+	fi
+	if [ -e /usr/local/nginx/sbin/nginx ];then
+		/usr/local/nginx/sbin/nginx && echo "Nginx 安装并启动成功！！！"
+	fi
+}
+echo "开始在线安装 Nginx 请稍后..." && NGINX_INSTALL
+```
+
+
 
 
 
@@ -298,6 +371,8 @@ $ cd /usr/local/seate/bin
 # 启动 seate-server 服务
 $ sh ./bin/seate-server.sh
 ```
+
+
 
 
 
