@@ -10,7 +10,7 @@ import xyz.fusheng.core.model.dto.RuleDto;
 import xyz.fusheng.core.model.entity.Rule;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.model.vo.RuleVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

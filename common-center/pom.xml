@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>core-common</module>
-        <module>tool-common</module>
     </modules>
 
     <dependencies>

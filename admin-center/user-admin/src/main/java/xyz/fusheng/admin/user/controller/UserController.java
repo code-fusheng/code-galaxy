@@ -5,13 +5,16 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
+import xyz.fusheng.admin.user.common.annotation.UserInfo;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.dto.UserDto;
+import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.model.vo.UserVo;
 import xyz.fusheng.admin.user.core.service.UserService;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -33,9 +36,11 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @PostMapping("/saveUser")
     @ApiOperation(value = "添加用户", notes = "后台添加用户")
-    public ResultVo<Object> saveUser(@RequestBody @Validated UserDto userDto) {
+    @PostMapping("/saveUser")
+    public ResultVo<Object> saveUser(@RequestBody @Validated UserDto userDto, @ApiIgnore @UserInfo SelfUser userInfo) {
+        userDto.setCreatorId(userInfo.getUserId());
+        userDto.setCreatorName(userInfo.getUsername());
         userService.saveUser(userDto);
         return new ResultVo<>("操作成功:添加用户!");
     }
@@ -46,6 +51,22 @@ public class UserController {
                                                        Long userId) {
         userService.deleteUserById(userId);
         return new ResultVo<>("操作提示: 删除用户!");
+    }
+
+    @ApiOperation(value = "获取用户信息")
+    @GetMapping("/getUserById/{userId}")
+    public ResultVo<UserVo> getUserById(@PathVariable Long userId) {
+        UserVo userVo = userService.getUserById(userId);
+        return new ResultVo<>("操作提示: 获取用户信息!", userVo);
+    }
+
+    @ApiOperation(value = "更新用户信息")
+    @PutMapping("/updateUser")
+    public ResultVo<Object> updateUser(@RequestBody UserDto userDto, @ApiIgnore @UserInfo SelfUser userInfo) {
+        userDto.setUpdaterId(userInfo.getUserId());
+        userDto.setUpdaterName(userInfo.getUsername());
+        userService.updateUser(userDto);
+        return new ResultVo<>("操作提示: 更新成功!");
     }
 
     @ApiOperation("分页查询用户列表")

@@ -122,4 +122,11 @@
     select count(*) from ex_paper_question where paper_id = #{params.paperId}
   </select>
 
+  <select id="getAllQuestionAndOptionsWithAnswers" resultType="xyz.fusheng.core.model.vo.QuestionVo">
+    select q.question_id, q.question_content, q.question_image, q.question_video, q.question_code, q.question_type, q.question_tag,
+    pq.question_sort as questionSort, pq.question_score as questionScore
+    from ex_question q right join ex_paper_question pq on q.question_id = pq.question_id
+    where q.is_deleted = 0
+  </select>
+
 </mapper>

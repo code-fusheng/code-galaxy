@@ -31,4 +31,17 @@ public interface UserService{
      * @return
      */
     Page<UserVo> getUserByPage(Page<UserVo> page);
+
+    /**
+     * 获取用户信息
+     * @param userId
+     * @return
+     */
+    UserVo getUserById(Long userId);
+
+    /**
+     * 修改用户
+     * @param userDto
+     */
+    void updateUser(UserDto userDto);
 }

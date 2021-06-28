@@ -4,6 +4,8 @@ import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.dto.QuestionDto;
 import xyz.fusheng.core.model.vo.QuestionVo;
 
+import java.util.List;
+
 public interface QuestionService{
 
     /**
@@ -58,4 +60,10 @@ public interface QuestionService{
      * @return
      */
     Page<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(Page<QuestionVo> page);
+
+    /**
+     * 获取所有试题与选项以及答案列表
+     * @return
+     */
+    List<QuestionVo> getAllQuestionAndOptionsWithAnswers();
 }

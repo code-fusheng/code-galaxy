@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.auth.core.service.AuthService;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.HeaderUtils;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.HeaderUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;

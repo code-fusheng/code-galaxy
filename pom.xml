@@ -87,6 +87,8 @@
         <!-- 自定义依赖 -->
         <common-center.version>1.0.0</common-center.version>
 
+        <!-- 依赖版本约束 -->
+        <elasticsearch.version>6.8.14</elasticsearch.version>
         <swagger2.version>2.9.2</swagger2.version>
         <knife4j.version>2.0.1</knife4j.version>
         <mysql-connector-java.version>8.0.19</mysql-connector-java.version>
@@ -141,6 +143,13 @@
                     </exclusion>
                 </exclusions>
                 <version>1.0.0</version>
+            </dependency>
+
+            <!-- logstash需要的包 -->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>6.3</version>
             </dependency>
 
             <dependency>

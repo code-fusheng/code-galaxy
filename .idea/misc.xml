@@ -13,7 +13,11 @@
         <option value="$PROJECT_DIR$/common-center/common-model/pom.xml" />
         <option value="$PROJECT_DIR$/common-center/config-common/pom.xml" />
         <option value="$PROJECT_DIR$/common-center/model-common/pom.xml" />
+        <option value="$PROJECT_DIR$/common-center/tool-common/pom.xml" />
         <option value="$PROJECT_DIR$/common-core/pom.xml" />
+        <option value="$PROJECT_DIR$/learn-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/learn-leetcode/pom.xml" />
+        <option value="$PROJECT_DIR$/learn/pom.xml" />
         <option value="$PROJECT_DIR$/test-server/pom.xml" />
       </set>
     </option>

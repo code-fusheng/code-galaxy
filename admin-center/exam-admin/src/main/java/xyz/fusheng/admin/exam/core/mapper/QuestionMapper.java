@@ -47,4 +47,6 @@ public interface QuestionMapper extends BaseMapper<Question> {
     List<QuestionVo> getSimpleQuestionByPage(Page<QuestionVo> page);
 
     int getSimpleCountByPage(Page<QuestionVo> page);
+
+    List<QuestionVo> getAllQuestionAndOptionsWithAnswers();
 }

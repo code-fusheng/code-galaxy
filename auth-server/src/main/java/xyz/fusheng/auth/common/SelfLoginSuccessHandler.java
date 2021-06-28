@@ -13,9 +13,8 @@ import org.springframework.security.oauth2.provider.token.AuthorizationServerTok
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 import xyz.fusheng.auth.core.service.AuthService;
-import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.HeaderUtils;
+import xyz.fusheng.core.utils.HeaderUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -98,7 +97,8 @@ public class SelfLoginSuccessHandler implements AuthenticationSuccessHandler {
 
             resultVo = ResultVo.success(accessToken);
         } catch (Exception e) {
-            resultVo = ResultVo.error(ResultEnums.CLIENT_AUTH_FAILED.getMsg());
+            logger.error("异常信息{}:", e.getCause().getMessage());
+            resultVo = ResultVo.error(e.getMessage());
         }
         // 封装返回参数
         response.setContentType("application/json;charset=utf-8");

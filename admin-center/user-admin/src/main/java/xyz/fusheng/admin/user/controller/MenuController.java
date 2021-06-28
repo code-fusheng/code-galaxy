@@ -9,7 +9,7 @@ import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.vo.MenuVo;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

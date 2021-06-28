@@ -61,8 +61,8 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
             // 响应消息内容对象
             JSONObject message = new JSONObject();
             // 响应状态
-            message.put("code", ResultEnums.MISSING_CREDENTIALS.getCode());
-            message.put("message", ResultEnums.MISSING_CREDENTIALS.getMsg());
+            message.put("code", "10005");
+            message.put("message", "缺少身份凭证!");
             // 转换响应消息内容对象为字节
             byte[] bits = message.toJSONString().getBytes(StandardCharsets.UTF_8);
             DataBuffer buffer = response.bufferFactory().wrap(bits);

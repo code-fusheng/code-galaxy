@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
-import xyz.fusheng.tool.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.AuthFeignClientServer;
 
 /**
  * @FileName: UserServerApplication

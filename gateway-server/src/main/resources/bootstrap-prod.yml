@@ -10,7 +10,7 @@ spring:
     password: zH1314520
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
-    host: 47.111.158.6
+    host: 175.24.45.179
     port: 6390
     password: Xcode-redis?
     database: 9

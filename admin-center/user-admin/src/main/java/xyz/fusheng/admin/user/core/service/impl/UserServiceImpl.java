@@ -51,10 +51,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUserById(Long userId) {
-        User user = userMapper.selectById(userId);
-        user.setIsDeleted(StateEnums.DELETED.getCode());
-        userMapper.updateById(user);
-        logger.info("删除用户信息:{}", user);
+        userMapper.deleteById(userId);
     }
 
     @Override
@@ -64,5 +61,20 @@ public class UserServiceImpl implements UserService {
         int totalCount = userMapper.getUserCountByPage(page);
         page.setTotalCount(totalCount);
         return page;
+    }
+
+    @Override
+    public UserVo getUserById(Long userId) {
+        UserVo userVo = new UserVo();
+        User user = userMapper.selectById(userId);
+        BeanUtils.copyProperties(user, userVo);
+        return userVo;
+    }
+
+    @Override
+    public void updateUser(UserDto userDto) {
+        User user = new User();
+        BeanUtils.copyProperties(userDto, user);
+        userMapper.updateById(user);
     }
 }

@@ -10,8 +10,8 @@ import lombok.EqualsAndHashCode;
 import xyz.fusheng.core.model.base.BaseEntity;
 
 /**
-    * 系统表-字典类型表
-    */
+ * 系统表-字典类型表
+ */
 @ApiModel(value="xyz-fusheng-model-entity-DictType")
 @Data
 @EqualsAndHashCode(callSuper=true)

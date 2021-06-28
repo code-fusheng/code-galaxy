@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>learn-java</module>
+        <module>learn-elasticsearch</module>
+        <module>learn-leetcode</module>
     </modules>
 
 

@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.fusheng.tool.feign.AuthFeignClientServer;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.entity.Role;
 import xyz.fusheng.core.model.entity.User;

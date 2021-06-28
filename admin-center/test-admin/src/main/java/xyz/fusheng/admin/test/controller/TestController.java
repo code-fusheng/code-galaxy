@@ -12,9 +12,10 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import xyz.fusheng.admin.test.common.annotation.UserInfo;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.SecurityUtils;
+import xyz.fusheng.core.utils.SecurityUtils;
 
 /**
  * @FileName: TestController
@@ -53,7 +54,13 @@ public class TestController {
         return new ResultVo<>("测试通过工具类获取用户信息!", userInfo);
     }
 
-    @PreAuthorize("hasAnyAuthority('test:testPreAuthorizeByGetPort')")
+    @ApiOperation("/测试通过注解获取用户信息")
+    @GetMapping("/testGetUserInfoByAnnotation")
+    public ResultVo<SelfUser> testGetUserInfoByAnnotation(@UserInfo SelfUser userInfo) {
+        return new ResultVo<>(userInfo);
+    }
+
+    @PreAuthorize("hasAnyAuthority('test:debug:getPort')")
     @ApiOperation("测试权限控制")
     @GetMapping("/testPreAuthorizeByGetPort")
     public ResultVo<Object> testPreAuthorizeByGetPort() {

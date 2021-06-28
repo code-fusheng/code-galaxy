@@ -10,8 +10,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import xyz.fusheng.tool.feign.AuthFeignClientServer;
-import xyz.fusheng.tool.feign.UserFeignClientServer;
+import xyz.fusheng.core.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.UserFeignClientServer;
 
 /**
  * @FileName: UserAdminApplication

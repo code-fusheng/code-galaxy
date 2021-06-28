@@ -8,7 +8,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;

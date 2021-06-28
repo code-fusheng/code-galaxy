@@ -8,20 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core-common" />
+        <module name="learn-leeetcode" />
         <module name="base-server" />
+        <module name="learn-leetcode" />
         <module name="test-server" />
         <module name="user-admin" />
         <module name="code-swagger2-starter" />
         <module name="exam-server" />
         <module name="auth-server" />
         <module name="article-admin" />
-        <module name="tool-common" />
         <module name="exam-admin" />
         <module name="repo-server" />
         <module name="article-server" />
         <module name="base-admin" />
         <module name="test-admin" />
         <module name="gateway-server" />
+        <module name="learn" />
+        <module name="learn-elasticsearch" />
         <module name="learn-java" />
         <module name="user-server" />
       </profile>
@@ -29,8 +32,11 @@
     <bytecodeTargetLevel>
       <module name="code-swagger2-starter" target="1.8" />
       <module name="config-common" target="1.8" />
+      <module name="learn" target="1.8" />
+      <module name="learn-leeetcode" target="1.8" />
       <module name="model-common" target="1.8" />
       <module name="repo-server" target="1.8" />
+      <module name="tool-common" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -50,7 +56,11 @@
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="learn" options="-parameters" />
+      <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
+      <module name="learn-leeetcode" options="-parameters" />
+      <module name="learn-leetcode" options="-parameters" />
       <module name="model-common" options="-parameters" />
       <module name="repo-server" options="-parameters" />
       <module name="server-center" options="" />

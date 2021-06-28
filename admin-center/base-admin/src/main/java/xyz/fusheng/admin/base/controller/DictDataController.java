@@ -4,13 +4,16 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
+import xyz.fusheng.admin.base.common.annotation.UserInfo;
 import xyz.fusheng.admin.base.core.service.DictDataService;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.dto.DictDataDto;
+import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.DictDataVo;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -33,7 +36,10 @@ public class DictDataController {
 
     @ApiOperation(value = "添加字典数据")
     @PostMapping("/saveDictData")
-    public ResultVo<Object> saveDictData(@RequestBody @Validated DictDataDto dictDataDto) {
+    public ResultVo<Object> saveDictData(@RequestBody @Validated DictDataDto dictDataDto,
+                                         @ApiIgnore @UserInfo SelfUser userInfo) {
+        dictDataDto.setCreatorId(userInfo.getUserId());
+        dictDataDto.setCreatorName(userInfo.getUsername());
         dictDataService.saveDictData(dictDataDto);
         return new ResultVo<>("操作提示: 添加成功!");
     }
@@ -47,7 +53,10 @@ public class DictDataController {
 
     @ApiOperation(value = "修改字典数据")
     @PutMapping("/updateDictData")
-    public ResultVo<Object> updateDictData(@RequestBody DictDataDto dictDataDto) {
+    public ResultVo<Object> updateDictData(@RequestBody DictDataDto dictDataDto,
+                                           @ApiIgnore @UserInfo SelfUser userInfo) {
+        dictDataDto.setUpdaterId(userInfo.getUserId());
+        dictDataDto.setUpdaterName(userInfo.getUsername());
         dictDataService.updateDictData(dictDataDto);
         return new ResultVo<>("操作提示: 修改成功!");
     }

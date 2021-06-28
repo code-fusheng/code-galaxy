@@ -7,7 +7,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import xyz.fusheng.tool.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.AuthFeignClientServer;
 import xyz.fusheng.core.model.dto.LoginDto;
 import xyz.fusheng.core.model.entity.User;
 import xyz.fusheng.core.model.vo.ResultVo;

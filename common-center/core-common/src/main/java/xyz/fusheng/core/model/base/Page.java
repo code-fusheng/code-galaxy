@@ -8,6 +8,7 @@ package xyz.fusheng.core.model.base;
  * @Description: 基础分页对象
  */
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
@@ -56,6 +57,7 @@ public class Page<T> implements Serializable {
     /**
      * 数据
      */
+    @ApiModelProperty(hidden = true)
     private List<T> list;
 
     /**

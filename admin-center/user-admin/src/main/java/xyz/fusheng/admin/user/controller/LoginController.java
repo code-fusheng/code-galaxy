@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.tool.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.AuthFeignClientServer;
 import xyz.fusheng.core.model.dto.LoginDto;
 import xyz.fusheng.core.model.entity.User;
 import xyz.fusheng.core.model.vo.ResultVo;
@@ -44,6 +44,7 @@ public class LoginController {
     private AuthFeignClientServer authFeignClientServer;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @Deprecated
     public ResultVo<Object> login(@RequestBody @Validated LoginDto loginDto, HttpServletRequest request, HttpServletResponse response) throws IOException {
         logger.info("{}", loginDto);
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();

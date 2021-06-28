@@ -11,7 +11,7 @@ import xyz.fusheng.core.model.dto.RepositoryDto;
 import xyz.fusheng.core.model.entity.Repository;
 import xyz.fusheng.core.model.vo.RepositoryVo;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

@@ -209,4 +209,20 @@ public class QuestionServiceImpl implements QuestionService{
         });
         return page;
     }
+
+    @Override
+    public List<QuestionVo> getAllQuestionAndOptionsWithAnswers() {
+        // 查询数据
+        List<QuestionVo> questionVoList = questionMapper.getAllQuestionAndOptionsWithAnswers();
+        questionVoList.forEach(questionVo -> {
+            // 获取试题选项连同答案
+            List<Option> optionList = optionMapper.selectList(new QueryWrapper<Option>().lambda()
+                    .select(Option::getOptionId, Option::getOptionContent, Option::getOptionCode,
+                            Option::getOptionImage, Option::getOptionVideo)
+                    .eq(Option::getQuestionId, questionVo.getQuestionId())
+                    .eq(Option::getIsEnabled, StateEnums.ENABLED.getCode()).orderByAsc(Option::getOptionSort));
+            questionVo.setOptionList(optionList);
+        });
+        return questionVoList;
+    }
 }

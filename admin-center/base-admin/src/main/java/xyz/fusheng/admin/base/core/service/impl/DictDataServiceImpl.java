@@ -82,7 +82,9 @@ public class DictDataServiceImpl implements DictDataService {
                 .eq(DictData::getDictCode, dictDataCode)
                 .eq(DictData::getIsEnabled, StateEnums.ENABLED.getCode()));
         DictDataVo dictDataVo = new DictDataVo();
-        Assert.isTrue(ObjectUtils.isEmpty(dictData), "操作提示:更新失败!");
+        if (ObjectUtils.isEmpty(dictData)) {
+            throw new BusinessException("操作失败: 数据异常!");
+        }
         BeanUtils.copyProperties(dictData, dictDataVo);
         return dictDataVo;
     }

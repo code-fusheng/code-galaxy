@@ -4,14 +4,17 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
+import xyz.fusheng.admin.base.common.annotation.UserInfo;
 import xyz.fusheng.admin.base.core.service.DictTypeService;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.dto.DictTypeDto;
 import xyz.fusheng.core.model.entity.DictType;
+import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.DictTypeVo;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.tool.utils.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -34,7 +37,10 @@ public class DictTypeController {
 
     @ApiOperation(value = "添加字典类型", notes = "添加字典类型")
     @PostMapping("/saveDictType")
-    public ResultVo<Object> saveDictType(@RequestBody @Validated DictTypeDto dictTypeDto) {
+    public ResultVo<Object> saveDictType(@RequestBody @Validated DictTypeDto dictTypeDto,
+                                         @ApiIgnore @UserInfo SelfUser userInfo) {
+        dictTypeDto.setCreatorId(userInfo.getUserId());
+        dictTypeDto.setCreatorName(userInfo.getUsername());
         dictTypeService.saveDictType(dictTypeDto);
         return new ResultVo<>("操作提示: 添加成功!");
     }
@@ -48,7 +54,10 @@ public class DictTypeController {
 
     @ApiOperation(value = "修改字典类型")
     @PutMapping("/updateDictType")
-    public ResultVo<Object> updateDictType(@RequestBody DictTypeDto dictTypeDto) {
+    public ResultVo<Object> updateDictType(@RequestBody DictTypeDto dictTypeDto,
+                                           @ApiIgnore @UserInfo SelfUser userInfo) {
+        dictTypeDto.setUpdaterId(userInfo.getUserId());
+        dictTypeDto.setUpdaterName(userInfo.getUsername());
         dictTypeService.updateDictType(dictTypeDto);
         return new ResultVo<>("操作提示: 修改成功!");
     }

@@ -16,6 +16,12 @@
         <dependency>
             <groupId>xyz.fusheng</groupId>
             <artifactId>core-common</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-wep</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

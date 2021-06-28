@@ -17,7 +17,7 @@
 
         <dependency>
             <groupId>xyz.fusheng</groupId>
-            <artifactId>tool-common</artifactId>
+            <artifactId>core-common</artifactId>
         </dependency>
 
         <dependency>
