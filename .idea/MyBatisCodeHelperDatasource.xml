@@ -8,16 +8,32 @@
         <option name="generateServiceInterface" value="true" />
         <option name="insertMethodEnabled" value="false" />
         <option name="insertSelectiveMethodEnabled" value="false" />
-        <option name="javaMapperPackage" value="xyz.fusheng.exam.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/java" />
-        <option name="javaModelPackage" value="xyz.fusheng.model.entity" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="exam-admin" />
+        <option name="javaMapperPackage" value="xyz.fusheng.admin.article.core.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.core.model.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="article-admin" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="mapperAnnotaion" value="true" />
         <option name="modelSuperClass" value="xyz.fusheng.model.base.BaseEntity" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
+            <entry key="article-admin">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="xyz.fusheng.admin.article.core.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+                  <option name="javaModelPacakge" value="xyz.fusheng.core.model.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.admin.article.core.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+                  <option name="javaServicePackage" value="xyz.fusheng.admin.article.core.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="base-admin">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -83,10 +99,42 @@
           </map>
         </option>
         <option name="mybatisPlusStaticField" value="false" />
-        <option name="removeTablePreName" value="ex_" />
+        <option name="removeTablePreName" value="ar_" />
         <option name="selectByPrimaryKeyEnabled" value="false" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="code-galaxy-article:ar_article">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="article_id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="Article" />
+                  <option name="moduleName" value="article-admin" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="code-galaxy-article:ar_category">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="category_id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="Category" />
+                  <option name="moduleName" value="article-admin" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="code-galaxy-exam:ex_exam">
               <value>
                 <TableGenerateConfig>
@@ -327,7 +375,7 @@
         <option name="updateByPrimaykeyEnabled" value="false" />
         <option name="useSwagger" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/exam-admin/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/article-admin/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

@@ -38,6 +38,7 @@ public enum ResultEnums {
     UNSUPPORTED_GRANT_TYPE(10003, "不支持的认证模式!"),
     AUTH_FAILED(10004, "认证失败!"),
     MISSING_CREDENTIALS(10005, "缺少身份凭证!"),
+    TOKEN_PAST(10006, "认证失效!"),
 
     /**
      * 系统自定义异常

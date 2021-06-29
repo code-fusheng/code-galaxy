@@ -3,9 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/a-learn-demo/learn-elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-java/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-leetcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/a-learn-demo/learn-leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/article-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-center/base-admin/src/main/java" charset="UTF-8" />
@@ -19,6 +21,7 @@
     <file url="file://$PROJECT_DIR$/server-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/article-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/base-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/base-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/exam-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/test-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/user-server/src/main/java" charset="UTF-8" />

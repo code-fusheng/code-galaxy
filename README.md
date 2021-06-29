@@ -20,6 +20,7 @@
 (2021/06/06 07:00 --- 2021/06/06 10:54) rebuild : 项目重构 --- 后台项目整体结构重构,新增对外Api结构层
 (2021/06/06 17:00 --- 2021/06/06 19:29) rebuild : 系统重构 --- 系统整体认证相关代码重构
 (2021/06/06 11:00 --- 2021/06/07 00:47) rebuild : 网关重构 --- 重构网关相关认证授权逻辑与限流机制
+(2021/06/15 00:00 --- 2021/06/29 16:36) feature : 登录认证 --- 新增单点登录认证授权,创建文章服务对象
 ```
 
 
@@ -403,6 +404,12 @@ $ sh ./bin/seate-server.sh
 ## 帮助文档
 ### Docker 打包部署指令
 ```shell script
+X!code-galaxy?
+
+mvn clean package -P prod
+
+mvn install -DskipTests=true
+
 mvn clean package docker:build -DskipTests
 mvn clean package docker:build -Pprod -DskipTests
 
@@ -413,8 +420,13 @@ docker run -it -m 256M -d -p 10199:10199 --rm user-admin-server
 docker run -it -m 256M -d -p 10399:10399 --rm exam-admin-server
 docker run -it -m 256M -d -p 10099:10099 --rm base-admin-server
 
+scp -P 22221 -r gateway-server-1.0.0.jar root@47.111.158.6:/root/App/code-galaxy
+
 
 nohup java -jar gateway-server-1.0.0.jar  --server.port=9999  > gateway-server.log>&1 &
+nohup java -jar auth-server-1.0.0.jar  --server.port=9000  > auth-server.log>&1 &
+nohup java -jar user-server-1.0.0.jar  --server.port=10100  > user-server.log>&1 &
+nohup java -jar auth-server-1.0.0.jar  --server.port=9000  > auth-server.log>&1 &
 nohup java -jar exam-admin-server-1.0.0.jar --server.port=10399  > exam-admin-server.log>&1 &
 
 ```

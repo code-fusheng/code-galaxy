@@ -17,6 +17,13 @@
             <artifactId>core-common</artifactId>
         </dependency>
 
+        <!--http请求工具-->
+        <dependency>
+            <groupId>com.arronlong</groupId>
+            <artifactId>httpclientutil</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+
         <!-- Swagger 依赖 -->
         <dependency>
             <groupId>io.springfox</groupId>
