@@ -5,7 +5,7 @@ spring:
         server-addr: 47.111.158.6:8848
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://rm-bp15mj67u7y8p5761lo.mysql.rds.aliyuncs.com:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://rm-bp15mj67u7y8p5761lo.mysql.rds.aliyuncs.com:3306/code-galaxy-article?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
     password: zH1314520
     driver-class-name: com.mysql.cj.jdbc.Driver

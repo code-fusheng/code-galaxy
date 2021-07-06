@@ -1,8 +1,15 @@
 package xyz.fusheng.core.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
+
+import io.swagger.models.auth.In;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import xyz.fusheng.core.model.base.BaseEntity;
@@ -13,11 +20,13 @@ import xyz.fusheng.core.model.base.BaseEntity;
 @ApiModel(value="xyz-fusheng-core-model-entity-Article")
 @Data
 @EqualsAndHashCode(callSuper=true)
+@TableName("ar_article")
 public class Article extends BaseEntity {
     /**
     * 文章id
     */
     @ApiModelProperty(value="文章id")
+    @TableId(type = IdType.ASSIGN_ID)
     private Long articleId;
 
     /**
@@ -52,6 +61,7 @@ public class Article extends BaseEntity {
 
     /**
     * 附件
+     * TODO: 后续考虑附件单独成一体系
     */
     @ApiModelProperty(value="附件")
     private String articleAttachments;
@@ -114,7 +124,7 @@ public class Article extends BaseEntity {
     * 状态-发布(0:未发布/1:延时发布/2:发布)
     */
     @ApiModelProperty(value="状态-发布(0:未发布/1:延时发布/2:发布)")
-    private Boolean state;
+    private Integer state;
 
     /**
     * 备注
@@ -138,19 +148,20 @@ public class Article extends BaseEntity {
     * 是否置顶(1:置顶/0:默认)
     */
     @ApiModelProperty(value="是否置顶(1:置顶/0:默认)")
-    private Boolean isTop;
+    private Integer isTop;
 
     /**
     * 是否启用(1:已启用/0:未启用)
     */
     @ApiModelProperty(value="是否启用(1:已启用/0:未启用)")
-    private Boolean isEnabled;
+    private Integer isEnabled;
 
     /**
     * 是否逻辑删除(1:已删除/0:未删除)
     */
     @ApiModelProperty(value="是否逻辑删除(1:已删除/0:未删除)")
-    private Boolean isDeleted;
+    @TableLogic
+    private Integer isDeleted;
 
     /**
     * 创建者编号
@@ -180,11 +191,13 @@ public class Article extends BaseEntity {
     * 创建时间
     */
     @ApiModelProperty(value="创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date createdTime;
 
     /**
     * 修改时间
     */
     @ApiModelProperty(value="修改时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date updatedTime;
 }

@@ -1,10 +1,17 @@
 package xyz.fusheng.core.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Date;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.model.base.BaseEntity;
 
 /**
@@ -13,11 +20,13 @@ import xyz.fusheng.core.model.base.BaseEntity;
 @ApiModel(value="xyz-fusheng-core-model-entity-Category")
 @Data
 @EqualsAndHashCode(callSuper=true)
+@TableName("ar_category")
 public class Category extends BaseEntity {
     /**
     * 分类id
     */
     @ApiModelProperty(value="分类id")
+    @TableId(type = IdType.ASSIGN_ID)
     private Long categoryId;
 
     /**
@@ -41,8 +50,8 @@ public class Category extends BaseEntity {
     /**
     * 分类级别 默认1
     */
-    @ApiModelProperty(value="分类级别 默认1")
-    private String level;
+    @ApiModelProperty(value="分类级别 默认0")
+    private Integer level;
 
     /**
     * 父级id 默认0
@@ -52,9 +61,10 @@ public class Category extends BaseEntity {
 
     /**
     * 状态
+     * {@link StateEnums}
     */
     @ApiModelProperty(value="状态")
-    private Boolean state;
+    private Integer state;
 
     /**
     * 备注
@@ -78,13 +88,14 @@ public class Category extends BaseEntity {
     * 是否启用(1:已启用/0:未启用)
     */
     @ApiModelProperty(value="是否启用(1:已启用/0:未启用)")
-    private Boolean isEnabled;
+    private Integer isEnabled;
 
     /**
     * 是否逻辑删除(1:已删除/0:未删除)
     */
     @ApiModelProperty(value="是否逻辑删除(1:已删除/0:未删除)")
-    private Boolean isDeleted;
+    @TableLogic
+    private Integer isDeleted;
 
     /**
     * 创建者编号
@@ -114,11 +125,13 @@ public class Category extends BaseEntity {
     * 创建时间
     */
     @ApiModelProperty(value="创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date createdTime;
 
     /**
     * 修改时间
     */
     @ApiModelProperty(value="修改时间")
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date updatedTime;
 }

@@ -10,7 +10,7 @@ package xyz.fusheng.core.model.base;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.apache.commons.lang3.StringUtils;
+import xyz.fusheng.core.utils.StringUtils;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -117,6 +117,10 @@ public class Page<T> implements Serializable {
         } else {
             this.sortMethod = SORT_ASC;
         }
+    }
+
+    public String getSortColumn() {
+        return StringUtils.isEmpty(this.sortColumn) ? "created_time" : StringUtils.upperCharToUnderLine(sortColumn);
     }
 }
 

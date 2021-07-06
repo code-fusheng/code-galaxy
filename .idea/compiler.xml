@@ -22,11 +22,12 @@
         <module name="article-server" />
         <module name="base-admin" />
         <module name="test-admin" />
+        <module name="user-server" />
         <module name="gateway-server" />
         <module name="learn" />
         <module name="learn-elasticsearch" />
         <module name="learn-java" />
-        <module name="user-server" />
+        <module name="bill-admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -48,6 +49,7 @@
       <module name="auth-server" options="-parameters" />
       <module name="base-admin" options="-parameters" />
       <module name="base-server" options="-parameters" />
+      <module name="bill-admin" options="-parameters" />
       <module name="code-galaxy" options="" />
       <module name="code-swagger2-starter" options="-parameters" />
       <module name="common-center" options="" />

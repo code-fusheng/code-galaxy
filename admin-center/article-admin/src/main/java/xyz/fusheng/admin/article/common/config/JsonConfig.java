@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @FileName: JsonConfig
@@ -27,7 +29,6 @@ public class JsonConfig {
             // 本质上就是将 Long 类型主键序列化成 String 类型
             jacksonObjectMapperBuilder.serializerByType(Long.TYPE, ToStringSerializer.instance);
             jacksonObjectMapperBuilder.serializerByType(Long.class, ToStringSerializer.instance);
-
         };
         return cunstomizer;
     }

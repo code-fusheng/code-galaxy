@@ -23,27 +23,27 @@ public enum ResultEnums {
      * 5** 服务器错误，服务在处理请求过程中发生了错误
      */
 
-    SUCCESS(200, "操作成功！"),
-    ERROR(400, "请求错误！"),
-    NOT_LOGIN(401, "未登录！"),
-    NOT_AUTHORIZED(403, "未授权！"),
-    NOT_FOUND(404,"访问连接不存在！"),
-    INTERNAL_SERVER_ERROR(500,"服务器故障！"),
+    SUCCESS(200, "操作成功"),
+    ERROR(400, "请求错误"),
+    NOT_LOGIN(401, "未登录"),
+    NOT_AUTHORIZED(403, "未授权"),
+    NOT_FOUND(404,"访问连接不存在"),
+    INTERNAL_SERVER_ERROR(500,"服务器故障"),
 
     /**
      * Oauth 认证相关异常
      */
-    CLIENT_AUTH_FAILED(10001, "客户端认证失败!"),
-    USERNAME_OR_PASSWORD_ERROR(10002, "用户名或密码错误!"),
-    UNSUPPORTED_GRANT_TYPE(10003, "不支持的认证模式!"),
-    AUTH_FAILED(10004, "认证失败!"),
-    MISSING_CREDENTIALS(10005, "缺少身份凭证!"),
-    TOKEN_PAST(10006, "认证失效!"),
+    CLIENT_AUTH_FAILED(10001, "客户端认证失败"),
+    USERNAME_OR_PASSWORD_ERROR(10002, "用户名或密码错误"),
+    UNSUPPORTED_GRANT_TYPE(10003, "不支持的认证模式"),
+    AUTH_FAILED(10004, "认证失败"),
+    MISSING_CREDENTIALS(10005, "缺少身份凭证"),
+    TOKEN_PAST(10006, "认证失效"),
 
     /**
      * 系统自定义异常
      */
-    BUSINESS_ERROR(99999, "统一业务异常!")
+    BUSINESS_ERROR(99999, "统一业务异常")
     ;
 
     /**

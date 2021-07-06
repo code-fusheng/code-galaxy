@@ -48,3 +48,15 @@ spring:
             - Path=/exam-admin-server/**
           filters:
             - StripPrefix=1
+        - id: article-admin-server
+          uri: lb://article-admin-server
+          predicates:
+            - Path=/article-admin-server/**
+          filters:
+            - StripPrefix=1
+        - id: bill-admin-server
+          uri: lb://bill-admin-server
+          predicates:
+           - Path=/bill-admin-server/**
+          filters:
+           - StripPrefix=1
