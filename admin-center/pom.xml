@@ -16,7 +16,7 @@
         <module>test-admin</module>
         <module>article-admin</module>
         <module>exam-admin</module>
-        <module>base-admin</module>
+        <module>sys-admin</module>
         <module>bill-admin</module>
     </modules>
 

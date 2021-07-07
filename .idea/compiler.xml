@@ -20,25 +20,16 @@
         <module name="exam-admin" />
         <module name="repo-server" />
         <module name="article-server" />
-        <module name="base-admin" />
         <module name="test-admin" />
         <module name="user-server" />
         <module name="gateway-server" />
         <module name="learn" />
         <module name="learn-elasticsearch" />
+        <module name="sys-admin" />
         <module name="learn-java" />
         <module name="bill-admin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="code-swagger2-starter" target="1.8" />
-      <module name="config-common" target="1.8" />
-      <module name="learn" target="1.8" />
-      <module name="learn-leeetcode" target="1.8" />
-      <module name="model-common" target="1.8" />
-      <module name="repo-server" target="1.8" />
-      <module name="tool-common" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -47,28 +38,21 @@
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
-      <module name="base-admin" options="-parameters" />
       <module name="base-server" options="-parameters" />
       <module name="bill-admin" options="-parameters" />
       <module name="code-galaxy" options="" />
-      <module name="code-swagger2-starter" options="-parameters" />
       <module name="common-center" options="" />
-      <module name="config-common" options="-parameters" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
-      <module name="learn" options="-parameters" />
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
-      <module name="learn-leeetcode" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
-      <module name="model-common" options="-parameters" />
-      <module name="repo-server" options="-parameters" />
       <module name="server-center" options="" />
+      <module name="sys-admin" options="-parameters" />
       <module name="test-admin" options="-parameters" />
       <module name="test-server" options="-parameters" />
-      <module name="tool-common" options="-parameters" />
       <module name="user-admin" options="-parameters" />
       <module name="user-server" options="-parameters" />
     </option>

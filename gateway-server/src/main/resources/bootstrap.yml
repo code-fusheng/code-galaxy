@@ -30,10 +30,10 @@ spring:
             - Path=/test-admin-server/**
           filters:
             - StripPrefix=1
-        - id: base-admin-server
-          uri: lb://base-admin-server
+        - id: sys-admin-server
+          uri: lb://sys-admin-server
           predicates:
-            - Path=/base-admin-server/**
+            - Path=/sys-admin-server/**
           filters:
             - StripPrefix=1
         - id: user-admin-server

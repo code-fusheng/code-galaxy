@@ -16,6 +16,17 @@ spring:
     port: 6390
     password: Xcode-redis?
     database: 6
+  rabbitmq:
+    host: 47.111.158.6
+    port: 5672
+    username: code-fusheng
+    password: Xcode-rabbitmq?
+    virtual-host: /code-galaxy
+    listener:
+      simple:
+        concurrency: 10       # 并发消费者的初始值
+        max-concurrency: 20   # 并发消费者的最大值
+        prefetch: 5           # 并发消费者每次监听时可拉取的消息数量
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   configuration:
