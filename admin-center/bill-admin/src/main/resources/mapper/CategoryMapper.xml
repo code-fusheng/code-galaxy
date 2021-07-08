@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.admin.bill.core.mapper.CategoryMapper">
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    category_id, category_name, category_icon, item_count, `level`, pid, `state`, remark,
+    memo, version, is_enabled, is_deleted, creator_id, updater_id, creator_name, updater_name,
+    created_time, updated_time
+  </sql>
+
+  <select id="pageCategoryList" resultType="xyz.fusheng.core.model.bill.vo.CategoryVo">
+
+  </select>
+
+  <select id="countPage" resultType="java.lang.Integer">
+
+  </select>
+</mapper>

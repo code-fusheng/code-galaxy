@@ -1,4 +1,4 @@
-package xyz.fusheng.admin.sys.common.config;
+package xyz.fusheng.admin.user.common.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

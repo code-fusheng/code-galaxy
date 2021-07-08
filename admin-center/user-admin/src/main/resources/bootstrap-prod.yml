@@ -9,6 +9,17 @@ spring:
     username: root
     password: zH1314520
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 47.111.158.6
+    port: 5672
+    username: code-fusheng
+    password: Xcode-rabbitmq?
+    virtual-host: /code-galaxy
+    listener:
+      simple:
+        concurrency: 10       # 并发消费者的初始值
+        max-concurrency: 20   # 并发消费者的最大值
+        prefetch: 5           # 并发消费者每次监听时可拉取的消息数量
 #以下为Mybatis-plus的配置
 mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）

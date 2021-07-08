@@ -6,9 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import xyz.fusheng.core.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.SysFeignClientServer;
+import xyz.fusheng.core.feign.UserFeignClientServer;
 
 /**
  * @FileName: BaseAdminApplication
@@ -21,6 +25,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableResourceServer
+@EnableFeignClients(basePackageClasses = {SysFeignClientServer.class})
 @MapperScan("xyz.fusheng.admin.sys.core.mapper")
 public class SysAdminApplication {
 

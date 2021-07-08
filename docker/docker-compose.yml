@@ -1,0 +1,13 @@
+version: '3'
+services:
+  # 启动网关、认证、用户、系统服务
+  gateway-server:
+    container_name: gateway-server
+    image: code-galaxy/gateway-server:1.0.0
+    ports:
+    - "9999:9999"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - JAVA_OPTS=-Xms512m -Xmx512m -Xmn512m -Xss256k
+  #
+

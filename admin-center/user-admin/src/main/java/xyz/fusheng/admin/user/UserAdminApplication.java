@@ -11,6 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import xyz.fusheng.core.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.SysFeignClientServer;
 import xyz.fusheng.core.feign.UserFeignClientServer;
 
 /**
@@ -24,7 +25,7 @@ import xyz.fusheng.core.feign.UserFeignClientServer;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableResourceServer
-@EnableFeignClients(basePackageClasses = {AuthFeignClientServer.class, UserFeignClientServer.class})
+@EnableFeignClients(basePackageClasses = {AuthFeignClientServer.class, UserFeignClientServer.class, SysFeignClientServer.class})
 @MapperScan("xyz.fusheng.admin.user.core.mapper")
 public class UserAdminApplication {
 
