@@ -10,6 +10,7 @@
         <module name="core-common" />
         <module name="learn-leeetcode" />
         <module name="base-server" />
+        <module name="bill-admin" />
         <module name="learn-leetcode" />
         <module name="test-server" />
         <module name="user-admin" />
@@ -21,13 +22,12 @@
         <module name="repo-server" />
         <module name="article-server" />
         <module name="test-admin" />
-        <module name="user-server" />
         <module name="gateway-server" />
         <module name="learn" />
         <module name="learn-elasticsearch" />
         <module name="sys-admin" />
         <module name="learn-java" />
-        <module name="bill-admin" />
+        <module name="user-server" />
       </profile>
     </annotationProcessing>
   </component>
