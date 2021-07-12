@@ -17,6 +17,9 @@ import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.SecurityUtils;
 
+import javax.annotation.Resource;
+import java.util.concurrent.ExecutorService;
+
 /**
  * @FileName: TestController
  * @Author: code-fusheng
@@ -33,6 +36,9 @@ public class TestController {
 
     @Value("${server.port}")
     private String port;
+
+    @Resource
+    private ExecutorService executorService;
 
     @ApiOperation("测试获取用户信息")
     @GetMapping("/testGetUserInfo")
@@ -65,6 +71,33 @@ public class TestController {
     @GetMapping("/testPreAuthorizeByGetPort")
     public ResultVo<Object> testPreAuthorizeByGetPort() {
         return new ResultVo<>("测试权限控制!", port);
+    }
+
+    @GetMapping("/testThreadPool")
+    public void testThreadPool() {
+        test();
+    }
+
+    public void test() {
+        long startTime = System.currentTimeMillis();
+        executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+                test1();
+            }
+        });
+        logger.info("{}", System.currentTimeMillis() - startTime);
+    }
+
+    public void test1() {
+        long startTime = System.currentTimeMillis();
+        logger.info("test1");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            logger.error("{}", e.getMessage(), e);
+        }
+        logger.info("{}", System.currentTimeMillis() - startTime);
     }
 
 }
