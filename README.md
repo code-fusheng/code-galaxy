@@ -409,7 +409,7 @@ $ sh ./bin/seate-server.sh
 ```shell script
 X!code-galaxy?
 
-mvn clean package -P prod
+mvn clean package -P prod -D skipTests
 
 mvn install -DskipTests=true
 
