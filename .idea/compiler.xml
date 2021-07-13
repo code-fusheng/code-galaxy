@@ -15,9 +15,11 @@
         <module name="code-swagger2-starter" />
         <module name="exam-server" />
         <module name="gateway-server" />
+        <module name="mall-server" />
         <module name="auth-server" />
         <module name="repo-server" />
         <module name="article-server" />
+        <module name="shop-server" />
         <module name="learn" />
         <module name="learn-elasticsearch" />
         <module name="learn-java" />
@@ -30,6 +32,7 @@
       <module name="article-admin" target="1.8" />
       <module name="bill-admin" target="1.8" />
       <module name="exam-admin" target="1.8" />
+      <module name="shop-server" target="1.8" />
       <module name="sys-admin" target="1.8" />
       <module name="test-admin" target="1.8" />
       <module name="user-admin" target="1.8" />
@@ -53,7 +56,9 @@
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
+      <module name="mall-server" options="-parameters" />
       <module name="server-center" options="" />
+      <module name="shop-server" options="-parameters" />
       <module name="sys-admin" options="-parameters" />
       <module name="sys-server" options="-parameters" />
       <module name="test-admin" options="-parameters" />

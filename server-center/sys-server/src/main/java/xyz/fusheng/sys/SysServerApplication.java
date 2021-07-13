@@ -32,7 +32,7 @@ public class SysServerApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SysServerApplication.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
-        logger.info("系统后台服务[sys-admin-server]已经启动,端口号:{}", environment.getProperty("server.port"));
+        logger.info("系统后台服务[sys-server]已经启动,端口号:{}", environment.getProperty("server.port"));
     }
 
 }

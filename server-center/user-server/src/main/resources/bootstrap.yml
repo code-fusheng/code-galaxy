@@ -5,6 +5,11 @@ spring:
     name: user-server
   profiles:
     active: @profiles.active@
+  redis:
+    host: 175.24.45.179
+    port: 6390
+    password: Xcode-redis?
+    database: 9
 security:
   oauth2:
     resource:

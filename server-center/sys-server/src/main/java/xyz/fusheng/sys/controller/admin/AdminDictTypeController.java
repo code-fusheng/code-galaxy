@@ -29,7 +29,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/dict/type")
+@RequestMapping("/admin/dict/type")
 public class AdminDictTypeController {
 
     @Resource

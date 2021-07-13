@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/learn-elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/learn-leetcode/pom.xml" />
         <option value="$PROJECT_DIR$/learn/pom.xml" />
+        <option value="$PROJECT_DIR$/server-center/shop-server/pom.xml" />
         <option value="$PROJECT_DIR$/test-server/pom.xml" />
       </set>
     </option>

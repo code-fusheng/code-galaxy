@@ -28,7 +28,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/dict/data")
+@RequestMapping("/admin/dict/data")
 public class AdminDictDataController {
 
     @Resource

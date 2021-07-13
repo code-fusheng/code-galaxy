@@ -2,10 +2,10 @@ server:
   port: 10000
 spring:
   application:
-    name: sys-admin-server
+    name: sys-server
   profiles:
     active: @profiles.active@
 security:
   oauth2:
     resource:
-      id: sys-admin
+      id: sys-server

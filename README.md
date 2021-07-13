@@ -25,6 +25,8 @@
 (2021/07/07 21:36 --- 2021/07/08 13:24) feature : 消息队列 --- 新增RabbitMQ消息队列处理登录后的异步用户信息处理
 (2021/07/09 10:00 --- 2021/07/09 16:46) feature : 系统监控 --- 新增 Grafana、Github Dingding 机器人
 (2021/07/12 09:00 --- 2021/07/12 13:27) feature : 线程管理 --- 新增 threadPool 线程初始化配置以及测试
+(2021/07/13 18:00 --- 2021/07/13 18:19) rebuild : 系统重构 --- 重新构建设计微服务模块的前后端拆分粒度
+(2021/07/13 09:00 --- 2021/07/13 18:20) feature : 项目部署 --- 编写 docker 批量构建镜像脚本文件,镜像容器运行脚本,暂替自动化部署
 ```
 
 
@@ -420,7 +422,6 @@ mvn clean package docker:build -Pprod -DskipTests
 docker run -it -m 512M -d -p 9999:9999 --rm gateway-server
 docker run -it -m 256M -d -p 9000:9000 --rm auth-server
 docker run -it -m 256M -d -p 10100:10100 --rm user-server
-docker run -it -m 256M -d -p 10199:10199 --rm user-admin-server
 docker run -it -m 256M -d -p 10399:10399 --rm exam-admin-server
 docker run -it -m 256M -d -p 10099:10099 --rm sys-admin-server
 

@@ -2,10 +2,10 @@ server:
   port: 10300
 spring:
   application:
-    name: exam-admin-server
+    name: exam-server
   profiles:
     active: @profiles.active@
 security:
   oauth2:
     resource:
-      id: exam-admin
+      id: exam-server

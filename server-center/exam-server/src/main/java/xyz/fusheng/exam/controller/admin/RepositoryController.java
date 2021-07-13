@@ -26,7 +26,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/repository")
+@RequestMapping("/admin/repository")
 @Api(tags = "题库管理", value = "题库接口管理")
 public class RepositoryController {
 

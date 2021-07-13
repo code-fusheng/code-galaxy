@@ -22,7 +22,7 @@ import javax.annotation.Resource;
  */
 
 @RestController
-@RequestMapping("/userExamRecord")
+@RequestMapping("/admin/userExamRecord")
 @Api(tags = "成绩管理", value = "成绩接口管理")
 public class UserExamRecordController {
 

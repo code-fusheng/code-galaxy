@@ -28,7 +28,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/admin/question")
 @Api(tags = "试题管理", value = "试题管理接口")
 public class QuestionController {
 

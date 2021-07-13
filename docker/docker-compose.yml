@@ -3,7 +3,7 @@ services:
   # 启动网关、认证、用户、系统服务
   gateway-server:
     container_name: gateway-server
-    image: code-galaxy/gateway-server:1.0.0
+    image: gateway-server:1.0.0
     ports:
     - "9999:9999"
     environment:

@@ -25,7 +25,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/rule")
+@RequestMapping("/admin/rule")
 @Api(tags = "规则管理", value = "规则接口管理")
 public class RuleController {
 

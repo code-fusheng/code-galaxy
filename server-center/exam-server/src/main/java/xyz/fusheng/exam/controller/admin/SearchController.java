@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  */
 
 @RestController
-@RequestMapping("/search")
+@RequestMapping("/admin/search")
 public class SearchController {
 
     @Resource

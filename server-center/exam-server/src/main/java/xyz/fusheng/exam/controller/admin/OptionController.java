@@ -21,7 +21,7 @@ import javax.annotation.Resource;
  */
 
 @RestController
-@RequestMapping("/option")
+@RequestMapping("/admin/option")
 @Api(tags = "选项管理", value = "选项接口管理")
 public class OptionController {
 

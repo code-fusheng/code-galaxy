@@ -18,6 +18,7 @@
         <module>article-server</module>
         <module>sys-server</module>
         <module>bill-server</module>
+        <module>mall-server</module>
     </modules>
 
     <dependencies>
