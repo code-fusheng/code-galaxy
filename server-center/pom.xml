@@ -16,7 +16,8 @@
         <module>user-server</module>
         <module>exam-server</module>
         <module>article-server</module>
-        <module>base-server</module>
+        <module>sys-server</module>
+        <module>bill-server</module>
     </modules>
 
     <dependencies>

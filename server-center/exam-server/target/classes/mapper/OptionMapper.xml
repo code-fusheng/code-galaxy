@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="xyz.fusheng.mapper.OptionMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Option">
-    <!--@mbg.generated-->
-    <!--@Table ex_option-->
-    <id column="option_id" jdbcType="BIGINT" property="optionId" />
-    <result column="question_id" jdbcType="BIGINT" property="questionId" />
-    <result column="paper_id" jdbcType="BIGINT" property="paperId" />
-    <result column="option_content" jdbcType="VARCHAR" property="optionContent" />
-    <result column="option_image" jdbcType="VARCHAR" property="optionImage" />
-    <result column="option_video" jdbcType="VARCHAR" property="optionVideo" />
-    <result column="option_code" jdbcType="VARCHAR" property="optionCode" />
-    <result column="option_sort" jdbcType="TINYINT" property="optionSort" />
-    <result column="is_right" jdbcType="BOOLEAN" property="isRight" />
-    <result column="analysis" jdbcType="VARCHAR" property="analysis" />
-    <result column="state" jdbcType="BOOLEAN" property="state" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="memo" jdbcType="VARCHAR" property="memo" />
-    <result column="version" jdbcType="INTEGER" property="version" />
-    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
-    <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
-    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
-    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
-    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
-    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
-    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    option_id, question_id, paper_id, option_content, option_image, option_video, option_code,
-    option_sort, is_right, analysis, `state`, remark, memo, version, is_enabled, is_deleted,
-    creator_id, updater_id, creator_name, updater_name, created_time, updated_time
-  </sql>
+<mapper namespace="xyz.fusheng.exam.core.mapper.OptionMapper">
+
 </mapper>

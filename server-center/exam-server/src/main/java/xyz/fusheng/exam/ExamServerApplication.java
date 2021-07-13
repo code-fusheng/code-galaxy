@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @FileName: ExamServerApplication
@@ -18,9 +19,11 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * @Description: 考试服务启动类
  */
 
+@EnableTransactionManagement
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableResourceServer
+@MapperScan("xyz.fusheng.exam.core.mapper")
 public class ExamServerApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(ExamServerApplication.class);

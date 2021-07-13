@@ -15,7 +15,7 @@ import xyz.fusheng.core.model.sys.entity.LoginLog;
  * @Description:
  */
 
-@FeignClient(name = "sys-admin-server", fallbackFactory = SysServerFallback.class)
+@FeignClient(name = "sys-server", fallbackFactory = SysServerFallback.class)
 public interface SysFeignClientServer {
 
     @RequestMapping(value = "/api/loginLog/saveLoginLog", method = RequestMethod.POST)

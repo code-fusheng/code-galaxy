@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.user.core.mapper.RoleMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.core.model.entity.Role">
-    <!--@mbg.generated-->
-    <!--@Table sys_role-->
-    <id column="role_id" jdbcType="BIGINT" property="roleId" />
-    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
-    <result column="state" jdbcType="BOOLEAN" property="state" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="memo" jdbcType="VARCHAR" property="memo" />
-    <result column="version" jdbcType="INTEGER" property="version" />
-    <result column="is_enabled" jdbcType="INTEGER" property="isEnabled" />
-    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
-    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
-    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
-    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
-    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
-    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    role_id, role_name, `state`, remark, memo, version, is_enabled, is_deleted, creator_id,
-    updater_id, creator_name, updater_name, created_time, updated_time
-  </sql>
+  <select id="getRoleIdsByUserId" parameterType="java.lang.Long" resultType="java.lang.Long">
+    select role_id from sys_user_role where user_id = #{userId}
+  </select>
 </mapper>

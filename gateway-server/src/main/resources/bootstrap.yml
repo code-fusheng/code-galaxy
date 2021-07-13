@@ -24,39 +24,27 @@ spring:
             - Path=/user-server/**
           filters:
             - StripPrefix=1
-        - id: test-admin-server
-          uri: lb://test-admin-server
+        - id: sys-server
+          uri: lb://sys-server
           predicates:
-            - Path=/test-admin-server/**
+            - Path=/sys-server/**
           filters:
             - StripPrefix=1
-        - id: sys-admin-server
-          uri: lb://sys-admin-server
+        - id: exam-server
+          uri: lb://exam-server
           predicates:
-            - Path=/sys-admin-server/**
+            - Path=/exam-server/**
           filters:
             - StripPrefix=1
-        - id: user-admin-server
-          uri: lb://user-admin-server
+        - id: article-server
+          uri: lb://article-server
           predicates:
-            - Path=/user-admin-server/**
+            - Path=/article-server/**
           filters:
             - StripPrefix=1
-        - id: exam-admin-server
-          uri: lb://exam-admin-server
+        - id: bill-server
+          uri: lb://bill-server
           predicates:
-            - Path=/exam-admin-server/**
+            - Path=/bill-server/**
           filters:
             - StripPrefix=1
-        - id: article-admin-server
-          uri: lb://article-admin-server
-          predicates:
-            - Path=/article-admin-server/**
-          filters:
-            - StripPrefix=1
-        - id: bill-admin-server
-          uri: lb://bill-admin-server
-          predicates:
-           - Path=/bill-admin-server/**
-          filters:
-           - StripPrefix=1

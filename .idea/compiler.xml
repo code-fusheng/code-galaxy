@@ -8,28 +8,32 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core-common" />
+        <module name="bill-server" />
         <module name="learn-leeetcode" />
-        <module name="base-server" />
-        <module name="bill-admin" />
         <module name="learn-leetcode" />
         <module name="test-server" />
-        <module name="user-admin" />
         <module name="code-swagger2-starter" />
         <module name="exam-server" />
+        <module name="gateway-server" />
         <module name="auth-server" />
-        <module name="article-admin" />
-        <module name="exam-admin" />
         <module name="repo-server" />
         <module name="article-server" />
-        <module name="test-admin" />
-        <module name="gateway-server" />
         <module name="learn" />
         <module name="learn-elasticsearch" />
-        <module name="sys-admin" />
         <module name="learn-java" />
+        <module name="sys-server" />
         <module name="user-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-center" target="1.8" />
+      <module name="article-admin" target="1.8" />
+      <module name="bill-admin" target="1.8" />
+      <module name="exam-admin" target="1.8" />
+      <module name="sys-admin" target="1.8" />
+      <module name="test-admin" target="1.8" />
+      <module name="user-admin" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -38,8 +42,8 @@
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
-      <module name="base-server" options="-parameters" />
       <module name="bill-admin" options="-parameters" />
+      <module name="bill-server" options="-parameters" />
       <module name="code-galaxy" options="" />
       <module name="common-center" options="" />
       <module name="core-common" options="-parameters" />
@@ -51,6 +55,7 @@
       <module name="learn-leetcode" options="-parameters" />
       <module name="server-center" options="" />
       <module name="sys-admin" options="-parameters" />
+      <module name="sys-server" options="-parameters" />
       <module name="test-admin" options="-parameters" />
       <module name="test-server" options="-parameters" />
       <module name="user-admin" options="-parameters" />

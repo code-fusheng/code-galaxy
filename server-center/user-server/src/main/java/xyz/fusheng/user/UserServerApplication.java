@@ -10,6 +10,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import xyz.fusheng.core.feign.AuthFeignClientServer;
+import xyz.fusheng.core.feign.SysFeignClientServer;
+import xyz.fusheng.core.feign.UserFeignClientServer;
 
 /**
  * @FileName: UserServerApplication
@@ -21,7 +23,7 @@ import xyz.fusheng.core.feign.AuthFeignClientServer;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackageClasses = AuthFeignClientServer.class)
+@EnableFeignClients(basePackageClasses = {AuthFeignClientServer.class, UserFeignClientServer.class, SysFeignClientServer.class})
 @MapperScan("xyz.fusheng.user.core.mapper")
 public class UserServerApplication {
 

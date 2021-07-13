@@ -71,7 +71,6 @@
         <module>server-center</module>
         <module>gateway-server</module>
         <module>auth-server</module>
-        <module>admin-center</module>
         <module>a-learn-demo</module>
     </modules>
 

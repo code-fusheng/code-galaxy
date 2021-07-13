@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.bill.core.mapper.TransRecordMapper">
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    trans_id, event_time, trans_content, trans_desc, trans_amount, paid_method, unit_price,
+    trans_count, original_price, discount_price, direction, opera_client, `state`, remark,
+    memo, version, is_enabled, is_deleted, creator_id, updater_id, creator_name, updater_name,
+    created_time, updated_time
+  </sql>
+
+  <select id="pageTransRecordList" resultType="xyz.fusheng.core.model.bill.vo.TransRecordVo">
+    select tr.*, c.category_name as transCategoryName
+    from bill_trans_record tr left join bill_category c on tr.trans_category = c.category_id
+    where tr.is_deleted = 0
+    <if test="params.transCategory != null and params.transCategory != ''">
+        and tr.trans_category = #{params.transCategory}
+    </if>
+    <if test="params.categoryTime!=null">
+        and created_time between #{params.categoryTime[0],jdbcType=TIMESTAMP} and #{params.categoryTime[1],jdbcType=TIMESTAMP}
+    </if>
+    <if test="sortColumn!=null and sortColumn!=''">
+        order by ${sortColumn} ${sortMethod}
+    </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="countTransRecordPage" resultType="java.lang.Integer">
+    select count(*)
+    from bill_trans_record tr left join bill_category c on tr.trans_category = c.category_id
+    where tr.is_deleted = 0
+    <if test="params.transCategory != null and params.transCategory != ''">
+        and tr.trans_category = #{params.transCategory}
+    </if>
+    <if test="params.categoryTime!=null">
+        and created_time between #{params.categoryTime[0],jdbcType=TIMESTAMP} and #{params.categoryTime[1],jdbcType=TIMESTAMP}
+    </if>
+  </select>
+</mapper>

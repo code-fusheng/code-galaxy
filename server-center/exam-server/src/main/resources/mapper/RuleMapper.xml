@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.fusheng.exam.core.mapper.RuleMapper">
+
+  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.RuleVo">
+    select *
+    from ex_rule
+    where is_deleted = 0
+    <if test="params.ruleName != null and params.ruleName != ''">
+        and rule_name like concat(#{params.ruleName}, '%')
+    </if>
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.ruleTime != null">
+        and created_time between #{params.ruleTime[0], jdbcType=TIMESTAMP} and #{params.ruleTime[1], jdbcType=TIMESTAMP}
+    </if>
+    <if test="sortColumn !=null and sortColumn != ''">
+        order by ${sortColumn} ${sortMethod}
+    </if>
+    limit #{index}, #{pageSize}
+  </select>
+
+  <select id="getCountByPage" resultType="java.lang.Integer">
+    select count(*)
+    from ex_rule
+    where is_deleted = 0
+    <if test="params.ruleName != null and params.ruleName != ''">
+        and rule_name like concat(#{params.ruleName}, '%')
+    </if>
+    <if test="params.creatorName != null">
+        and creator_name like concat(#{params.creatorName}, '%')
+    </if>
+    <if test="params.isEnabled != null">
+        and is_enabled = #{params.isEnabled}
+    </if>
+    <if test="params.ruleTime != null">
+        and created_time between #{params.ruleTime[0], jdbcType=TIMESTAMP} and #{params.ruleTime[1], jdbcType=TIMESTAMP}
+    </if>
+  </select>
+</mapper>
