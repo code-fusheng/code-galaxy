@@ -1,21 +1,11 @@
 spring:
   cloud:
     nacos:
-      discovery:
-        server-addr: localhost:8848
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
-    username: root
-    password: code-fusheng
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  redis:
-    host: 175.24.45.179
-    port: 6390
-    password: Xcode-redis?
-    database: 6
-mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
-  configuration:
-    call-setters-on-nulls: true
+      config:
+        server-addr: 47.111.158.6:8848
+        file-extension: yaml
+        namespace: a9c9e56c-d9ed-45b4-a1ca-fa31a1973511
+        group: gateway-server-dev
+
+
 

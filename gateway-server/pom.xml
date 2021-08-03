@@ -28,22 +28,29 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+
+        <!--nacos客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            &lt;!&ndash; Maven整个生命周期内排除内置容器，排除内置容器导出成war包可以让外部容器运行spring-boot项目&ndash;&gt;
-            <exclusions>
-                <exclusion>
+        <!--        <dependency>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    &lt;!&ndash; Maven整个生命周期内排除内置容器，排除内置容器导出成war包可以让外部容器运行spring-boot项目&ndash;&gt;
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-starter-tomcat</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
