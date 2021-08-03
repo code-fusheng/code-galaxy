@@ -14,6 +14,8 @@ import java.io.IOException;
 
 /**
  * 失败处理器：认证失败后响应json给前端
+ *
+ * @author code-fusheng
  */
 @Component("customAuthenticationFailureHandler")
 public class CustomAuthenticationFailureHandler implements AuthenticationFailureHandler {

@@ -1,13 +1,13 @@
 package xyz.fusheng.user.controller.api;
 
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import xyz.fusheng.core.model.dto.UserRegisterDto;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.entity.Role;
 import xyz.fusheng.core.model.entity.User;
+import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.user.core.service.UserService;
 
 import javax.annotation.Resource;
@@ -27,6 +27,12 @@ public class ApiUserController {
 
     @Resource
     private UserService userService;
+
+    @PostMapping("/register")
+    public ResultVo<Object> register(@RequestBody @Validated UserRegisterDto userRegisterDto) {
+        userService.registerUser(userRegisterDto);
+        return new ResultVo<>("注册成功");
+    }
 
     /**
      * >>>>> Feign 远程调用接口 >>>>

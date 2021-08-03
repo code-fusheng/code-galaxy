@@ -9,3 +9,10 @@ security:
   oauth2:
     resource:
       id: sys-server
+aliyun:
+  oss:
+    bucketName: aliyun-oss-model
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI4GBfAZSSf7c8JhEPbK3r
+    accessKeySecret: VpMu3ShYf30IpaMNlhEDe8dzBclVGT
+

@@ -17,6 +17,8 @@ import java.io.IOException;
 
 /**
  * 退出成功处理器，清除redis中的数据
+ *
+ * @author code-fusheng
  */
 @Component("customLogoutSuccessHandler")
 public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {

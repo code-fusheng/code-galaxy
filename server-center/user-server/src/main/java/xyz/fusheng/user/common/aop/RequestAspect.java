@@ -53,7 +53,7 @@ public class RequestAspect {
      * execution 切入点表达式
      * 两个..代表所有子目录，最后括号里的两个..代表所有参数
      */
-    @Pointcut("execution( * xyz.fusheng.*.controller..*(..))")
+    @Pointcut("execution( * xyz.fusheng.*.controller..*(..)) && !execution(* xyz.fusheng.*.controller.api..*(..))")
     public void logPointCut() {}
 
     @Before("logPointCut()")

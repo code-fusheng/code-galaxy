@@ -50,7 +50,7 @@ public class ThreadPoolConfig {
                 TimeUnit.SECONDS,
                 new SynchronousQueue<>(),
                 threadFactory);
-        logger.info("【初始化固定线程池结束】- 大小:{}, 最大容量:{}",
+        logger.info("初始化固定线程池结束 - 大小:{}, 最大容量:{}",
                 threadPoolExecutor.getCorePoolSize(), threadPoolExecutor.getMaximumPoolSize());
         return threadPoolExecutor;
     }

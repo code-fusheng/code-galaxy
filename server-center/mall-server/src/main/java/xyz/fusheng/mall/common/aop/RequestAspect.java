@@ -1,4 +1,4 @@
-package xyz.fusheng.test.common.aop;
+package xyz.fusheng.mall.common.aop;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.aspectj.lang.JoinPoint;
@@ -15,7 +15,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.utils.SecurityUtils;
-import xyz.fusheng.test.common.annotation.UserInfo;
+import xyz.fusheng.mall.common.annotation.UserInfo;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.annotation.Annotation;
@@ -30,15 +30,15 @@ import java.util.Map;
  * @Description: AOP切面输出基本信息
  * 0、@pointcut 配置切入点
  * 1、@Around 环绕通知
- *  在目标方法执行前后实施增强，可以用于日志，事务管理等功能
+ * 在目标方法执行前后实施增强，可以用于日志，事务管理等功能
  * 2、@Before 前置通知
- *  在目标方法执行前实施增强，可以应用于权限管理功能
+ * 在目标方法执行前实施增强，可以应用于权限管理功能
  * 3、@AfterReturning 后置通知
- *  在目标方法执行后实施增强，可以应用于关闭流、上传文件、删除临时文件等功能
+ * 在目标方法执行后实施增强，可以应用于关闭流、上传文件、删除临时文件等功能
  * 4、@AfterThrowing 异常抛出通知
- *  在方法抛出异常后实施增强，可以应用于处理异常记录日志等功能
+ * 在方法抛出异常后实施增强，可以应用于处理异常记录日志等功能
  * 5、@DeclareParents 引介通知
- *  在目标类中添加一些新的方法和属性，可以应用于修改老版本程序
+ * 在目标类中添加一些新的方法和属性，可以应用于修改老版本程序
  * 6、@After 最终通知
  */
 
@@ -53,8 +53,9 @@ public class RequestAspect {
      * execution 切入点表达式
      * 两个..代表所有子目录，最后括号里的两个..代表所有参数
      */
-    @Pointcut("execution( * xyz.fusheng.*.*.controller..*(..))")
-    public void logPointCut() {}
+    @Pointcut("execution( * xyz.fusheng.*.controller..*(..)) && !execution(* xyz.fusheng.*.controller.api..*(..))")
+    public void logPointCut() {
+    }
 
     @Before("logPointCut()")
     public void doBefore(JoinPoint joinPoint) throws Exception {
@@ -81,7 +82,7 @@ public class RequestAspect {
         Method method = signature.getMethod();
         // 获取此切点的参数
         Object[] args = pjp.getArgs();
-        for (int i = 0; i < args.length; i ++) {
+        for (int i = 0; i < args.length; i++) {
             if (args[i] instanceof Map<?, ?>) {
                 @SuppressWarnings("unchecked")
                 Map<String, Object> map = (Map<String, Object>) args[i];
@@ -93,6 +94,7 @@ public class RequestAspect {
                         Annotation[] annotations = method.getParameterAnnotations()[i];
                         for (Annotation annotation : annotations) {
                             if (annotation instanceof UserInfo) {
+                                logger.info("AOP切面-用户信息:{}", userInfo);
                                 args[i] = userInfo;
                                 break;
                             }
@@ -108,5 +110,6 @@ public class RequestAspect {
         logger.info("耗时 : {}", time);
         return result;
     }
+
 
 }

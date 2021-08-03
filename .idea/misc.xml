@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/a-learn-demo/learn-elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/article-admin/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/bill-admin/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/exam-admin/pom.xml" />

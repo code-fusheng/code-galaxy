@@ -12,6 +12,7 @@ import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.core.model.dto.UserDto;
+import xyz.fusheng.core.model.dto.UserRegisterDto;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.entity.Role;
 import xyz.fusheng.core.model.entity.User;
@@ -98,5 +99,12 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         BeanUtils.copyProperties(userDto, user);
         userMapper.updateById(user);
+    }
+
+    @Override
+    public void registerUser(UserRegisterDto userRegisterDto) {
+        User user = new User();
+        BeanUtils.copyProperties(userRegisterDto, user);
+        userMapper.insert(user);
     }
 }

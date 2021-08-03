@@ -48,3 +48,9 @@ spring:
             - Path=/bill-server/**
           filters:
             - StripPrefix=1
+        - id: mall-server
+          uri: lb://mall-server
+          predicates:
+            - Path=/mall-server/**
+          filters:
+            - StripPrefix=1
