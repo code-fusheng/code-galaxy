@@ -1,33 +1,8 @@
 spring:
   cloud:
     nacos:
-      discovery:
+      config:
         server-addr: 47.111.158.6:8848
-  main:
-    allow-bean-definition-overriding: true
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://rm-bp15mj67u7y8p5761lo.mysql.rds.aliyuncs.com:3306/code-galaxy?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
-    username: root
-    password: zH1314520
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  redis:
-    host: 175.24.45.179
-    port: 6390
-    password: Xcode-redis?
-    database: 9
-  rabbitmq:
-    host: 47.111.158.6
-    port: 5672
-    username: code-fusheng
-    password: Xcode-rabbitmq?
-    virtual-host: /code-galaxy
-    listener:
-      simple:
-        concurrency: 10       # 并发消费者的初始值
-        max-concurrency: 20   # 并发消费者的最大值
-        prefetch: 5           # 并发消费者每次监听时可拉取的消息数量
-mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
-  configuration:
-    call-setters-on-nulls: true
+        file-extension: yaml
+        namespace: a9c9e56c-d9ed-45b4-a1ca-fa31a1973511
+        group: auth-server-prod
