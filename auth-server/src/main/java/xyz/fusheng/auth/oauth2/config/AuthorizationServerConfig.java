@@ -22,6 +22,9 @@ import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author code-fusheng
+ */
 @Configuration
 @EnableAuthorizationServer // 标识为认证服务器
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -58,6 +61,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Resource // 注入增强器
     private TokenEnhancer jwtTokenEnhancer;
+
     /**
      * 关于认证服务器端点配置
      * @param endpoints

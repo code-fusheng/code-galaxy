@@ -1,4 +1,4 @@
-package xyz.fusheng.test.controller;
+package xyz.fusheng.test.controller.web;
 
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

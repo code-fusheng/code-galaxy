@@ -40,7 +40,7 @@ public class UserController {
 
     @GetMapping("/user/debugUser")
     public ResultVo<Object> debugUser() {
-        return new ResultVo<>("操作成功!");
+        return ResultVo.success("操作成功!");
     }
 
 
