@@ -69,7 +69,7 @@ public class AliyunOssUtils {
      */
     public String uploadOnlineSource(String url, String namePrefix) {
         log.info("在线资源Url预览:{}", url);
-        List<String> list = Arrays.asList(url);
+        List<String> list = Arrays.asList(url.split("\\."));
         String fileType = list.get(list.size() - 1);
         String fileName = namePrefix + System.currentTimeMillis() + "." + fileType;
         log.info("文件名 fileName:{}", fileName);
