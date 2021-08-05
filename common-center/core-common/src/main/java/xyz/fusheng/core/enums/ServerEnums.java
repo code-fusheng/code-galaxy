@@ -13,6 +13,9 @@ import lombok.Getter;
 @Getter
 public enum ServerEnums {
 
+    /**
+     * 服务枚举
+     */
     TEST_SERVER("test-server", "测试服务"),
     USER_SERVER("user-server", "用户服务"),
     ARTICLE_SERVER("article-server", "文章服务"),

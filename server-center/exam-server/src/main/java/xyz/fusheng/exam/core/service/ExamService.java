@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.dto.ExamDto;
 import xyz.fusheng.exam.model.vo.ExamVo;
 
@@ -19,6 +19,6 @@ public interface ExamService {
      * @param page
      * @return
      */
-    Page<ExamVo> getExamVoByPage(Page<ExamVo> page);
+    PageData<ExamVo> getExamVoByPage(PageData<ExamVo> page);
 }
 

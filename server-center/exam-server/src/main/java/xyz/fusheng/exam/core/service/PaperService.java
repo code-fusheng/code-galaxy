@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.dto.PaperDto;
 import xyz.fusheng.exam.model.vo.PaperVo;
 
@@ -19,7 +19,7 @@ public interface PaperService {
      * @param page
      * @return
      */
-    Page<PaperVo> getPaperByPage(Page<PaperVo> page);
+    PageData<PaperVo> getPaperByPage(PageData<PaperVo> page);
 
     /**
      * 获取试卷基础信息

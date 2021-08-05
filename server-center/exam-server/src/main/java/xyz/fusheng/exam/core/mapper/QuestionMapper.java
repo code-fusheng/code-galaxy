@@ -2,7 +2,7 @@ package xyz.fusheng.exam.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.entity.Question;
 import xyz.fusheng.exam.model.vo.QuestionVo;
 
@@ -23,14 +23,14 @@ public interface QuestionMapper extends BaseMapper<Question> {
      * @param page
      * @return
      */
-    List<QuestionVo> getByPage(Page<QuestionVo> page);
+    List<QuestionVo> getByPage(PageData<QuestionVo> page);
 
     /**
      * 统计分页试题总数
      * @param page
      * @return
      */
-    int getCountByPage(Page<QuestionVo> page);
+    int getCountByPage(PageData<QuestionVo> page);
 
     /**
      * 获取试题视图对象(包含题库名称)
@@ -44,9 +44,9 @@ public interface QuestionMapper extends BaseMapper<Question> {
      * @param page
      * @return
      */
-    List<QuestionVo> getSimpleQuestionByPage(Page<QuestionVo> page);
+    List<QuestionVo> getSimpleQuestionByPage(PageData<QuestionVo> page);
 
-    int getSimpleCountByPage(Page<QuestionVo> page);
+    int getSimpleCountByPage(PageData<QuestionVo> page);
 
     List<QuestionVo> getAllQuestionAndOptionsWithAnswers();
 }

@@ -4,7 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.RuleService;
@@ -46,7 +46,7 @@ public class RuleController {
      */
     @ApiOperation(value = "分页查询试卷规则列表")
     @PostMapping("/getRuleByPage")
-    public ResultVo<Page<RuleVo>> getRuleByPage(@RequestBody Page<RuleVo> page) {
+    public ResultVo<PageData<RuleVo>> getRuleByPage(@RequestBody PageData<RuleVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

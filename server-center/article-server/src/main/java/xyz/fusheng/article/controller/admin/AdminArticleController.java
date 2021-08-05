@@ -8,7 +8,7 @@ import xyz.fusheng.article.common.annotation.UserInfo;
 import xyz.fusheng.article.core.service.ArticleService;
 import xyz.fusheng.article.model.dto.ArticleDto;
 import xyz.fusheng.article.model.vo.ArticleVo;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 
@@ -43,7 +43,7 @@ public class AdminArticleController {
 
     @ApiOperation("分页查询文章")
     @PostMapping("/pageArticle")
-    public ResultVo<Page<ArticleVo>> pageArticle(@RequestBody Page<ArticleVo> page) {
+    public ResultVo<PageData<ArticleVo>> pageArticle(@RequestBody PageData<ArticleVo> page) {
         page = articleService.pageArticle(page);
         return new ResultVo<>("操作成功: 分页查询分类!", page);
     }

@@ -10,7 +10,7 @@ import xyz.fusheng.article.model.dto.CategoryDto;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.CategoryVo;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
@@ -70,7 +70,7 @@ public class AdminCategoryController {
 
     @ApiOperation("多条件分页查询分类")
     @PostMapping("/pageCategory")
-    public ResultVo<Page<CategoryVo>> pageCategory(@RequestBody Page<CategoryVo> page) {
+    public ResultVo<PageData<CategoryVo>> pageCategory(@RequestBody PageData<CategoryVo> page) {
         if (StringUtils.isNotBlank(page.getSortColumn())) {
             // 创建时间、更新时间
             String[] sortColumns = {"created_time", "updated_time"};

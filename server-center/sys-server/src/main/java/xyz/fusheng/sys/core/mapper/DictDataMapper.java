@@ -2,7 +2,7 @@ package xyz.fusheng.sys.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.sys.model.entity.DictData;
 import xyz.fusheng.sys.model.vo.DictDataVo;
 
@@ -16,19 +16,19 @@ public interface DictDataMapper extends BaseMapper<DictData> {
      * @param dictType
      * @return
      */
-    List<DictDataVo> listDictDataByDictType(String dictType);
+    List<DictDataVo> listDictData(String dictType);
 
     /**
      * 分页查询字典数据视图
      * @param page
      * @return
      */
-    List<DictDataVo> getByPage(Page<DictDataVo> page);
+    List<DictDataVo> getByPage(PageData<DictDataVo> page);
 
     /**
      * 统计字典数据分页总数
      * @param page
      * @return
      */
-    int getCountByPage(Page<DictDataVo> page);
+    int getCountByPage(PageData<DictDataVo> page);
 }

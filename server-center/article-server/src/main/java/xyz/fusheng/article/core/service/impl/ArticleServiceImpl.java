@@ -16,7 +16,7 @@ import xyz.fusheng.article.model.vo.ArticleVo;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
@@ -52,7 +52,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Page<ArticleVo> pageArticle(Page<ArticleVo> page) {
+    public PageData<ArticleVo> pageArticle(PageData<ArticleVo> page) {
         if (StringUtils.isNotBlank(page.getSortColumn())) {
             // 文章分类、创建时间、更新时间
             String[] sortColumns = {"article_category", "created_time", "updated_time"};

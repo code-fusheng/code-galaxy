@@ -8,7 +8,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import xyz.fusheng.core.enums.StateEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.core.mapper.OptionMapper;
 import xyz.fusheng.exam.core.mapper.PaperMapper;
 import xyz.fusheng.exam.core.mapper.QuestionMapper;
@@ -107,7 +107,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Page<QuestionVo> getQuestionByPage(Page<QuestionVo> page) {
+    public PageData<QuestionVo> getQuestionByPage(PageData<QuestionVo> page) {
         // 查询数据
         List<QuestionVo> questionVoList = questionMapper.getByPage(page);
         page.setList(questionVoList);
@@ -135,7 +135,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Page<QuestionVo> getQuestionAndOptionsWithAnswersByPage(Page<QuestionVo> page) {
+    public PageData<QuestionVo> getQuestionAndOptionsWithAnswersByPage(PageData<QuestionVo> page) {
         // 查询数据
         List<QuestionVo> questionVoList = questionMapper.getSimpleQuestionByPage(page);
         page.setList(questionVoList);
@@ -190,7 +190,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Page<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(Page<QuestionVo> page) {
+    public PageData<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(PageData<QuestionVo> page) {
         // 查询数据
         List<QuestionVo> questionVoList = questionMapper.getSimpleQuestionByPage(page);
         page.setList(questionVoList);

@@ -10,7 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.dto.UserDto;
 import xyz.fusheng.core.model.dto.UserRegisterDto;
 import xyz.fusheng.core.model.entity.Menu;
@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<UserVo> getUserByPage(Page<UserVo> page) {
+    public PageData<UserVo> getUserByPage(PageData<UserVo> page) {
         List<UserVo> userVoList = userMapper.getUserByPage(page);
         page.setList(userVoList);
         int totalCount = userMapper.getUserCountByPage(page);

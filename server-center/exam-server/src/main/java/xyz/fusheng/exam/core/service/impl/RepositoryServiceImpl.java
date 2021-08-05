@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.StateEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.core.mapper.RepositoryMapper;
 import xyz.fusheng.exam.core.service.RepositoryService;
 import xyz.fusheng.exam.model.dto.RepositoryDto;
@@ -52,7 +52,7 @@ public class RepositoryServiceImpl implements RepositoryService {
     }
 
     @Override
-    public Page<RepositoryVo> getRepositoryByPage(Page<RepositoryVo> page) {
+    public PageData<RepositoryVo> getRepositoryByPage(PageData<RepositoryVo> page) {
         List<RepositoryVo> repositoryVoList = repositoryMapper.getByPage(page);
         page.setList(repositoryVoList);
         int totalCount = repositoryMapper.getCountByPage(page);

@@ -7,7 +7,7 @@ import xyz.fusheng.bill.core.service.CategoryService;
 import xyz.fusheng.bill.model.dto.CategoryDto;
 import xyz.fusheng.bill.model.entity.Category;
 import xyz.fusheng.bill.model.vo.CategoryVo;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -27,7 +27,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Page<CategoryVo> pageCategory(Page<CategoryVo> page) {
+    public PageData<CategoryVo> pageCategory(PageData<CategoryVo> page) {
         List<CategoryVo> categoryVoList = categoryMapper.pageCategoryList(page);
         page.setList(categoryVoList);
         int totalCount = categoryMapper.countPage(page);

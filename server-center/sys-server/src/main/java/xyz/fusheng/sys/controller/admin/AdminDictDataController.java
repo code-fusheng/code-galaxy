@@ -5,18 +5,15 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
-import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.sys.common.annotation.UserInfo;
 import xyz.fusheng.sys.core.service.DictDataService;
 import xyz.fusheng.sys.model.dto.DictDataDto;
 import xyz.fusheng.sys.model.vo.DictDataVo;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -45,9 +42,9 @@ public class AdminDictDataController {
     }
 
     @ApiOperation(value = "批量删除字典数据")
-    @DeleteMapping("/deleteDictDataByCodes")
-    public ResultVo<Object> deleteDictDataByCodes(@RequestBody Long[] dictCodes) {
-        dictDataService.deleteDictDataByCodes(dictCodes);
+    @DeleteMapping("/deleteDictData")
+    public ResultVo<Object> deleteDictData(@RequestBody Long[] dictCodes) {
+        dictDataService.deleteDictData(dictCodes);
         return new ResultVo<>("操作提示: 删除成功!");
     }
 
@@ -62,34 +59,23 @@ public class AdminDictDataController {
     }
 
     @ApiOperation(value = "根据Code获取字典数据详情")
-    @GetMapping("/getDictDataByCode/{dictDataCode}")
-    public ResultVo<DictDataVo> getDictDataByCode(@PathVariable @ApiParam(value = "字典数据code编码") Long dictDataCode) {
-        DictDataVo dictDataVo = dictDataService.getDictDataByCode(dictDataCode);
+    @GetMapping("/infoDictData/{dictDataCode}")
+    public ResultVo<DictDataVo> infoDictData(@PathVariable @ApiParam(value = "字典数据code编码") Long dictDataCode) {
+        DictDataVo dictDataVo = dictDataService.infoDictData(dictDataCode);
         return new ResultVo<>("操作提示: 获取成功!", dictDataVo);
     }
 
     @ApiOperation(value = "根据字典类型获取所有字典数据")
-    @GetMapping("/listDictDataByDictType/{dictType}")
-    public ResultVo<List<DictDataVo>> listDictDataByDictType(@PathVariable @ApiParam(value = "字典类型") String dictType) {
-        List<DictDataVo> dictDataList = dictDataService.listDictDataByDictType(dictType);
+    @GetMapping("/listDictData/{dictType}")
+    public ResultVo<List<DictDataVo>> listDictData(@PathVariable @ApiParam(value = "字典类型") String dictType) {
+        List<DictDataVo> dictDataList = dictDataService.listDictData(dictType);
         return new ResultVo<>("操作提示: 获取成功!", dictDataList);
     }
 
-
     @ApiOperation(value = "分页查询字典数据列表")
     @PostMapping("/getDictDataByPage")
-    public ResultVo<Page<DictDataVo>> getDictTypeByPage(@RequestBody Page<DictDataVo> page) {
-        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
-        page.setSortColumn(newSortColumn);
-        if (StringUtils.isNotBlank(page.getSortColumn())) {
-            // 字典排序、字典标签、创建时间、更新时间
-            String[] sortColumns = {"dict_sort", "dict_label", "created_time", "update_time"};
-            List<String> sortList = Arrays.asList(sortColumns);
-            if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
-            }
-        }
-        page = dictDataService.getDictDataByPage(page);
+    public ResultVo<PageData<DictDataVo>> getDictTypeByPage(@RequestBody PageData<DictDataVo> page) {
+        page = dictDataService.pageDictData(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
 

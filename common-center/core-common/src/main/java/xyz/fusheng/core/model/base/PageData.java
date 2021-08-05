@@ -10,6 +10,7 @@ package xyz.fusheng.core.model.base;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.experimental.Accessors;
 import xyz.fusheng.core.utils.StringUtils;
 
 import java.io.Serializable;
@@ -18,7 +19,8 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-public class Page<T> implements Serializable {
+@Accessors(chain = true)
+public class PageData<T> implements Serializable {
 
     private static final long serialVersionUID = 8759874641772522011L;
 
@@ -122,5 +124,6 @@ public class Page<T> implements Serializable {
     public String getSortColumn() {
         return StringUtils.isEmpty(this.sortColumn) ? "created_time" : StringUtils.upperCharToUnderLine(sortColumn);
     }
+
 }
 

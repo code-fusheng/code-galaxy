@@ -7,7 +7,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.dto.UserDto;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
@@ -71,7 +71,7 @@ public class AdminUserController {
 
     @ApiOperation("分页查询用户列表")
     @PostMapping("/getUserByPage")
-    public ResultVo<Page<UserVo>> getUserByPage(@RequestBody Page<UserVo> page) {
+    public ResultVo<PageData<UserVo>> getUserByPage(@RequestBody PageData<UserVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

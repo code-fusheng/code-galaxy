@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.PaperService;
@@ -41,7 +41,7 @@ public class PaperController {
 
     @ApiOperation(value = "分页查询试卷列表")
     @PostMapping("/getPaperByPage")
-    public ResultVo<Page<PaperVo>> getPaperByPage(@RequestBody Page<PaperVo> page) {
+    public ResultVo<PageData<PaperVo>> getPaperByPage(@RequestBody PageData<PaperVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

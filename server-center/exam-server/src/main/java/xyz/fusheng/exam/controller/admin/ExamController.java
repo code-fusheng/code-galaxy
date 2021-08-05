@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.ExamService;
@@ -44,7 +44,7 @@ public class ExamController {
 
     @ApiOperation(value = "分页查询考试列表")
     @PostMapping("/getExamByPage")
-    public ResultVo<Page<ExamVo>> getExamByPage(@RequestBody Page<ExamVo> page) {
+    public ResultVo<PageData<ExamVo>> getExamByPage(@RequestBody PageData<ExamVo> page) {
         String sortColumn = page.getSortColumn();
         // 驼峰转下划线
         String newSortColumn = StringUtils.upperCharToUnderLine(sortColumn);

@@ -1,6 +1,6 @@
 package xyz.fusheng.sys.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.sys.model.dto.DictDataDto;
 import xyz.fusheng.sys.model.vo.DictDataVo;
 
@@ -18,7 +18,7 @@ public interface DictDataService{
      * 批量删除字典数据根据Ids
      * @param dictCodes
      */
-    void deleteDictDataByCodes(Long[] dictCodes);
+    void deleteDictData(Long[] dictCodes);
 
     /**
      * 修改字典数据
@@ -31,19 +31,19 @@ public interface DictDataService{
      * @param dictDataCode
      * @return
      */
-    DictDataVo getDictDataByCode(Long dictDataCode);
+    DictDataVo infoDictData(Long dictDataCode);
 
     /**
      * 根据字典类型获取字典数据列表
      * @param dictType
      * @return
      */
-    List<DictDataVo> listDictDataByDictType(String dictType);
+    List<DictDataVo> listDictData(String dictType);
 
     /**
      * 分页查询字典数据列表
      * @param page
      * @return
      */
-    Page<DictDataVo> getDictDataByPage(Page<DictDataVo> page);
+    PageData<DictDataVo> pageDictData(PageData<DictDataVo> page);
 }

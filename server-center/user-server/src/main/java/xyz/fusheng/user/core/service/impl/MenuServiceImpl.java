@@ -3,7 +3,7 @@ package xyz.fusheng.user.core.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.StateEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.vo.MenuVo;
 import xyz.fusheng.user.core.mapper.MenuMapper;
@@ -46,7 +46,7 @@ public class MenuServiceImpl implements MenuService {
      * @return
      */
     @Override
-    public Page<MenuVo> getMenuByPage(Page<MenuVo> page) {
+    public PageData<MenuVo> getMenuByPage(PageData<MenuVo> page) {
         List<MenuVo> menuVoList = menuMapper.getMenuByPage(page);
         page.setList(menuVoList);
         int totalCount = menuMapper.getMenuCountByPage(page);

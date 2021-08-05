@@ -2,7 +2,7 @@ package xyz.fusheng.exam.core.service.impl;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.core.mapper.ExamMapper;
 import xyz.fusheng.exam.core.service.ExamService;
 import xyz.fusheng.exam.model.dto.ExamDto;
@@ -26,7 +26,7 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public Page<ExamVo> getExamVoByPage(Page<ExamVo> page) {
+    public PageData<ExamVo> getExamVoByPage(PageData<ExamVo> page) {
         List<ExamVo> examVoList = examMapper.getByPage(page);
         page.setList(examVoList);
         int totalCount = examMapper.getCountByPage(page);

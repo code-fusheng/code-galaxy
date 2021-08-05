@@ -2,7 +2,7 @@ package xyz.fusheng.user.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.entity.Role;
 import xyz.fusheng.core.model.entity.User;
@@ -23,7 +23,7 @@ public interface UserMapper extends BaseMapper<User> {
      * @param page
      * @return
      */
-    List<UserVo> getUserByPage(Page<UserVo> page);
+    List<UserVo> getUserByPage(PageData<UserVo> page);
 
     /**
      * 获取分页总数
@@ -31,5 +31,5 @@ public interface UserMapper extends BaseMapper<User> {
      * @param page
      * @return
      */
-    int getUserCountByPage(Page<UserVo> page);
+    int getUserCountByPage(PageData<UserVo> page);
 }

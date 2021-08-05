@@ -12,7 +12,7 @@ import xyz.fusheng.bill.core.service.TransRecordService;
 import xyz.fusheng.bill.model.dto.TransRecordDto;
 import xyz.fusheng.bill.model.vo.TransRecordVo;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
@@ -48,7 +48,7 @@ public class AdminTransRecordController {
 
     @ApiOperation("分页查询消费记录列表")
     @PostMapping("/pageTransRecord")
-    public ResultVo<Page<TransRecordVo>> pageTransRecord(@RequestBody Page<TransRecordVo> page) {
+    public ResultVo<PageData<TransRecordVo>> pageTransRecord(@RequestBody PageData<TransRecordVo> page) {
         if (StringUtils.isNotBlank(page.getSortColumn())) {
             // 创建时间、更新时间
             String[] sortColumns = {"created_time", "updated_time"};

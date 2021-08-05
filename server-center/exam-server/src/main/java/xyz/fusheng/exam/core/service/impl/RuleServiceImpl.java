@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.core.mapper.RuleMapper;
 import xyz.fusheng.exam.core.service.RuleService;
 import xyz.fusheng.exam.model.dto.RuleDto;
@@ -40,7 +40,7 @@ public class RuleServiceImpl implements RuleService {
      * @return
      */
     @Override
-    public Page<RuleVo> getRuleByPage(Page<RuleVo> page) {
+    public PageData<RuleVo> getRuleByPage(PageData<RuleVo> page) {
         // 查询数据
         List<RuleVo> ruleVoList = ruleMapper.getByPage(page);
         page.setList(ruleVoList);

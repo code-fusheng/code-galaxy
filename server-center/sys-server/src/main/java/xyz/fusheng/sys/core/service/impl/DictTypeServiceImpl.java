@@ -7,8 +7,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
+import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.exception.BusinessException;
+import xyz.fusheng.core.model.base.PageData;
+import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.sys.core.mapper.DictTypeMapper;
 import xyz.fusheng.sys.core.service.DictTypeService;
 import xyz.fusheng.sys.model.dto.DictTypeDto;
@@ -49,7 +52,7 @@ public class DictTypeServiceImpl implements DictTypeService {
     }
 
     @Override
-    public void deleteDictTypedByIds(Long[] dictIds) {
+    public void deleteDictType(Long[] dictIds) {
         List<Long> ids = Arrays.asList(dictIds);
         if (ids.size() > 0) {
             dictTypeMapper.deleteBatchIds(ids);
@@ -65,7 +68,7 @@ public class DictTypeServiceImpl implements DictTypeService {
     }
 
     @Override
-    public DictType getDictTypeById(Long dictTypeId) {
+    public DictType infoDictType(Long dictTypeId) {
         DictType dictType = dictTypeMapper.selectOne(new QueryWrapper<DictType>().lambda()
                 .eq(DictType::getDictId, dictTypeId)
                 .eq(DictType::getIsEnabled, StateEnums.ENABLED.getCode()));
@@ -73,7 +76,17 @@ public class DictTypeServiceImpl implements DictTypeService {
     }
 
     @Override
-    public Page<DictTypeVo> getDictTypeByPage(Page<DictTypeVo> page) {
+    public PageData<DictTypeVo> pageDictType(PageData<DictTypeVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 字典名称、字典类型、创建时间、更新时间
+            String[] sortColumns = {"dict_name", "dict_type", "created_time", "updated_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+            }
+        }
         // 查询数据
         List<DictTypeVo> dictTypeVoList = dictTypeMapper.getByPage(page);
         page.setList(dictTypeVoList);

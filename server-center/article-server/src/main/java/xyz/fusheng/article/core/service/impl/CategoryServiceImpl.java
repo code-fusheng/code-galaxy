@@ -15,7 +15,7 @@ import xyz.fusheng.article.model.vo.CategoryVo;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -65,7 +65,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Page<CategoryVo> getCategoryByPage(Page<CategoryVo> page) {
+    public PageData<CategoryVo> getCategoryByPage(PageData<CategoryVo> page) {
         List<CategoryVo> categoryVoList = categoryMapper.getCategoryByPage(page);
         page.setList(categoryVoList);
         int totalCount = categoryMapper.getCountByPage(page);

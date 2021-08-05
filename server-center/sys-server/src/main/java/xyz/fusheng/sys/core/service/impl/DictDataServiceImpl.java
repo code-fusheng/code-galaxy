@@ -6,9 +6,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
+import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
+import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.sys.core.mapper.DictDataMapper;
 import xyz.fusheng.sys.core.mapper.DictTypeMapper;
 import xyz.fusheng.sys.core.service.DictDataService;
@@ -59,7 +61,7 @@ public class DictDataServiceImpl implements DictDataService {
     }
 
     @Override
-    public void deleteDictDataByCodes(Long[] dictCodes) {
+    public void deleteDictData(Long[] dictCodes) {
         List<Long> codes = Arrays.asList(dictCodes);
         if (codes.size() > 0) {
             dictDataMapper.deleteBatchIds(codes);
@@ -75,7 +77,7 @@ public class DictDataServiceImpl implements DictDataService {
     }
 
     @Override
-    public DictDataVo getDictDataByCode(Long dictDataCode) {
+    public DictDataVo infoDictData(Long dictDataCode) {
         DictData dictData = dictDataMapper.selectOne(new QueryWrapper<DictData>().lambda()
                 .eq(DictData::getDictCode, dictDataCode)
                 .eq(DictData::getIsEnabled, StateEnums.ENABLED.getCode()));
@@ -88,13 +90,23 @@ public class DictDataServiceImpl implements DictDataService {
     }
 
     @Override
-    public List<DictDataVo> listDictDataByDictType(String dictType) {
-        List<DictDataVo> dictDataList = dictDataMapper.listDictDataByDictType(dictType);
+    public List<DictDataVo> listDictData(String dictType) {
+        List<DictDataVo> dictDataList = dictDataMapper.listDictData(dictType);
         return dictDataList;
     }
 
     @Override
-    public Page<DictDataVo> getDictDataByPage(Page<DictDataVo> page) {
+    public PageData<DictDataVo> pageDictData(PageData<DictDataVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 字典排序、字典标签、创建时间、更新时间
+            String[] sortColumns = {"dict_sort", "dict_label", "created_time", "update_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+            }
+        }
         List<DictDataVo> dictDataVoList = dictDataMapper.getByPage(page);
         page.setList(dictDataVoList);
         int totalCount = dictDataMapper.getCountByPage(page);

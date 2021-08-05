@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.dto.QuestionDto;
 import xyz.fusheng.exam.model.vo.QuestionVo;
 
@@ -32,7 +32,7 @@ public interface QuestionService{
      * @param page
      * @return
      */
-    Page<QuestionVo> getQuestionByPage(Page<QuestionVo> page);
+    PageData<QuestionVo> getQuestionByPage(PageData<QuestionVo> page);
 
     /**
      * 获取试题与选项连同答案
@@ -46,7 +46,7 @@ public interface QuestionService{
      * @param page
      * @return
      */
-    Page<QuestionVo> getQuestionAndOptionsWithAnswersByPage(Page<QuestionVo> page);
+    PageData<QuestionVo> getQuestionAndOptionsWithAnswersByPage(PageData<QuestionVo> page);
 
     /**
      * 更新问题与选项连同答案
@@ -59,7 +59,7 @@ public interface QuestionService{
      * @param page
      * @return
      */
-    Page<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(Page<QuestionVo> page);
+    PageData<QuestionVo> getQuestionAndOptionsNotWithAnswersByPage(PageData<QuestionVo> page);
 
     /**
      * 获取所有试题与选项以及答案列表

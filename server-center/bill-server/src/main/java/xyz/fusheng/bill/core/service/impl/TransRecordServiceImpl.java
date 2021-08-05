@@ -13,7 +13,7 @@ import xyz.fusheng.bill.model.entity.TransRecord;
 import xyz.fusheng.bill.model.vo.TransRecordVo;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -28,7 +28,7 @@ public class TransRecordServiceImpl implements TransRecordService {
     private CategoryMapper categoryMapper;
 
     @Override
-    public Page<TransRecordVo> pageTransRecord(Page<TransRecordVo> page) {
+    public PageData<TransRecordVo> pageTransRecord(PageData<TransRecordVo> page) {
         List<TransRecordVo> transRecordVoList = transRecordMapper.pageTransRecordList(page);
         page.setList(transRecordVoList);
         int totalCount = transRecordMapper.countTransRecordPage(page);

@@ -4,7 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.vo.MenuVo;
 import xyz.fusheng.core.model.vo.ResultVo;
@@ -47,7 +47,7 @@ public class AdminMenuController {
 
     @ApiOperation("分页查询权限列表")
     @PostMapping("/getMenuByPage")
-    public ResultVo<Page<MenuVo>> getMenuByPage(@RequestBody Page<MenuVo> page) {
+    public ResultVo<PageData<MenuVo>> getMenuByPage(@RequestBody PageData<MenuVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

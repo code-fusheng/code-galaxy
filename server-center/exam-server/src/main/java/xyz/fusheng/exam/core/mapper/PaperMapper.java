@@ -2,7 +2,7 @@ package xyz.fusheng.exam.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.entity.Paper;
 import xyz.fusheng.exam.model.vo.PaperVo;
 
@@ -23,14 +23,14 @@ public interface PaperMapper extends BaseMapper<Paper> {
      * @param page
      * @return
      */
-    List<PaperVo> getByPage(Page<PaperVo> page);
+    List<PaperVo> getByPage(PageData<PaperVo> page);
 
     /**
      * 统计分页试卷总数
      * @param page
      * @return
      */
-    int getCountByPage(Page<PaperVo> page);
+    int getCountByPage(PageData<PaperVo> page);
 
     /**
      * 获取试卷基础信息

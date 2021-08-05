@@ -3,7 +3,7 @@ package xyz.fusheng.article.core.service;
 import xyz.fusheng.article.model.dto.CategoryDto;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.CategoryVo;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public interface CategoryService {
 
     CategoryVo getCategoryById(Long id);
 
-    Page<CategoryVo> getCategoryByPage(Page<CategoryVo> page);
+    PageData<CategoryVo> getCategoryByPage(PageData<CategoryVo> page);
 
     List<Category> getAllCategoryList();
 

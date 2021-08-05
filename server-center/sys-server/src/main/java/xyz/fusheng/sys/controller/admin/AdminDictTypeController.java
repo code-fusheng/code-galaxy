@@ -4,21 +4,16 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
-import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.core.utils.StringUtils;
-import xyz.fusheng.sys.common.annotation.UserInfo;
+import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.sys.core.service.DictTypeService;
 import xyz.fusheng.sys.model.dto.DictTypeDto;
 import xyz.fusheng.sys.model.entity.DictType;
 import xyz.fusheng.sys.model.vo.DictTypeVo;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @FileName: DictTypeController
@@ -37,8 +32,8 @@ public class AdminDictTypeController {
 
     @ApiOperation(value = "添加字典类型", notes = "添加字典类型")
     @PostMapping("/saveDictType")
-    public ResultVo<Object> saveDictType(@RequestBody @Validated DictTypeDto dictTypeDto,
-                                         @ApiIgnore @UserInfo SelfUser userInfo) {
+    public ResultVo<Object> saveDictType(@RequestBody @Validated DictTypeDto dictTypeDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
         dictTypeDto.setCreatorId(userInfo.getUserId());
         dictTypeDto.setCreatorName(userInfo.getUsername());
         dictTypeService.saveDictType(dictTypeDto);
@@ -46,16 +41,16 @@ public class AdminDictTypeController {
     }
 
     @ApiOperation(value = "批量删除字典类型")
-    @DeleteMapping("/deleteDictTypeByIds")
-    public ResultVo<Object> deleteDictTypeByIds(@RequestBody Long[] dictIds) {
-        dictTypeService.deleteDictTypedByIds(dictIds);
+    @DeleteMapping("/deleteDictType")
+    public ResultVo<Object> deleteDictType(@RequestBody Long[] dictIds) {
+        dictTypeService.deleteDictType(dictIds);
         return new ResultVo<>("操作提示: 删除成功!");
     }
 
     @ApiOperation(value = "修改字典类型")
     @PutMapping("/updateDictType")
-    public ResultVo<Object> updateDictType(@RequestBody DictTypeDto dictTypeDto,
-                                           @ApiIgnore @UserInfo SelfUser userInfo) {
+    public ResultVo<Object> updateDictType(@RequestBody DictTypeDto dictTypeDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
         dictTypeDto.setUpdaterId(userInfo.getUserId());
         dictTypeDto.setUpdaterName(userInfo.getUsername());
         dictTypeService.updateDictType(dictTypeDto);
@@ -63,26 +58,16 @@ public class AdminDictTypeController {
     }
 
     @ApiOperation(value = "根据Id获取字典类型详情")
-    @GetMapping("/getDictTypeById/{dictTypeId}")
-    public ResultVo<DictType> getDictTypeById(@PathVariable @ApiParam(value = "字典类型Id", example = "1384749237748654082") Long dictTypeId) {
-        DictType dictType = dictTypeService.getDictTypeById(dictTypeId);
+    @GetMapping("/infoDictType/{dictTypeId}")
+    public ResultVo<DictType> infoDictType(@PathVariable @ApiParam(value = "字典类型Id", example = "1384749237748654082") Long dictTypeId) {
+        DictType dictType = dictTypeService.infoDictType(dictTypeId);
         return new ResultVo<>("操作提示: 获取成功!", dictType);
     }
 
     @ApiOperation(value = "分页查询字典类型列表")
-    @PostMapping("/getDictTypeByPage")
-    public ResultVo<Page<DictTypeVo>> getDictTypeByPage(@RequestBody Page<DictTypeVo> page) {
-        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
-        page.setSortColumn(newSortColumn);
-        if (StringUtils.isNotBlank(page.getSortColumn())) {
-            // 字典名称、字典类型、创建时间、更新时间
-            String[] sortColumns = {"dict_name", "dict_type", "created_time", "updated_time"};
-            List<String> sortList = Arrays.asList(sortColumns);
-            if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
-            }
-        }
-        page = dictTypeService.getDictTypeByPage(page);
+    @PostMapping("/pageDictType")
+    public ResultVo<PageData<DictTypeVo>> pageDictType(@RequestBody PageData<DictTypeVo> page) {
+        page = dictTypeService.pageDictType(page);
         return new ResultVo<>("操作提示: 分页查询成功!", page);
     }
 

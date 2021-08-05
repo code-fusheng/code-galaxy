@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.dto.RuleDto;
 import xyz.fusheng.exam.model.entity.Rule;
 import xyz.fusheng.exam.model.vo.RuleVo;
@@ -20,7 +20,7 @@ public interface RuleService {
      * @param page
      * @return
      */
-    Page<RuleVo> getRuleByPage(Page<RuleVo> page);
+    PageData<RuleVo> getRuleByPage(PageData<RuleVo> page);
 
     /**
      * 获取规则信息

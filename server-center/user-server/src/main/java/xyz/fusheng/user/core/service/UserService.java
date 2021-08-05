@@ -1,7 +1,7 @@
 package xyz.fusheng.user.core.service;
 
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.dto.UserDto;
 import xyz.fusheng.core.model.dto.UserRegisterDto;
 import xyz.fusheng.core.model.entity.Menu;
@@ -45,7 +45,7 @@ public interface UserService {
      * @param page
      * @return
      */
-    Page<UserVo> getUserByPage(Page<UserVo> page);
+    PageData<UserVo> getUserByPage(PageData<UserVo> page);
 
     /**
      * 获取用户信息

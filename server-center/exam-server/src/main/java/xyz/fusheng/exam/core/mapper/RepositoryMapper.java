@@ -3,7 +3,7 @@ package xyz.fusheng.exam.core.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.entity.Repository;
 import xyz.fusheng.exam.model.vo.RepositoryVo;
 
@@ -33,14 +33,14 @@ public interface RepositoryMapper extends BaseMapper<Repository> {
      * @param page
      * @return
      */
-    List<RepositoryVo> getByPage(Page<RepositoryVo> page);
+    List<RepositoryVo> getByPage(PageData<RepositoryVo> page);
 
     /**
      * 统计分页题库总数
      * @param page
      * @return
      */
-    int getCountByPage(Page<RepositoryVo> page);
+    int getCountByPage(PageData<RepositoryVo> page);
 
     /**
      * 查询当前试题是否修改归属题库

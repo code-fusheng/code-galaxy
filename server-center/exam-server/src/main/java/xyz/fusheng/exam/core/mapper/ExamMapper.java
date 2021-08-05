@@ -2,7 +2,7 @@ package xyz.fusheng.exam.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.entity.Exam;
 import xyz.fusheng.exam.model.vo.ExamVo;
 
@@ -16,7 +16,7 @@ public interface ExamMapper extends BaseMapper<Exam> {
      * @param page
      * @return
      */
-    List<ExamVo> getByPage(Page<ExamVo> page);
+    List<ExamVo> getByPage(PageData<ExamVo> page);
 
-    int getCountByPage(Page<ExamVo> page);
+    int getCountByPage(PageData<ExamVo> page);
 }

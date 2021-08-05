@@ -1,32 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.sys.core.mapper.DictTypeMapper">
-  <resultMap id="BaseResultMap" type="xyz.fusheng.sys.model.entity.DictType">
-    <!--@mbg.generated-->
-    <!--@Table sys_dict_type-->
-    <id column="dict_id" jdbcType="BIGINT" property="dictId" />
-    <result column="dict_name" jdbcType="VARCHAR" property="dictName" />
-    <result column="dict_type" jdbcType="VARCHAR" property="dictType" />
-    <result column="state" jdbcType="BOOLEAN" property="state" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="memo" jdbcType="VARCHAR" property="memo" />
-    <result column="version" jdbcType="INTEGER" property="version" />
-    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
-    <result column="is_deleted" jdbcType="BOOLEAN" property="isDeleted" />
-    <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
-    <result column="updater_id" jdbcType="BIGINT" property="updaterId" />
-    <result column="creator_name" jdbcType="VARCHAR" property="creatorName" />
-    <result column="updater_name" jdbcType="VARCHAR" property="updaterName" />
-    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    <!--@mbg.generated-->
-    dict_id, dict_name, dict_type, `state`, remark, memo, version, is_enabled, is_deleted,
-    creator_id, updater_id, creator_name, updater_name, created_time, updated_time
-  </sql>
 
-   <select id="getByPage" resultType="xyz.fusheng.sys.model.vo.DictTypeVo" parameterType="xyz.fusheng.core.model.base.Page">
+   <select id="getByPage" resultType="xyz.fusheng.sys.model.vo.DictTypeVo" parameterType="xyz.fusheng.core.model.base.PageData">
     select *
     from sys_dict_type
     where is_deleted = 0
@@ -51,7 +27,7 @@
     limit #{index}, #{pageSize}
   </select>
 
-  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.core.model.base.Page">
+  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.core.model.base.PageData">
     select count(*)
     from sys_dict_type
     where is_deleted = 0

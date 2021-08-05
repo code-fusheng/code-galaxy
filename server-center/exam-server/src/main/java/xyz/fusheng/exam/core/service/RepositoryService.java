@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.exam.model.dto.RepositoryDto;
 import xyz.fusheng.exam.model.entity.Repository;
 import xyz.fusheng.exam.model.vo.RepositoryVo;
@@ -38,7 +38,7 @@ public interface RepositoryService{
      * 分页查询题库
      * @return
      */
-    Page<RepositoryVo> getRepositoryByPage(Page<RepositoryVo> queryPage);
+    PageData<RepositoryVo> getRepositoryByPage(PageData<RepositoryVo> queryPage);
 
     /**
      * 获取所有题库列表

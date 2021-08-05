@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.RepositoryService;
@@ -70,7 +70,7 @@ public class RepositoryController {
 
     @ApiOperation(value = "分页查询题库列表")
     @PostMapping("/getRepositoryByPage")
-    public ResultVo<Page<RepositoryVo>> getRepositoryByPage(@RequestBody Page<RepositoryVo> page) {
+    public ResultVo<PageData<RepositoryVo>> getRepositoryByPage(@RequestBody PageData<RepositoryVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.QuestionService;
@@ -71,7 +71,7 @@ public class QuestionController {
 
     @ApiOperation(value = "分页查询试题列表")
     @PostMapping("/getQuestionByPage")
-    public ResultVo<Page<QuestionVo>> getQuestionByPage(@RequestBody Page<QuestionVo> page) {
+    public ResultVo<PageData<QuestionVo>> getQuestionByPage(@RequestBody PageData<QuestionVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {
@@ -88,7 +88,7 @@ public class QuestionController {
 
     @ApiOperation(value = "分页查询试卷中的试题以及选项与答案")
     @PostMapping("/getQuestionAndOptionsWithAnswersByPageForPaperId")
-    public ResultVo<Page<QuestionVo>> getQuestionAndOptionsWithAnswersByPageForPaperId(@RequestBody Page<QuestionVo> page) {
+    public ResultVo<PageData<QuestionVo>> getQuestionAndOptionsWithAnswersByPageForPaperId(@RequestBody PageData<QuestionVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {
@@ -105,7 +105,7 @@ public class QuestionController {
 
     /****************************************以下为考试交卷相关接口********************************************/
     @PostMapping("/getQuestionAndOptionsNotWithAnswersByPageForExam")
-    public ResultVo<Page<QuestionVo>> getQuestionAndOptionsNotWithAnswersByPageForExam(@RequestBody Page<QuestionVo> page) {
+    public ResultVo<PageData<QuestionVo>> getQuestionAndOptionsNotWithAnswersByPageForExam(@RequestBody PageData<QuestionVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

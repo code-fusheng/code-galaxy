@@ -1,6 +1,6 @@
 package xyz.fusheng.sys.core.service;
 
-import xyz.fusheng.core.model.base.Page;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.sys.model.dto.DictTypeDto;
 import xyz.fusheng.sys.model.entity.DictType;
 import xyz.fusheng.sys.model.vo.DictTypeVo;
@@ -17,7 +17,7 @@ public interface DictTypeService {
      * 批量删除字典类型根据Id
      * @param dictIds
      */
-    void deleteDictTypedByIds(Long[] dictIds);
+    void deleteDictType(Long[] dictIds);
 
     /**
      * 修改字典类型
@@ -30,12 +30,12 @@ public interface DictTypeService {
      * @param dictTypeId
      * @return
      */
-    DictType getDictTypeById(Long dictTypeId);
+    DictType infoDictType(Long dictTypeId);
 
     /**
      * 分页查询字典类型列表
      * @param page
      * @return
      */
-    Page<DictTypeVo> getDictTypeByPage(Page<DictTypeVo> page);
+    PageData<DictTypeVo> pageDictType(PageData<DictTypeVo> page);
 }

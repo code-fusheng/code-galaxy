@@ -29,11 +29,11 @@
     updated_time
   </sql>
 
-  <select id="listDictDataByDictType" resultType="xyz.fusheng.sys.model.vo.DictDataVo">
+  <select id="listDictData" resultType="xyz.fusheng.sys.model.vo.DictDataVo">
     select * from sys_dict_data where dict_type = #{dictType} and is_deleted = 0
   </select>
 
-  <select id="getByPage" resultType="xyz.fusheng.sys.model.vo.DictDataVo" parameterType="xyz.fusheng.core.model.base.Page">
+  <select id="getByPage" resultType="xyz.fusheng.sys.model.vo.DictDataVo" parameterType="xyz.fusheng.core.model.base.PageData">
     select *
     from sys_dict_data
     where is_deleted = 0
@@ -61,7 +61,7 @@
     limit #{index}, #{pageSize}
   </select>
 
-  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.core.model.base.Page">
+  <select id="getCountByPage" resultType="java.lang.Integer" parameterType="xyz.fusheng.core.model.base.PageData">
     select count(*)
     from sys_dict_data
     where is_deleted = 0
