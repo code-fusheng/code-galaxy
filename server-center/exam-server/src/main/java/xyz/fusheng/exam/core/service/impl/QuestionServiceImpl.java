@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.vo.QuestionVo;
 import xyz.fusheng.exam.core.mapper.OptionMapper;
 import xyz.fusheng.exam.core.mapper.PaperMapper;
 import xyz.fusheng.exam.core.mapper.QuestionMapper;
@@ -19,6 +18,7 @@ import xyz.fusheng.exam.model.dto.QuestionDto;
 import xyz.fusheng.exam.model.entity.Option;
 import xyz.fusheng.exam.model.entity.Question;
 import xyz.fusheng.exam.model.entity.Repository;
+import xyz.fusheng.exam.model.vo.QuestionVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

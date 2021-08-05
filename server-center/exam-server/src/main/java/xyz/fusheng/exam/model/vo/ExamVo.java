@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.model.vo;
 
-import xyz.fusheng.core.model.entity.Exam;
+import xyz.fusheng.exam.model.entity.Exam;
 
 /**
  * @FileName: ExamVo

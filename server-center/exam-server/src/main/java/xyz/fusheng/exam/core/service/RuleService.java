@@ -1,9 +1,9 @@
 package xyz.fusheng.exam.core.service;
 
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.RuleDto;
-import xyz.fusheng.core.model.entity.Rule;
-import xyz.fusheng.core.model.vo.RuleVo;
+import xyz.fusheng.exam.model.dto.RuleDto;
+import xyz.fusheng.exam.model.entity.Rule;
+import xyz.fusheng.exam.model.vo.RuleVo;
 
 import java.util.List;
 

@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.vo.PaperVo;
 import xyz.fusheng.exam.core.mapper.PaperMapper;
 import xyz.fusheng.exam.core.service.PaperService;
 import xyz.fusheng.exam.model.dto.PaperDto;
 import xyz.fusheng.exam.model.entity.Paper;
+import xyz.fusheng.exam.model.vo.PaperVo;
 
 import javax.annotation.Resource;
 import java.util.List;

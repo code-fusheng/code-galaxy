@@ -1,7 +1,7 @@
 package xyz.fusheng.exam.model.vo;
 
 import lombok.Data;
-import xyz.fusheng.core.model.entity.Option;
+import xyz.fusheng.exam.model.entity.Option;
 
 /**
  * @FileName: OptionVo

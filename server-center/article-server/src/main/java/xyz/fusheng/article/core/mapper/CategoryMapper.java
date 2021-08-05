@@ -14,4 +14,5 @@ public interface CategoryMapper extends BaseMapper<Category> {
     List<CategoryVo> getCategoryByPage(Page<CategoryVo> page);
 
     int getCountByPage(Page<CategoryVo> page);
+
 }

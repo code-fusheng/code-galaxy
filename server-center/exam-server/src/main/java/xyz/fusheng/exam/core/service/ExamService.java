@@ -1,6 +1,8 @@
 package xyz.fusheng.exam.core.service;
 
+import xyz.fusheng.core.model.base.Page;
 import xyz.fusheng.exam.model.dto.ExamDto;
+import xyz.fusheng.exam.model.vo.ExamVo;
 
 
 public interface ExamService {

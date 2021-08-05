@@ -5,12 +5,12 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.RuleDto;
-import xyz.fusheng.core.model.entity.Rule;
 import xyz.fusheng.core.model.vo.ResultVo;
-import xyz.fusheng.core.model.vo.RuleVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.RuleService;
+import xyz.fusheng.exam.model.dto.RuleDto;
+import xyz.fusheng.exam.model.entity.Rule;
+import xyz.fusheng.exam.model.vo.RuleVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

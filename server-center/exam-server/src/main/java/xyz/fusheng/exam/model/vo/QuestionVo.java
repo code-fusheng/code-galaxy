@@ -2,6 +2,7 @@ package xyz.fusheng.exam.model.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import xyz.fusheng.exam.model.entity.Option;
 import xyz.fusheng.exam.model.entity.Question;
 
@@ -17,6 +18,7 @@ import java.util.List;
  */
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class QuestionVo extends Question {
 
     @ApiModelProperty("题库Id")

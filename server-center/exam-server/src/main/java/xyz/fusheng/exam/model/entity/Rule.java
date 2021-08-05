@@ -1,20 +1,21 @@
-package xyz.fusheng.core.model.entity;
+package xyz.fusheng.exam.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Date;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import xyz.fusheng.core.model.base.BaseEntity;
 
+import java.util.Date;
+
 /**
-    * 应用表-规则表
-    */
-@ApiModel(value="xyz-fusheng-exam-PaperRule")
+ * 应用表-规则表
+ */
+@ApiModel(value = "xyz-fusheng-exam-PaperRule")
 @Data
-@EqualsAndHashCode(callSuper=true)
+@EqualsAndHashCode(callSuper = true)
 @TableName(value = "ex_rule")
 public class Rule extends BaseEntity {
     /**

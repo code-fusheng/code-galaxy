@@ -2,7 +2,8 @@ package xyz.fusheng.exam.model.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import xyz.fusheng.core.model.entity.Paper;
+import lombok.EqualsAndHashCode;
+import xyz.fusheng.exam.model.entity.Paper;
 
 /**
  * @FileName: PaperVo
@@ -13,6 +14,7 @@ import xyz.fusheng.core.model.entity.Paper;
  */
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class PaperVo extends Paper {
 
     @ApiModelProperty("规则名称")

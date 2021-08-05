@@ -1,7 +1,7 @@
-package xyz.fusheng.core.model.vo;
+package xyz.fusheng.exam.model.vo;
 
 import lombok.Data;
-import xyz.fusheng.core.model.entity.Rule;
+import xyz.fusheng.exam.model.entity.Rule;
 
 /**
  * @FileName: PaperRuleVo

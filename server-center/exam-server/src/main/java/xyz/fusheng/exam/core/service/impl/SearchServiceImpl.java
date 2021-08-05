@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.model.vo.QuestionVo;
 import xyz.fusheng.exam.core.service.QuestionService;
 import xyz.fusheng.exam.core.service.SearchService;
+import xyz.fusheng.exam.model.vo.QuestionVo;
 
 import javax.annotation.Resource;
 import java.io.IOException;

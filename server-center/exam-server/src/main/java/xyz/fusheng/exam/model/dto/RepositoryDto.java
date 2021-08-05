@@ -3,6 +3,7 @@ package xyz.fusheng.exam.model.dto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import xyz.fusheng.core.model.base.BaseDto;
 
 import javax.validation.constraints.NotNull;
@@ -17,6 +18,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 @ApiModel(value = "题库传输对象")
+@EqualsAndHashCode(callSuper = false)
 public class RepositoryDto extends BaseDto {
 
     /**

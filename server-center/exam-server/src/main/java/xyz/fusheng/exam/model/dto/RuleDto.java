@@ -1,4 +1,4 @@
-package xyz.fusheng.core.model.dto;
+package xyz.fusheng.exam.model.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
