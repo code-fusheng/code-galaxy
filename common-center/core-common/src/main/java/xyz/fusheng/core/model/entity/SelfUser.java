@@ -41,29 +41,9 @@ public class SelfUser implements Serializable, UserDetails {
     private String phone;
 
     /**
-     * 头像
-     */
-    private String header;
-
-    /**
-     * 签名
-     */
-    private String signature;
-
-    /**
-     * 介绍 描述
-     */
-    private String description;
-
-    /**
      * realName 真实名称
      */
     private String realname;
-
-    /**
-     * 性别 0:男 1:女
-     */
-    private Integer sex;
 
     /**
      * 用户角色

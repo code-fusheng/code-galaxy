@@ -18,138 +18,13 @@
         </filter>
     </appender>
 
-    <!-- info文件输出 -->
-    <appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.base}/${log.moduleName}-info.log
-        </File><!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.base}/archive/${log.moduleName}-info-%d{yyyy-MM-dd}.%i.log
-            </FileNamePattern>
-            <!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>${log.max.size}</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <!-- 日志输出的文件的格式  -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n</pattern>
-        </layout>
-    </appender>
-
-    <!-- debug文件输出 -->
-    <appender name="debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.base}/${log.moduleName}-debug.log
-        </File><!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.base}/archive/${log.moduleName}-debug-%d{yyyy-MM-dd}.%i.log
-            </FileNamePattern>
-            <!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>${log.max.size}</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>DEBUG</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <!-- 日志输出的文件的格式  -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n</pattern>
-        </layout>
-    </appender>
-
-    <!-- warning文件输出 -->
-    <appender name="warn" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.base}/${log.moduleName}-warn.log
-        </File><!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.base}/archive/${log.moduleName}-warn-%d{yyyy-MM-dd}.%i.log
-            </FileNamePattern>
-            <!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>${log.max.size}</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>WARN</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <!-- 日志输出的文件的格式  -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n</pattern>
-        </layout>
-    </appender>
-
-    <!-- error文件输出 -->
-    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.base}/${log.moduleName}-error.log
-        </File><!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.base}/archive/${log.moduleName}-error-%d{yyyy-MM-dd}.%i.log
-            </FileNamePattern>
-            <!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>${log.max.size}</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>ERROR</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-        <!-- 日志输出的文件的格式  -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n</pattern>
-        </layout>
-    </appender>
-
-    <!-- error文件输出 -->
-    <appender name="all" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.base}/${log.moduleName}-all.log
-        </File><!-- 设置日志不超过${log.max.size}时的保存路径，注意如果 是web项目会保存到Tomcat的bin目录 下 -->
-        <!-- 滚动记录文件，先将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件。-->
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.base}/archive/${log.moduleName}-all-%d{yyyy-MM-dd}.%i.log
-            </FileNamePattern>
-            <!-- 当天的日志大小 超过${log.max.size}时,压缩日志并保存 -->
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>${log.max.size}</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <!-- 日志输出的文件的格式  -->
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n</pattern>
-        </layout>
-    </appender>
-
     <!-- 为某个包下的所有类的指定Appender 这里也可以指定类名称例如：com.aa.bb.ClassName -->
     <logger name="xyz.fusheng.exam" additivity="false">
         <level value="debug"/>
         <appender-ref ref="stdout"/>
-        <appender-ref ref="info"/>
-        <appender-ref ref="debug"/>
-        <appender-ref ref="warn"/>
-        <appender-ref ref="error"/>
-        <appender-ref ref="all"/>
     </logger>
     <!-- root将级别为“DEBUG”及大于“DEBUG”的日志信息交给已经配置好的名为“Console”的appender处理，“Console”appender将信息打印到Console -->
     <root level="info">
         <appender-ref ref="stdout"/> <!-- 标识这个appender将会添加到这个logger -->
-        <appender-ref ref="info"/>
-        <appender-ref ref="debug"/>
-        <appender-ref ref="warn"/>
-        <appender-ref ref="error"/>
-        <appender-ref ref="all"/>
     </root>
 </configuration>

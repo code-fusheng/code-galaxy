@@ -1,6 +1,5 @@
 package xyz.fusheng.gateway.core.filter;
 
-import com.alibaba.fastjson.JSON;
 import com.nimbusds.jose.JWSObject;
 import net.minidev.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
@@ -19,7 +18,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 import xyz.fusheng.core.enums.ResultEnums;
-import xyz.fusheng.core.model.vo.ResultVo;
 
 import javax.annotation.Resource;
 import java.nio.charset.StandardCharsets;
@@ -83,6 +81,6 @@ public class AccessTokenFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return 10;
+        return -1;
     }
 }

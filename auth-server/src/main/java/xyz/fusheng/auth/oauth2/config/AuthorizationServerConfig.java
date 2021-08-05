@@ -59,7 +59,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Resource
     private JwtAccessTokenConverter jwtAccessTokenConverter;
 
-    @Resource // 注入增强器
+    @Resource
     private TokenEnhancer jwtTokenEnhancer;
 
     /**
