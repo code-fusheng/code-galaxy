@@ -9,13 +9,13 @@ import org.springframework.util.ObjectUtils;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.DictDataDto;
-import xyz.fusheng.core.model.entity.DictData;
-import xyz.fusheng.core.model.entity.DictType;
-import xyz.fusheng.core.model.vo.DictDataVo;
 import xyz.fusheng.sys.core.mapper.DictDataMapper;
 import xyz.fusheng.sys.core.mapper.DictTypeMapper;
 import xyz.fusheng.sys.core.service.DictDataService;
+import xyz.fusheng.sys.model.dto.DictDataDto;
+import xyz.fusheng.sys.model.entity.DictData;
+import xyz.fusheng.sys.model.entity.DictType;
+import xyz.fusheng.sys.model.vo.DictDataVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

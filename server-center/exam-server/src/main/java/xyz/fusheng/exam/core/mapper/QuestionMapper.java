@@ -3,8 +3,8 @@ package xyz.fusheng.exam.core.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.entity.Question;
 import xyz.fusheng.core.model.vo.QuestionVo;
+import xyz.fusheng.exam.model.entity.Question;
 
 import java.util.List;
 

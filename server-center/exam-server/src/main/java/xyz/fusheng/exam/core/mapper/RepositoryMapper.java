@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.entity.Repository;
 import xyz.fusheng.core.model.vo.RepositoryVo;
+import xyz.fusheng.exam.model.entity.Repository;
 
 import java.util.List;
 

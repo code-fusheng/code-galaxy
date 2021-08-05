@@ -6,11 +6,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.PaperDto;
-import xyz.fusheng.core.model.vo.PaperVo;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.PaperService;
+import xyz.fusheng.exam.model.dto.PaperDto;
+import xyz.fusheng.exam.model.vo.PaperVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

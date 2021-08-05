@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.article.core.mapper.ArticleMapper">
 
- <select id="pageArticle" parameterType="xyz.fusheng.core.model.base.Page" resultType="xyz.fusheng.core.model.vo.ArticleVo">
+ <select id="pageArticle" parameterType="xyz.fusheng.core.model.base.Page" resultType="xyz.fusheng.article.model.vo.ArticleVo">
     select a.article_id, a.article_title, a.author_id, a.article_image, a.article_desc,
     a.article_content, a.article_attachments, a.edit_content, a.edit_model,
     a.article_category, a.good_count, a.read_count, a.collect_count, a.comment_count,
@@ -55,7 +55,7 @@ where a.is_deleted = 0 and c.is_deleted = 0
 </if>
 </select>
 
-<select id="getArticleById" resultType="xyz.fusheng.core.model.vo.ArticleVo">
+<select id="getArticleById" resultType="xyz.fusheng.article.model.vo.ArticleVo">
 select a.article_id, a.article_title, a.author_id, a.article_image, a.article_desc,
 a.article_content, a.article_attachments, a.edit_content, a.edit_model,
 a.article_category, a.good_count, a.read_count, a.collect_count, a.comment_count,

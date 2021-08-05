@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.dto.OptionDto;
+import xyz.fusheng.exam.model.dto.OptionDto;
 
 public interface OptionService{
 

@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.DictDataDto;
 import xyz.fusheng.core.model.entity.SelfUser;
-import xyz.fusheng.core.model.vo.DictDataVo;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.sys.common.annotation.UserInfo;
 import xyz.fusheng.sys.core.service.DictDataService;
+import xyz.fusheng.sys.model.dto.DictDataDto;
+import xyz.fusheng.sys.model.vo.DictDataVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

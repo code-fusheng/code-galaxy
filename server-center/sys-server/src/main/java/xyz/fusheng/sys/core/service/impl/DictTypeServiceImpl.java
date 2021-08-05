@@ -9,11 +9,11 @@ import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.DictTypeDto;
-import xyz.fusheng.core.model.entity.DictType;
-import xyz.fusheng.core.model.vo.DictTypeVo;
 import xyz.fusheng.sys.core.mapper.DictTypeMapper;
 import xyz.fusheng.sys.core.service.DictTypeService;
+import xyz.fusheng.sys.model.dto.DictTypeDto;
+import xyz.fusheng.sys.model.entity.DictType;
+import xyz.fusheng.sys.model.vo.DictTypeVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

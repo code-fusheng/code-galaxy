@@ -3,8 +3,8 @@ package xyz.fusheng.sys.core.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.entity.DictData;
-import xyz.fusheng.core.model.vo.DictDataVo;
+import xyz.fusheng.sys.model.entity.DictData;
+import xyz.fusheng.sys.model.vo.DictDataVo;
 
 import java.util.List;
 

@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
-import xyz.fusheng.core.model.entity.Cart;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.query.CartQuery;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.mall.common.annotation.UserInfo;
 import xyz.fusheng.mall.core.service.CartService;
+import xyz.fusheng.mall.model.entity.Cart;
 
 import javax.annotation.Resource;
 import java.util.List;

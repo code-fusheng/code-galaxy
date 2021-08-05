@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.exam.core.mapper.ExamMapper">
 
-  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.ExamVo">
+  <select id="getByPage" resultType="xyz.fusheng.exam.model.vo.ExamVo">
     select e.*
     from ex_exam e
     where e.is_deleted = 0

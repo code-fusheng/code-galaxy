@@ -2,10 +2,10 @@ package xyz.fusheng.exam.core.service.impl;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.model.dto.UserExamRecordDto;
-import xyz.fusheng.core.model.entity.UserExamRecord;
 import xyz.fusheng.exam.core.mapper.UserExamRecordMapper;
 import xyz.fusheng.exam.core.service.UserExamRecordService;
+import xyz.fusheng.exam.model.dto.UserExamRecordDto;
+import xyz.fusheng.exam.model.entity.UserExamRecord;
 
 import javax.annotation.Resource;
 

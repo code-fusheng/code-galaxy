@@ -1,8 +1,8 @@
 package xyz.fusheng.bill.core.service;
 
+import xyz.fusheng.bill.model.dto.CategoryDto;
+import xyz.fusheng.bill.model.vo.CategoryVo;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.bill.dto.CategoryDto;
-import xyz.fusheng.core.model.bill.vo.CategoryVo;
 
 public interface CategoryService{
 

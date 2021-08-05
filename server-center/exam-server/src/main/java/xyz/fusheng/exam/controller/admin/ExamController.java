@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.ExamDto;
-import xyz.fusheng.core.model.vo.ExamVo;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.ExamService;
+import xyz.fusheng.exam.model.dto.ExamDto;
+import xyz.fusheng.exam.model.vo.ExamVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

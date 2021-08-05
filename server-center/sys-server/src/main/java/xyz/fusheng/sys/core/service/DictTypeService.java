@@ -1,9 +1,9 @@
 package xyz.fusheng.sys.core.service;
 
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.DictTypeDto;
-import xyz.fusheng.core.model.entity.DictType;
-import xyz.fusheng.core.model.vo.DictTypeVo;
+import xyz.fusheng.sys.model.dto.DictTypeDto;
+import xyz.fusheng.sys.model.entity.DictType;
+import xyz.fusheng.sys.model.vo.DictTypeVo;
 
 public interface DictTypeService {
 

@@ -1,8 +1,8 @@
 package xyz.fusheng.exam.core.service;
 
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.QuestionDto;
 import xyz.fusheng.core.model.vo.QuestionVo;
+import xyz.fusheng.exam.model.dto.QuestionDto;
 
 import java.util.List;
 

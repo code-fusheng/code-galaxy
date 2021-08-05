@@ -1,8 +1,8 @@
 package xyz.fusheng.article.core.service;
 
+import xyz.fusheng.article.model.dto.ArticleDto;
+import xyz.fusheng.article.model.vo.ArticleVo;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.ArticleDto;
-import xyz.fusheng.core.model.vo.ArticleVo;
 
 public interface ArticleService {
 

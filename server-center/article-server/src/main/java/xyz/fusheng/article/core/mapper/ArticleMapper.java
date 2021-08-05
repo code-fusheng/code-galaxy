@@ -2,9 +2,9 @@ package xyz.fusheng.article.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import xyz.fusheng.article.model.entity.Article;
+import xyz.fusheng.article.model.vo.ArticleVo;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.entity.Article;
-import xyz.fusheng.core.model.vo.ArticleVo;
 
 import java.util.List;
 

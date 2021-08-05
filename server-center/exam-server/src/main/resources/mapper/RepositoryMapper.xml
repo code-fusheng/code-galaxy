@@ -10,7 +10,7 @@
     delete from ex_repository_question where repository_id = #{repositoryId} and question_id = #{questionId}
   </delete>
 
-  <select id="getByPage" resultType="xyz.fusheng.core.model.vo.RepositoryVo">
+  <select id="getByPage" resultType="xyz.fusheng.exam.model.vo.RepositoryVo">
     select *
     from ex_repository
     where is_deleted = 0

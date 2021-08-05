@@ -7,9 +7,9 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.model.entity.Cart;
 import xyz.fusheng.core.model.query.CartQuery;
 import xyz.fusheng.mall.common.utils.JsonUtils;
+import xyz.fusheng.mall.model.entity.Cart;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

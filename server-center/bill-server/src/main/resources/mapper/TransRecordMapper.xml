@@ -9,7 +9,7 @@
     created_time, updated_time
   </sql>
 
-  <select id="pageTransRecordList" resultType="xyz.fusheng.core.model.bill.vo.TransRecordVo">
+  <select id="pageTransRecordList" resultType="xyz.fusheng.bill.model.vo.TransRecordVo">
     select tr.*, c.category_name as transCategoryName
     from bill_trans_record tr left join bill_category c on tr.trans_category = c.category_id
     where tr.is_deleted = 0

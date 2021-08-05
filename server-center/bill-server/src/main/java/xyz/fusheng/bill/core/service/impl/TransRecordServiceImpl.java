@@ -7,13 +7,13 @@ import org.springframework.transaction.annotation.Transactional;
 import xyz.fusheng.bill.core.mapper.CategoryMapper;
 import xyz.fusheng.bill.core.mapper.TransRecordMapper;
 import xyz.fusheng.bill.core.service.TransRecordService;
+import xyz.fusheng.bill.model.dto.TransRecordDto;
+import xyz.fusheng.bill.model.entity.Category;
+import xyz.fusheng.bill.model.entity.TransRecord;
+import xyz.fusheng.bill.model.vo.TransRecordVo;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.bill.dto.TransRecordDto;
-import xyz.fusheng.core.model.bill.entity.Category;
-import xyz.fusheng.core.model.bill.entity.TransRecord;
-import xyz.fusheng.core.model.bill.vo.TransRecordVo;
 
 import javax.annotation.Resource;
 import java.util.List;

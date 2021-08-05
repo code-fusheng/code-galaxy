@@ -1,6 +1,6 @@
 package xyz.fusheng.exam.core.service;
 
-import xyz.fusheng.core.model.dto.UserExamRecordDto;
+import xyz.fusheng.exam.model.dto.UserExamRecordDto;
 
 public interface UserExamRecordService{
 

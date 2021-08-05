@@ -8,7 +8,7 @@
     created_time, updated_time
   </sql>
 
-  <select id="pageCategoryList" resultType="xyz.fusheng.core.model.bill.vo.CategoryVo">
+  <select id="pageCategoryList" resultType="xyz.fusheng.bill.model.vo.CategoryVo">
 
   </select>
 

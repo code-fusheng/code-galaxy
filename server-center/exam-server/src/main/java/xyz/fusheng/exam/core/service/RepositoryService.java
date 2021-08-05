@@ -1,9 +1,9 @@
 package xyz.fusheng.exam.core.service;
 
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.RepositoryDto;
-import xyz.fusheng.core.model.entity.Repository;
 import xyz.fusheng.core.model.vo.RepositoryVo;
+import xyz.fusheng.exam.model.dto.RepositoryDto;
+import xyz.fusheng.exam.model.entity.Repository;
 
 import java.util.List;
 

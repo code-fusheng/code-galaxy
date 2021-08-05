@@ -1,8 +1,8 @@
 package xyz.fusheng.sys.core.service;
 
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.DictDataDto;
-import xyz.fusheng.core.model.vo.DictDataVo;
+import xyz.fusheng.sys.model.dto.DictDataDto;
+import xyz.fusheng.sys.model.vo.DictDataVo;
 
 import java.util.List;
 

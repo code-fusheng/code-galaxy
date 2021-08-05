@@ -5,11 +5,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.RepositoryDto;
-import xyz.fusheng.core.model.entity.Repository;
 import xyz.fusheng.core.model.vo.RepositoryVo;
 import xyz.fusheng.exam.core.mapper.RepositoryMapper;
 import xyz.fusheng.exam.core.service.RepositoryService;
+import xyz.fusheng.exam.model.dto.RepositoryDto;
+import xyz.fusheng.exam.model.entity.Repository;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

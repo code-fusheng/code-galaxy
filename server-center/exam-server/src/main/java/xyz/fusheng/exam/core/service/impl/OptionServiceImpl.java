@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
-import xyz.fusheng.core.model.dto.OptionDto;
-import xyz.fusheng.core.model.entity.Option;
-import xyz.fusheng.core.model.entity.Question;
 import xyz.fusheng.exam.core.mapper.OptionMapper;
 import xyz.fusheng.exam.core.mapper.QuestionMapper;
 import xyz.fusheng.exam.core.service.OptionService;
+import xyz.fusheng.exam.model.dto.OptionDto;
+import xyz.fusheng.exam.model.entity.Option;
+import xyz.fusheng.exam.model.entity.Question;
 
 import javax.annotation.Resource;
 

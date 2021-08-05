@@ -7,11 +7,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.dto.QuestionDto;
-import xyz.fusheng.core.model.vo.QuestionVo;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
 import xyz.fusheng.exam.core.service.QuestionService;
+import xyz.fusheng.exam.model.dto.QuestionDto;
+import xyz.fusheng.exam.model.vo.QuestionVo;
 
 import javax.annotation.Resource;
 import java.util.Arrays;

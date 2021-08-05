@@ -4,10 +4,10 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import xyz.fusheng.bill.core.mapper.CategoryMapper;
 import xyz.fusheng.bill.core.service.CategoryService;
+import xyz.fusheng.bill.model.dto.CategoryDto;
+import xyz.fusheng.bill.model.entity.Category;
+import xyz.fusheng.bill.model.vo.CategoryVo;
 import xyz.fusheng.core.model.base.Page;
-import xyz.fusheng.core.model.bill.dto.CategoryDto;
-import xyz.fusheng.core.model.bill.entity.Category;
-import xyz.fusheng.core.model.bill.vo.CategoryVo;
 
 import javax.annotation.Resource;
 import java.util.List;

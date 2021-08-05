@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.fusheng.core.model.dto.UserExamRecordDto;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.exam.core.service.UserExamRecordService;
+import xyz.fusheng.exam.model.dto.UserExamRecordDto;
 
 import javax.annotation.Resource;
 
