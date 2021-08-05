@@ -8,8 +8,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 import xyz.fusheng.core.feign.SysFeignClientServer;
+import xyz.fusheng.core.model.entity.LoginLog;
 import xyz.fusheng.core.model.entity.User;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
 import xyz.fusheng.core.utils.AddressUtils;
 import xyz.fusheng.user.core.mapper.UserMapper;
 

@@ -1,6 +1,6 @@
 package xyz.fusheng.sys.core.service;
 
-import xyz.fusheng.core.model.sys.entity.LoginLog;
+import xyz.fusheng.core.model.entity.LoginLog;
 
 /**
  * @FileName: LoginLogService

@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+import xyz.fusheng.core.model.entity.LoginLog;
 import xyz.fusheng.core.model.entity.SelfUser;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;

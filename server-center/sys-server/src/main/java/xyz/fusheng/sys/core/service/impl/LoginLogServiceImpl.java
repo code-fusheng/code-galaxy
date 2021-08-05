@@ -1,7 +1,7 @@
 package xyz.fusheng.sys.core.service.impl;
 
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
+import xyz.fusheng.core.model.entity.LoginLog;
 import xyz.fusheng.sys.core.mapper.LoginLogMapper;
 import xyz.fusheng.sys.core.service.LoginLogService;
 

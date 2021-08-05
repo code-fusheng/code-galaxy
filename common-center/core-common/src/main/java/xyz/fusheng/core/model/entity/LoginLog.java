@@ -1,5 +1,6 @@
-package xyz.fusheng.core.model.sys.entity;
+package xyz.fusheng.core.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -24,7 +25,7 @@ public class LoginLog implements Serializable {
     /**
      * 登录日志编号
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Long loginLogId;
 
     /**

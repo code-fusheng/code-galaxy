@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
+import xyz.fusheng.core.model.entity.LoginLog;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.sys.core.service.LoginLogService;
 

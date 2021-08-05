@@ -3,7 +3,7 @@ package xyz.fusheng.core.feign.fallback;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import xyz.fusheng.core.feign.SysFeignClientServer;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
+import xyz.fusheng.core.model.entity.LoginLog;
 
 /**
  * @FileName: SysServerFallback

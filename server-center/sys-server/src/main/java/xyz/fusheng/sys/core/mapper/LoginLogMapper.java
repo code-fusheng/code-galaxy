@@ -2,7 +2,7 @@ package xyz.fusheng.sys.core.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
-import xyz.fusheng.core.model.sys.entity.LoginLog;
+import xyz.fusheng.core.model.entity.LoginLog;
 
 /**
  * @FileName: LoginLogMapper
