@@ -3,6 +3,7 @@ package xyz.fusheng.core.model.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -78,6 +79,7 @@ public class LoginLog implements Serializable {
     /**
      * 登录时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
     private Date loginTime;
 
 }

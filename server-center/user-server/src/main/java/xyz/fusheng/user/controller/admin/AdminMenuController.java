@@ -32,8 +32,8 @@ public class AdminMenuController {
     private MenuService menuService;
 
     @ApiOperation("获取可用权限列表")
-    @GetMapping("/getMenuList")
-    public ResultVo<List<Menu>> getMenuList() {
+    @GetMapping("/listMenu")
+    public ResultVo<List<Menu>> listMenu() {
         List<Menu> menuList = menuService.getMenuList();
         return new ResultVo<>("操作成功: 获取可用权限列表!", menuList);
     }
@@ -46,8 +46,8 @@ public class AdminMenuController {
     }
 
     @ApiOperation("分页查询权限列表")
-    @PostMapping("/getMenuByPage")
-    public ResultVo<PageData<MenuVo>> getMenuByPage(@RequestBody PageData<MenuVo> page) {
+    @PostMapping("/pageMenu")
+    public ResultVo<PageData<MenuVo>> pageMenu(@RequestBody PageData<MenuVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

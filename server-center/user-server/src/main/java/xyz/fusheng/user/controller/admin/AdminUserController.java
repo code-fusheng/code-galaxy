@@ -46,16 +46,16 @@ public class AdminUserController {
     }
 
     @ApiOperation(value = "删除用户根据Id")
-    @DeleteMapping("/deleteUserById/{userId}")
-    public ResultVo<Object> deleteUserById(@PathVariable @Validated @ApiParam(value = "用户Id", required = true, example = "")
+    @DeleteMapping("/deleteUser/{userId}")
+    public ResultVo<Object> deleteUser(@PathVariable @Validated @ApiParam(value = "用户Id", required = true, example = "")
                                                    Long userId) {
         userService.deleteUserById(userId);
         return new ResultVo<>("操作提示: 删除用户!");
     }
 
     @ApiOperation(value = "获取用户信息")
-    @GetMapping("/getUserById/{userId}")
-    public ResultVo<UserVo> getUserById(@PathVariable Long userId) {
+    @GetMapping("/infoUser/{userId}")
+    public ResultVo<UserVo> infoUser(@PathVariable Long userId) {
         UserVo userVo = userService.getUserById(userId);
         return new ResultVo<>("操作提示: 获取用户信息!", userVo);
     }
@@ -70,8 +70,8 @@ public class AdminUserController {
     }
 
     @ApiOperation("分页查询用户列表")
-    @PostMapping("/getUserByPage")
-    public ResultVo<PageData<UserVo>> getUserByPage(@RequestBody PageData<UserVo> page) {
+    @PostMapping("/pageUser")
+    public ResultVo<PageData<UserVo>> pageUser(@RequestBody PageData<UserVo> page) {
         String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
         page.setSortColumn(newSortColumn);
         if (StringUtils.isNotBlank(page.getSortColumn())) {

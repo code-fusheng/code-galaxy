@@ -2,5 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xyz.fusheng.sys.core.mapper.LoginLogMapper">
 
+    <select id="getByPage" resultType="xyz.fusheng.core.model.entity.LoginLog">
+        select * from sys_login_log
+        <where>
+        <if test="params.loginStatus!=null">
+            and login_status = #{params.loginStatus}
+        </if>
+        <if test="params.loginLogTime!=null">
+            and login_time between #{params.loginLogTime[0],jdbcType=TIMESTAMP} and #{params.loginLogTime[1],jdbcType=TIMESTAMP}
+        </if>
+        </where>
+        <if test="sortColumn!=null and sortColumn!=''">
+            order by ${sortColumn} ${sortMethod}
+        </if>
+        limit #{index}, #{pageSize}
+    </select>
+
+    <select id="getCountByPage" resultType="java.lang.Integer">
+        select count(*)
+        from sys_login_log
+        <where>
+        <if test="params.loginStatus!=null">
+            and login_status = #{params.loginStatus}
+        </if>
+        <if test="params.loginLogTime!=null">
+            and login_time between #{params.loginLogTime[0],jdbcType=TIMESTAMP} and #{params.loginLogTime[1],jdbcType=TIMESTAMP}
+        </if>
+        </where>
+    </select>
 
 </mapper>

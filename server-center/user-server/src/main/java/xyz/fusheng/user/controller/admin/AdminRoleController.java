@@ -36,15 +36,15 @@ public class AdminRoleController {
     }
 
     @ApiOperation("删除角色")
-    @DeleteMapping("/deleteRoleById/{roleId}")
-    public ResultVo<Object> deleteRoleById(@PathVariable Long roleId) {
+    @DeleteMapping("/deleteRole/{roleId}")
+    public ResultVo<Object> deleteRole(@PathVariable Long roleId) {
         roleService.deleteRoleById(roleId);
         return new ResultVo<>("操作提示: 角色删除成功!");
     }
 
     @ApiOperation("获取角色详情")
-    @GetMapping("/getRuleById/{roleId}")
-    public ResultVo<RoleVo> getRuleById(@PathVariable Long roleId) {
+    @GetMapping("/infoRole/{roleId}")
+    public ResultVo<RoleVo> infoRole(@PathVariable Long roleId) {
         RoleVo roleVo = roleService.getRoleById(roleId);
         return new ResultVo<>("操作成功：获取角色详情!", roleVo);
     }
@@ -57,8 +57,8 @@ public class AdminRoleController {
     }
 
     @ApiOperation("查询角色列表")
-    @GetMapping("/getRoleList")
-    public ResultVo<List<Role>> getRoleList() {
+    @GetMapping("/listRole")
+    public ResultVo<List<Role>> listRole() {
         List<Role> roleList = roleService.getRoleList();
         return new ResultVo<>("操作成功: 查询角色列表!", roleList);
     }

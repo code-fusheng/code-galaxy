@@ -81,6 +81,6 @@ public class AccessTokenFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -1;
+        return -5;
     }
 }

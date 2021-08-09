@@ -1,5 +1,6 @@
 package xyz.fusheng.sys.core.service;
 
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.LoginLog;
 
 /**
@@ -14,4 +15,5 @@ public interface LoginLogService {
 
     void saveLoginLog(LoginLog loginLog);
 
+    PageData<LoginLog> pageLoginLog(PageData<LoginLog> page);
 }
