@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.auth.web.service.AuthService;
+import xyz.fusheng.core.feign.UserFeignClientServer;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.HeaderUtils;
 
@@ -31,6 +32,9 @@ public class AuthController {
 
     @Autowired
     private AuthService authService;
+
+    @Autowired
+    private UserFeignClientServer userFeignClientServer;
 
     @GetMapping("/user/refreshToken") // localhost:7001/auth/user/refreshToken?refreshToken=xxxx
     public ResultVo refreshToken(HttpServletRequest request) {
@@ -69,7 +73,6 @@ public class AuthController {
             logger.error("refreshToken={}", e.getMessage(), e);
             return ResultVo.error("新令牌获取失败：" + e.getMessage());
         }
-
 
     }
 

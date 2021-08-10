@@ -4,15 +4,12 @@ import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import xyz.fusheng.core.model.base.BaseEntity;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import xyz.fusheng.core.model.base.BaseEntity;
 
 /**
  * 系统表-用户表

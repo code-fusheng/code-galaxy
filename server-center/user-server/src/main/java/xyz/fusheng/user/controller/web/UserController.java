@@ -11,6 +11,7 @@ import xyz.fusheng.core.feign.AuthFeignClientServer;
 import xyz.fusheng.core.model.dto.LoginDto;
 import xyz.fusheng.core.model.entity.User;
 import xyz.fusheng.core.model.vo.ResultVo;
+import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.user.core.service.UserService;
 
 import javax.annotation.Resource;
@@ -70,9 +71,9 @@ public class UserController {
         return new ResultVo<>("登录成功!", access_token);
     }
 
-    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/info", method = RequestMethod.GET)
     public ResultVo<User> info() {
-        User userInfo = authFeignClientServer.info();
+        User userInfo = userService.getUserById(SecurityUtils.getUserInfo().getUserId());
         return new ResultVo<>("操作提示: 获取成功!", userInfo);
     }
 

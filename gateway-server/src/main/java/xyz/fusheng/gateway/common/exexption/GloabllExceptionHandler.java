@@ -77,7 +77,12 @@ public class GloabllExceptionHandler extends DefaultErrorWebExceptionHandler {
      */
     @Override
     protected int getHttpStatus(Map<String, Object> errorAttributes) {
-        int statusCode = (int) errorAttributes.get("code");
+        int statusCode = 0;
+        if (errorAttributes.containsKey("code")) {
+            statusCode = (int) errorAttributes.get("code");
+        } else {
+            statusCode = (int) errorAttributes.get("status");
+        }
         return statusCode;
     }
 

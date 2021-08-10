@@ -3,8 +3,6 @@ package xyz.fusheng.article.controller.admin;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
-import xyz.fusheng.article.common.annotation.UserInfo;
 import xyz.fusheng.article.core.service.CategoryService;
 import xyz.fusheng.article.model.dto.CategoryDto;
 import xyz.fusheng.article.model.entity.Category;
@@ -13,6 +11,7 @@ import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
+import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
@@ -37,8 +36,8 @@ public class AdminCategoryController {
 
     @ApiOperation("添加分类")
     @PostMapping("/saveCategory")
-    public ResultVo<Object> saveCategory(@RequestBody CategoryDto categoryDto,
-                                         @ApiIgnore @UserInfo SelfUser userInfo) {
+    public ResultVo<Object> saveCategory(@RequestBody CategoryDto categoryDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
         categoryDto.setCreatorId(userInfo.getUserId());
         categoryDto.setCreatorName(userInfo.getUsername());
         categoryService.saveCategory(categoryDto);
@@ -61,9 +60,10 @@ public class AdminCategoryController {
 
     @ApiOperation("修改分类")
     @PutMapping("/updateCategory")
-    public ResultVo<Object> updateCategory(@RequestBody CategoryDto categoryDto, @ApiIgnore @UserInfo SelfUser userInfo) {
-        categoryDto.setCreatorId(userInfo.getUserId());
-        categoryDto.setCreatorName(userInfo.getUsername());
+    public ResultVo<Object> updateCategory(@RequestBody CategoryDto categoryDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
+        categoryDto.setUpdaterId(userInfo.getUserId());
+        categoryDto.setUpdaterName(userInfo.getUsername());
         categoryService.updateCategory(categoryDto);
         return new ResultVo<>("操作成功: 修改分类!");
     }
