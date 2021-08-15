@@ -77,6 +77,9 @@ public class ArticleDto extends BaseDto {
     @ApiModelProperty(value="编辑模式")
     private String editModel;
 
+    @ApiModelProperty(value = "用时/s")
+    private Long useTime;
+
     /**
      * 文章类型
      */

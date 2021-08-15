@@ -15,6 +15,7 @@ import java.util.Date;
 
 /**
  * 应用表-文章表
+ * @author code-fusheng
  */
 @ApiModel(value = "xyz-fusheng-core-model-entity-Article")
 @Data
@@ -77,6 +78,9 @@ public class Article extends BaseEntity {
     @ApiModelProperty(value="编辑模式")
     private String editModel;
 
+    @ApiModelProperty(value = "用时/s")
+    private Long useTime;
+
     /**
     * 文章类型
     */
@@ -122,7 +126,7 @@ public class Article extends BaseEntity {
     /**
     * 状态-发布(0:未发布/1:延时发布/2:发布)
     */
-    @ApiModelProperty(value="状态-发布(0:未发布/1:延时发布/2:发布)")
+    @ApiModelProperty(value="状态-发布(0:草稿/1:延时发布/2:已发布)")
     private Integer state;
 
     /**

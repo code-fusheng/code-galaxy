@@ -1,6 +1,7 @@
 package xyz.fusheng.article.core.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,8 @@ import xyz.fusheng.core.enums.ResultEnums;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
+import xyz.fusheng.core.model.entity.SelfUser;
+import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
@@ -116,6 +119,18 @@ public class ArticleServiceImpl implements ArticleService {
             categoryMapper.updateById(category);
             log.info("更新分类文章数结果:{} -> {}",oldCount, count);
         }
+    }
+
+    @Override
+    public boolean saveDraft(ArticleDto articleDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
+        articleDto.setState(0);
+        articleDto.setCreatorId(userInfo.getUserId());
+        articleDto.setCreatorName(userInfo.getUsername());
+        articleDto.setAuthorId(userInfo.getUserId());
+        Article article = new Article();
+        BeanUtils.copyProperties(articleDto, article);
+        return SqlHelper.retBool(articleMapper.insert(article));
     }
 }
 

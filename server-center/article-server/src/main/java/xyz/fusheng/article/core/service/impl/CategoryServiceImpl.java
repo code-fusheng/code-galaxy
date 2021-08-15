@@ -87,5 +87,13 @@ public class CategoryServiceImpl implements CategoryService {
         int updateResult = categoryMapper.updateById(category);
         log.info("分类更新结果:{}", updateResult);
     }
+
+    @Override
+    public List<Category> getSimpleCategoryList() {
+        List<Category> categoryList = categoryMapper.selectList(new QueryWrapper<Category>().lambda()
+                .select(Category::getCategoryId, Category::getCategoryName, Category::getCategoryImage)
+                .eq(Category::getIsEnabled, StateEnums.ENABLED.getCode()).orderByDesc(Category::getArticleCount));
+        return categoryList;
+    }
 }
 

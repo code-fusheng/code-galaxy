@@ -15,5 +15,11 @@ public interface ArticleService {
     void updateArticle(ArticleDto articleDto);
 
     void batchDeleteArticleByIds(Long[] ids);
+
+    /**
+     * 保存草稿
+     * @param articleDto
+     */
+    boolean saveDraft(ArticleDto articleDto);
 }
 

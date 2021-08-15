@@ -20,6 +20,8 @@ public interface CategoryService {
     List<Category> getAllCategoryList();
 
     void updateCategory(CategoryDto categoryDto);
+
+    List<Category> getSimpleCategoryList();
 }
 
 
