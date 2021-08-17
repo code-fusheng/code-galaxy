@@ -2,7 +2,7 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 47.111.158.6:8848
+        server-addr: localhost:8848
         file-extension: yaml
         namespace: a9c9e56c-d9ed-45b4-a1ca-fa31a1973511
         group: code-galaxy-dev

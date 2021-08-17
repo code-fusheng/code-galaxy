@@ -7,23 +7,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core-common" />
-        <module name="bill-server" />
-        <module name="learn-leeetcode" />
-        <module name="learn-leetcode" />
-        <module name="test-server" />
-        <module name="code-swagger2-starter" />
-        <module name="exam-server" />
-        <module name="gateway-server" />
-        <module name="auth-server" />
         <module name="repo-server" />
-        <module name="article-server" />
-        <module name="shop-server" />
+        <module name="learn-leetcode" />
+        <module name="exam-server" />
+        <module name="test-server" />
         <module name="learn" />
-        <module name="mall-server" />
-        <module name="learn-java" />
-        <module name="sys-server" />
+        <module name="shop-server" />
         <module name="user-server" />
+        <module name="auth-server" />
+        <module name="core-common" />
+        <module name="learn-leeetcode" />
+        <module name="bill-server" />
+        <module name="mall-server" />
+        <module name="gateway-server" />
+        <module name="sys-server" />
+        <module name="code-swagger2-starter" />
+        <module name="article-server" />
+        <module name="learn-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

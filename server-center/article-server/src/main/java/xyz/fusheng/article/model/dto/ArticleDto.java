@@ -84,7 +84,6 @@ public class ArticleDto extends BaseDto {
      * 文章类型
      */
     @ApiModelProperty(value="文章类型")
-    @NotNull
     private Long articleCategory;
 
     /**
@@ -122,6 +121,12 @@ public class ArticleDto extends BaseDto {
      */
     @ApiModelProperty(value="乐观锁 默认1")
     private Integer version;
+
+    /**
+     * 是否公开（0:公开/1:私有）
+     */
+    @ApiModelProperty(value = "是否公开（0:公开/1:私有）")
+    private Integer isPublish;
 
     /**
      * 是否置顶(1:置顶/0:默认)

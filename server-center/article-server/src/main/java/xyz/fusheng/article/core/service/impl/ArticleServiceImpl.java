@@ -124,7 +124,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public boolean saveDraft(ArticleDto articleDto) {
         SelfUser userInfo = SecurityUtils.getUserInfo();
-        articleDto.setState(0);
+        articleDto.setState(StateEnums.ARTICLE_DRAFT.getCode());
+        // 草稿内容默认私有
+        articleDto.setIsPublish(StateEnums.PRIVATE.getCode());
         articleDto.setCreatorId(userInfo.getUserId());
         articleDto.setCreatorName(userInfo.getUsername());
         articleDto.setAuthorId(userInfo.getUserId());
