@@ -19,6 +19,7 @@ public interface ArticleService {
     /**
      * 保存草稿
      * @param articleDto
+     * @return
      */
     boolean saveDraft(ArticleDto articleDto);
 }

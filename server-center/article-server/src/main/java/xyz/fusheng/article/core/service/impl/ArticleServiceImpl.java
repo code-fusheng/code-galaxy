@@ -134,5 +134,6 @@ public class ArticleServiceImpl implements ArticleService {
         BeanUtils.copyProperties(articleDto, article);
         return SqlHelper.retBool(articleMapper.insert(article));
     }
+
 }
 
