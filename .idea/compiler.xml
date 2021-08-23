@@ -47,7 +47,7 @@
       <module name="auth-server" options="-parameters" />
       <module name="bill-admin" options="-parameters" />
       <module name="bill-server" options="-parameters" />
-      <module name="code-galaxy" options="-parameters" />
+      <module name="code-galaxy" options="" />
       <module name="common-center" options="" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
