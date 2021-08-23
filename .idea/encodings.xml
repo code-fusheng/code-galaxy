@@ -5,17 +5,26 @@
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-java/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/a-learn-demo/learn-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-center/core-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-center/core-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/article-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/article-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/bill-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/bill-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/exam-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/exam-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/mall-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/mall-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/sys-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/sys-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/test-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/test-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-center/user-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-center/user-server/src/main/resources" charset="UTF-8" />
   </component>
 </project>
