@@ -18,6 +18,12 @@
         </filter>
     </appender>
 
+    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>47.111.158.6:5047</destination>
+        <queueSize>1048576</queueSize>
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+
     <!-- 为某个包下的所有类的指定Appender 这里也可以指定类名称例如：com.aa.bb.ClassName -->
     <logger name="xyz.fusheng.test" additivity="false">
         <level value="debug"/>
@@ -26,5 +32,6 @@
     <!-- root将级别为“DEBUG”及大于“DEBUG”的日志信息交给已经配置好的名为“Console”的appender处理，“Console”appender将信息打印到Console -->
     <root level="info">
         <appender-ref ref="stdout"/> <!-- 标识这个appender将会添加到这个logger -->
+        <appender-ref ref="logstash"/>
     </root>
 </configuration>
