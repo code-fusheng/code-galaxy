@@ -36,6 +36,65 @@ public class ArticleServiceImpl implements ArticleService {
     @Resource
     private CategoryMapper categoryMapper;
 
+    // Web用户端
+
+    /**
+     * 保存草稿
+     * @param articleDto
+     * @return
+     */
+    @Override
+    public boolean saveDraft(ArticleDto articleDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
+        articleDto.setState(StateEnums.ARTICLE_DRAFT.getCode());
+        // 草稿内容默认私有
+        articleDto.setIsPublish(StateEnums.PRIVATE.getCode());
+        articleDto.setCreatorId(userInfo.getUserId());
+        articleDto.setCreatorName(userInfo.getUsername());
+        articleDto.setAuthorId(userInfo.getUserId());
+        Article article = new Article();
+        BeanUtils.copyProperties(articleDto, article);
+        return SqlHelper.retBool(articleMapper.insert(article));
+    }
+
+    @Override
+    public boolean savePublish(ArticleDto articleDto) {
+        return false;
+    }
+
+    @Override
+    public PageData<ArticleVo> pageList(PageData<ArticleVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 文章标题
+            String[] sortColumns = {"article_title", "author_name", "good_count", "read_count", "collection_count", "comment_count", "created_time", "update_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+            }
+        }
+        // 获取数据
+        List<ArticleVo> articleVoList = articleMapper.pageArticle(page);
+        page.setList(articleVoList);
+        // 统计总数
+        int totalCount = articleMapper.countArticleByPage(page);
+        page.setTotalCount(totalCount);
+        return page;
+    }
+
+    @Override
+    public ArticleVo readInfo(Long id) {
+        ArticleVo articleVo = new ArticleVo();
+        Article article = articleMapper.selectById(id);
+        article.setReadCount(article.getReadCount() + 1);
+        BeanUtils.copyProperties(article, articleVo);
+        articleMapper.updateById(article);
+        return articleVo;
+    }
+
+    // Admin管理后台
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void saveArticle(ArticleDto articleDto) {
@@ -121,18 +180,5 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
-    @Override
-    public boolean saveDraft(ArticleDto articleDto) {
-        SelfUser userInfo = SecurityUtils.getUserInfo();
-        articleDto.setState(StateEnums.ARTICLE_DRAFT.getCode());
-        // 草稿内容默认私有
-        articleDto.setIsPublish(StateEnums.PRIVATE.getCode());
-        articleDto.setCreatorId(userInfo.getUserId());
-        articleDto.setCreatorName(userInfo.getUsername());
-        articleDto.setAuthorId(userInfo.getUserId());
-        Article article = new Article();
-        BeanUtils.copyProperties(articleDto, article);
-        return SqlHelper.retBool(articleMapper.insert(article));
-    }
 }
 

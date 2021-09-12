@@ -47,17 +47,18 @@
       <module name="auth-server" options="-parameters" />
       <module name="bill-admin" options="-parameters" />
       <module name="bill-server" options="-parameters" />
-      <module name="code-galaxy" options="" />
+      <module name="code-galaxy" options="-parameters" />
       <module name="common-center" options="" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="learn-demo" options="" />
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
       <module name="mall-server" options="-parameters" />
-      <module name="server-center" options="-parameters" />
+      <module name="server-center" options="" />
       <module name="shop-server" options="-parameters" />
       <module name="sys-admin" options="-parameters" />
       <module name="sys-server" options="-parameters" />

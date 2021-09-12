@@ -21,5 +21,26 @@ public interface ArticleService {
      * @param articleDto
      */
     boolean saveDraft(ArticleDto articleDto);
+
+    /**
+     * 发布文章
+     * @param articleDto
+     * @return
+     */
+    boolean savePublish(ArticleDto articleDto);
+
+    /**
+     * 文章分页列表
+     * @param page
+     * @return
+     */
+    PageData<ArticleVo> pageList(PageData<ArticleVo> page);
+
+    /**
+     * 阅读详情
+     * @param id
+     * @return
+     */
+    ArticleVo readInfo(Long id);
 }
 

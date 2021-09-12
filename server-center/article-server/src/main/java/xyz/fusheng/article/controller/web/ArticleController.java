@@ -1,15 +1,16 @@
 package xyz.fusheng.article.controller.web;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.article.core.service.ArticleService;
 import xyz.fusheng.article.model.dto.ArticleDto;
+import xyz.fusheng.article.model.vo.ArticleVo;
+import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @FileName: ArticleController
@@ -28,9 +29,31 @@ public class ArticleController {
 
     @ApiOperation("保存草稿")
     @PostMapping("/saveDraft")
-    public ResultVo  saveDraft(@RequestBody ArticleDto articleDto) {
+    public ResultVo<Object>  saveDraft(@RequestBody ArticleDto articleDto) {
         boolean result = articleService.saveDraft(articleDto);
         return result ? ResultVo.success() : ResultVo.error("保存草稿失败!");
     }
+
+    @ApiOperation("保存发布")
+    @PostMapping("/savePublish")
+    public ResultVo<Object> savePublish(@RequestBody ArticleDto articleDto) {
+        boolean result = articleService.savePublish(articleDto);
+        return result ? ResultVo.success() : ResultVo.error("内容发布失败!");
+    }
+
+    @ApiOperation("文章列表")
+    @PostMapping("/pageList")
+    public ResultVo<PageData<ArticleVo>> pageList(@RequestBody PageData<ArticleVo> page) {
+        page = articleService.pageList(page);
+        return ResultVo.success(page);
+    }
+
+    @ApiOperation("阅读详情")
+    @GetMapping("/readInfo/{id}")
+    public ResultVo<ArticleVo> readInfo(@PathVariable Long id) {
+        ArticleVo articleVo = articleService.readInfo(id);
+        return ResultVo.success(articleVo);
+    }
+
 
 }

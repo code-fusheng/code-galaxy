@@ -103,6 +103,7 @@
         <commons-io.version>2.6</commons-io.version>
         <httpclient.version>4.5.13</httpclient.version>
         <httpclientutil.version>1.0.4</httpclientutil.version>
+        <spring-boot-starter-websocket.version>2.2.6.RELEASE</spring-boot-starter-websocket.version>
     </properties>
 
     <!--父项目的坐标，如果子项目中没有配置相关的信息，那么使用父项目中的配置。坐标包括：groupID,artifactId和version。-->
@@ -118,6 +119,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!-- logstash需要的包 -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
         </dependency>
 
         <!-- 测试 -->
@@ -237,6 +244,12 @@
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+                <version>${spring-boot-starter-websocket.version}</version>
             </dependency>
 
         </dependencies>
