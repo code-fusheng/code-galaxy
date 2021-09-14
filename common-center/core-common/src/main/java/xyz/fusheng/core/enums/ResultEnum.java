@@ -11,7 +11,7 @@ import lombok.Getter;
  */
 
 @Getter
-public enum ResultEnums {
+public enum ResultEnum {
 
     /**
      * 标准 HTTP 异常
@@ -53,7 +53,7 @@ public enum ResultEnums {
     private Integer code;
     private String msg;
 
-    ResultEnums(Integer code, String msg) {
+    ResultEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

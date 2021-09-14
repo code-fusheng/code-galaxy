@@ -1,6 +1,7 @@
 package xyz.fusheng.article.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import xyz.fusheng.core.model.base.BaseDto;
@@ -16,6 +17,7 @@ import java.util.Date;
  */
 
 @Data
+@ApiModel("文章分类传输对象")
 public class CategoryDto extends BaseDto {
 
     @ApiModelProperty(value="分类id")

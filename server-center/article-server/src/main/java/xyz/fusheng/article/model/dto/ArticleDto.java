@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import xyz.fusheng.core.enums.ArticleStateEnum;
+import xyz.fusheng.core.enums.SourceMarkEnum;
 import xyz.fusheng.core.model.base.BaseDto;
 
 import javax.validation.constraints.NotNull;
@@ -87,10 +89,10 @@ public class ArticleDto extends BaseDto {
     private Long articleCategory;
 
     /**
-     * 来源标记（0:站内/1:站外/2:其他）
+     * 来源标记（1:站内/2:站外/0:其他）
      */
-    @ApiModelProperty(value="来源标记（0:站内/1:站外/2:其他）")
-    private String sourceMark;
+    @ApiModelProperty(value="来源标记（1:站内/2:站外/0:其他）")
+    private SourceMarkEnum sourceMark;
 
     /**
      * 文章来源
@@ -100,9 +102,10 @@ public class ArticleDto extends BaseDto {
 
     /**
      * 状态-发布(0:未发布/1:延时发布/2:发布)
+     * {@link ArticleStateEnum}
      */
-    @ApiModelProperty(value="状态-发布(0:未发布/1:延时发布/2:发布)")
-    private Integer state;
+    @ApiModelProperty(value="状态-发布(0:草稿/1:延时发布/2:已发布)")
+    private ArticleStateEnum state;
 
     /**
      * 备注
@@ -123,9 +126,9 @@ public class ArticleDto extends BaseDto {
     private Integer version;
 
     /**
-     * 是否公开（0:公开/1:私有）
+     * 是否公开（1:公开/0:私有）
      */
-    @ApiModelProperty(value = "是否公开（0:公开/1:私有）")
+    @ApiModelProperty(value = "是否公开（1:公开/0:私有）")
     private Integer isPublish;
 
     /**

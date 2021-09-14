@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.exam.core.mapper.OptionMapper;
@@ -36,7 +36,7 @@ public class OptionServiceImpl implements OptionService {
                 .eq(Question::getQuestionId, optionDto.getQuestionId())
                 .eq(Question::getIsEnabled, StateEnums.ENABLED.getCode()));
         if (ObjectUtils.isEmpty(question)) {
-            throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "选项所在目标试题信息异常!");
+            throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "选项所在目标试题信息异常!");
         }
         Option option = new Option();
         BeanUtils.copyProperties(optionDto, option);

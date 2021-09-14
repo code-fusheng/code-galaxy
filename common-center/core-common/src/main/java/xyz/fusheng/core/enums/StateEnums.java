@@ -48,20 +48,8 @@ public enum StateEnums {
      * 选项状态
      */
     OPTION_RIGHT(1, "正确"),
-    OPTION_ERROR(0, "错误"),
+    OPTION_ERROR(0, "错误")
 
-    /**
-     * 文章状态
-     */
-    ARTICLE_DRAFT(0, "草稿"),
-    ARTICLE_DELAYED(1, "延时发布"),
-    ARTICLE_PUBLISHED(2, "已经发布"),
-
-    /**
-     * 文章开放状态 is_publish
-     */
-    PUBLISH(1, "公开"),
-    PRIVATE(0, "私有")
     ;
 
     /**

@@ -5,7 +5,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.StringUtils;
@@ -49,7 +49,7 @@ public class QuestionController {
         // 查询删除的试题是否被试卷引用
         boolean isUsed = questionService.checkQuestionIsUsedByPaper(questionIds);
         if (isUsed) {
-            return new ResultVo<>(ResultEnums.BUSINESS_ERROR.getCode(), "操作提示: 批量删除试题目标存在试卷引用");
+            return new ResultVo<>(ResultEnum.BUSINESS_ERROR.getCode(), "操作提示: 批量删除试题目标存在试卷引用");
         }
         questionService.deleteQuestionByIds(questionIds);
         return new ResultVo<>("操作提示: 删除成功!");
@@ -79,7 +79,7 @@ public class QuestionController {
             String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = questionService.getQuestionByPage(page);
@@ -96,7 +96,7 @@ public class QuestionController {
             String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time", "question_sort"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = questionService.getQuestionAndOptionsWithAnswersByPage(page);
@@ -113,7 +113,7 @@ public class QuestionController {
             String[] sortColumns = {"question_type", "question_tag", "created_time", "update_time", "question_sort"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = questionService.getQuestionAndOptionsNotWithAnswersByPage(page);

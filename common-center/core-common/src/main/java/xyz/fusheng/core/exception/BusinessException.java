@@ -1,7 +1,7 @@
 package xyz.fusheng.core.exception;
 
 import lombok.Getter;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 
 /**
  * @FileName: BusinessException
@@ -20,14 +20,14 @@ public class BusinessException extends RuntimeException {
      * 它是Exception的子类。
      */
 
-    private Integer errorCode = ResultEnums.BUSINESS_ERROR.getCode();
+    private Integer errorCode = ResultEnum.BUSINESS_ERROR.getCode();
 
-    public BusinessException(ResultEnums resultEnum) {
+    public BusinessException(ResultEnum resultEnum) {
         super(resultEnum.getMsg());
         this.errorCode = resultEnum.getCode();
     }
 
-    public BusinessException(ResultEnums resultEnum, Throwable throwable) {
+    public BusinessException(ResultEnum resultEnum, Throwable throwable) {
         super(resultEnum.getMsg(), throwable);
         this.errorCode = resultEnum.getCode();
     }

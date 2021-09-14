@@ -3,13 +3,13 @@ package xyz.fusheng.core.enums;
 import lombok.Getter;
 
 /**
- * @FileName: TypeEnums
+ * @FileName: GlobalEnums
  * @Author: code-fusheng
- * @Date: 2021/4/7 11:31 上午
+ * @Date: 2021/6/18 11:14 上午
  * @Version: 1.0
- * @Description: 统一类型枚举
+ * @Description:
  */
 
 @Getter
-public enum TypeEnums {
+public enum GlobalEnum {
 }

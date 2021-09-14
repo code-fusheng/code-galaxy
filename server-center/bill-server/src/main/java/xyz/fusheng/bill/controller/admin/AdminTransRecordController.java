@@ -11,7 +11,7 @@ import xyz.fusheng.bill.common.annotation.UserInfo;
 import xyz.fusheng.bill.core.service.TransRecordService;
 import xyz.fusheng.bill.model.dto.TransRecordDto;
 import xyz.fusheng.bill.model.vo.TransRecordVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
@@ -54,7 +54,7 @@ public class AdminTransRecordController {
             String[] sortColumns = {"created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = transRecordService.pageTransRecord(page);

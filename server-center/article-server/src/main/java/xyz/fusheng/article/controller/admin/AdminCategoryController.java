@@ -7,7 +7,7 @@ import xyz.fusheng.article.core.service.CategoryService;
 import xyz.fusheng.article.model.dto.CategoryDto;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.CategoryVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
@@ -76,7 +76,7 @@ public class AdminCategoryController {
             String[] sortColumns = {"created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = categoryService.getCategoryByPage(page);

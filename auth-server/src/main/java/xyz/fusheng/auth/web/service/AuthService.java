@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.vo.ResultVo;
 
 import java.util.HashMap;
@@ -61,7 +61,7 @@ public class AuthService {
         JSONObject jsonToken = JSON.parseObject(token);
         // 如果响应内容中包含了error属性值，则获取新的认证失败。
         if(StringUtils.isNotEmpty(jsonToken.getString("error"))) {
-            return new ResultVo(ResultEnums.TOKEN_PAST);
+            return new ResultVo(ResultEnum.TOKEN_PAST);
         }
 
         return ResultVo.success(jsonToken);

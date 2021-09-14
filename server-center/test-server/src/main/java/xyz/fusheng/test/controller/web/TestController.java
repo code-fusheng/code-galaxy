@@ -38,7 +38,7 @@ public class TestController {
     private String port;
 
     @Resource
-    private ExecutorService executorService;
+    private ExecutorService newFixedThreadPool;
 
     @ApiOperation("测试获取用户信息")
     @GetMapping("/testGetUserInfo")
@@ -80,7 +80,7 @@ public class TestController {
 
     public void test() {
         long startTime = System.currentTimeMillis();
-        executorService.execute(new Runnable() {
+        newFixedThreadPool.execute(new Runnable() {
             @Override
             public void run() {
                 test1();

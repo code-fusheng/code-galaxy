@@ -11,7 +11,7 @@ import xyz.fusheng.bill.model.dto.TransRecordDto;
 import xyz.fusheng.bill.model.entity.Category;
 import xyz.fusheng.bill.model.entity.TransRecord;
 import xyz.fusheng.bill.model.vo.TransRecordVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
 
@@ -43,7 +43,7 @@ public class TransRecordServiceImpl implements TransRecordService {
         BeanUtils.copyProperties(transRecordDto, transRecord);
         transRecordMapper.insert(transRecord);
         Category category = categoryMapper.selectById(transRecordDto.getTransCategory());
-        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "消费类型异常!"); }
+        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "消费类型异常!"); }
         category.setItemCount(category.getItemCount() + 1);
         categoryMapper.updateById(category);
     }

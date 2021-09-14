@@ -1,7 +1,7 @@
 package xyz.fusheng.sys.core.service.impl;
 
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.LoginLog;
@@ -39,7 +39,7 @@ public class LoginLogServiceImpl implements LoginLogService {
             String[] sortColumns = {"created_time", "updated_time", "login_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+                throw new BusinessException(ResultEnum.ERROR.getCode(), "参数错误!");
             }
         }
         // 查询数据

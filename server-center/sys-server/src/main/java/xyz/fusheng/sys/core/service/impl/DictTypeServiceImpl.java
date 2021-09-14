@@ -7,7 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.util.ObjectUtils;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
@@ -84,7 +84,7 @@ public class DictTypeServiceImpl implements DictTypeService {
             String[] sortColumns = {"dict_name", "dict_type", "created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+                throw new BusinessException(ResultEnum.ERROR.getCode(), "参数错误!");
             }
         }
         // 查询数据

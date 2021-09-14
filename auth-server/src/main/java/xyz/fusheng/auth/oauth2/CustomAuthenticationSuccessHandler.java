@@ -21,7 +21,7 @@ import org.springframework.security.oauth2.provider.*;
 import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.model.entity.LoginLog;
 import xyz.fusheng.core.model.entity.SelfUser;
@@ -118,7 +118,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
             result = ResultVo.success(accessToken);
         } catch (Exception e) {
             logger.error("认证成功处理器异常={}", e.getMessage(), e);
-            result = new ResultVo(ResultEnums.AUTH_FAILED.getCode(), e.getMessage());
+            result = new ResultVo(ResultEnum.AUTH_FAILED.getCode(), e.getMessage());
         }
 
         SelfUser userInfo = (SelfUser) authentication.getPrincipal();

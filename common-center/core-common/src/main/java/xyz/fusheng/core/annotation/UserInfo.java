@@ -1,4 +1,4 @@
-package xyz.fusheng.sys.common.annotation;
+package xyz.fusheng.core.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

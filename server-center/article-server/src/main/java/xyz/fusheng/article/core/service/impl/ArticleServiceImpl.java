@@ -14,7 +14,9 @@ import xyz.fusheng.article.model.dto.ArticleDto;
 import xyz.fusheng.article.model.entity.Article;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.ArticleVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.constants.GlobalConstants;
+import xyz.fusheng.core.enums.ArticleStateEnum;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
@@ -46,9 +48,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public boolean saveDraft(ArticleDto articleDto) {
         SelfUser userInfo = SecurityUtils.getUserInfo();
-        articleDto.setState(StateEnums.ARTICLE_DRAFT.getCode());
+        articleDto.setState(ArticleStateEnum.DRAFT);
         // 草稿内容默认私有
-        articleDto.setIsPublish(StateEnums.PRIVATE.getCode());
+        articleDto.setIsPublish(GlobalConstants.NO);
         articleDto.setCreatorId(userInfo.getUserId());
         articleDto.setCreatorName(userInfo.getUsername());
         articleDto.setAuthorId(userInfo.getUserId());
@@ -71,7 +73,7 @@ public class ArticleServiceImpl implements ArticleService {
             String[] sortColumns = {"article_title", "author_name", "good_count", "read_count", "collection_count", "comment_count", "created_time", "update_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                throw new BusinessException(ResultEnums.ERROR.getCode(), "参数错误!");
+                throw new BusinessException(ResultEnum.ERROR.getCode(), "参数错误!");
             }
         }
         // 获取数据
@@ -101,16 +103,17 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = new Article();
         BeanUtils.copyProperties(articleDto, article);
         articleMapper.insert(article);
-        log.info("插入文章数据结果:{}", article);
+        log.info("[文章管理-插入文章数据] => article:{}", article);
         // 更新分类文章数
         Category category = categoryMapper.selectById(articleDto.getArticleCategory());
-        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "文章分类编号对应数据不存在!");  }
+        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "文章分类编号对应数据不存在!");  }
+        Integer oldCount = category.getArticleCount();
         Integer count = articleMapper.selectCount(new QueryWrapper<Article>().lambda()
                 .eq(Article::getArticleCategory, articleDto.getArticleCategory())
-                .eq(Article::getIsEnabled, StateEnums.ENABLED.getCode()));
+                .eq(Article::getIsEnabled, GlobalConstants.YES));
         category.setArticleCount(count);
         categoryMapper.updateById(category);
-        log.info("更新分类文章数结果:{} -> {}",category.getArticleCount(), count );
+        log.info("[文章管理-更新分类文章数] => oldCount:{} -> newCount:{}",oldCount, count );
     }
 
     @Override
@@ -120,7 +123,7 @@ public class ArticleServiceImpl implements ArticleService {
             String[] sortColumns = {"article_category", "created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "参数错误!");
+                throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "参数错误!");
             }
         }
         List<ArticleVo> articleVoList = articleMapper.pageArticle(page);
@@ -156,7 +159,7 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = new Article();
         BeanUtils.copyProperties(articleDto, article);
         articleMapper.updateById(article);
-        log.info("更新文章结果:{}", article);
+        log.info("[文章管理-更新文章] => article:{}", article);
     }
 
     @Override
