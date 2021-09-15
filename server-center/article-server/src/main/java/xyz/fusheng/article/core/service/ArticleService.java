@@ -4,6 +4,8 @@ import xyz.fusheng.article.model.dto.ArticleDto;
 import xyz.fusheng.article.model.vo.ArticleVo;
 import xyz.fusheng.core.model.base.PageData;
 
+import java.util.List;
+
 public interface ArticleService {
 
     void saveArticle(ArticleDto articleDto);
@@ -42,5 +44,12 @@ public interface ArticleService {
      * @return
      */
     ArticleVo readInfo(Long id);
+
+    /**
+     * 上下篇
+     * @param id
+     * @return
+     */
+    List<ArticleVo> lastAndNext(Long id);
 }
 

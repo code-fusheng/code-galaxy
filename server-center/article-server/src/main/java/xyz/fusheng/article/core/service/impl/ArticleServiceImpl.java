@@ -25,6 +25,7 @@ import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -93,6 +94,19 @@ public class ArticleServiceImpl implements ArticleService {
         BeanUtils.copyProperties(article, articleVo);
         articleMapper.updateById(article);
         return articleVo;
+    }
+
+    @Override
+    public List<ArticleVo> lastAndNext(Long id) {
+        Article centerArticle = articleMapper.selectById(id);
+        List<ArticleVo> articleVoList = new ArrayList<>(2);
+        // 获取上一篇
+        ArticleVo lastArticleVo = articleMapper.getLastArticle(id, centerArticle.getArticleCategory());
+        // 获取下一篇
+        ArticleVo nextArticleVo = articleMapper.getNextArticle(id, centerArticle.getArticleCategory());
+        articleVoList.add(lastArticleVo);
+        articleVoList.add(nextArticleVo);
+        return articleVoList;
     }
 
     // Admin管理后台

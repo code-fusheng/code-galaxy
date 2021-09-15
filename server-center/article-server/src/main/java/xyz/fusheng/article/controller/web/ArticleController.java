@@ -55,5 +55,12 @@ public class ArticleController {
         return ResultVo.success(articleVo);
     }
 
+    @ApiOperation("上下篇")
+    @GetMapping("/lastAndNext/{id}")
+    public ResultVo<List<ArticleVo>> lastAndNext(@PathVariable("id") Long id) {
+        List<ArticleVo> articleVoList = articleService.lastAndNext(id);
+        return ResultVo.success(articleVoList);
+    }
+
 
 }
