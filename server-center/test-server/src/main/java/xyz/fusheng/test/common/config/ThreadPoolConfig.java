@@ -39,7 +39,7 @@ public class ThreadPoolConfig {
 
     private static final String FIXED_THREAD_POOL_PREFIX = "fixed-thread-pool";
 
-    @Bean
+    @Bean("newFixedThreadPool")
     public ExecutorService newFixedThreadPool() {
         logger.info("初始化固定线程池开始!");
         ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat(FIXED_THREAD_POOL_PREFIX).build();

@@ -6,11 +6,14 @@
  */
 package xyz.fusheng.core.utils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.List;
@@ -31,6 +34,8 @@ import java.util.regex.Pattern;
  */
 
 public final class StringUtils extends org.apache.commons.lang3.StringUtils {
+
+    private static final Logger log = LoggerFactory.getLogger(StringUtils.class);
 
     private static final String LOCAL_HOST_IP = "127.0.0.1";
 
@@ -408,5 +413,24 @@ public final class StringUtils extends org.apache.commons.lang3.StringUtils {
         return temp;
     }
 
+    /**
+     * 判断对象中属性值是否全为空
+     *
+     * @param object
+     * @return
+     */
+    public static boolean checkObjAllFieldsIsNull(Object object) {
+        if (null == object) { return true; }
+        try {
+            for (Field f : object.getClass().getDeclaredFields()) {
+                f.setAccessible(true);
+                log.info("Filed:{} - Value:{}", f.getName(), f.get(object));
+                if (f.get(object) != null && org.apache.commons.lang3.StringUtils.isNotBlank(f.get(object).toString())) {
+                    return false;
+                }
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return true;
+    }
 
 }

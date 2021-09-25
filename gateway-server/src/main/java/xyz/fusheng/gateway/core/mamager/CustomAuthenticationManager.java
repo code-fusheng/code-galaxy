@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.server.resource.BearerTokenAuthenticationToken;
 import reactor.core.publisher.Mono;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.exception.BusinessException;
 
 /**
@@ -53,7 +53,7 @@ public class CustomAuthenticationManager implements ReactiveAuthenticationManage
                         }
                         return Mono.just(result);
                     } catch (InvalidTokenException e) {
-                        throw new BusinessException(ResultEnums.AUTH_FAILED.getCode(), "Token 非法");
+                        throw new BusinessException(ResultEnum.AUTH_FAILED.getCode(), "Token 非法");
                     }
                 }))
                 .cast(Authentication.class);

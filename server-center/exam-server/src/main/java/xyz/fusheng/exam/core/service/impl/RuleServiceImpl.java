@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
@@ -60,7 +60,7 @@ public class RuleServiceImpl implements RuleService {
         RuleVo ruleVo = new RuleVo();
         Rule rule = ruleMapper.selectById(ruleId);
         if (ObjectUtils.isEmpty(rule)) {
-            throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "规则信息查询异常!");
+            throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "规则信息查询异常!");
         }
         BeanUtils.copyProperties(rule, ruleVo);
         return ruleVo;

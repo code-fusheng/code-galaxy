@@ -20,9 +20,6 @@ import java.util.Date;
 @Data
 public class BaseDto implements Serializable {
 
-    @ApiModelProperty(value = "状态")
-    private Integer state;
-
     @ApiModelProperty(value = "备注")
     private String remark;
 

@@ -3,7 +3,7 @@ package xyz.fusheng.user.controller.admin;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.entity.Menu;
 import xyz.fusheng.core.model.vo.MenuVo;
@@ -55,7 +55,7 @@ public class AdminMenuController {
             String[] sortColumns = {"name", "menu_id", "level", "pid", "created_time", "update_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = menuService.getMenuByPage(page);

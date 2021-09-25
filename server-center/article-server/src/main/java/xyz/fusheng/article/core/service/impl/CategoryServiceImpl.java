@@ -12,7 +12,7 @@ import xyz.fusheng.article.model.dto.CategoryDto;
 import xyz.fusheng.article.model.entity.Article;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.CategoryVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
@@ -36,7 +36,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .eq(Category::getCategoryName, categoryDto.getCategoryName())
                 .eq(Category::getIsEnabled, StateEnums.ENABLED.getCode()));
         if (ObjectUtils.isNotEmpty(oldCategory)) {
-            throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "分类「" + categoryDto.getCategoryName() + "」已经存在!");
+            throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "分类「" + categoryDto.getCategoryName() + "」已经存在!");
         }
         Category category = new Category();
         BeanUtils.copyProperties(categoryDto, category);
@@ -50,7 +50,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .eq(Article::getIsEnabled, StateEnums.ENABLED.getCode())
                 .eq(Article::getArticleCategory, id));
         if (selectCount > 0) {
-            throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "当前分类存在文章!");
+            throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "当前分类存在文章!");
         }
         int deleteResult = categoryMapper.deleteById(id);
         log.info("分类删除结果:{}", deleteResult);

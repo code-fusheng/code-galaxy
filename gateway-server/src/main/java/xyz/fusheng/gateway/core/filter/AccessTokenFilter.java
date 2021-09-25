@@ -17,7 +17,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 
 import javax.annotation.Resource;
 import java.nio.charset.StandardCharsets;
@@ -70,7 +70,7 @@ public class AccessTokenFilter implements GlobalFilter, Ordered {
 
         // 响应提示
         JSONObject result = new JSONObject();
-        result.put("code", ResultEnums.AUTH_FAILED.getCode());
+        result.put("code", ResultEnum.AUTH_FAILED.getCode());
         result.put("message", message);
         byte[] bits = result.toJSONString().getBytes(StandardCharsets.UTF_8);
         DataBuffer buffer = response.bufferFactory().wrap(bits);

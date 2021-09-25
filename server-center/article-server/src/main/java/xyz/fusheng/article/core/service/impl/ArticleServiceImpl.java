@@ -14,7 +14,9 @@ import xyz.fusheng.article.model.dto.ArticleDto;
 import xyz.fusheng.article.model.entity.Article;
 import xyz.fusheng.article.model.entity.Category;
 import xyz.fusheng.article.model.vo.ArticleVo;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.constants.GlobalConstants;
+import xyz.fusheng.core.enums.ArticleStateEnum;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.enums.StateEnums;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.base.PageData;
@@ -23,6 +25,7 @@ import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.core.utils.StringUtils;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,22 +39,95 @@ public class ArticleServiceImpl implements ArticleService {
     @Resource
     private CategoryMapper categoryMapper;
 
+    // Web用户端
+
+    /**
+     * 保存草稿
+     * @param articleDto
+     * @return
+     */
+    @Override
+    public boolean saveDraft(ArticleDto articleDto) {
+        SelfUser userInfo = SecurityUtils.getUserInfo();
+        articleDto.setState(ArticleStateEnum.DRAFT);
+        // 草稿内容默认私有
+        articleDto.setIsPublish(GlobalConstants.NO);
+        articleDto.setCreatorId(userInfo.getUserId());
+        articleDto.setCreatorName(userInfo.getUsername());
+        articleDto.setAuthorId(userInfo.getUserId());
+        Article article = new Article();
+        BeanUtils.copyProperties(articleDto, article);
+        return SqlHelper.retBool(articleMapper.insert(article));
+    }
+
+    @Override
+    public boolean savePublish(ArticleDto articleDto) {
+        return false;
+    }
+
+    @Override
+    public PageData<ArticleVo> pageList(PageData<ArticleVo> page) {
+        String newSortColumn = StringUtils.upperCharToUnderLine(page.getSortColumn());
+        page.setSortColumn(newSortColumn);
+        if (StringUtils.isNotBlank(page.getSortColumn())) {
+            // 文章标题
+            String[] sortColumns = {"article_title", "author_name", "good_count", "read_count", "collection_count", "comment_count", "created_time", "update_time"};
+            List<String> sortList = Arrays.asList(sortColumns);
+            if (!sortList.contains(newSortColumn.toLowerCase())) {
+                throw new BusinessException(ResultEnum.ERROR.getCode(), "参数错误!");
+            }
+        }
+        // 获取数据
+        List<ArticleVo> articleVoList = articleMapper.pageArticle(page);
+        page.setList(articleVoList);
+        // 统计总数
+        int totalCount = articleMapper.countArticleByPage(page);
+        page.setTotalCount(totalCount);
+        return page;
+    }
+
+    @Override
+    public ArticleVo readInfo(Long id) {
+        ArticleVo articleVo = new ArticleVo();
+        Article article = articleMapper.selectById(id);
+        article.setReadCount(article.getReadCount() + 1);
+        BeanUtils.copyProperties(article, articleVo);
+        articleMapper.updateById(article);
+        return articleVo;
+    }
+
+    @Override
+    public List<ArticleVo> lastAndNext(Long id) {
+        Article centerArticle = articleMapper.selectById(id);
+        List<ArticleVo> articleVoList = new ArrayList<>(2);
+        // 获取上一篇
+        ArticleVo lastArticleVo = articleMapper.getLastArticle(id, centerArticle.getArticleCategory());
+        // 获取下一篇
+        ArticleVo nextArticleVo = articleMapper.getNextArticle(id, centerArticle.getArticleCategory());
+        articleVoList.add(lastArticleVo);
+        articleVoList.add(nextArticleVo);
+        return articleVoList;
+    }
+
+    // Admin管理后台
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void saveArticle(ArticleDto articleDto) {
         Article article = new Article();
         BeanUtils.copyProperties(articleDto, article);
         articleMapper.insert(article);
-        log.info("插入文章数据结果:{}", article);
+        log.info("[文章管理-插入文章数据] => article:{}", article);
         // 更新分类文章数
         Category category = categoryMapper.selectById(articleDto.getArticleCategory());
-        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "文章分类编号对应数据不存在!");  }
+        if (ObjectUtils.isEmpty(category)) { throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "文章分类编号对应数据不存在!");  }
+        Integer oldCount = category.getArticleCount();
         Integer count = articleMapper.selectCount(new QueryWrapper<Article>().lambda()
                 .eq(Article::getArticleCategory, articleDto.getArticleCategory())
-                .eq(Article::getIsEnabled, StateEnums.ENABLED.getCode()));
+                .eq(Article::getIsEnabled, GlobalConstants.YES));
         category.setArticleCount(count);
         categoryMapper.updateById(category);
-        log.info("更新分类文章数结果:{} -> {}",category.getArticleCount(), count );
+        log.info("[文章管理-更新分类文章数] => oldCount:{} -> newCount:{}",oldCount, count );
     }
 
     @Override
@@ -61,7 +137,7 @@ public class ArticleServiceImpl implements ArticleService {
             String[] sortColumns = {"article_category", "created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "参数错误!");
+                throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "参数错误!");
             }
         }
         List<ArticleVo> articleVoList = articleMapper.pageArticle(page);
@@ -97,7 +173,7 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = new Article();
         BeanUtils.copyProperties(articleDto, article);
         articleMapper.updateById(article);
-        log.info("更新文章结果:{}", article);
+        log.info("[文章管理-更新文章] => article:{}", article);
     }
 
     @Override
@@ -119,20 +195,6 @@ public class ArticleServiceImpl implements ArticleService {
             categoryMapper.updateById(category);
             log.info("更新分类文章数结果:{} -> {}",oldCount, count);
         }
-    }
-
-    @Override
-    public boolean saveDraft(ArticleDto articleDto) {
-        SelfUser userInfo = SecurityUtils.getUserInfo();
-        articleDto.setState(StateEnums.ARTICLE_DRAFT.getCode());
-        // 草稿内容默认私有
-        articleDto.setIsPublish(StateEnums.PRIVATE.getCode());
-        articleDto.setCreatorId(userInfo.getUserId());
-        articleDto.setCreatorName(userInfo.getUsername());
-        articleDto.setAuthorId(userInfo.getUserId());
-        Article article = new Article();
-        BeanUtils.copyProperties(articleDto, article);
-        return SqlHelper.retBool(articleMapper.insert(article));
     }
 
 }

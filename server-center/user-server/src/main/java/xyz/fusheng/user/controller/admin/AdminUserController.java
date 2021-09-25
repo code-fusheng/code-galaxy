@@ -6,14 +6,14 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.annotation.UserInfo;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
 import xyz.fusheng.core.model.dto.UserDto;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.model.vo.UserVo;
 import xyz.fusheng.core.utils.StringUtils;
-import xyz.fusheng.user.common.annotation.UserInfo;
 import xyz.fusheng.user.core.service.UserService;
 
 import javax.annotation.Resource;
@@ -79,7 +79,7 @@ public class AdminUserController {
             String[] sortColumns = {"created_time", "updated_time"};
             List<String> sortList = Arrays.asList(sortColumns);
             if (!sortList.contains(newSortColumn.toLowerCase())) {
-                return new ResultVo<>(ResultEnums.ERROR.getCode(), "操作提示: 参数错误!");
+                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
             }
         }
         page = userService.getUserByPage(page);

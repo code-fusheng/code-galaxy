@@ -3,7 +3,7 @@ package xyz.fusheng.core.model.vo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 
 import java.io.Serializable;
 
@@ -39,8 +39,8 @@ public class ResultVo<T> implements Serializable {
      * 害。具体情况集体分析吧
      */
     public ResultVo() {
-        this.code = ResultEnums.SUCCESS.getCode();
-        this.msg = ResultEnums.SUCCESS.getMsg();
+        this.code = ResultEnum.SUCCESS.getCode();
+        this.msg = ResultEnum.SUCCESS.getMsg();
     }
 
     /**
@@ -56,16 +56,16 @@ public class ResultVo<T> implements Serializable {
     }
 
     public ResultVo(String msg) {
-        this.code = ResultEnums.SUCCESS.getCode();
+        this.code = ResultEnum.SUCCESS.getCode();
         this.msg = msg;
     }
     public ResultVo(T data) {
-        this.code = ResultEnums.SUCCESS.getCode();
-        this.msg = ResultEnums.SUCCESS.getMsg();
+        this.code = ResultEnum.SUCCESS.getCode();
+        this.msg = ResultEnum.SUCCESS.getMsg();
         this.data = data;
     }
     public ResultVo(String msg, T data) {
-        this.code = ResultEnums.SUCCESS.getCode();
+        this.code = ResultEnum.SUCCESS.getCode();
         this.msg = msg;
         this.data = data;
     }
@@ -73,32 +73,32 @@ public class ResultVo<T> implements Serializable {
         this.code = code;
         this.msg = msg;
     }
-    public ResultVo(ResultEnums resultEnums) {
-        this.code = resultEnums.getCode();
-        this.msg = resultEnums.getMsg();
+    public ResultVo(ResultEnum resultEnum) {
+        this.code = resultEnum.getCode();
+        this.msg = resultEnum.getMsg();
     }
 
-    public static ResultVo getResult(Integer code, String msg, Object data) {
-        ResultVo resultVo = new ResultVo();
+    public static <T> ResultVo<T> getResult(Integer code, String msg, T data) {
+        ResultVo<T> resultVo = new ResultVo();
         resultVo.setCode(code);
         resultVo.setMsg(msg);
         resultVo.setData(data);
         return resultVo;
     }
 
-    public static ResultVo success() {
-        return getResult(ResultEnums.SUCCESS.getCode(), ResultEnums.SUCCESS.getMsg(), null);
+    public static <T> ResultVo<T> success() {
+        return getResult(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), null);
     }
 
-    public static ResultVo success(Object data) {
-        return getResult(ResultEnums.SUCCESS.getCode(), ResultEnums.SUCCESS.getMsg(), data);
+    public static <T> ResultVo<T> success(T data) {
+        return getResult(ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), data);
     }
 
-    public static ResultVo error(String msg) {
-        return getResult(ResultEnums.ERROR.getCode(), msg, null);
+    public static <T> ResultVo<T> error(String msg) {
+        return getResult(ResultEnum.ERROR.getCode(), msg, null);
     }
 
-    public static ResultVo error(Integer code, String msg) {
+    public static <T> ResultVo<T> error(Integer code, String msg) {
         return getResult(code, msg, null);
     }
 }

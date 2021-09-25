@@ -16,4 +16,8 @@ public interface ArticleMapper extends BaseMapper<Article> {
     int countArticleByPage(PageData<ArticleVo> page);
 
     ArticleVo getArticleById(Long id);
+
+    ArticleVo getLastArticle(Long id, Long articleCategory);
+
+    ArticleVo getNextArticle(Long id, Long articleCategory);
 }

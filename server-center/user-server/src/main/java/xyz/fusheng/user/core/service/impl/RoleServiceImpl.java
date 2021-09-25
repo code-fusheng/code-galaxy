@@ -3,7 +3,7 @@ package xyz.fusheng.user.core.service.impl;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.dto.RoleDto;
 import xyz.fusheng.core.model.entity.Role;
@@ -43,7 +43,7 @@ public class RoleServiceImpl implements RoleService {
         RoleVo roleVo = new RoleVo();
         Role role = roleMapper.selectById(roleId);
         if (ObjectUtils.isEmpty(role)) {
-            throw new BusinessException(ResultEnums.BUSINESS_ERROR.getCode(), "角色信息查询异常!");
+            throw new BusinessException(ResultEnum.BUSINESS_ERROR.getCode(), "角色信息查询异常!");
         }
         BeanUtils.copyProperties(role, roleVo);
         return roleVo;

@@ -8,7 +8,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import xyz.fusheng.core.enums.ResultEnums;
+import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.vo.ResultVo;
 
@@ -58,13 +58,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = BusinessException.class)
     public ResultVo validationExceptionHandler(BusinessException e) {
         logger.error("业务异常,异常信息:", e);
-        return ResultVo.error(ResultEnums.BUSINESS_ERROR.getCode(), ResultEnums.BUSINESS_ERROR.getMsg() + ":" + e.getMessage());
+        return ResultVo.error(ResultEnum.BUSINESS_ERROR.getCode(), ResultEnum.BUSINESS_ERROR.getMsg() + ":" + e.getMessage());
     }
 
     // TODO 仅用于开发
     @ExceptionHandler(value = SQLIntegrityConstraintViolationException.class)
     public ResultVo validationExceptionHandler(SQLIntegrityConstraintViolationException e) {
-        return ResultVo.error(ResultEnums.INTERNAL_SERVER_ERROR.getCode(), e.getMessage());
+        return ResultVo.error(ResultEnum.INTERNAL_SERVER_ERROR.getCode(), e.getMessage());
     }
 
 }

@@ -13,9 +13,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import xyz.fusheng.core.annotation.UserInfo;
 import xyz.fusheng.core.model.entity.SelfUser;
 import xyz.fusheng.core.utils.SecurityUtils;
-import xyz.fusheng.sys.common.annotation.UserInfo;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.annotation.Annotation;
