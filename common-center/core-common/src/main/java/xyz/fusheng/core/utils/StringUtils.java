@@ -9,6 +9,8 @@ package xyz.fusheng.core.utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
+import xyz.fusheng.core.model.entity.Menu;
+import xyz.fusheng.core.model.entity.SelfUser;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;
@@ -431,6 +433,12 @@ public final class StringUtils extends org.apache.commons.lang3.StringUtils {
             }
         } catch (Exception e) { e.printStackTrace(); }
         return true;
+    }
+
+    public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.setMenuId(1L);
+        checkObjAllFieldsIsNull(menu);
     }
 
 }
