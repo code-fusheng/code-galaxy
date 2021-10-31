@@ -58,7 +58,7 @@
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
       <module name="mall-server" options="-parameters" />
-      <module name="server-center" options="" />
+      <module name="server-center" options="-parameters" />
       <module name="shop-server" options="-parameters" />
       <module name="sys-admin" options="-parameters" />
       <module name="sys-server" options="-parameters" />

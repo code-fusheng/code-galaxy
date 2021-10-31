@@ -22,7 +22,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableDiscoveryClient
 @EnableResourceServer
 @MapperScan("xyz.fusheng.article.core.mapper")
-public class ArticleServerApplication {
+public class
+ArticleServerApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(ArticleServerApplication.class);
 

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="docker-mysql" uuid="70bfd29e-5059-4b35-bfdf-c9b4bfb6b73d">
+    <data-source source="LOCAL" name="47.111.158.6" uuid="726097cc-7fc9-42ce-9de8-c86a4dec8536">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>阿里云</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://47.111.158.6:3306/code-galaxy?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="code-galaxy@localhost" uuid="0a971623-0094-4c13-bb03-0d6263603a9a">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/code-galaxy</jdbc-url>
+      <jdbc-url>jdbc:mysql://rm-bp15mj67u7y8p5761lo.mysql.rds.aliyuncs.com:3306/code-galaxy?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

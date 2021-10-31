@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * @Description: 文章状态枚举
  */
 
-public enum ArticleStateEnum implements IEnumCode<Integer>{
+public enum ArticleStateEnum implements IEnumCode<Integer> {
 
     DRAFT(0, "草稿"),
     DELAYED(1, "延时发布"),

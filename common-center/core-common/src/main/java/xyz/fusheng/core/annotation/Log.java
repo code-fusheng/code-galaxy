@@ -3,6 +3,7 @@ package xyz.fusheng.core.annotation; /**
  * @Date: 2020/9/4 15:21
  */
 
+import xyz.fusheng.core.constants.GlobalConstants;
 import xyz.fusheng.core.enums.BusinessTypeEnum;
 import xyz.fusheng.core.enums.OperatorTypeEnum;
 
@@ -24,21 +25,26 @@ public @interface Log {
     /**
      * 模块
      */
-    public String title() default "";
+    String title() default "";
 
     /**
      * 功能
      */
-    public BusinessTypeEnum businessType() default BusinessTypeEnum.OTHER;
+    BusinessTypeEnum businessType() default BusinessTypeEnum.OTHER;
 
     /**
      * 操作人类别
      */
-    public OperatorTypeEnum operatorType() default OperatorTypeEnum.ADMIN;
+    OperatorTypeEnum operatorType() default OperatorTypeEnum.ADMIN;
+
+    /**
+     * 是否展示
+     */
+    int IsShow() default 1;
 
     /**
      * 是否保存请求的参数
      */
-    public boolean isSaveRequestData() default true;
+    boolean isSaveRequestData() default true;
 
 }

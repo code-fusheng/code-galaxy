@@ -4,15 +4,16 @@
     <option name="projectProfile">
       <ProjectProfile>
         <option name="deleteByPrimayKeyEnabled" value="false" />
+        <option name="genComment" value="false" />
         <option name="generateService" value="true" />
         <option name="generateServiceInterface" value="true" />
         <option name="insertMethodEnabled" value="false" />
         <option name="insertSelectiveMethodEnabled" value="false" />
-        <option name="javaMapperPackage" value="xyz.fusheng.admin.bill.core.mapper" />
-        <option name="javaMapperPath" value="$PROJECT_DIR$/admin-center/bill-admin/src/main/java" />
-        <option name="javaModelPackage" value="xyz.fusheng.core.model.bill.entity" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/common-center/core-common/src/main/java" />
-        <option name="lastDatabaseCrudChooseModuleName" value="bill-admin" />
+        <option name="javaMapperPackage" value="xyz.fusheng.sys.core.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/java" />
+        <option name="javaModelPackage" value="xyz.fusheng.core.model" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="sys-server" />
         <option name="lombokDataAnnotation" value="true" />
         <option name="mapperAnnotaion" value="true" />
         <option name="modelSuperClass" value="xyz.fusheng.model.base.BaseEntity" />
@@ -96,6 +97,22 @@
                 </UserPackageAndPathInfoByModule>
               </value>
             </entry>
+            <entry key="sys-server">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="xyz.fusheng.sys.core.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/java" />
+                  <option name="javaModelPacakge" value="xyz.fusheng.core.model" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="xyz.fusheng.sys.core.service.impl" />
+                  <option name="javaServiceInterfacePath" value="F:\专业源码\code-galaxy\git\code-galaxy\server-center\sys-server\src\main\java" />
+                  <option name="javaServicePackage" value="xyz.fusheng.sys.core.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/server-center/sys-server/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
             <entry key="user-admin">
               <value>
                 <UserPackageAndPathInfoByModule>
@@ -115,7 +132,7 @@
           </map>
         </option>
         <option name="mybatisPlusStaticField" value="false" />
-        <option name="removeTablePreName" value="bill_" />
+        <option name="removeTablePreName" value="Sys_" />
         <option name="selectByPrimaryKeyEnabled" value="false" />
         <option name="tableGenerateConfigs">
           <map>
@@ -380,6 +397,24 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="code-galaxy:sys_opera_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="deleteByPrimayKeyEnabled" value="false" />
+                  <option name="generatedKey" value="id" />
+                  <option name="insertMethodEnabled" value="false" />
+                  <option name="insertSelectiveMethodEnabled" value="false" />
+                  <option name="javaModelName" value="SysOperaLog" />
+                  <option name="moduleName" value="sys-server" />
+                  <option name="selectByPrimaryKeyEnabled" value="false" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="updateByPrimaryKeySelectiveEnabled" value="false" />
+                  <option name="updateByPrimaykeyEnabled" value="false" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="code-galaxy:sys_role">
               <value>
                 <TableGenerateConfig>
@@ -422,7 +457,7 @@
         <option name="updateByPrimaykeyEnabled" value="false" />
         <option name="useSwagger" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
-        <option name="xmlMapperPath" value="$PROJECT_DIR$/admin-center/bill-admin/src/main/resources" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/server-center/sys-server/src/main/resources" />
       </ProjectProfile>
     </option>
   </component>

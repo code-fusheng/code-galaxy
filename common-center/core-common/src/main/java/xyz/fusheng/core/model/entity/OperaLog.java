@@ -1,80 +1,68 @@
 package xyz.fusheng.core.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
-import com.baomidou.mybatisplus.annotation.*;
-import java.io.Serializable;
-import java.util.Date;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import xyz.fusheng.core.model.base.BaseEntity;
 
-/**
- * @Author code-fusheng
- * @Date: 21-09-15 17:03:34
- */
+import java.util.Date;
 
-@TableName ( value ="sys_opera_log" )
+@ApiModel(value="sys_opera_log")
 @Data
-@ApiModel
-public class OperaLog implements Serializable{
+@EqualsAndHashCode(callSuper=true)
+public class OperaLog extends BaseEntity {
+    @ApiModelProperty(value="主键(自增)")
+    @TableId(type = IdType.AUTO)
+    private Long id;
 
-	private static final long serialVersionUID = 1L;
+    @ApiModelProperty(value="操作主题")
+    private String operaTitle;
 
-  	@TableId(value = "id")
-	@ApiModelProperty( value="主键")
-	private Integer id;
+    @ApiModelProperty(value="操作类型")
+    private String operaType;
 
-  	@TableField(value = "opera_title" )
-	@ApiModelProperty( value="操作模块标题")
-	private String operaTitle;
+    @ApiModelProperty(value="方法名称")
+    private String method;
 
-  	@TableField(value = "opera_type" )
-	@ApiModelProperty( value="操作类型(见枚举)")
-	private Integer operaType;
+    @ApiModelProperty(value="请求方式")
+    private String requestMethod;
 
-  	@TableField(value = "request_name" )
-	@ApiModelProperty( value="请求方法名称")
-	private String requestName;
+    @ApiModelProperty(value="请求uri")
+    private String requestUri;
 
-  	@TableField(value = "request_url" )
-	@ApiModelProperty( value="请求方法地址")
-	private String requestUrl;
+    @ApiModelProperty(value="操作员类型")
+    private String operatorType;
 
-  	@TableField(value = "request_type" )
-	@ApiModelProperty( value="请求方法类型")
-	private Integer requestType;
+    @ApiModelProperty(value="操作员名称")
+    private String operatorName;
 
-  	@TableField(value = "operator_type" )
-	@ApiModelProperty( value="操作用户类型")
-	private Integer operatorType;
+    @ApiModelProperty(value="IP地址")
+    private String operaIp;
 
-  	@TableField(value = "operator_name" )
-	@ApiModelProperty( value="操作人员名称")
-	private String operatorName;
+    @ApiModelProperty(value="操作地址")
+    private String operaLocation;
 
-  	@TableField(value = "opera_ip" )
-	@ApiModelProperty( value="操作IP地址")
-	private String operaIp;
+    @ApiModelProperty(value="入参")
+    private String inputParam;
 
-  	@TableField(value = "opera_location" )
-	@ApiModelProperty( value="操作地理位置")
-	private String operaLocation;
+    @ApiModelProperty(value="出参")
+    private String outputParam;
 
-  	@TableField(value = "in_param" )
-	@ApiModelProperty( value="入参")
-	private String inParam;
+    @ApiModelProperty(value="操作状态(1:正常/0:异常)")
+    private Integer state;
 
-  	@TableField(value = "out_param" )
-	@ApiModelProperty( value="出参")
-	private String outParam;
+    @ApiModelProperty(value="错误信息")
+    private String errorMsg;
 
-  	@TableField(value = "opera_result" )
-	@ApiModelProperty( value="操作结果(见枚举)")
-	private Integer operaResult;
+    @ApiModelProperty(value="操作时间")
+    private Date operaTime;
 
-  	@TableField(value = "opera_time" )
-	@ApiModelProperty( value="操作时间")
-	@JsonFormat(pattern = "yyyy-MM-dd  HH:mm:ss")
-	private Date operaTime;
+    @ApiModelProperty(value="耗时")
+    private Long useTime;
 
+    @ApiModelProperty(value="是否展示(1:展示/0:不展示)")
+    private Integer isShow;
 }

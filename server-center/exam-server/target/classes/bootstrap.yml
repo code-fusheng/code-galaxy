@@ -4,7 +4,7 @@ spring:
   application:
     name: exam-server
   profiles:
-    active: prod
+    active: dev
 security:
   oauth2:
     resource:
