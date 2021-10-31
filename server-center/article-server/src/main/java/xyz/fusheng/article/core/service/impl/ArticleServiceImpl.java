@@ -60,9 +60,24 @@ public class ArticleServiceImpl implements ArticleService {
         return SqlHelper.retBool(articleMapper.insert(article));
     }
 
+    /**
+     * 保存并发布 TODO 发布文章应当推送一条通知
+     * @param articleDto
+     * @return
+     */
     @Override
     public boolean savePublish(ArticleDto articleDto) {
-        return false;
+        SelfUser userInfo = SecurityUtils.getUserInfo();
+        // 已经发布
+        articleDto.setState(ArticleStateEnum.PUBLISHED);
+        // 发布默认微公开
+        articleDto.setIsPublish(GlobalConstants.YES);
+        articleDto.setCreatorId(userInfo.getUserId());
+        articleDto.setCreatorName(userInfo.getUsername());
+        articleDto.setAuthorId(userInfo.getUserId());
+        Article article = new Article();
+        BeanUtils.copyProperties(articleDto, article);
+        return SqlHelper.retBool(articleMapper.insert(article));
     }
 
     @Override
