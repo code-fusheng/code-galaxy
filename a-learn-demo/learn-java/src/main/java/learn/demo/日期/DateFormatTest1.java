@@ -25,6 +25,10 @@ public class DateFormatTest1 {
         SimpleDateFormat f = new SimpleDateFormat("yyyyMMddHHmmss");
         Date date = f.parse(timeStr);
         System.out.println(date);
+
+        System.out.println(new Date());
+
+        System.out.println(f.format(new Date()));
     }
 
 }
