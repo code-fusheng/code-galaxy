@@ -8,6 +8,8 @@ package xyz.fusheng.core.model.base;
  * @Description: 基础分页对象
  */
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -20,9 +22,7 @@ import java.util.Map;
 
 @Data
 @Accessors(chain = true)
-public class PageData<T> implements Serializable {
-
-    private static final long serialVersionUID = 8759874641772522011L;
+public class PageData<T> {
 
     /**
      * asc 升序
@@ -125,5 +125,15 @@ public class PageData<T> implements Serializable {
         return StringUtils.isEmpty(this.sortColumn) ? "created_time" : StringUtils.upperCharToUnderLine(sortColumn);
     }
 
+    @ApiModelProperty(hidden = true)
+    public IPage<T> getPage() {
+        return new Page<T>().setCurrent(this.currentPage).setSize(this.pageSize);
+    }
+
+    public PageData(IPage iPage) {
+        this.list = iPage.getRecords();
+        this.totalCount = Math.toIntExact(iPage.getTotal());
+        this.totalPage = Math.toIntExact(iPage.getPages());
+    }
 }
 
