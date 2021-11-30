@@ -1,5 +1,10 @@
 package learn.demo.公用;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.util.Objects;
+
 /**
  * @FileName: test
  * @Author: code-fusheng
@@ -9,4 +14,28 @@ package learn.demo.公用;
  */
 
 public class test {
+
+    @Data
+    @AllArgsConstructor
+    static class Consumevo {
+        Long amount;
+        Long originalPrice;
+    }
+
+    public static void main(String[] args) {
+
+        Consumevo consumevo = new Consumevo(27000L, 27000L);
+
+        if (!Objects.equals(consumevo.getAmount(), consumevo.getOriginalPrice())) {
+            System.out.println("订单金额异常");
+        }
+
+        System.out.println(27001 != 27000);
+
+        consumevo.setAmount(0L);
+
+        System.out.println(consumevo.getAmount() == 0);
+
+    }
+
 }

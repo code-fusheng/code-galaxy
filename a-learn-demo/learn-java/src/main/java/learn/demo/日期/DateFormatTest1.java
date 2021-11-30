@@ -3,6 +3,7 @@ package learn.demo.日期;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * @FileName: DateFormatTest1
@@ -29,6 +30,10 @@ public class DateFormatTest1 {
         System.out.println(new Date());
 
         System.out.println(f.format(new Date()));
+
+        int rannum = (int) (new Random().nextDouble() * (99999 - 10000 + 1)) + 10000;
+        String payNo = f.format(new Date()) + rannum;
+        System.out.println(payNo);
     }
 
 }
