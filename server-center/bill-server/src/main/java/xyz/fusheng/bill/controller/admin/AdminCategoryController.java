@@ -9,6 +9,7 @@ import springfox.documentation.annotations.ApiIgnore;
 import xyz.fusheng.bill.common.annotation.UserInfo;
 import xyz.fusheng.bill.core.service.CategoryService;
 import xyz.fusheng.bill.model.dto.CategoryDto;
+import xyz.fusheng.bill.model.entity.Category;
 import xyz.fusheng.bill.model.vo.CategoryVo;
 import xyz.fusheng.core.enums.ResultEnum;
 import xyz.fusheng.core.model.base.PageData;
@@ -46,15 +47,7 @@ public class AdminCategoryController {
 
     @ApiOperation("分页查询消费类型")
     @PostMapping("/pageCategory")
-    public ResultVo<PageData<CategoryVo>> pageCategory(@RequestBody PageData<CategoryVo> page) {
-        if (StringUtils.isNotBlank(page.getSortColumn())) {
-            // 创建时间、更新时间
-            String[] sortColumns = {"created_time", "updated_time"};
-            List<String> sortList = Arrays.asList(sortColumns);
-            if (!sortList.contains(page.getSortColumn().toLowerCase())) {
-                return new ResultVo<>(ResultEnum.ERROR.getCode(), "操作提示: 参数错误!");
-            }
-        }
+    public ResultVo<PageData<Category>> pageCategory(@RequestBody PageData<Category> page) {
         page = categoryService.pageCategory(page);
         return new ResultVo<>("操作成功: 分页查询消费类型", page);
     }

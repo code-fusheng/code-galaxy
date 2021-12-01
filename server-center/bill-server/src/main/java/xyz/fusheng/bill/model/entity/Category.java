@@ -1,8 +1,6 @@
 package xyz.fusheng.bill.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -97,24 +95,28 @@ public class Category extends BaseEntity {
     * 创建者编号
     */
     @ApiModelProperty(value="创建者编号")
+    @TableField(fill = FieldFill.INSERT)
     private Long creatorId;
 
     /**
     * 修改者编号
     */
     @ApiModelProperty(value="修改者编号")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updaterId;
 
     /**
     * 创建者姓名
     */
     @ApiModelProperty(value="创建者姓名")
+    @TableField(fill = FieldFill.INSERT)
     private String creatorName;
 
     /**
     * 修改者姓名
     */
     @ApiModelProperty(value="修改者姓名")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private String updaterName;
 
     /**
