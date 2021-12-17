@@ -42,7 +42,6 @@ public class ThreadLocalUtils {
     public void remove() {
         this.operaLog = null;
         this.isLog = false;
-
     }
 
 }

@@ -53,12 +53,12 @@
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
-      <module name="learn-demo" options="" />
+      <module name="learn-demo" options="-parameters" />
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
       <module name="mall-server" options="-parameters" />
-      <module name="server-center" options="-parameters" />
+      <module name="server-center" options="" />
       <module name="shop-server" options="-parameters" />
       <module name="sys-admin" options="-parameters" />
       <module name="sys-server" options="-parameters" />

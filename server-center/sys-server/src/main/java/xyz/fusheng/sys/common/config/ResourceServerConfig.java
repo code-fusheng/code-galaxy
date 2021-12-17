@@ -66,8 +66,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 //                .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
-                .antMatchers("/v2/api-docs/**", "/doc.html", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**"
-                ).permitAll()
+                .antMatchers("/push/websocket", "/websocket/**").permitAll()
+                .antMatchers("/v2/api-docs/**", "/doc.html", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**").permitAll()
                 // 放行所有 /api 开头的请求
                 .antMatchers("/api/**").permitAll()
                 // 所有请求都需要有 all 范围
