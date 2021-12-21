@@ -32,5 +32,4 @@ public class BillServerApplication {
         logger.info("记账服务[bill-server]已经启动,端口号:{}", environment.getProperty("server.port"));
     }
 
-
 }
