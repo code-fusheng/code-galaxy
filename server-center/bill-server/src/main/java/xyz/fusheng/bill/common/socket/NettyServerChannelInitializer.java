@@ -31,8 +31,6 @@ public class NettyServerChannelInitializer extends ChannelInitializer<SocketChan
         // PS: 拓展解码器
         // DelimiterBasedFrameDecoder 指定分隔符结尾
         // FixedLengthFrameDecoder 固定长度
-        pipeline.addLast(new LineBasedFrameDecoder(1024));
-        pipeline.addLast(new StringDecoder());
         // 以下三个是http的支持
         // http 解码器
         pipeline.addLast(new HttpServerCodec());

@@ -9,3 +9,18 @@ security:
   oauth2:
     resource:
       id: bill-admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 10601
+    servlet:
+      context-path: /
+    ssl:
+      enabled: false
+  endpoint:
+    health:
+      show-details: always

@@ -66,6 +66,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 //                .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
+                .antMatchers("/actuator/health").permitAll()
                 .antMatchers("/ws", "/websocket/**").permitAll()
                 .antMatchers("/v2/api-docs/**", "/doc.html", "/swagger-resources/**", "/swagger-ui.html", "/webjars/**"
                 ).permitAll()

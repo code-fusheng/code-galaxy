@@ -7,8 +7,11 @@ import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -23,6 +26,13 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 @Component
 public class NettyServerHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
+
+    private static MessageHandlerServer messageHandlerServer;
+
+    @Autowired
+    public void setMessageHandlerServer(MessageHandlerServer messageHandlerServer) {
+        NettyServerHandler.messageHandlerServer = messageHandlerServer;
+    }
 
     //可以存储userId与ChannelId的映射表
     public static ConcurrentHashMap<String, ChannelId> channelIdMap = new ConcurrentHashMap<>();
@@ -55,18 +65,26 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<TextWebSocke
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         log.info("[接收消息] -> 客户端:{}, 数据:{}", ctx.channel().id(), msg.text());
+        messageHandlerServer.messagePreHandler(ctx, msg);
     }
 
     // 发送消息至单一对象
-    private void sendMessageToSingle(ChannelHandlerContext ctx, Object obj) {
+    public void sendMessageToSingle(ChannelHandlerContext ctx, Object obj) {
         ctx.channel().writeAndFlush(new TextWebSocketFrame(JSON.toJSONString(obj)));
+        log.info("[单点消息] -> 客户端:{}, 数据:{}", ctx.channel().id(), obj);
     }
 
     // 发送消息给所有对象
-    private void sendMessageToAll(ChannelHandlerContext ctx, Object obj) {
+    public void sendMessageToAll(ChannelHandlerContext ctx, Object obj) {
         for (Channel channel : channelGroup) {
-            if (!channel.id().asLongText().equals(ctx.channel().id().asLongText())) {
+            if (Objects.nonNull(ctx)) {
+                if (!channel.id().asLongText().equals(ctx.channel().id().asLongText())) {
+                    channel.writeAndFlush(new TextWebSocketFrame(JSON.toJSONString(obj)));
+                    log.info("[广播消息] -> 客户端:{}, 数据:{}", channel.id(), obj);
+                }
+            } else {
                 channel.writeAndFlush(new TextWebSocketFrame(JSON.toJSONString(obj)));
+                log.info("[广播消息] -> 客户端:{}, 数据:{}", channel.id(), obj);
             }
         }
     }
