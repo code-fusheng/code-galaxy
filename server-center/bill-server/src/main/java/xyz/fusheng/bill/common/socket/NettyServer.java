@@ -7,11 +7,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -53,6 +50,8 @@ public class NettyServer {
             log.info("[Netty服务启动-开始监控端口] -> Port:{}", port);
             // 等待服务端监控端口关闭
             future.channel().closeFuture().sync();
+            //
+            log.info("[Netty服务启动-端口监听成功] -> Port:{}", port);
         } catch (InterruptedException e) {
             // 中断异常
             log.info("[Netty服务启动-异常] -> 异常信息:{}", e.getMessage(), e);
@@ -63,4 +62,5 @@ public class NettyServer {
             workGroup.shutdownGracefully();
         }
     }
+
 }

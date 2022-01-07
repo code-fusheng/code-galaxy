@@ -1,12 +1,16 @@
 package xyz.fusheng.sys.common.oss;
 
 import com.aliyun.oss.OSS;
+import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.model.CannedAccessControlList;
 import com.aliyun.oss.model.CreateBucketRequest;
+import com.aliyun.oss.model.ObjectMetadata;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
 
 import javax.annotation.Resource;
 import java.io.ByteArrayInputStream;
@@ -15,7 +19,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -87,6 +93,34 @@ public class AliyunOssUtils {
             e.printStackTrace();
         }
         return "https://" + bucketName + "." + aliyunOssConfig.getEndpoint() + "/" + fileName;
+    }
+
+    /**
+     * @param img  base64
+     * @param name 文件名称
+     * @return
+     */
+    public String clientUploadBase64(String name, String img) {
+        OSSClient oss = new OSSClient(aliyunOssConfig.getEndpoint(), aliyunOssConfig.getAccessKeyId(), aliyunOssConfig.getAccessKeySecret());
+        InputStream inputStream1;
+        if (StringUtils.isNotBlank(img)) { //base64所在字段
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+            String date = sdf.format(new Date());
+            String newFileName = date + "/" + name;// 新文件名
+            try {
+                byte[] bytes = new BASE64Decoder().decodeBuffer(img);  //将字符串转换为byte数组
+                inputStream1 = new ByteArrayInputStream(bytes);
+                ObjectMetadata metadata = new ObjectMetadata();
+                metadata.setContentLength(inputStream1.available());
+                oss.putObject(aliyunOssConfig.getBucketName(), "client" + "/" + newFileName, inputStream1, metadata);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                //e.printStackTrace();
+            }
+            return "https://" + aliyunOssConfig.getBucketName() + "." + aliyunOssConfig.getEndpoint() + "/" + "client" + "/" + newFileName;
+        } else {
+            return null;
+        }
     }
 
     /**

@@ -10,13 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import xyz.fusheng.core.exception.BusinessException;
 import xyz.fusheng.core.model.vo.ResultVo;
+import xyz.fusheng.test.entity.xml.UserStarXml;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -45,6 +45,27 @@ public class ApiTestController {
 
     @Value("${server.port}")
     private String port;
+
+    @GetMapping("/testWx")
+    public String wxCollBack(@RequestParam("signature") String signature,
+                                       @RequestParam("timestamp") String timestamp,
+                                       @RequestParam("nonce") String nonce,
+                                       @RequestParam("echostr") String echostr) {
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("signature", signature);
+        paramMap.put("timestamp", timestamp);
+        paramMap.put("nonce", nonce);
+        paramMap.put("echostr", echostr);
+        log.info("{}", paramMap);
+        return echostr;
+    }
+
+    @PostMapping(value = "/testWx", produces = MediaType.APPLICATION_XML_VALUE)
+    public void wxCollBack(HttpServletRequest request, @RequestBody UserStarXml userStarXml) {
+        log.info("{}", userStarXml);
+        System.out.println(request);
+        log.info("{}", request.getAttributeNames());
+    }
 
     @GetMapping("/testGetPort")
     public ResultVo<Object> testGetPort() {

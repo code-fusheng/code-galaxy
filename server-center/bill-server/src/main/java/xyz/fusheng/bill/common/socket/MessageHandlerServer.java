@@ -7,17 +7,13 @@ import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import xyz.fusheng.bill.model.dto.socket.ColumnDto;
-import xyz.fusheng.bill.model.dto.socket.MessageDto;
-import xyz.fusheng.bill.model.dto.socket.OnlineUserDto;
-import xyz.fusheng.bill.model.dto.socket.RoomDto;
+import xyz.fusheng.bill.model.dto.socket.*;
+import xyz.fusheng.core.annotation.OnlineEdit;
 import xyz.fusheng.core.exception.BusinessException;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.lang.reflect.Field;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -41,6 +37,8 @@ public class MessageHandlerServer {
 
     private static final String ONLINE_USER_OBJ_KEY = "onlineUserDto";
 
+    private static final String COLUMN_PREFIX_KEY = "column:";
+
     @Resource
     private NettyServerHandler nettyServerHandler;
 
@@ -54,6 +52,7 @@ public class MessageHandlerServer {
         RoomDto roomDto = new RoomDto();
         List<OnlineUserDto> onlineUserDtoList = new LinkedList<>();
         ColumnDto columnDto = new ColumnDto();
+        List<ColumnDto> columnDtoList = new ArrayList<>();
         try {
             log.info("[客户端「{}」消息预处理流程-开始] -> msg:{}", ctx.channel().id(), msg.text());
             JSONObject textJSONObject = JSON.parseObject(msg.text());
@@ -69,8 +68,14 @@ public class MessageHandlerServer {
                 case "JOIN_ROOM":
                     onlineUserDtoList = joinRoom(ctx, textJSONObject);
                     messageDto.setEventType("JOIN_ROOM");
+                    messageDto.setRoomId(textJSONObject.getString("roomId"));
                     messageDto.setMessageBody(onlineUserDtoList);
                     nettyServerHandler.sendMessageToAll(null, messageDto);
+                    // 获取当前编辑内容
+                    columnDtoList = getColumnDtoList(messageDto.getRoomId());
+                    messageDto.setEventType("INIT_COLUMN");
+                    messageDto.setMessageBody(columnDtoList);
+                    nettyServerHandler.sendMessageToSingle(ctx, messageDto);
                     break;
                 case "EXIT_ROOM":
                     onlineUserDtoList = exitRoom(ctx, textJSONObject);
@@ -82,7 +87,13 @@ public class MessageHandlerServer {
                     columnDto = lockingColumn(ctx, textJSONObject);
                     messageDto.setEventType("LOCKING_COLUMN");
                     messageDto.setMessageBody(columnDto);
-                    nettyServerHandler.sendMessageToAll(null, messageDto);
+                    nettyServerHandler.sendMessageToAll(ctx, messageDto);
+                    break;
+                case "RELEASE_COLUMN":
+                    columnDto = releaseColumn(ctx, textJSONObject);
+                    messageDto.setEventType("RELEASE_COLUMN");
+                    messageDto.setMessageBody(columnDto);
+                    nettyServerHandler.sendMessageToAll(ctx, messageDto);
                     break;
                 default:
                     throw new BusinessException("eventType事件类型不匹配!");
@@ -128,6 +139,9 @@ public class MessageHandlerServer {
         onlineUserList.add(onlineUserDto);
         redisTemplate.opsForHash().put(ROOM_PREFIX_KEY + ":" + roomDto.getRoomId(), ONLINE_USER_OBJ_KEY, onlineUserList);
         log.info("[客户端「{}」初始化在线用户信息-Redis同步成功] -> roomDto:{}", ctx.channel().id(), JSON.toJSON(roomDto));
+        // 初始化企业注册案件字段信息
+        List<ColumnDto> columnDtoList = initColumnDtoList(roomDto.getRoomId());
+        log.info("[客户端「{}」初始化字段编辑信息-Redis同步成功] -> columnDtoList:{}", ctx.channel().id(), columnDtoList);
         return roomDto;
     }
 
@@ -209,7 +223,59 @@ public class MessageHandlerServer {
     private ColumnDto lockingColumn(ChannelHandlerContext ctx, JSONObject textJSONObject) {
         MessageDto messageDto = JSON.toJavaObject(textJSONObject, MessageDto.class);
         ColumnDto columnDto = JSON.toJavaObject((JSON) JSON.toJSON(messageDto.getMessageBody()), ColumnDto.class);
+        redisTemplate.opsForHash().put(ROOM_PREFIX_KEY + ":" + messageDto.getRoomId(), COLUMN_PREFIX_KEY + columnDto.getColumnKey(), JSON.toJSON(columnDto));
         log.info("[客户端「{}」锁定字段] -> columnDto:{}", ctx.channel().id(), columnDto);
         return columnDto;
+    }
+
+    private ColumnDto releaseColumn(ChannelHandlerContext ctx, JSONObject textJSONObject) {
+        MessageDto messageDto = JSON.toJavaObject(textJSONObject, MessageDto.class);
+        ColumnDto columnDto = JSON.toJavaObject((JSON) JSON.toJSON(messageDto.getMessageBody()), ColumnDto.class);
+        redisTemplate.opsForHash().put(ROOM_PREFIX_KEY + ":" + messageDto.getRoomId(), COLUMN_PREFIX_KEY + columnDto.getColumnKey(), JSON.toJSON(columnDto));
+        log.info("[客户端「{}」释放字段] -> columnDto:{}", ctx.channel().id(), columnDto);
+        return columnDto;
+    }
+
+    private List<ColumnDto> initColumnDtoList(String roomId) {
+        List<ColumnDto> columnDtoList = new ArrayList<>();
+        RoomDto roomInfo = getRoomInfo(roomId);
+        switch (roomInfo.getRoomType()) {
+            case "COMPANY_REG":
+                for (Field field : CompanyRegMsgDto.class.getDeclaredFields()) {
+                    OnlineEdit annotation = field.getAnnotation(OnlineEdit.class);
+                    if (annotation == null) {
+                        continue;
+                    }
+                    ColumnDto columnDto = new ColumnDto(annotation.columnKey());
+                    redisTemplate.opsForHash().put(ROOM_PREFIX_KEY + ":" + roomId, COLUMN_PREFIX_KEY + annotation.columnKey(), columnDto);
+                    columnDtoList.add(columnDto);
+                }
+                return columnDtoList;
+            default:
+                return null;
+        }
+    }
+
+    private List<ColumnDto> getColumnDtoList(String roomId) {
+        RoomDto roomInfo = getRoomInfo(roomId);
+        List<ColumnDto> columnDtoList = new ArrayList<>();
+        switch (roomInfo.getRoomType()) {
+            case "COMPANY_REG":
+                for (Field field : CompanyRegMsgDto.class.getDeclaredFields()) {
+                    OnlineEdit annotation = field.getAnnotation(OnlineEdit.class);
+                    if (annotation == null) {
+                        continue;
+                    }
+                    Object o = redisTemplate.opsForHash().get(ROOM_PREFIX_KEY + ":" + roomId, COLUMN_PREFIX_KEY + annotation.columnKey());
+                    ColumnDto columnDto = JSON.toJavaObject((JSON) JSON.toJSON(o) , ColumnDto.class);
+                    if (Objects.isNull(columnDto)) {
+                        columnDto = new ColumnDto(annotation.columnKey());
+                    }
+                    columnDtoList.add(columnDto);
+                }
+                return columnDtoList;
+            default:
+                return null;
+        }
     }
 }

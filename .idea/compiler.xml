@@ -15,10 +15,12 @@
         <module name="shop-server" />
         <module name="user-server" />
         <module name="auth-server" />
+        <module name="sdk-server" />
         <module name="core-common" />
         <module name="learn-leeetcode" />
         <module name="bill-server" />
         <module name="mall-server" />
+        <module name="sdk-common" />
         <module name="gateway-server" />
         <module name="sys-server" />
         <module name="code-swagger2-starter" />
@@ -32,6 +34,7 @@
       <module name="bill-admin" target="1.8" />
       <module name="exam-admin" target="1.8" />
       <module name="learn-elasticsearch" target="1.8" />
+      <module name="learn-spring-boot" target="1.8" />
       <module name="shop-server" target="1.8" />
       <module name="sys-admin" target="1.8" />
       <module name="test-admin" target="1.8" />
@@ -57,7 +60,10 @@
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />
+      <module name="learn-spring-boot" options="-parameters" />
       <module name="mall-server" options="-parameters" />
+      <module name="sdk-common" options="-parameters" />
+      <module name="sdk-server" options="-parameters" />
       <module name="server-center" options="" />
       <module name="shop-server" options="-parameters" />
       <module name="sys-admin" options="-parameters" />

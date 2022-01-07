@@ -3,6 +3,7 @@ package xyz.fusheng.bill.model.dto.socket;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,5 +28,8 @@ public class ColumnDto {
 
     public ColumnDto(String columnKey) {
         this.columnKey = columnKey;
+        this.columnValue = "";
+        this.editState = "NO_LOCKING";
+        this.currentUser = new ArrayList<>();
     }
 }

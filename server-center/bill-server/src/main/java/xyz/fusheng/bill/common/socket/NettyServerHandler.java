@@ -44,6 +44,8 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<TextWebSocke
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         channelGroup.add(ctx.channel());
+        log.info("{}", ctx.channel().id().asShortText());
+        log.info("{}", ctx.channel().id().asLongText());
         log.info("[建立连接] -> cid:{}", ctx.channel().id());
     }
 
@@ -76,6 +78,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<TextWebSocke
 
     // 发送消息给所有对象
     public void sendMessageToAll(ChannelHandlerContext ctx, Object obj) {
+        // 获取房间内的所有 channelId
         for (Channel channel : channelGroup) {
             if (Objects.nonNull(ctx)) {
                 if (!channel.id().asLongText().equals(ctx.channel().id().asLongText())) {

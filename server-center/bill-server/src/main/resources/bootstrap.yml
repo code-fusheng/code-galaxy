@@ -15,8 +15,6 @@ management:
     web:
       exposure:
         include: "*"
-  server:
-    port: 10601
     servlet:
       context-path: /
     ssl:
