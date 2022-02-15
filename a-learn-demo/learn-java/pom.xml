@@ -25,6 +25,13 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>xyz.fusheng</groupId>
+            <artifactId>core-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-core</artifactId>
@@ -33,6 +40,12 @@
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

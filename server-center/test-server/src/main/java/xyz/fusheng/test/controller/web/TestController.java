@@ -1,5 +1,6 @@
 package xyz.fusheng.test.controller.web;
 
+import com.google.common.base.Stopwatch;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +14,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.fusheng.core.model.entity.SelfUser;
+import xyz.fusheng.core.model.entity.User;
 import xyz.fusheng.core.model.vo.ResultVo;
 import xyz.fusheng.core.utils.SecurityUtils;
 import xyz.fusheng.test.common.annotation.UserInfo;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @FileName: TestController
@@ -98,6 +104,11 @@ public class TestController {
             logger.error("{}", e.getMessage(), e);
         }
         logger.info("{}", System.currentTimeMillis() - startTime);
+    }
+
+    public static void main(String[] args) {
+        Stopwatch started = Stopwatch.createStarted();
+        System.out.println(started.stop().elapsed(TimeUnit.SECONDS));
     }
 
 }

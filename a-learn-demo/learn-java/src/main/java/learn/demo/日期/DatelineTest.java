@@ -32,6 +32,8 @@ public class DatelineTest {
 
         System.out.println(simpleDateFormat1.format(date));
 
+        System.out.println(simpleDateFormat2.format(new Date()));
+
     }
 
 }

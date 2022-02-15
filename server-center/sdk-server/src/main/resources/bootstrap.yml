@@ -1,0 +1,11 @@
+server:
+  port: 19999
+spring:
+  application:
+    name: sdk-server
+  profiles:
+    active: @profiles.active@
+security:
+  oauth2:
+    resource:
+      id: sdk-server
