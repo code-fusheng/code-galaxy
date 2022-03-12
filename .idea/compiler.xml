@@ -56,7 +56,6 @@
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
-      <module name="learn-demo" options="" />
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />

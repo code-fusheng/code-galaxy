@@ -1,6 +1,5 @@
 package learn.demo.集合.list;
 
-import com.sun.tools.javac.util.ArrayUtils;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
