@@ -18,8 +18,10 @@ import xyz.fusheng.test.entity.xml.UserStarXml;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -70,6 +72,60 @@ public class ApiTestController {
     @GetMapping("/testGetPort")
     public ResultVo<Object> testGetPort() {
         return ResultVo.success(port);
+    }
+
+    @GetMapping(value = "/onlineFileDownloadZip")
+    public void onlineFileDownloadZip(HttpServletResponse response) throws Exception {
+        String rootZipFileName = URLEncoder.encode("证照文件.zip", "UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
+
+        response.setHeader("Content-Disposition", "attachment;filename=" + rootZipFileName);
+        String url1 = "https://code-fusheng.oss-cn-beijing.aliyuncs.com/typore/20201224204810.png";
+        String url2 = "https://code-fusheng.oss-cn-beijing.aliyuncs.com/typore/20201224204810.png";
+
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("url1", url1);
+        map.put("url2", url2);
+
+        ServletOutputStream outputStream = response.getOutputStream();
+        ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
+
+        try {
+            for (Map.Entry<String, String> entry : map.entrySet()) {
+                String key = entry.getKey();
+                String fileName = new String(key.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8) + ".png";
+                ZipEntry zipEntry = new ZipEntry(fileName);
+                zipOutputStream.putNextEntry(zipEntry);
+                String url = entry.getValue();
+                URL url0 = new URL(url);
+                InputStream inputStream = url0.openConnection().getInputStream();
+                BufferedInputStream bis = new BufferedInputStream(inputStream);
+                int len;
+                byte[] data = new byte[64 * 1024];
+                while ((len = bis.read(data, 0, 64 * 1024)) != -1) {
+                    zipOutputStream.write(data, 0, len);
+                }
+            }
+            zipOutputStream.flush();
+        } catch (Exception e) {
+
+        } finally {
+            //关闭数据流，注意关闭的顺序
+            zipOutputStream.close();
+            outputStream.close();
+        }
+
+        InputStream inputStream;
+
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        byte[] bs = new byte[64 * 1024];
+        out.write(bs);
+        ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
+        int len = in.read(bs);
+        for (int i = 0; i < len; i++) {
+            System.out.println(bs[i]);
+        }
     }
 
     @GetMapping(value = "/download1")

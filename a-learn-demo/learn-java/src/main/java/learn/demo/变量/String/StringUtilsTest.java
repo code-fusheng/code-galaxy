@@ -1,5 +1,7 @@
 package learn.demo.变量.String;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * @FileName: StringUtilsTest
  * @Author: code-fusheng
@@ -14,6 +16,9 @@ public class StringUtilsTest {
 
         String str = "qrscene_111111111";
         System.out.println(str.substring(8));
+
+        boolean scene = StringUtils.contains(str, "scene");
+        System.out.println(scene);
 
     }
 
