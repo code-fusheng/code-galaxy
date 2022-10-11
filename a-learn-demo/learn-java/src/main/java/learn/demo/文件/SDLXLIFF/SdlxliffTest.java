@@ -1,16 +1,19 @@
 package learn.demo.文件.SDLXLIFF;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import org.dom4j.*;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -29,13 +32,17 @@ public class SdlxliffTest {
         Map<Integer, String> targetMap = new LinkedHashMap<>();
 
         AtomicInteger sourceCount = new AtomicInteger(0);
-
         AtomicInteger targetCount = new AtomicInteger(0);
 
-        String filePath = "F://专业源码/code-galaxy/git/code-galaxy/a-learn-demo/learn-java/file/翻译任务.docx.sdlxliff";
+        // String filePath = "F://专业源码/code-galaxy/git/code-galaxy/a-learn-demo/learn-java/file/翻译任务.docx.sdlxliff";
+        String filePath = "/Users/zhanghao/code-galaxy/code-galaxy/a-learn-demo/learn-java/file/翻译任务.docx.sdlxliff";
+
+        String onlineUrl = "https://code-business.oss-cn-hangzhou.aliyuncs.com/20220313011301/翻译任务.docx.sdlxliff";
 
         String s = new String(Files.readAllBytes(Paths.get(filePath)), Charset.defaultCharset());
         System.out.println(s);
+
+        URL url = new URL(onlineUrl);
 
         // 1、读取 XML 文档
         // 读写XML文档主要依赖于org.dom4j.io包，有DOMReader和SAXReader两种方式。因为利用了相同的接口，它们的调用方式是一样的。
@@ -44,7 +51,7 @@ public class SdlxliffTest {
 
         try {
             SAXReader saxReader = new SAXReader();
-            document = saxReader.read(new File(filePath));
+            document = saxReader.read(url);
             System.out.println(document);
         } catch (Exception e) {
             e.printStackTrace();

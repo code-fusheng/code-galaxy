@@ -34,6 +34,8 @@ CN=zhanghao, OU=fusheng, O=fusheng, L=changsha, ST=湖南, C=f
 
 ### 二、项目部署
 ```shell
+docker login -u admin -p Harbor12345 42.192.222.62:9090
+
 kubectl create ns prod
 
 docker tag test-server:latest 42.192.222.62:9090/code-galaxy/test-server:latest
@@ -60,6 +62,9 @@ docker tag sys-server:latest 42.192.222.62:9090/code-galaxy/sys-server:latest
 docker push 42.192.222.62:9090/code-galaxy/sys-server:latest
 kubectl create -f sys-server-prod.yml
 ```
+
+
+mvn clean package docker:build  -DpushImage -Dmaven.test.skip=true -Pprod
 
 
 

@@ -2,6 +2,7 @@ package learn.demo.公用;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.apache.logging.log4j.util.Strings;
 
 import java.util.Objects;
 
@@ -23,6 +24,8 @@ public class test {
     }
 
     public static void main(String[] args) {
+
+        System.out.println(Strings.trimToNull("   xxx xxx  "));
 
         Consumevo consumevo = new Consumevo(27000L, 27000L);
 

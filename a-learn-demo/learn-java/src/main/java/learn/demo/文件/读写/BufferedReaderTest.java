@@ -1,10 +1,5 @@
 package learn.demo.文件.读写;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 /**
  * @FileName: BufferedReaderTest
  * @Author: code-fusheng
@@ -17,8 +12,8 @@ public class BufferedReaderTest {
 
     public static void main(String[] args) {
 
-        String path = System.getProperty("user.dir" + File.separator + "text.txt");
-
+        String path = System.getProperty("user.dir");
+        System.out.println(path);
     }
 
 }

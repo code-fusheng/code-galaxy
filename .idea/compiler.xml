@@ -48,14 +48,15 @@
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
+      <module name="base-center" options="" />
       <module name="bill-admin" options="-parameters" />
       <module name="bill-server" options="-parameters" />
-      <module name="code-galaxy" options="" />
-      <module name="common-center" options="" />
+      <module name="code-galaxy" options="-parameters" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="learn-demo" options="" />
       <module name="learn-elasticsearch" options="-parameters" />
       <module name="learn-java" options="-parameters" />
       <module name="learn-leetcode" options="-parameters" />

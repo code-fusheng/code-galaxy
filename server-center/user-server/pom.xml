@@ -113,7 +113,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.2</version>
                 <configuration>
-                    <imageName>${project.artifactId}</imageName>
+                    <imageName>42.192.222.62:12375/code-fusheng/${project.artifactId}:${project.version}</imageName>
                     <imageTags>
                         <imageTag>latest</imageTag>
                     </imageTags>
@@ -129,6 +129,8 @@
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
+                    <serverId>code-harbor</serverId>
+                    <registryUrl>http://42.192.222.62:9090</registryUrl>
                 </configuration>
             </plugin>
         </plugins>

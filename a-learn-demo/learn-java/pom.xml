@@ -56,6 +56,21 @@
             <version>2.1.3</version>
         </dependency>
 
+        <!-- hutool工具类 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xyz.fusheng</groupId>
+            <artifactId>learn-java</artifactId>
+            <version>1.1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/qbg-sign-util-1.1.0.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
 </project>

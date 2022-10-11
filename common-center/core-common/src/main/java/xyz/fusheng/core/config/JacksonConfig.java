@@ -15,7 +15,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
  */
 
 @Configuration
-public class JsonConfig {
+public class JacksonConfig {
 
     /**
      * Jackson全局转化long类型为String，解决jackson序列化时long类型缺失精度问题
@@ -23,7 +23,7 @@ public class JsonConfig {
      */
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
-        Jackson2ObjectMapperBuilderCustomizer cunstomizer = new Jackson2ObjectMapperBuilderCustomizer() {
+        return new Jackson2ObjectMapperBuilderCustomizer() {
             @Override
             public void customize(Jackson2ObjectMapperBuilder jacksonObjectMapperBuilder) {
 
@@ -32,7 +32,5 @@ public class JsonConfig {
 
             }
         };
-        return cunstomizer;
     }
-
 }
