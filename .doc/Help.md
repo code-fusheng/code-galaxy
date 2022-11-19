@@ -66,6 +66,8 @@ kubectl create -f sys-server-prod.yml
 
 mvn clean package docker:build  -DpushImage -Dmaven.test.skip=true -Pprod
 
+打印GC日志  -XX:+PrintGCDetails
+
 
 
 

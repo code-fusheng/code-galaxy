@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-server-prod
+  namespace: prod
+  labels:
+    app: user-server-prod
+spec:
+  type: NodePort
+  ports:
+    - port: 10100
+      nodePort: 50100 #service对外开放端口
+  selector:
+    app: user-server-prod
+---
+apiVersion: apps/v1
+kind: Deployment #对象类型
+metadata:
+  name: user-server-prod #名称
+  namespace: prod
+  labels:
+    app: user-server-prod #标注
+spec:
+  replicas: 1 #运行容器的副本数，修改这里可以快速修改分布式节点数量
+  selector:
+    matchLabels:
+      app: user-server-prod
+  template:
+    metadata:
+      labels:
+        app: user-server-prod
+    spec:
+      containers: #docker容器的配置
+        - name: user-server-prod
+          image: 42.192.222.62:9191/code-galaxy/user-server:latest # pull镜像的地址 ip:prot/dir/images:tag
+          imagePullPolicy: IfNotPresent #pull镜像时机，
+          ports:
+            - containerPort: 10100 #容器对外开放端口,需与springboot配置文件一致

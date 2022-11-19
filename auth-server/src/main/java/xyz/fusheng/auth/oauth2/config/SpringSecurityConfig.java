@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.security.web.firewall.HttpFirewall;
+import org.springframework.security.web.firewall.StrictHttpFirewall;
 
 /**
  * 安全配置类
@@ -49,11 +51,19 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 成功处理器
                 .successHandler(authenticationSuccessHandler)
                 .failureHandler(authenticationFailureHandler)
-            .and()
+                .and()
                 .logout()
                 .logoutSuccessHandler(logoutSuccessHandler)
-            .and()
+                .and()
                 .csrf().disable();
+    }
+
+    @Bean
+    public HttpFirewall allowUrlEncodedSlashHttpFirewall() {
+        StrictHttpFirewall firewall = new StrictHttpFirewall();
+        //此处可添加别的规则,目前只设置 允许双 //
+        firewall.setAllowUrlEncodedDoubleSlash(true);
+        return firewall;
     }
 
 }
