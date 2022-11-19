@@ -8,33 +8,34 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="repo-server" />
-        <module name="learn-leetcode" />
-        <module name="exam-server" />
         <module name="test-server" />
         <module name="learn" />
         <module name="shop-server" />
         <module name="user-server" />
         <module name="auth-server" />
-        <module name="sdk-server" />
         <module name="core-common" />
-        <module name="learn-leeetcode" />
-        <module name="bill-server" />
-        <module name="mall-server" />
-        <module name="sdk-common" />
         <module name="gateway-server" />
+        <module name="learn-leeetcode" />
         <module name="sys-server" />
         <module name="code-swagger2-starter" />
         <module name="article-server" />
-        <module name="learn-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-center" target="1.8" />
       <module name="article-admin" target="1.8" />
       <module name="bill-admin" target="1.8" />
+      <module name="bill-server" target="1.8" />
       <module name="exam-admin" target="1.8" />
+      <module name="exam-server" target="1.8" />
+      <module name="learn-demo" target="1.8" />
       <module name="learn-elasticsearch" target="1.8" />
+      <module name="learn-java" target="8" />
+      <module name="learn-leetcode" target="1.8" />
       <module name="learn-spring-boot" target="1.8" />
+      <module name="mall-server" target="1.8" />
+      <module name="sdk-common" target="1.8" />
+      <module name="sdk-server" target="1.8" />
       <module name="shop-server" target="1.8" />
       <module name="sys-admin" target="1.8" />
       <module name="test-admin" target="1.8" />
@@ -48,10 +49,10 @@
       <module name="article-admin" options="-parameters" />
       <module name="article-server" options="-parameters" />
       <module name="auth-server" options="-parameters" />
-      <module name="base-center" options="" />
       <module name="bill-admin" options="-parameters" />
       <module name="bill-server" options="-parameters" />
-      <module name="code-galaxy" options="-parameters" />
+      <module name="code-galaxy" options="" />
+      <module name="common-center" options="" />
       <module name="core-common" options="-parameters" />
       <module name="exam-admin" options="-parameters" />
       <module name="exam-server" options="-parameters" />

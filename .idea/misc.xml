@@ -5,13 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/server-center/sdk-server/pom.xml" />
-        <option value="$PROJECT_DIR$/common-center/sdk-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/a-learn-demo/learn-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/a-learn-demo/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/article-admin/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/bill-admin/pom.xml" />
         <option value="$PROJECT_DIR$/admin-center/exam-admin/pom.xml" />
@@ -28,6 +27,9 @@
         <option value="$PROJECT_DIR$/learn-elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/learn-leetcode/pom.xml" />
         <option value="$PROJECT_DIR$/learn/pom.xml" />
+        <option value="$PROJECT_DIR$/server-center/bill-server/pom.xml" />
+        <option value="$PROJECT_DIR$/server-center/exam-server/pom.xml" />
+        <option value="$PROJECT_DIR$/server-center/mall-server/pom.xml" />
         <option value="$PROJECT_DIR$/server-center/shop-server/pom.xml" />
         <option value="$PROJECT_DIR$/test-server/pom.xml" />
       </set>
